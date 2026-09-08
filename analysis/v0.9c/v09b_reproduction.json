@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "source_head": "09eccf0",
+  "frozen_tag_commit": "f0dd89d21a441818751f9c705560b23e1d8ca22f",
+  "rom_sha256": "d761088a8549cb5bc60a2f03a4b78eea5282dbc17ed5da4ef1de27da4ad8d4d4",
+  "bps_sha256": "51dbdb8ef24a32ca5efb05ec3196b98ae08a32f3a4d6bb88673d58266837dcf6",
+  "rom_size": 13107200,
+  "bps_size": 3189401,
+  "build_A_B_byte_identity": true,
+  "bps_roundtrip": true,
+  "zip_sha256": "800a49eb411f9d251ca37eaacd50a61733c2ce3d7939db9ed3719b18ff432529",
+  "zip_matches_published": true,
+  "independent_font_checkout": true,
+  "font_revision": "897f0e71224d9964a84b888f2596b2bfd7f98def",
+  "reference_immutability": true
+}

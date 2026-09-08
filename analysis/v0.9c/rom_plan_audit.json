@@ -1,0 +1,34 @@
+{
+  "status": "PASS_DECLARED_WRITER_RECONSTRUCTION",
+  "target_sha256": "d761088a8549cb5bc60a2f03a4b78eea5282dbc17ed5da4ef1de27da4ad8d4d4",
+  "stages": {
+    "stage1": 4042,
+    "stage2": 10793,
+    "stage3": 627
+  },
+  "writer_categories": {
+    "padding": 1,
+    "hook": 15,
+    "pointer": 2085,
+    "graphics_layout": 4,
+    "graphics": 24,
+    "assembly": 20,
+    "font": 3,
+    "mapping": 1,
+    "text": 1226,
+    "full_text": 664,
+    "inspection": 2,
+    "review": 10791,
+    "japanese_review": 627
+  },
+  "diff_ranges": 21924,
+  "changed_existing_or_nonpadding_bytes": 380833,
+  "unexpected_diff": 0,
+  "unowned_diff": 0,
+  "typed_pointer_fields": 10380,
+  "unaligned_pointer_storages": [],
+  "japanese_visible_text_flags": 9,
+  "header_checksum_valid": true,
+  "protected_eeprom": true,
+  "protected_font_audio": true
+}

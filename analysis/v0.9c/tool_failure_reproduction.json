@@ -1,0 +1,16 @@
+{
+  "partial_output": {
+    "error": "[Errno 28] injected storage exhaustion after 128 bytes",
+    "exists": true,
+    "size": 128
+  },
+  "metadata_mismatch": {
+    "returncode": 0,
+    "accepted_wrong_fields": [
+      "version",
+      "source_size",
+      "patch_size"
+    ],
+    "actual_patch_size": 3189401
+  }
+}

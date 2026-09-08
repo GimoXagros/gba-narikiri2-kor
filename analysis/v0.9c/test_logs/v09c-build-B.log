@@ -1,0 +1,38 @@
+{
+  "version": "v0.9c",
+  "release_type": "candidate",
+  "release_authorized": false,
+  "source_profile": "AN9J_FFR_BETA3_071102",
+  "source_size": 9961472,
+  "source_sha256": "c6d7a401aa2a22362b2d27d0d31632cb2180a86b094788815d949b84c7fc944d",
+  "target_size": 13107200,
+  "target_sha256": "d761088a8549cb5bc60a2f03a4b78eea5282dbc17ed5da4ef1de27da4ad8d4d4",
+  "patch_size": 3189401,
+  "patch_sha256": "51dbdb8ef24a32ca5efb05ec3196b98ae08a32f3a4d6bb88673d58266837dcf6",
+  "baseline_v09b_sha256": "d761088a8549cb5bc60a2f03a4b78eea5282dbc17ed5da4ef1de27da4ad8d4d4",
+  "rom_change_policy": "IDENTICAL_TO_V09B_TOOL_FIXES_ONLY",
+  "included_bug_ids": [
+    "ND2-V09C-20260909-001",
+    "ND2-V09C-20260909-002",
+    "ND2-V09C-20260909-003"
+  ],
+  "rom_changes": [],
+  "unexpected_diff": 0,
+  "unowned_diff": 0,
+  "compact_name_fields": 1227,
+  "first_stage_absolute_pointer_bindings": 2077,
+  "baseline_review": {
+    "corrected": 285,
+    "bindings": 325,
+    "compact_corrected": 16,
+    "compact_ledger_sha256": "2e50d5a4708a935cd998f9d24837d1f39f272a6b505151dab2687b49a3034977",
+    "trade_pointer_table_restored": true,
+    "ledger_sha256": "d26baf396fc202f75392278b7fa1a9377757a651818f988a7520dca13e64b067"
+  },
+  "publication_status": "LOCAL_PC_CANDIDATE_NOT_AUTHORIZED_FOR_RELEASE",
+  "runtime_status": "SEE_ARTIFACT_BOUND_PC_VERIFICATION",
+  "japanese_reference_sha256_before": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+  "japanese_reference_sha256_after": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+  "beta3_source_sha256_before": "c6d7a401aa2a22362b2d27d0d31632cb2180a86b094788815d949b84c7fc944d",
+  "beta3_source_sha256_after": "c6d7a401aa2a22362b2d27d0d31632cb2180a86b094788815d949b84c7fc944d"
+}

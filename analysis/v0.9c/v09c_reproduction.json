@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "artifacts": {
+    "NARIKIRI2_AN9J_K_DALMOORI_v0.9c.gba": {
+      "size": 13107200,
+      "sha256": "d761088a8549cb5bc60a2f03a4b78eea5282dbc17ed5da4ef1de27da4ad8d4d4",
+      "build_a_equals_b": true
+    },
+    "NARIKIRI2_AN9J_K_DALMOORI_v0.9c_FROM_BETA3.bps": {
+      "size": 3189401,
+      "sha256": "51dbdb8ef24a32ca5efb05ec3196b98ae08a32f3a4d6bb88673d58266837dcf6",
+      "build_a_equals_b": true
+    }
+  },
+  "beta3_diff_classification_bytes": {
+    "V09B_EXISTING_UI_FIX": 7813,
+    "V09B_EXISTING_POINTER": 23361,
+    "V09B_EXISTING_FONT": 27283,
+    "V09B_EXISTING_TEXT": 322376
+  },
+  "v09b_to_v09c_changed_bytes": 0,
+  "v09b_to_v09c_diff_ranges": 0,
+  "unexpected_diff": 0,
+  "unowned_diff": 0,
+  "reason": "All three fixes are host tooling or audit metadata. ROM and BPS bytes equal frozen v0.9b; no manufactured game changes."
+}

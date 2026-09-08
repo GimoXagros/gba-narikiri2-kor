@@ -1,0 +1,79 @@
+[
+  {
+    "name": "테일즈 오브 더 월드 나리키리 던전 2_[AN9J][J].gba",
+    "role": "READ_ONLY_COMPARISON_REFERENCE",
+    "sha256_before": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+    "sha256_after": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+    "size": 8388608,
+    "game_code": "AN9J",
+    "header_checksum": 45,
+    "computed_checksum": 45,
+    "status": "PASS"
+  },
+  {
+    "name": "테일즈 오브 더 월드 나리키리 던전 2_[AN9J][K]_FFR.gba",
+    "role": "HISTORICAL_BUILD_REFERENCE",
+    "sha256_before": "f94cb5a128c8a98e6e18e6a0598ebf9b266f54da0750367af8defac3eb2df7d4",
+    "sha256_after": "f94cb5a128c8a98e6e18e6a0598ebf9b266f54da0750367af8defac3eb2df7d4",
+    "size": 12582912,
+    "game_code": "AN9J",
+    "header_checksum": 45,
+    "computed_checksum": 45,
+    "status": "PASS"
+  },
+  {
+    "name": "테일즈 오브 더 월드 나리키리 던전 2_[AN9J][K]_FFR_BETA3(071102).gba",
+    "role": "IMMUTABLE_PRODUCT_SOURCE",
+    "sha256_before": "c6d7a401aa2a22362b2d27d0d31632cb2180a86b094788815d949b84c7fc944d",
+    "sha256_after": "c6d7a401aa2a22362b2d27d0d31632cb2180a86b094788815d949b84c7fc944d",
+    "size": 9961472,
+    "game_code": "AN9J",
+    "header_checksum": 45,
+    "computed_checksum": 45,
+    "status": "PASS"
+  },
+  {
+    "name": "테일즈 오브 더 월드 나리키리 던전 2_[AN9J][J].gba",
+    "role": "READ_ONLY_COMPARISON_REFERENCE",
+    "sha256_before": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+    "sha256_after": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+    "size": 8388608,
+    "game_code": "AN9J",
+    "header_checksum": 45,
+    "computed_checksum": 45,
+    "status": "PASS"
+  },
+  {
+    "name": "테일즈 오브 더 월드 나리키리 던전 2_[AN9J][K]_FFR.gba",
+    "role": "HISTORICAL_BUILD_REFERENCE",
+    "sha256_before": "f94cb5a128c8a98e6e18e6a0598ebf9b266f54da0750367af8defac3eb2df7d4",
+    "sha256_after": "f94cb5a128c8a98e6e18e6a0598ebf9b266f54da0750367af8defac3eb2df7d4",
+    "size": 12582912,
+    "game_code": "AN9J",
+    "header_checksum": 45,
+    "computed_checksum": 45,
+    "status": "PASS"
+  },
+  {
+    "name": "테일즈 오브 더 월드 나리키리 던전 2_[AN9J][K]_FFR_BETA3(071102).gba",
+    "role": "IMMUTABLE_PRODUCT_SOURCE",
+    "sha256_before": "c6d7a401aa2a22362b2d27d0d31632cb2180a86b094788815d949b84c7fc944d",
+    "sha256_after": "c6d7a401aa2a22362b2d27d0d31632cb2180a86b094788815d949b84c7fc944d",
+    "size": 9961472,
+    "game_code": "AN9J",
+    "header_checksum": 45,
+    "computed_checksum": 45,
+    "status": "PASS"
+  },
+  {
+    "name": "NARIKIRI2_AN9J_K_DALMOORI_v0.9b.gba",
+    "role": "FROZEN_AUDIT_TARGET",
+    "sha256_before": "d761088a8549cb5bc60a2f03a4b78eea5282dbc17ed5da4ef1de27da4ad8d4d4",
+    "sha256_after": "d761088a8549cb5bc60a2f03a4b78eea5282dbc17ed5da4ef1de27da4ad8d4d4",
+    "size": 13107200,
+    "game_code": "AN9J",
+    "header_checksum": 45,
+    "computed_checksum": 45,
+    "status": "PASS"
+  }
+]

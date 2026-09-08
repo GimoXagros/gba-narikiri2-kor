@@ -1,0 +1,55 @@
+test_both_input_paths_protected (test_restore.FileSafetyTests.test_both_input_paths_protected) ... ok
+test_cli_rejects_unsupported_fixture_without_force_option (test_restore.FileSafetyTests.test_cli_rejects_unsupported_fixture_without_force_option) ... ok
+test_existing_output_preserved (test_restore.FileSafetyTests.test_existing_output_preserved) ... ok
+test_invalid_input_creates_no_output (test_restore.FileSafetyTests.test_invalid_input_creates_no_output) ... ok
+test_late_output_creation_does_not_overwrite (test_restore.FileSafetyTests.test_late_output_creation_does_not_overwrite) ... ok
+test_missing_donor_creates_no_output (test_restore.FileSafetyTests.test_missing_donor_creates_no_output) ... ok
+test_missing_output_parent_creates_nothing (test_restore.FileSafetyTests.test_missing_output_parent_creates_nothing) ... ok
+test_new_output_preserves_inputs_and_save (test_restore.FileSafetyTests.test_new_output_preserves_inputs_and_save) ... ok
+test_save_output_extension_rejected (test_restore.FileSafetyTests.test_save_output_extension_rejected) ... ok
+test_expected_result_hash_enforced (test_restore.RestorationTests.test_expected_result_hash_enforced) ... ok
+test_growth_rejected (test_restore.RestorationTests.test_growth_rejected) ... ok
+test_invalid_difference_intervals_rejected (test_restore.RestorationTests.test_invalid_difference_intervals_rejected) ... ok
+test_invalid_window_bounds_rejected (test_restore.RestorationTests.test_invalid_window_bounds_rejected) ... ok
+test_modified_byte_outside_allowlist_rejected_even_with_matching_hash (test_restore.RestorationTests.test_modified_byte_outside_allowlist_rejected_even_with_matching_hash) ... ok
+test_overlapping_or_unordered_windows_rejected (test_restore.RestorationTests.test_overlapping_or_unordered_windows_rejected) ... ok
+test_restored_window_must_match_donor (test_restore.RestorationTests.test_restored_window_must_match_donor) ... ok
+test_restores_only_registered_windows (test_restore.RestorationTests.test_restores_only_registered_windows) ... ok
+test_truncated_or_extended_inputs_rejected (test_restore.RestorationTests.test_truncated_or_extended_inputs_rejected) ... ok
+test_two_builds_identical (test_restore.RestorationTests.test_two_builds_identical) ... ok
+test_unchanged_donor_bytes_can_exist_inside_write_window (test_restore.RestorationTests.test_unchanged_donor_bytes_can_exist_inside_write_window) ... ok
+test_wrong_same_size_donor_rejected (test_restore.RestorationTests.test_wrong_same_size_donor_rejected) ... ok
+test_wrong_same_size_source_rejected (test_restore.RestorationTests.test_wrong_same_size_source_rejected) ... ok
+test_empty_source_or_target (test_bps_and_report_contracts.BpsSizeTests.test_empty_source_or_target) ... ok
+test_growing_target (test_bps_and_report_contracts.BpsSizeTests.test_growing_target) ... ok
+test_shrinking_target (test_bps_and_report_contracts.BpsSizeTests.test_shrinking_target) ... ok
+test_wrong_source_rejected (test_bps_and_report_contracts.BpsSizeTests.test_wrong_source_rejected) ... ok
+test_failed_or_missing_result_cannot_be_promoted (test_bps_and_report_contracts.TestReportTests.test_failed_or_missing_result_cannot_be_promoted) ... ok
+test_real_skips_cannot_be_promoted_to_pass (test_bps_and_report_contracts.TestReportTests.test_real_skips_cannot_be_promoted_to_pass) ... ok
+test_skipped_word_in_test_name_is_not_a_skipped_result (test_bps_and_report_contracts.TestReportTests.test_skipped_word_in_test_name_is_not_a_skipped_result) ... ok
+test_clean_evidence_requires_matching_source_and_normal_close (test_runtime_evidence.RuntimeEvidenceTests.test_clean_evidence_requires_matching_source_and_normal_close) ... ok
+test_clean_sequence_rejects_rewind_and_post_close_work (test_runtime_evidence.RuntimeEvidenceTests.test_clean_sequence_rejects_rewind_and_post_close_work) ... ok
+test_previous_rom_results_cannot_be_promoted (test_runtime_evidence.RuntimeEvidenceTests.test_previous_rom_results_cannot_be_promoted) ... ok
+test_save_requires_exact_size_and_explicit_nonfixture_flag (test_runtime_evidence.RuntimeEvidenceTests.test_save_requires_exact_size_and_explicit_nonfixture_flag) ... ok
+test_state_load_and_ram_fixture_are_not_clean_progression (test_runtime_evidence.RuntimeEvidenceTests.test_state_load_and_ram_fixture_are_not_clean_progression) ... ok
+test_format_arguments_and_newlines_remain_explicit (test_compact_transcription.CompactTranscriptionTests.test_format_arguments_and_newlines_remain_explicit) ... ok
+test_formatter_toggle_and_raw_toggle_have_same_glyph_effect (test_compact_transcription.CompactTranscriptionTests.test_formatter_toggle_and_raw_toggle_have_same_glyph_effect) ... ok
+test_gol_gong_and_b1_do_not_use_historical_misreadings (test_compact_transcription.CompactTranscriptionTests.test_gol_gong_and_b1_do_not_use_historical_misreadings) ... ok
+test_initial_and_vowel_final_pieces_compose_in_order (test_compact_transcription.CompactTranscriptionTests.test_initial_and_vowel_final_pieces_compose_in_order) ... ok
+test_mark_and_private_control_bytes_are_never_silently_dropped (test_compact_transcription.CompactTranscriptionTests.test_mark_and_private_control_bytes_are_never_silently_dropped) ... ok
+test_archives_and_patch_bytes_cannot_hide_as_documentation (test_repository_integration.RepositoryIntegrationTests.test_archives_and_patch_bytes_cannot_hide_as_documentation) ... ok
+test_game_and_save_extensions_are_excluded (test_repository_integration.RepositoryIntegrationTests.test_game_and_save_extensions_are_excluded) ... ok
+test_historical_reference_is_allowed_only_outside_active_code (test_repository_integration.RepositoryIntegrationTests.test_historical_reference_is_allowed_only_outside_active_code) ... ok
+test_logo_exception_requires_original_bytes (test_repository_integration.RepositoryIntegrationTests.test_logo_exception_requires_original_bytes) ... ok
+test_concurrent_destination_is_not_overwritten (test_v09c_io.CandidateOutputTests.test_concurrent_destination_is_not_overwritten) ... ok
+test_existing_file_and_hardlink_preserved (test_v09c_io.CandidateOutputTests.test_existing_file_and_hardlink_preserved) ... ok
+test_flush_failure_leaves_no_output (test_v09c_io.CandidateOutputTests.test_flush_failure_leaves_no_output) ... ok
+test_partial_write_leaves_no_final_or_temporary_file (test_v09c_io.CandidateOutputTests.test_partial_write_leaves_no_final_or_temporary_file) ... ok
+test_readback_failure_leaves_no_output (test_v09c_io.CandidateOutputTests.test_readback_failure_leaves_no_output) ... ok
+test_unicode_path_success (test_v09c_io.CandidateOutputTests.test_unicode_path_success) ... ok
+
+----------------------------------------------------------------------
+Ran 49 tests in 0.056s
+
+OK
+Collected 49; executed 49; failures 0; errors 0; skipped 0
