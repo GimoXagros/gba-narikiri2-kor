@@ -1,0 +1,34 @@
+{
+  "project": "Tales of the World: Narikiri Dungeon 2",
+  "game_code": "AN9J",
+  "audit_target": "v0.9b",
+  "fix_destination": "v0.9c",
+  "scope": "PC_VALIDATION",
+  "current_step": "LOCAL_PACKAGE_AND_DRAFT_PR",
+  "last_completed_step": "CANDIDATE_A_B_150_TESTS_AND_RUNTIME",
+  "baseline_v09b_sha256": "d761088a8549cb5bc60a2f03a4b78eea5282dbc17ed5da4ef1de27da4ad8d4d4",
+  "japanese_reference_sha256_before": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+  "japanese_reference_sha256_after": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+  "beta3_source_sha256_before": "c6d7a401aa2a22362b2d27d0d31632cb2180a86b094788815d949b84c7fc944d",
+  "beta3_source_sha256_after": "c6d7a401aa2a22362b2d27d0d31632cb2180a86b094788815d949b84c7fc944d",
+  "current_v09c_candidate_sha256": "d761088a8549cb5bc60a2f03a4b78eea5282dbc17ed5da4ef1de27da4ad8d4d4",
+  "open_bug_ids": [],
+  "awaiting_user_hardware_retest_bug_ids": [
+    "ND2-V09C-20260909-001",
+    "ND2-V09C-20260909-002",
+    "ND2-V09C-20260909-003"
+  ],
+  "tests": {
+    "collected": 150,
+    "executed": 150,
+    "passed": 150,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0,
+    "elapsed_seconds": 13.453
+  },
+  "pc_validation_status": "PC_VALIDATION_PASS",
+  "hardware_validation_status": "AWAITING_USER_HARDWARE_RETEST",
+  "release_status": "RELEASE_NOT_AUTHORIZED",
+  "updated_at": "2026-09-08T17:51:04.775269+00:00"
+}

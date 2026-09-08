@@ -1,0 +1,12 @@
+test,scope,count,result,limitation
+Frozen build A/B,Final product bytes,2,PASS,Exact frozen source and pinned font required
+Candidate build A/B,Final product bytes,2,PASS,Tool-only candidate; game bytes identical
+Local suite,Real-data and source/component contracts,150,PASS,Inherited component fixtures retained
+Public subset,No-ROM source/synthetic contracts,49,PASS,Overlaps local suite
+Frozen mGBA routes,New game/save/cold load/names/battle/inspection/suspend,14 routes / 134 screens,PASS_WITH_LIMITATION,2 inspection routes use one RAM fixture each
+Items,List pixels/base font/cache,156 / 157 screens,PASS_WITH_LIMITATION,Inventory fixture
+Books,Costume/monster/character list and details,200 / 142 / 22,PASS_WITH_LIMITATION,Discovery fixture
+Costume arte names,Detail pixels,224,PASS_WITH_LIMITATION,Not all battle consumers
+Arte descriptions,Ordinary skill-menu rendering,231,PASS_WITH_LIMITATION,Known-arte fixture
+All story endings / natural unlocks,Natural full game,Not exhausted,NOT_VERIFIED,Not claimed by PC matrix
+Two-device trade / hardware,Physical console,0,AWAITING_USER_HARDWARE_RETEST,Only trade Thumb pointer consumer tested

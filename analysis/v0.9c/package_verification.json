@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "package_A_B_identical": true,
+  "artifacts": {
+    "manifest.json": {
+      "size": 3632,
+      "sha256": "41e8dcd14a02e47be3350de3897787d2fe9e5a586f80fecf73c4dc36b757094f"
+    },
+    "NARIKIRI2_AN9J_K_DALMOORI_v0.9c_FROM_BETA3.bps": {
+      "size": 3189401,
+      "sha256": "51dbdb8ef24a32ca5efb05ec3196b98ae08a32f3a4d6bb88673d58266837dcf6"
+    },
+    "NARIKIRI2_AN9J_K_DALMOORI_v0.9c_PC_CANDIDATE.zip": {
+      "size": 191782,
+      "sha256": "206d97f7b8292c60adaef8bc925d04c4faffd08869f164166c5494be236e25e0"
+    },
+    "SHA256SUMS.txt": {
+      "size": 308,
+      "sha256": "e81a583c5108a30781561cd2211110cf19d46b239988a77a863b4e02892fed78"
+    }
+  },
+  "rom_included": false,
+  "zip_manifest_readback": true,
+  "standalone_application": [
+    {
+      "case": "standalone Unicode output and BPS roundtrip",
+      "result": "PASS"
+    },
+    {
+      "case": "Japanese rejected",
+      "result": "PASS"
+    },
+    {
+      "case": "BETA2 rejected",
+      "result": "PASS"
+    },
+    {
+      "case": "already patched rejected",
+      "result": "PASS"
+    },
+    {
+      "case": "existing output preserved",
+      "result": "PASS"
+    },
+    {
+      "case": "source path preserved",
+      "result": "PASS"
+    },
+    {
+      "case": "existing hardlink to source preserved",
+      "result": "PASS"
+    }
+  ],
+  "applied_target_sha256": "d761088a8549cb5bc60a2f03a4b78eea5282dbc17ed5da4ef1de27da4ad8d4d4",
+  "release_authorized": false
+}

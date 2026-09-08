@@ -27,3 +27,5 @@ local/
 third_party/_work/
 .venv/
 analysis/private/
+
+private_validation/

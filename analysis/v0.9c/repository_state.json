@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/GimoXagros/narikiri2-save-compat",
+  "branch": "fix/v0.9c-pc-validation",
+  "initial_head": "09eccf0a079cbe6106a8c1f5427b8a2cffa6681a",
+  "frozen_tag_commit": "f0dd89d21a441818751f9c705560b23e1d8ca22f",
+  "initial_worktree_clean": true,
+  "agents_found": [],
+  "prior_v09c_branch_or_pr": false,
+  "scope": "AN9J v0.9b PC audit; no merge/tag/release"
+}

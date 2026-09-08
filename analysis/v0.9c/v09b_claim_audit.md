@@ -1,0 +1,23 @@
+# v0.9b claim audit
+
+- **VERIFIED** — ROM/BPS/ZIP hashes: v09b_reproduction.json; detached-tag packaging equals all published assets.
+- **VERIFIED** — 139 local tests: v09b_test_summary.json; test_logs/v09b-local-tests.log. Includes inherited component tests with historical fixtures; final v09b byte binding and runtime are separate checks.
+- **VERIFIED** — 43 public contracts: test_logs/v09b-public-tests.log. Synthetic/source tests; no ROM in public CI.
+- **VERIFIED** — Repeated build byte identity: v09b_reproduction.json.
+- **VERIFIED** — BPS round-trip: v09b_reproduction.json; candidate real-data contracts.
+- **VERIFIED** — BETA3 EEPROM preserved: rom_plan_audit.json; 0xA601C..0xA6800.
+- **VERIFIED** — Large font/audio preserved: rom_plan_audit.json; 0xAC3F4..0x2B2CAC.
+- **VERIFIED** — 8037 actual body strings: Frozen ledger: 8038 records minus D00549 pointer table.
+- **VERIFIED** — 1227 compact name fields: known_compact_labels plus extended_fields; pointer_audit.csv.
+- **VERIFIED** — 8946 body pointer bindings: Frozen review binding catalogue; candidate build manifest baseline.
+- **VERIFIED** — 285 body corrections: Frozen Japanese review ledger; current build gate validates 325 bindings.
+- **VERIFIED** — 16 compact field corrections: Frozen compact ledger; current build gate.
+- **VERIFIED** — Clothes trade pointer table restored: test_reviewed_v09b.py actual Thumb consumer; A4918 -> 08373760; two valid entries. Static source/runtime separation applies; no two-console exchange.
+- **CONTRADICTED** — 2077 compact pointer bindings: ND2-V09C-20260909-003: transfer_writes increments all absolute pointer writers. 2077 first-stage absolute pointer bindings; 1227 compact fields. Historical gate left unchanged.
+- **VERIFIED_WITH_LIMITATION** — mGBA save/name/suspend/inspection: runtime_summary.json: 14 routes and 134 screen identities; inspected current save, load and info screens. Inspection routes each set isolated RAM once. Legacy save is a known local converted sample, not arbitrary original Japanese save compatibility.
+- **VERIFIED_WITH_LIMITATION** — 156 items / 157 screens: runtime_summary.json: fresh items matrix PASS. Discovery/inventory flags set in isolated RAM; no natural unlock claim.
+- **VERIFIED_WITH_LIMITATION** — 200 costumes: runtime_summary.json: fresh costume matrix PASS. Discovery/inventory flags set in isolated RAM; no natural unlock claim.
+- **VERIFIED_WITH_LIMITATION** — 142 monsters: runtime_summary.json: fresh monster matrix PASS. Discovery/inventory flags set in isolated RAM; no natural unlock claim.
+- **VERIFIED_WITH_LIMITATION** — 22 characters: runtime_summary.json: fresh character matrix PASS. Discovery/inventory flags set in isolated RAM; no natural unlock claim.
+- **VERIFIED_WITH_LIMITATION** — 224 costume arte names: Fresh costume detail matrix: all 224 expected names located as actual pixels. Does not cover every arte in battle.
+- **VERIFIED_WITH_LIMITATION** — 231 arte descriptions: 231 fresh ordinary skill-menu captures, all equal prior verified screens; contact sheets inspected. Known-arte RAM fixtures; not natural skill learning.

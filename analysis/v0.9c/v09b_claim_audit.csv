@@ -1,0 +1,22 @@
+claim,status,evidence,limitation
+ROM/BPS/ZIP hashes,VERIFIED,v09b_reproduction.json; detached-tag packaging equals all published assets,
+139 local tests,VERIFIED,v09b_test_summary.json; test_logs/v09b-local-tests.log,Includes inherited component tests with historical fixtures; final v09b byte binding and runtime are separate checks.
+43 public contracts,VERIFIED,test_logs/v09b-public-tests.log,Synthetic/source tests; no ROM in public CI.
+Repeated build byte identity,VERIFIED,v09b_reproduction.json,
+BPS round-trip,VERIFIED,v09b_reproduction.json; candidate real-data contracts,
+BETA3 EEPROM preserved,VERIFIED,rom_plan_audit.json; 0xA601C..0xA6800,
+Large font/audio preserved,VERIFIED,rom_plan_audit.json; 0xAC3F4..0x2B2CAC,
+8037 actual body strings,VERIFIED,Frozen ledger: 8038 records minus D00549 pointer table,
+1227 compact name fields,VERIFIED,known_compact_labels plus extended_fields; pointer_audit.csv,
+8946 body pointer bindings,VERIFIED,Frozen review binding catalogue; candidate build manifest baseline,
+285 body corrections,VERIFIED,Frozen Japanese review ledger; current build gate validates 325 bindings,
+16 compact field corrections,VERIFIED,Frozen compact ledger; current build gate,
+Clothes trade pointer table restored,VERIFIED,test_reviewed_v09b.py actual Thumb consumer; A4918 -> 08373760; two valid entries,Static source/runtime separation applies; no two-console exchange.
+2077 compact pointer bindings,CONTRADICTED,ND2-V09C-20260909-003: transfer_writes increments all absolute pointer writers,2077 first-stage absolute pointer bindings; 1227 compact fields. Historical gate left unchanged.
+mGBA save/name/suspend/inspection,VERIFIED_WITH_LIMITATION,"runtime_summary.json: 14 routes and 134 screen identities; inspected current save, load and info screens","Inspection routes each set isolated RAM once. Legacy save is a known local converted sample, not arbitrary original Japanese save compatibility."
+156 items / 157 screens,VERIFIED_WITH_LIMITATION,runtime_summary.json: fresh items matrix PASS,Discovery/inventory flags set in isolated RAM; no natural unlock claim.
+200 costumes,VERIFIED_WITH_LIMITATION,runtime_summary.json: fresh costume matrix PASS,Discovery/inventory flags set in isolated RAM; no natural unlock claim.
+142 monsters,VERIFIED_WITH_LIMITATION,runtime_summary.json: fresh monster matrix PASS,Discovery/inventory flags set in isolated RAM; no natural unlock claim.
+22 characters,VERIFIED_WITH_LIMITATION,runtime_summary.json: fresh character matrix PASS,Discovery/inventory flags set in isolated RAM; no natural unlock claim.
+224 costume arte names,VERIFIED_WITH_LIMITATION,Fresh costume detail matrix: all 224 expected names located as actual pixels,Does not cover every arte in battle.
+231 arte descriptions,VERIFIED_WITH_LIMITATION,"231 fresh ordinary skill-menu captures, all equal prior verified screens; contact sheets inspected",Known-arte RAM fixtures; not natural skill learning.
