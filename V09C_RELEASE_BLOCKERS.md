@@ -1,10 +1,5 @@
-# v0.9c release blockers
+# v0.9c release status
 
-Executed PC audit passes; known host bugs 001/002/003 are fixed. No known unowned game changes remain. This task permits local PC candidate and draft PR only.
+On 2026-09-09 the user explicitly requested the v0.9c prerelease, superseding the earlier candidate-only publication restriction. The prerelease authorization and current tool hashes are recorded in verification/v0.9c-prerelease.json. Packaging A/B and independent application pass; publication is being completed.
 
-- AWAITING_USER_HARDWARE_RETEST: complete docs/v0.9c/HARDWARE_RETEST.md for the exact candidate and record device/save workflow.
-- RELEASE_NOT_AUTHORIZED: no merge, tag, public release, issue #4 closure or v1.0 claim.
-- Preserve current RIGHTS.md; resolve current permission wording before a future publication decision.
-- Full natural playthrough/all branches/two-device exchange are outside the measured PC evidence; never turn their absence into a PASS.
-
-These are release/coverage boundaries, not a reason to leave the authorized PC candidate unfinished.
+PC_VALIDATION_PASS / USER_AUTHORIZED_PRERELEASE / AWAITING_USER_HARDWARE_RETEST. Hardware, full natural story coverage and two-device exchange are not certified. Issue #4 stays open. RIGHTS.md remains unchanged. Historical candidate audit documents retain their then-current authorization state; they do not override the later direct user request.

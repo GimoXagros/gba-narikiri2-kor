@@ -1,0 +1,20 @@
+{
+  "version": "v0.9c",
+  "release_type": "prerelease",
+  "release_authorized": true,
+  "authorization_date": "2026-09-09",
+  "authorization_source": "Direct user request: v0.9c로 프리릴리즈바랍니다",
+  "supersedes": "Candidate-only publication restriction; hardware and coverage limitations remain",
+  "pc_validation_status": "PC_VALIDATION_PASS",
+  "hardware_validation_status": "AWAITING_USER_HARDWARE_RETEST",
+  "target_sha256": "d761088a8549cb5bc60a2f03a4b78eea5282dbc17ed5da4ef1de27da4ad8d4d4",
+  "patch_sha256": "51dbdb8ef24a32ca5efb05ec3196b98ae08a32f3a4d6bb88673d58266837dcf6",
+  "rom_changed_bytes": 0,
+  "candidate_evidence_commit": "e2303fbd9e64d9e9b4f40f9cc98397efa1b3c91a",
+  "source_sha256": {
+    "apply_ffr_v09c.py": "8dac3783f4229d3b9b9e8637a969339488fdcd62321f9cd3997b835244bf1be7",
+    "tools/v09c_io.py": "a6f885d8419047fc5c0a8d4746578a6785a348fd380b3e41ec0f4c060422d786",
+    "tools/build_ffr_v09c.py": "0363934700b89b298a5898f73ae11a697a52b510eecc118151dc60c5468e9f52",
+    "tools/package_ffr_v09c_release.py": "cd3d1891c8764de951267c8c56900cb2ebb5bc90dc3aa9faafb830b881526ddb"
+  }
+}

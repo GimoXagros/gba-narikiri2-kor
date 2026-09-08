@@ -44,7 +44,7 @@ def main():
     target = checked(args.source.read_bytes(), args.patch.read_bytes())
     atomic_write_new(args.output, target)
     print('Verified local PC candidate: '+str(args.output.resolve()))
-    print('Game bytes unchanged from v0.9b. Hardware retest and release authorization pending.')
+    print('Game bytes unchanged from v0.9b. Hardware retest pending; see included release notes.')
     print('SHA-256: '+TARGET)
 
 

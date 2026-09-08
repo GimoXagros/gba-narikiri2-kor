@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "local_tests": 150,
+  "public_tests": 49,
+  "package_A_B_identical": true,
+  "standalone_unicode_roundtrip": true,
+  "rom_included": false,
+  "negative_authorization_checks": [
+    {
+      "case": "authorization denied",
+      "result": "REJECTED"
+    },
+    {
+      "case": "wrong target",
+      "result": "REJECTED"
+    },
+    {
+      "case": "hardware status changed",
+      "result": "REJECTED"
+    },
+    {
+      "case": "changed source",
+      "result": "REJECTED"
+    }
+  ],
+  "artifacts": {
+    "manifest.json": {
+      "size": 3832,
+      "sha256": "3e552b95fd2a436cfbaf33ba0f2be553bfd2b4c0db964d6d2445e59163f9e926"
+    },
+    "NARIKIRI2_AN9J_K_DALMOORI_v0.9c_BETA3_PACKAGE.zip": {
+      "size": 190363,
+      "sha256": "f92c048ed2e4d35ad83599d9c592db26f15a56053e8c4e109b31d8cec369484c"
+    },
+    "NARIKIRI2_AN9J_K_DALMOORI_v0.9c_FROM_BETA3.bps": {
+      "size": 3189401,
+      "sha256": "51dbdb8ef24a32ca5efb05ec3196b98ae08a32f3a4d6bb88673d58266837dcf6"
+    },
+    "SHA256SUMS.txt": {
+      "size": 309,
+      "sha256": "f39d95642425dabfe0d44f8eeb23c5c118fbe3469b396c564fa6254ca70d03db"
+    }
+  }
+}

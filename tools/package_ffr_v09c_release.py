@@ -1,4 +1,4 @@
-"""Prepare a LOCAL v0.9c PC candidate ZIP; this never authorizes a release."""
+"""Package v0.9c; prerelease mode requires a separate recorded user authorization."""
 import argparse
 import hashlib
 import json
@@ -63,6 +63,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--build-dir', type=Path, required=True)
     parser.add_argument('--output-dir', type=Path, required=True)
+    parser.add_argument('--prerelease', action='store_true')
     args = parser.parse_args()
     if exists_or_link(args.output_dir):
         raise FileExistsError('Choose a new candidate package directory')
@@ -79,7 +80,27 @@ def main():
             gate['included_bug_ids'] != manifest['included_bug_ids']):
         raise ValueError('Artifact-bound PC candidate gate not satisfied')
     files = {patch_name: patch}
-    for name, relative in TEXT.items():
+    entries = dict(TEXT)
+    if args.prerelease:
+        authorization = json.loads((ROOT/'verification/v0.9c-prerelease.json').read_text(encoding='utf-8'))
+        if (authorization['release_authorized'] is not True or
+                authorization['release_type'] != 'prerelease' or
+                authorization['version'] != 'v0.9c' or
+                authorization['target_sha256'] != TARGET or
+                authorization['patch_sha256'] != sha(patch) or
+                authorization['hardware_validation_status'] != 'AWAITING_USER_HARDWARE_RETEST'):
+            raise ValueError('Explicit artifact-bound prerelease authorization required')
+        for relative, expected in authorization['source_sha256'].items():
+            if sha((ROOT/relative).read_bytes()) != expected:
+                raise ValueError('Prerelease source binding mismatch: '+relative)
+        manifest.update(release_type='prerelease', release_authorized=True,
+                        publication_status='USER_AUTHORIZED_PRERELEASE',
+                        hardware_validation_status='AWAITING_USER_HARDWARE_RETEST')
+        entries.update({'README.md': 'docs/v0.9c/PRERELEASE.md',
+                        'V09C_PC_TEST_NOTES.md': 'docs/v0.9c/PRERELEASE_TEST_NOTES.md',
+                        'HARDWARE_RETEST.md': 'docs/v0.9c/PRERELEASE_HARDWARE_RETEST.md',
+                        'verification/v0.9c-prerelease.json': 'verification/v0.9c-prerelease.json'})
+    for name, relative in entries.items():
         path = ROOT/relative
         if path.is_symlink():
             raise ValueError('Candidate package input must not be a link')
@@ -104,12 +125,12 @@ def main():
         if set(archive.namelist()) != set(files) or any(archive.read(n) != data for n, data in files.items()):
             raise ValueError('Candidate ZIP read-back mismatch')
     args.output_dir.mkdir(parents=True, exist_ok=False)
-    archive_name = NAME+'_PC_CANDIDATE.zip'
+    archive_name = NAME+('_BETA3_PACKAGE.zip' if args.prerelease else '_PC_CANDIDATE.zip')
     for name, data in ((archive_name, raw_zip), (patch_name, patch), ('manifest.json', files['manifest.json'])):
         atomic_write_new(args.output_dir/name, data)
     sums = ''.join(f'{sha((args.output_dir/n).read_bytes())}  {n}\n' for n in sorted((archive_name, patch_name, 'manifest.json')))
     atomic_write_new(args.output_dir/'SHA256SUMS.txt', sums.encode('ascii'))
-    print(json.dumps(dict(status='LOCAL_PC_CANDIDATE', release_authorized=False,
+    print(json.dumps(dict(status='USER_AUTHORIZED_PRERELEASE' if args.prerelease else 'LOCAL_PC_CANDIDATE', release_authorized=args.prerelease,
                           zip_sha256=sha(raw_zip), zip_size=len(raw_zip), rom_included=False), indent=2))
 
 
