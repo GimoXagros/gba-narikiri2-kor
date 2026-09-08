@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "tag_object": "6d8e408f57ce219e528891d5f203f9823727a046",
+  "peeled_commit": "f0dd89d21a441818751f9c705560b23e1d8ca22f",
+  "main_unchanged": "09eccf0a079cbe6106a8c1f5427b8a2cffa6681a",
+  "v09c_tag_absent": true,
+  "issue4_open": true,
+  "assets": [
+    {
+      "name": "manifest.json",
+      "size": 6098,
+      "digest": "sha256:9f4714487f9316c12ce0e3e7c66a339d361f74f23155cd58e07bee02d908d473",
+      "updated_at": "2026-09-06T18:12:47Z"
+    },
+    {
+      "name": "NARIKIRI2_AN9J_K_DALMOORI_v0.9b_BETA3_PACKAGE.zip",
+      "size": 228437,
+      "digest": "sha256:800a49eb411f9d251ca37eaacd50a61733c2ce3d7939db9ed3719b18ff432529",
+      "updated_at": "2026-09-06T18:12:47Z"
+    },
+    {
+      "name": "NARIKIRI2_AN9J_K_DALMOORI_v0.9b_FROM_BETA3.bps",
+      "size": 3189401,
+      "digest": "sha256:51dbdb8ef24a32ca5efb05ec3196b98ae08a32f3a4d6bb88673d58266837dcf6",
+      "updated_at": "2026-09-06T18:12:48Z"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 312,
+      "digest": "sha256:aa28e9defec4a02b69697289ecd80811186b816ccd5840b72a43be6fac684cda",
+      "updated_at": "2026-09-06T18:12:47Z"
+    }
+  ]
+}

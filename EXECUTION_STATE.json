@@ -4,8 +4,8 @@
   "audit_target": "v0.9b",
   "fix_destination": "v0.9c",
   "scope": "PC_VALIDATION",
-  "current_step": "LOCAL_PACKAGE_AND_DRAFT_PR",
-  "last_completed_step": "CANDIDATE_A_B_150_TESTS_AND_RUNTIME",
+  "current_step": "PC_CANDIDATE_COMPLETE_DRAFT_PR",
+  "last_completed_step": "PACKAGE_STANDALONE_APPLICATION_DRAFT_PR_CI_AND_IMMUTABILITY",
   "baseline_v09b_sha256": "d761088a8549cb5bc60a2f03a4b78eea5282dbc17ed5da4ef1de27da4ad8d4d4",
   "japanese_reference_sha256_before": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
   "japanese_reference_sha256_after": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
@@ -30,5 +30,9 @@
   "pc_validation_status": "PC_VALIDATION_PASS",
   "hardware_validation_status": "AWAITING_USER_HARDWARE_RETEST",
   "release_status": "RELEASE_NOT_AUTHORIZED",
-  "updated_at": "2026-09-08T17:51:04.775269+00:00"
+  "updated_at": "2026-09-08T17:56:45.784030+00:00",
+  "draft_pr": "https://github.com/GimoXagros/narikiri2-save-compat/pull/8",
+  "implementation_head": "33c79f6817c1750c5385f343bab542a89e1e58fb",
+  "local_candidate_folder": "v0.9c_PC_검증후보_20260909",
+  "remaining_work": "User hardware retest and explicit future release decision; authorized PC task complete"
 }

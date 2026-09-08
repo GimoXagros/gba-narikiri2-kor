@@ -17,3 +17,9 @@ Ran frozen build_ffr_v09b.py twice with separate new outputs; exact ROM/BPS iden
 Ran tools/build_ffr_v09c.py twice into private_validation/v09c-build-A and -B. Both target/patch byte-identical to reproduced v09b. Ran final unittest discovery: 150 collected/executed/passed; 0 fail/skip/error. Public v09c subset 49/49. New source changes are host tooling only.
 
 Ran replay_pc_route.py against both frozen and candidate files: each 14 routes/134 identical screens. Ran audit_item_pages.py, audit_book_pages.py (three books and details), audit_arte_descriptions.py with explicit private core/save/route inputs. Recorded fixture limits, visually inspected native save/inspection/suspend screens and all ten arte-description contact sheets. Rechecked all seven reference snapshots and 108 frozen source/doc/gate files: unchanged. Wrote all claim/origin/bug/runtime reports and artifact-bound PC gate. Next: package A/B, standalone Unicode application, public content audit, draft PR and CI.
+
+## Package and draft PR completion
+
+Ran package_ffr_v09c_release.py with new A/B directories: identical 191,782-byte candidate ZIP, hash 206d97f7b8292c60adaef8bc925d04c4faffd08869f164166c5494be236e25e0. Extracted to a fresh Unicode directory and ran its standalone applicator; exact ROM round-trip. Wrong JP/BETA2/already-patched ROM, existing output/source and source hardlink all rejected without mutation. Candidate package has no ROM/save. Copied the separately verified private ROM and package into the user's new candidate folder, with local checksums.
+
+Committed by bug ID (184f5cd, 4e6b4fb, 33c79f6), pushed only fix/v0.9c-pc-validation and ran gh pr create --draft: PR #8. Windows/Ubuntu candidate public contracts and existing public contracts succeeded. Read-only GitHub checks confirm original main/tag/assets and open #4; no v0.9c tag. Final reference/frozen file/evidence SHA checks pass. No merge/release/shutdown.
