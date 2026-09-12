@@ -19,6 +19,7 @@ def main():
     p.add_argument('--run-dir',type=Path,required=True)
     p.add_argument('--core',type=Path,required=True)
     p.add_argument('--save',type=Path,required=True)
+    p.add_argument('--require-unlocked-save',action='store_true',help='Require existing items; do not modify RAM')
     args=p.parse_args()
     manifest=json.loads((args.build_dir/'BUILD_MANIFEST.json').read_text(encoding='utf-8'))
     rom_path=args.build_dir/'NARIKIRI2_BANKED_ENGINE_DIAGNOSTIC.gba'
@@ -45,9 +46,12 @@ def main():
         if base&3 or not 0x02000000<=base<base+0xA7B<=0x02040000:raise ValueError('Game-data root mismatch')
         before=host.read_memory(base+0xa2c,79)
         after=bytearray(b'\x11'*79);after[0]&=0xf0;after[78]&=0x0f
-        host.execute(dict(op='write_ram',address=hex(base+0xa2c),expected_hex=before.hex(),
-            final_hex=after.hex(),test_fixture_only=True,
-            reason='Grant one of each real item, IDs 1..156, to an isolated renderer coverage fixture; not save or natural-play evidence'))
+        if args.require_unlocked_save:
+            if before!=after:raise ValueError('Save must contain one of each real item')
+        else:
+            host.execute(dict(op='write_ram',address=hex(base+0xa2c),expected_hex=before.hex(),
+                final_hex=after.hex(),test_fixture_only=True,
+                reason='Grant one of each real item, IDs 1..156, to an isolated renderer coverage fixture; not save or natural-play evidence'))
         press('select',90);press('down',20);press('a',90);press('down',40)
         shot('01_all_items')
         press('a',40)
@@ -77,7 +81,8 @@ def main():
             if True:shot(f'items_step_{step:03d}')
         press('b');press('b');shot('02_returned_to_menu')
         result=dict(status='PASS',rom_sha256=manifest['target_rom_sha256'],core_sha256=host.dll_hash,
-            core_version=host.core_version,fixture_modified=True,natural_play_verified=False,
+            core_version=host.core_version,fixture_modified=not args.require_unlocked_save,natural_play_verified=False,
+            persistent_save_items_required=args.require_unlocked_save,
             save_compatibility_verified=False,item_ids_covered=156,screen_samples=len(observations),
             max_live_private_tiles=max(r['live_private_tiles'] for r in observations),
             base_font_including_transparency='8192 bytes exact on every screen',

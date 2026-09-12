@@ -10,7 +10,7 @@ import re
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-LOGO = '34044684d6dd3fd8dea0418964be3992787679237293f8180090bb32763288a3'
+LOGO = 'a6d33ce289482f8c5adbb3afc1672a34c1a4a3cfbb30a437c8d864ad7cd1cf0f'
 
 
 def inspect_content(name, data):
