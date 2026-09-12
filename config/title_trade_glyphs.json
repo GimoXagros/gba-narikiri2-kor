@@ -1,0 +1,17 @@
+{
+  "source": "Dalmoori Font 0.200 native bitmap generator",
+  "source_commit": "897f0e71224d9964a84b888f2596b2bfd7f98def",
+  "license": "Apache-2.0; third_party/dalmoori-font/LICENSE",
+  "glyphs": {
+    "교": {
+      "rows": [".#####..", ".....#..", ".....#..", ".....#..", "..#.#...", "..#.#...", "#######.", "........"],
+      "upstream_generated_path": "generator/build/ascii-font/AD/AD50.txt",
+      "source_file_sha256": "d1e127696a2f4dd8617d1cf9e6c6584d4c57135e90d6dade1cf35a4a4db2649d"
+    },
+    "환": {
+      "rows": [".###..#.", "#####.#.", ".#.#..##", "..#...#.", "#####.#.", ".#......", ".#......", ".######."],
+      "upstream_generated_path": "generator/build/ascii-font/D6/D658.txt",
+      "source_file_sha256": "4079c0020c0aa85cfea605b96b0a1818430f0daf358f7b8391dd30f72d5ebd8b"
+    }
+  }
+}

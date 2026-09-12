@@ -1,5 +1,11 @@
 # Work log
 
+## v0.9d title correction and requested prerelease
+
+The user reported that title-menu 교환 used a different font and explicitly requested v0.9d prerelease publication. They added 중단부터 to the comparison/verification scope. Isolated resource 12 at 0x37E584 and its three 16x16 OAM pieces (middle/right/left storage order). Replaced only its 124-byte compressed prefix with native Dalmoori pixels, preserving all pointers and other assets. Existing continue/new/suspend resources match the same pinned native glyph geometry, ink and edge exactly.
+
+Three save scenarios, eight menu selections, trade entry/return and actual suspend resumption passed. Rechecked Namco/formation and all-item/book matrices on final hash 69c5a3e22e00bcacfbaaa7eb28f2efc7d06c8ef37a646ac7236bc78bf76d4012. Prepared an independent font checkout and pinned dependencies; rebuilt the full inherited translation from exact immutable BETA2/BETA3/Japanese twice, then applied the declared final graphics writers. Output and package A/B identities match. Standalone application and negative inputs pass; 59 public contracts pass. Full evidence/limits and product commands are in docs/V09D_PRERELEASE.md. ROM/save and raw runtime evidence stay private. Publication is authorized as a prerelease; keep hardware issue #4 and older releases intact.
+
 ## 2026-09-13 graphics test and original-Japanese input
 
 Created `fix/v09d-graphics-test` from v0.9c. Reproduced the inherited BETA3 formation-selector defect and traced its invalid RL type byte. Restored only that byte and the original Namco sub-logo resource. The resulting ROM differs from v0.9c in 1,020 bytes, all within the two owned regions. Compared actual boot pixels and formation VRAM/OAM/palette against Japanese reference. Corrected an initial comparison fixture that used unsupported compact names in unmodified ROMs; that failed route is excluded from final evidence.

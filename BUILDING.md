@@ -1,6 +1,6 @@
 # Build and tests
 
-Current original-Japanese-input graphics test: see [v0.9d generation and verification](docs/V09D_GRAPHICS_TEST.md). End users apply the new test package directly to the exact Japanese ROM; no separate FFR input is required. The historical build below remains unchanged for reproduction of v0.9b/v0.9c.
+Current original-Japanese-input prerelease: see [v0.9d generation and verification](docs/V09D_PRERELEASE.md). End users apply the new test package directly to the exact Japanese ROM; no separate FFR input is required. The historical build below remains unchanged for reproduction of v0.9b/v0.9c.
 
 ## Historical v0.9b build
 
