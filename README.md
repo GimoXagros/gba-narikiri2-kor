@@ -1,27 +1,28 @@
 # Xagros의 한글화 패치 — 나리키리 던전 2
 
-**v0.9d 그래픽 수정 테스트판**은 일본어 원본 ROM에 직접 적용합니다. FFR 패치를 별도로 적용할 필요가 없습니다. 기존 한국어 번역에 기여한 **FFR 팀**과 달무리 글꼴 기여자는 [도움주신 분](CREDITS.md)에 기록했습니다.
+**v0.9d 공개 검증판**은 일본어 원본 ROM에 직접 적용합니다. FFR 패치를 별도로 적용할 필요가 없습니다. 기존 한국어 번역에 기여한 **FFR 팀**과 달무리 글꼴 기여자는 [도움주신 분](CREDITS.md)에 기록했습니다.
 
 ![프로젝트 식별 이미지](logo.png)
 
 ## 적용
 
-테스트 패키지의 압축을 풀고 Python 3.10 이상으로 실행합니다. 추가 패키지는 필요하지 않습니다.
+[v0.9d 프리릴리즈](https://github.com/GimoXagros/gba-narikiri2-kor/releases/tag/v0.9d)의 `Xagros_Narikiri2_KOR_v0.9d_JP_PACKAGE.zip`을 풀고 Python 3.10 이상으로 실행합니다. 추가 패키지는 필요하지 않습니다.
 
 ```powershell
-python apply_japanese_patch.py "일본어 원본.gba" --output "Xagros_Narikiri2_KOR_v0.9d_test.gba"
+python apply_japanese_patch.py "일본어 원본.gba" --output "Xagros_Narikiri2_KOR_v0.9d.gba"
 ```
 
 | 구분 | 바이트 | SHA-256 |
 | --- | ---: | --- |
 | AN9J 일본어 원본 | 8,388,608 | `a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7` |
-| v0.9d 테스트 결과 | 13,107,200 | `e9dbed3a744100b02ec1e0a67c153dda850d5c95fcfe32803008397ae6c9a04a` |
-| 일본어 원본용 BPS | 4,881,483 | `e483eb112ba2b0480aa6fd0e7eeb69b14165473bf0741c672b9a06145c8f7c68` |
+| v0.9d 결과 | 13,107,200 | `69c5a3e22e00bcacfbaaa7eb28f2efc7d06c8ef37a646ac7236bc78bf76d4012` |
+| 일본어 원본용 BPS | 4,881,466 | `efcbbcc5b0973ecf27ed73e4223211a9875cac0d4ba6192e26e1ea535ac6bcb5` |
 
-수정하지 않은 일본어 원본에 한 번만 적용합니다. BETA2/BETA3나 이미 패치한 ROM은 입력으로 받지 않으며 기존 파일을 덮어쓰지 않습니다. [자세한 사용법](docs/JP_TEST_PACKAGE.md) · [생성 및 검증 기록](docs/V09D_GRAPHICS_TEST.md)
+수정하지 않은 일본어 원본에 한 번만 적용합니다. BETA2/BETA3나 이미 패치한 ROM은 입력으로 받지 않으며 기존 파일을 덮어쓰지 않습니다. [자세한 사용법](docs/V09D_PACKAGE.md) · [생성 및 검증 기록](docs/V09D_PRERELEASE.md)
 
-## 이번 테스트판의 변경
+## 이번 버전의 변경
 
+- 타이틀의 **교환**을 **처음부터·이어하기·중단부터**와 같은 글꼴·외곽선으로 통일했습니다. 중단 저장의 실제 불러오기까지 확인했습니다.
 - 시작 화면을 원본의 **Namco / Produced by NAMCO**로 복구했습니다.
 - 대열에서 위치를 변경할 때 선택 테두리가 깨지던 압축 형식 바이트를 복구했습니다.
 - 저장소 표지를 사용자가 새로 제공한 이미지로 교체했습니다.
@@ -35,7 +36,7 @@ BETA3에서 이어받은 EEPROM 저장 코드는 그대로 유지합니다. **v0
 
 기존 8 KiB 게임 저장을 사용할 때는 원본을 백업하고 ROM과 SAV의 파일명을 확장자를 제외하고 같게 맞추십시오. 이전 ROM의 강제저장(savestate)은 재사용하지 마십시오.
 
-mGBA PC에서 확인한 테스트판입니다. [실기·장시간 전체 진행 검증 과제](https://github.com/GimoXagros/gba-narikiri2-kor/issues/4)는 남아 있습니다. 과거 [v0.9c 프리릴리즈](https://github.com/GimoXagros/gba-narikiri2-kor/releases/tag/v0.9c)와 기존 릴리즈 자산은 이력으로 보존합니다.
+mGBA PC에서 확인한 프리릴리즈입니다. [실기·장시간 전체 진행 검증 과제](https://github.com/GimoXagros/gba-narikiri2-kor/issues/4)는 남아 있습니다. 과거 [v0.9c 프리릴리즈](https://github.com/GimoXagros/gba-narikiri2-kor/releases/tag/v0.9c)와 기존 릴리즈 자산은 이력으로 보존합니다.
 
 ## 출처와 공개 범위
 

@@ -1,9 +1,7 @@
-# Resume — original-Japanese-input graphics test
+# Resume — v0.9d prerelease
 
-Current worktree branch: fix/v09d-graphics-test. Canonical repository: https://github.com/GimoXagros/gba-narikiri2-kor (same ID 1356107995, renamed at user request).
+Current branch: fix/v09d-title-prerelease. Repository: https://github.com/GimoXagros/gba-narikiri2-kor.
 
-User-requested graphics repair, replacement logo, all-item/book battery save and original-Japanese-input patch have been generated and locally verified. Details, exact hashes, cause and limitations are in docs/V09D_GRAPHICS_TEST.md. The new target is e9dbed3a744100b02ec1e0a67c153dda850d5c95fcfe32803008397ae6c9a04a. FFR remains credited for the existing translation in CREDITS.md.
+The user authorized v0.9d prerelease publication after correcting the title-menu 교환 font and adding 중단부터 comparison/resumption validation. Final result: 69c5a3e22e00bcacfbaaa7eb28f2efc7d06c8ef37a646ac7236bc78bf76d4012. Source, BPS, package identity and test evidence are in docs/V09D_PRERELEASE.md and verification/v0.9d.json. Use build_v09d.py with immutable BETA2/BETA3/Japanese inputs, then package_v09d.py. The old local graphics test is historical.
 
-This is a v0.9d graphics test package, not a v1.0 promotion. Existing v0.9c release assets remain unchanged. No ROM/save/BIOS or runtime image upload; user ROM and test save are local only. Keep issue #4 open for hardware/full-play. Do not shut down the PC as part of this test-file request.
-
-Use the GitHub PR state and current branch status to determine whether integration remains; do not repeat the historical v0.9c publication steps. Preserve historical reports and source hashes.
+Check PR/tag/release state before any continuation. Finish the PR, exact-head CI, annotated v0.9d tag, GitHub prerelease upload, download/read-back and standalone application if not already completed. Upload only the declared BPS/ZIP/manifest/checksums; no ROM/save/BIOS or screenshots. Keep issue #4 open for hardware/full playthrough, preserve old releases, and do not shut down the PC as part of this request.

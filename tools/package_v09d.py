@@ -1,4 +1,4 @@
-"""Create a reproducible original-Japanese-input test package; no ROM or save included."""
+"""Create the reproducible v0.9d original-Japanese-input package; no ROM or save."""
 import argparse
 from io import BytesIO
 import json
@@ -11,26 +11,30 @@ from bps import create_bps, apply_bps
 from v09c_io import atomic_write_new
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGE_NAME = 'Xagros_Narikiri2_KOR_v0.9d_test_JP_PACKAGE.zip'
+PACKAGE_NAME = 'Xagros_Narikiri2_KOR_v0.9d_JP_PACKAGE.zip'
 
 
 def package(japanese, target):
+    gate=json.loads((ROOT/'verification/v0.9d.json').read_text(encoding='utf-8'))
+    if not gate.get('release_ready') or (gate.get('source_sha256'),gate.get('target_sha256'),gate.get('patch_sha256')) != (SOURCE_SHA256,TARGET_SHA256,PATCH_SHA256):
+        raise ValueError('Artifact-bound v0.9d prerelease verification gate not satisfied')
     if len(japanese) != SOURCE_SIZE or sha(japanese) != SOURCE_SHA256:
         raise ValueError('Japanese source mismatch')
     if len(target) != TARGET_SIZE or sha(target) != TARGET_SHA256:
-        raise ValueError('Verified graphics test target mismatch')
+        raise ValueError('Verified v0.9d target mismatch')
     delta = create_bps(japanese, target, METADATA)
     if sha(delta) != PATCH_SHA256 or apply_bps(japanese, delta) != target:
         raise ValueError('BPS identity or roundtrip mismatch')
     entries = {PATCH_NAME: delta}
     for file in ('apply_japanese_patch.py', 'bps.py', 'v09c_io.py'):
         entries[file] = (ROOT/'tools'/file).read_bytes()
-    for name, source in [('README.txt', 'docs/JP_TEST_PACKAGE.md'), ('CREDITS.md', 'CREDITS.md'),
+    for name, source in [('README.txt', 'docs/V09D_PACKAGE.md'), ('CREDITS.md', 'CREDITS.md'),
                          ('RIGHTS.md', 'RIGHTS.md'), ('LICENSE', 'LICENSE'),
                          ('THIRD_PARTY_NOTICES.md', 'THIRD_PARTY_NOTICES.md'),
+                         ('VERIFICATION.json', 'verification/v0.9d.json'),
                          ('DALMOORI_LICENSE', 'third_party/dalmoori-font/LICENSE')]:
         entries[name] = (ROOT/source).read_bytes()
-    manifest = dict(version='v0.9d-graphics-test',source_sha256=sha(japanese),target_sha256=sha(target),
+    manifest = dict(version='v0.9d',prerelease=True,source_sha256=sha(japanese),target_sha256=sha(target),
                     files={n:dict(size=len(b),sha256=sha(b)) for n,b in sorted(entries.items())})
     entries['MANIFEST.json'] = (json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').encode()
     stream = BytesIO()
