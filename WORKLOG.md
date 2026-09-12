@@ -1,4 +1,14 @@
-# v0.9c PC audit work log
+# Work log
+
+## 2026-09-13 graphics test and original-Japanese input
+
+Created `fix/v09d-graphics-test` from v0.9c. Reproduced the inherited BETA3 formation-selector defect and traced its invalid RL type byte. Restored only that byte and the original Namco sub-logo resource. The resulting ROM differs from v0.9c in 1,020 bytes, all within the two owned regions. Compared actual boot pixels and formation VRAM/OAM/palette against Japanese reference. Corrected an initial comparison fixture that used unsupported compact names in unmodified ROMs; that failed route is excluded from final evidence.
+
+Created the requested local item/book test save using RAM fixtures followed by native EEPROM saving. A cold boot preserved all fields. Subsequent item and book matrix runs used the persistent save without RAM writes: 156 items, 142 monsters, 200 costumes, 22 characters. Native screenshots and private logs remain outside Git.
+
+User then requested Japanese-original-only patch application, Xagros branding, FFR contributor credit and repository rename. Created and verified the standalone Japanese-input BPS/ZIP twice, with 56 public contracts and standalone positive/negative application checks. Replaced only the user-supplied repository logo and its exact-hash audit exception. Renamed the same remote repository ID to `GimoXagros/gba-narikiri2-kor` and updated the shared Git remote. Existing tags/releases and open hardware validation remain intact. Details and artifact hashes: `docs/V09D_GRAPHICS_TEST.md`.
+
+## Historical v0.9c PC audit
 
 ## Preflight
 

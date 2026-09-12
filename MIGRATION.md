@@ -1,6 +1,8 @@
 # v0.9 canonical integration
 
-Canonical: https://github.com/GimoXagros/narikiri2-save-compat
+Canonical: https://github.com/GimoXagros/gba-narikiri2-kor
+
+2026-09-13: renamed from `narikiri2-save-compat` to `gba-narikiri2-kor` at the user's request. Repository ID `1356107995`, issues, tags and release history are retained. References below describe the historical consolidation; the new original-Japanese-input package and FFR contribution credit are recorded in `docs/V09D_GRAPHICS_TEST.md` and `CREDITS.md`.
 Development archive: https://github.com/GimoXagros/narikiri2-an9j-save-fix
 
 The canonical v0.5 main at 6c26506 is the parent of this integration. Its original restore.py, synthetic tests, verification/v0.5.json and existing tag remain; the original documentation is also preserved under docs/history/v0.5. No history is force-rewritten or deleted.

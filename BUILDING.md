@@ -1,4 +1,8 @@
-# v0.9b build and tests
+# Build and tests
+
+Current original-Japanese-input graphics test: see [v0.9d generation and verification](docs/V09D_GRAPHICS_TEST.md). End users apply the new test package directly to the exact Japanese ROM; no separate FFR input is required. The historical build below remains unchanged for reproduction of v0.9b/v0.9c.
+
+## Historical v0.9b build
 
 Applying the ZIP needs Python 3.10+ and the standard library. Reproduction additionally needs the exact BETA2, BETA3(071102) and Japanese inputs from config/source_profiles.json, Node.js, requirements-dev.txt and the pinned font source. End users need only BETA3; BETA2 and Japanese are local build/review references.
 

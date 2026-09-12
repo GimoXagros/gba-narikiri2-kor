@@ -16,6 +16,7 @@ def main():
     p.add_argument('--limit',type=int)
     p.add_argument('--start',type=int,default=0)
     p.add_argument('--detail-pages',type=int,default=0)
+    p.add_argument('--require-unlocked-save',action='store_true',help='Require existing save flags; do not modify RAM')
     a=p.parse_args()
     m=json.loads((a.build_dir/'BUILD_MANIFEST.json').read_text(encoding='utf-8'))
     path=a.build_dir/'NARIKIRI2_BANKED_ENGINE_DIAGNOSTIC.gba'; rom=path.read_bytes()
@@ -56,8 +57,11 @@ def main():
         before=h.read_memory(base,160); after=bytearray(before)
         for start,count in ((0x22A,165),(0x2CF,165),(0x374,201),(0x453,22)):
             for bit in range(start,start+count):after[bit//8]|=1<<(bit%8)
-        h.execute(dict(op='write_ram',address=hex(base),expected_hex=before.hex(),final_hex=after.hex(),
-            test_fixture_only=True,reason='Set only decoded monster discovery/inspection, costume discovery and character-book flags for renderer coverage; never exported as gameplay save'))
+        if a.require_unlocked_save:
+            if before!=after:raise ValueError('Save does not contain all required book flags')
+        else:
+            h.execute(dict(op='write_ram',address=hex(base),expected_hex=before.hex(),final_hex=after.hex(),
+                test_fixture_only=True,reason='Set only decoded monster discovery/inspection, costume discovery and character-book flags for renderer coverage; never exported as gameplay save'))
         for _ in range(('monster','costume','character').index(a.book)):press('down')
         press('a',120);shot('opened')
         observations=[];covered=set();artes=set()
@@ -92,11 +96,13 @@ def main():
                 shot(f'return_{step:03d}')
                 if not locate(expected):raise ValueError('Detail return did not restore the expected list name')
         report=dict(status='PASS_ACTUAL_BOOK_LIST_PIXELS',rom_sha256=m['target_rom_sha256'],book=a.book,
-            fixture_modified=True,natural_unlock_verified=False,records=len(covered),observations=observations,
+            fixture_modified=not a.require_unlocked_save,natural_unlock_verified=False,
+            persistent_save_flags_required=a.require_unlocked_save,records=len(covered),observations=observations,
             detail_screens_captured=len(covered) if a.details else 0,
             complete_book_coverage=len(covered)==len(order),
             actual_arte_names_verified=len(artes),arte_ids=sorted(artes),
-            limitations=['Discovery flags set in isolated RAM only','List scroll coverage; detail, battle and other consumers are separate claims'])
+            limitations=[('User-created unlocked battery save; no RAM modification in this run' if a.require_unlocked_save else 'Discovery flags set in isolated RAM only'),
+                'Natural unlock progression and hardware are separate claims'])
         (a.run_dir/'BOOK_MATRIX.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         print(json.dumps({k:v for k,v in report.items() if k!='observations'},ensure_ascii=False))
     finally:h.lib.retro_unload_game();h.lib.retro_deinit()
