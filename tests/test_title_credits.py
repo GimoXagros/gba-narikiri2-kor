@@ -58,10 +58,11 @@ class ProductContract(unittest.TestCase):
                 new=subject.unpack(raw,subject.LOGO_SPRITES)
                 self.assertEqual(new[0],old[0])
                 # The shared backdrop may lose old white text-halo pixels;
-                # actual emblem colors/interiors and the numeral stay intact.
+                # actual emblem colors/interiors stay intact outside ®/2.
                 for y in range(160):
                     for x in range(240):
-                        if old[1][y][x] not in (0,6,7) or x>=192 or y<28 or y>=92:
+                        numeral_region=(190<=x<216 and 26<=y<92) or (184<=x<193 and 75<=y<92)
+                        if not numeral_region and (old[1][y][x] not in (0,6,7) or x>=192 or y<28 or y>=92):
                             self.assertEqual(new[1][y][x],old[1][y][x])
                 # Stale hanging glow under the old lettering, observed in r2.
                 for x,y in ((40,82),(42,82),(86,82)):
@@ -73,6 +74,13 @@ class ProductContract(unittest.TestCase):
                 face={10,11,12,13,15}
                 self.assertTrue(all(new[2][y][x] not in face for y in range(49,52) for x in (175,176)))
                 self.assertTrue(any(new[2][y][175] in face for y in range(54,59)))
+                # Japanese navy anti-aliasing replaces the pale blurred edge;
+                # stray gold pixels above the numeral must not survive.
+                self.assertEqual(new[2][40][213],8)
+                self.assertTrue(all(new[2][28][x]==0 for x in range(190,216)))
+                # Circle top and the R's open counter, at native pixel scale.
+                self.assertEqual(new[2][83][188],9)
+                self.assertEqual(new[2][86][188],1)
             else:
                 original=subject.unpack(decompress(self.jp,source)[0],subject.COPYRIGHT_SPRITES)[3]
                 actual=subject.unpack(raw,subject.COPYRIGHT_SPRITES)[3]

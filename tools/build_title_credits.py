@@ -97,6 +97,39 @@ def paint(layer, points, value):
         layer[y][x] = value(x,y) if callable(value) else value
 
 
+def refine_numeral(layers, japanese_layers):
+    """Restore native 2 shading, remove stray pixels and separate the small ®."""
+    ink,backdrop=layers[2],layers[1]
+    # The Japanese numeral is isolated from its Japanese lettering and old R.
+    # Both planes have real sprite coverage through x215, y83; bank 2 continues
+    # to y91 and can hold the newly authored 9x9 registered mark below the 2.
+    for y in range(26,92):
+        for x in range(190,216):
+            backdrop[y][x]=0
+            if y>=28:ink[y][x]=0
+    for y in range(75,92):
+        for x in range(185,193):
+            ink[y][x]=0
+            backdrop[y][x]=0
+    for y in range(29,84):
+        left=192 if 51<=y<=59 else 191 if y>=75 else 190
+        for x in range(left,216):ink[y][x]=japanese_layers[2][y][x]
+    numeral={(x,y) for y in range(29,84) for x in range(190,216) if ink[y][x]}
+    # A consistent one-pixel white rim follows the original anti-aliased edge.
+    for x,y in expanded(numeral,1):
+        if 190<=x<216 and 26<=y<84:backdrop[y][x]=6
+    # Circle plus R, intentionally rasterized at native resolution; pale fill
+    # separates the mark from the neighboring gold/blue outline.
+    rows=('..#####..','.#.....#.','#..##...#','#..#.#..#',
+          '#..##...#','#..#.#..#','#..#..#.#','.#.....#.','..#####..')
+    for y,row in enumerate(rows):
+        for x,ch in enumerate(row):
+            # Fill only the disk; corners remain transparent.
+            if (y in (0,8) and 2<=x<=6) or (y in (1,7) and 1<=x<=7) or 2<=y<=6:
+                ink[83+y][184+x]=9 if ch=='#' else 1
+    return layers
+
+
 def logo_raw(japanese, korean_reference):
     original,used=decompress(japanese,0x37C09C)
     korean,consumed=decompress(korean_reference,0x37C09C)
@@ -159,6 +192,9 @@ def logo_raw(japanese, korean_reference):
             if source_backdrop[y][x]!=backdrop[y][x] and (
                 not editable(x,y) or source_backdrop[y][x] not in (0,6,7)):
                 raise ValueError('Protected emblem/numeral pixel changed')
+    layers=refine_numeral(unpack(final,LOGO_SPRITES),unpack(original,LOGO_SPRITES))
+    final=pack_into(final,LOGO_SPRITES,layers,lambda bank,x,y:
+        bank in (1,2) and ((190<=x<216 and 26<=y<92) or (184<=x<193 and 75<=y<92)))
     return final,unpack(final,LOGO_SPRITES)
 
 
@@ -233,7 +269,7 @@ def build(base,japanese):
               'copyright':'© 이노마타 무츠미  © 후지시마 코스케','appended_credits':strings,
               'original_credit_rows':191,'added_credit_rows':5,'final_scroll_rows':58,
               'assets':assets,'writes':[{'offset':hex(o),'length':len(p),'purpose':n} for o,p,n in sorted(writes)],
-              'logo_policy':'preserve ribbon and emblem detail; correct 던젼 to 던전, open word space and refit white halo',
+              'logo_policy':'preserve ribbon/emblem; correct Korean lettering/halo; restore Japanese numeral shading and redraw registered mark',
               'copyright_font':'Dalmoori native 8px; space after both copyright symbols',
               'runtime_status':'PENDING','scope':'title and ending credits local test build'}
     return bytes(out),manifest
