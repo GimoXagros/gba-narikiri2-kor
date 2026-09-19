@@ -82,6 +82,11 @@ class ProductContract(unittest.TestCase):
                 self.assertEqual(new[2][75][188],9)
                 self.assertEqual(new[2][78][187],1)
                 self.assertTrue(all(new[2][y][x]==0 for y in range(84,92) for x in range(185,193)))
+                jp_layers=subject.unpack(decompress(self.jp,source)[0],subject.LOGO_SPRITES)
+                for y in range(26,84):
+                    self.assertEqual(new[1][y][190:216],jp_layers[1][y][190:216])
+                for y in range(77,82):
+                    self.assertEqual(new[2][y][184:191],jp_layers[2][y][184:191])
             else:
                 original=subject.unpack(decompress(self.jp,source)[0],subject.COPYRIGHT_SPRITES)[3]
                 actual=subject.unpack(raw,subject.COPYRIGHT_SPRITES)[3]

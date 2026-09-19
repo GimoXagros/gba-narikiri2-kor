@@ -1,5 +1,5 @@
 {
-  "rom_sha256": "9ac6c1ad748f458cc7d2c1d9776646c6829bd55f108195e40d77a7ba7f2429b7",
+  "rom_sha256": "96b20cee3a72860ab5f078ca4d7aaf3508835e8a564d018afbb542a2ad0a1373",
   "core_sha256": "0d3177c927d791fef897f735d88db3646f7932d02054af108619c6df4e1597f1",
   "checks": {
     "resource_9_runtime_load": "PASS",
@@ -32,15 +32,15 @@
     "ending_tail": "PASS; frame 10440 save prompt screenshot requires visual review"
   },
   "ending_entry_fixture": {
-    "rom_sha256": "1c881675dac5ba650d0a6fce93622411f0e3f52388c44c3daab941b55bea021c",
+    "rom_sha256": "ff56851fc371df9f0144b9116a875ab3133739daeddc74f216aa4e34bcd8a797",
     "offset": "0x3746D8",
     "before": "5daa0008",
     "after": "d9520a08",
     "purpose": "Invoke original ending routine via boot dispatch; no RAM intervention",
     "limitation": "Does not prove natural story completion or cleared-save compatibility"
   },
-  "visual_review": "PASS: registered symbol restored between final ㄴ and numeral 2; title inspected; ending screens unchanged",
-  "reproducible_product_build": "PASS",
+  "visual_review": "PASS: native registered mark at original position beside ㄴ; Japanese numeral rim restored; title inspected; ending screens identical to previously reviewed output",
+  "reproducible_product_build": "PASS: ROM/BPS byte-identical to incremental output",
   "contract_tests": {
     "passed": 5,
     "failed": 0,
