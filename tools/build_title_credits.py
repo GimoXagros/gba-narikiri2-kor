@@ -102,7 +102,7 @@ def refine_numeral(layers, japanese_layers):
     ink,backdrop=layers[2],layers[1]
     # The Japanese numeral is isolated from its Japanese lettering and old R.
     # Both planes have real sprite coverage through x215, y83; bank 2 continues
-    # to y91 and can hold the newly authored 9x9 registered mark below the 2.
+    # to y91. The registered mark occupies its original gap beside ㄴ and 2.
     for y in range(26,92):
         for x in range(190,216):
             backdrop[y][x]=0
@@ -118,15 +118,14 @@ def refine_numeral(layers, japanese_layers):
     # A consistent one-pixel white rim follows the original anti-aliased edge.
     for x,y in expanded(numeral,1):
         if 190<=x<216 and 26<=y<84:backdrop[y][x]=6
-    # Circle plus R, intentionally rasterized at native resolution; pale fill
-    # separates the mark from the neighboring gold/blue outline.
-    rows=('..#####..','.#.....#.','#..##...#','#..#.#..#',
-          '#..##...#','#..#.#..#','#..#..#.#','.#.....#.','..#####..')
+    # A 7x9 circle/R fits the original gap. A pale column separates its right
+    # edge from the numeral without moving either title word or the numeral.
+    rows=('..###..','.#...#.','#.##..#','#.#.#.#',
+          '#.##..#','#.#.#.#','#.#.#.#','.#...#.','..###..')
     for y,row in enumerate(rows):
         for x,ch in enumerate(row):
-            # Fill only the disk; corners remain transparent.
-            if (y in (0,8) and 2<=x<=6) or (y in (1,7) and 1<=x<=7) or 2<=y<=6:
-                ink[83+y][184+x]=9 if ch=='#' else 1
+            ink[75+y][184+x]=9 if ch=='#' else 1
+        ink[75+y][191]=1
     return layers
 
 

@@ -79,8 +79,9 @@ class ProductContract(unittest.TestCase):
                 self.assertEqual(new[2][40][213],8)
                 self.assertTrue(all(new[2][28][x]==0 for x in range(190,216)))
                 # Circle top and the R's open counter, at native pixel scale.
-                self.assertEqual(new[2][83][188],9)
-                self.assertEqual(new[2][86][188],1)
+                self.assertEqual(new[2][75][188],9)
+                self.assertEqual(new[2][78][187],1)
+                self.assertTrue(all(new[2][y][x]==0 for y in range(84,92) for x in range(185,193)))
             else:
                 original=subject.unpack(decompress(self.jp,source)[0],subject.COPYRIGHT_SPRITES)[3]
                 actual=subject.unpack(raw,subject.COPYRIGHT_SPRITES)[3]
