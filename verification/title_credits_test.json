@@ -1,5 +1,5 @@
 {
-  "rom_sha256": "96b20cee3a72860ab5f078ca4d7aaf3508835e8a564d018afbb542a2ad0a1373",
+  "rom_sha256": "02704a31c1f2afba7f342982197927f74e728fd2747193f0c46ae00cbbeb0e36",
   "core_sha256": "0d3177c927d791fef897f735d88db3646f7932d02054af108619c6df4e1597f1",
   "checks": {
     "resource_9_runtime_load": "PASS",
@@ -32,15 +32,15 @@
     "ending_tail": "PASS; frame 10440 save prompt screenshot requires visual review"
   },
   "ending_entry_fixture": {
-    "rom_sha256": "ff56851fc371df9f0144b9116a875ab3133739daeddc74f216aa4e34bcd8a797",
+    "rom_sha256": "251a8ee9e48fbf057469e522fe98e66e192ae717a393739c39fe5419fe853d0b",
     "offset": "0x3746D8",
     "before": "5daa0008",
     "after": "d9520a08",
     "purpose": "Invoke original ending routine via boot dispatch; no RAM intervention",
     "limitation": "Does not prove natural story completion or cleared-save compatibility"
   },
-  "visual_review": "PASS: native registered mark at original position beside ㄴ; Japanese numeral rim restored; title inspected; ending screens identical to previously reviewed output",
-  "reproducible_product_build": "PASS: ROM/BPS byte-identical to incremental output",
+  "visual_review": "PASS: white outline plane identical to right reference H; numeral/registered mark and ribbon planes identical to left reference I; runtime title inspected",
+  "reproducible_product_build": "PASS",
   "contract_tests": {
     "passed": 5,
     "failed": 0,

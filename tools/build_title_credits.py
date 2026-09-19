@@ -114,10 +114,11 @@ def refine_numeral(layers, japanese_layers):
     for y in range(29,84):
         left=192 if 51<=y<=59 else 191 if y>=75 else 190
         for x in range(left,216):ink[y][x]=japanese_layers[2][y][x]
-    # The user supplied the Japanese detail as the adopted outline reference.
-    # Restore its original pale rim, including its small antialias transitions.
-    for y in range(26,84):
-        for x in range(190,216):backdrop[y][x]=japanese_layers[1][y][x]
+    # Adopt the thin white rim from style H, while retaining style I's native
+    # registered mark and numeral pixels. Only the separate white plane changes.
+    numeral={(x,y) for y in range(29,84) for x in range(190,216) if ink[y][x]}
+    for x,y in expanded(numeral,1):
+        if 190<=x<216 and 26<=y<84:backdrop[y][x]=6
     # Copy the native registered mark's disk, excluding the neighboring Japanese
     # letter. Retain its original position and light R on a dark-blue interior.
     bounds=((186,190),(185,191),(184,191),(184,191),(184,191),
@@ -266,7 +267,7 @@ def build(base,japanese):
               'copyright':'© 이노마타 무츠미  © 후지시마 코스케','appended_credits':strings,
               'original_credit_rows':191,'added_credit_rows':5,'final_scroll_rows':58,
               'assets':assets,'writes':[{'offset':hex(o),'length':len(p),'purpose':n} for o,p,n in sorted(writes)],
-              'logo_policy':'preserve ribbon/emblem; correct Korean lettering/halo; restore Japanese numeral shading/rim and native registered mark at original position',
+              'logo_policy':'preserve ribbon/emblem; correct Korean lettering/halo; Japanese numeral and registered mark with adopted thin white rim from style H',
               'copyright_font':'Dalmoori native 8px; space after both copyright symbols',
               'runtime_status':'PENDING','scope':'title and ending credits local test build'}
     return bytes(out),manifest
