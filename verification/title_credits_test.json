@@ -1,0 +1,49 @@
+{
+  "rom_sha256": "710860dc2a1d54fb139eb7fc292d1fdde8b0f15aa06445520df39c46e2896c98",
+  "core_sha256": "0d3177c927d791fef897f735d88db3646f7932d02054af108619c6df4e1597f1",
+  "checks": {
+    "resource_9_runtime_load": "PASS",
+    "resource_16_runtime_load": "PASS",
+    "title_cold_boot_and_start_menu": "PASS; screenshots require visual review",
+    "live_staff_line_YOICHI HARAGUCHI": {
+      "status": "PASS",
+      "vram": "0x600f40e"
+    },
+    "live_staff_line_KYUSHIRO TAKAGI": {
+      "status": "PASS",
+      "vram": "0x600f450"
+    },
+    "live_staff_line_MASAYA NAKAMURA": {
+      "status": "PASS",
+      "vram": "0x600f490"
+    },
+    "live_staff_line_KOREAN TRANSLATION": {
+      "status": "PASS",
+      "vram": "0x600f54c"
+    },
+    "live_staff_line_TEAM FFR": {
+      "status": "PASS",
+      "vram": "0x600f596"
+    },
+    "live_staff_line_XAGROS": {
+      "status": "PASS",
+      "vram": "0x600f5d8"
+    },
+    "ending_tail": "PASS; frame 10440 save prompt screenshot requires visual review"
+  },
+  "ending_entry_fixture": {
+    "rom_sha256": "694889c9443470b2a7fa5f981e00d446e31ef721e6f13db0bcabce5cd662a9a0",
+    "offset": "0x3746D8",
+    "before": "5daa0008",
+    "after": "d9520a08",
+    "purpose": "Invoke original ending routine via boot dispatch; no RAM intervention",
+    "limitation": "Does not prove natural story completion or cleared-save compatibility"
+  },
+  "visual_review": "PASS: corrected white outline fits new lettering; ribbon/emblem/numeral preserved; title, menu, credits and save prompt inspected",
+  "reproducible_product_build": "PASS: ROM and BPS match incremental build byte-for-byte",
+  "contract_tests": {
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0
+  }
+}
