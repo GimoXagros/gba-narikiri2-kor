@@ -39,14 +39,27 @@ class ProductContract(unittest.TestCase):
             if not address:break
             pointers.append(address)
             self.assertLess(len(pointers),220)
-        self.assertEqual(len(pointers),196)
+        self.assertEqual(len(pointers),199)
         self.assertEqual(struct.pack('<191I',*pointers[:191]),self.jp[0x7F9608:0x7F9904])
+        for value in pointers[:191]:
+            at=value-0x08000000
+            end=self.jp.index(0,at)+1
+            self.assertEqual(self.rom[at:end],self.jp[at:end])
         tail=[]
         for value in pointers[191:]:
             at=value-0x08000000
             tail.append(self.rom[at:self.rom.index(0,at)].decode('ascii'))
-        self.assertEqual(tail,['','','KOREAN TRANSLATION','TEAM FFR','XAGROS'])
-        self.assertEqual(self.rom[0xA5316:0xA5318],bytes.fromhex('3a21'))
+        self.assertEqual(tail,['','','-KOREAN TRANSLATION-','TEAM FFR','XAGROS','','(SPECIAL THANKS)','AND YOU'])
+        self.assertEqual(self.rom[0xA5316:0xA5318],bytes.fromhex('3d21'))
+
+    def test_original_ascii_font_is_selected_only_for_staff_pages(self):
+        native,_=decompress_lz77_stream(self.jp,0xCA3F4,0x10000)
+        actual,_=decompress_lz77_stream(self.rom,0xC86000,0x10000)
+        self.assertEqual(actual,native)
+        self.assertEqual(len(actual),8192)
+        self.assertEqual(self.rom[0xA59CC:0xA59D4],bytes.fromhex('004b1847016fc808'))
+        for offset in (0x2158,0x21D4):
+            self.assertEqual(self.rom[offset:offset+4],self.base[offset:offset+4])
 
     def test_ribbon_emblem_and_year_line_are_protected(self):
         for index,source in ((9,0x37C09C),(16,0x37EBE8)):
@@ -56,14 +69,16 @@ class ProductContract(unittest.TestCase):
                 reference=decompress(self.base,source)[0]
                 old=subject.unpack(reference,subject.LOGO_SPRITES)
                 new=subject.unpack(raw,subject.LOGO_SPRITES)
+                for x,y in ((115,16),(116,16),(117,16),(116,17),(117,17)):old[0][y][x]=0
                 self.assertEqual(new[0],old[0])
+                native=subject.unpack(decompress(self.jp,source)[0],subject.LOGO_SPRITES)[1]
                 # The shared backdrop may lose old white text-halo pixels;
                 # actual emblem colors/interiors stay intact outside ®/2.
                 for y in range(160):
                     for x in range(240):
                         numeral_region=(190<=x<216 and 26<=y<92) or (184<=x<193 and 75<=y<92)
                         if not numeral_region and (old[1][y][x] not in (0,6,7) or x>=192 or y<28 or y>=92):
-                            self.assertEqual(new[1][y][x],old[1][y][x])
+                            self.assertEqual(new[1][y][x],native[y][x] if native[y][x]!=old[1][y][x] else old[1][y][x])
                 # Stale hanging glow under the old lettering, observed in r2.
                 for x,y in ((40,82),(42,82),(86,82)):
                     self.assertEqual(old[1][y][x],6)

@@ -53,8 +53,12 @@ def run(rom_path, core, out):
         ending.execute({'op':'frames','count':600})
         ending.execute({'op':'screenshot','name':'namco_and_korean_credits.png'})
         vram=ending.read_memory(0x06000000,0x18000)
+        native,_=decompress_lz77_stream(rom,0xC86000,0x10000)
+        if vram[0xC000:0xE000]!=native:
+            raise ValueError('Staff ASCII font does not match original in live VRAM')
+        report['checks']['native_ascii_staff_font_in_vram']='PASS; all 8192 bytes'
         for text in ('YOICHI HARAGUCHI','KYUSHIRO TAKAGI','MASAYA NAKAMURA',
-                     'KOREAN TRANSLATION','TEAM FFR','XAGROS'):
+                     '-KOREAN TRANSLATION-','TEAM FFR','XAGROS','(SPECIAL THANKS)','AND YOU'):
             # The observed staff renderer emits ASCII - 0x10, palette bank 12.
             tiles=b''.join(struct.pack('<H',(ord(ch)-0x10)|0xC000) for ch in text)
             at=vram.find(tiles)

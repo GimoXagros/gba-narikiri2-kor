@@ -1,0 +1,122 @@
+[
+  {
+    "kind": "item",
+    "id": 63,
+    "storage": 2830760,
+    "after": "살아 있는 자를 죽이는 마검",
+    "source_sha256": "fe487b8386d48bca0cf67e5b9a38db137b8f14af488e1cac6758c4764bddddb8",
+    "before_sha256": "d3702ed5a78d77f8398aa7ce1c8d38c38e94c1bc31f0d105c1a7ecd5431b0066"
+  },
+  {
+    "kind": "monster",
+    "id": 60,
+    "storage": 3832080,
+    "after": "지옥을 지키는 개\n＜화＞속성에 강하다",
+    "source_sha256": "8f6faf6de98f65f2700f35636354f9f5446ad51f9560f060fd17528b50474bd3",
+    "before_sha256": "680cfbd8067a6b19d9827a38039712377d786094b94fbbc790d1389a37c44bbd"
+  },
+  {
+    "kind": "monster",
+    "id": 78,
+    "storage": 3832152,
+    "after": "＜풍＞속성의 궁수",
+    "source_sha256": "ef01299d381e703aa4944ed44db4eedb519edf148e12154f7c07df0209d92ad1",
+    "before_sha256": "8f17233b1eee6afb175989098578b18b9e2a3e228b27710ca9a361c678de45a7"
+  },
+  {
+    "kind": "monster",
+    "id": 79,
+    "storage": 3832156,
+    "after": "＜수＞속성의 궁수",
+    "source_sha256": "66f7f52118bcd3deded7d54ed39d0d7107c816d52ce072371ce659fef0fe7024",
+    "before_sha256": "6fefa61fef095dc429c95790de90152cf233de8967fca806b6e26b59dd1f7c32"
+  },
+  {
+    "kind": "monster",
+    "id": 80,
+    "storage": 3832160,
+    "after": "＜뇌＞속성의 궁수",
+    "source_sha256": "f7d21f0af1d9899c0c8e39806774a0415a67c5b2e6d0e7c21e38c829ec50eb5f",
+    "before_sha256": "e9d26db0cf5b1c61b7d1a812e093a9e47daf06f43da482883e99ecf4604412ec"
+  },
+  {
+    "kind": "monster",
+    "id": 81,
+    "storage": 3832164,
+    "after": "＜광＞속성의 궁수\n조준이 정확하다",
+    "source_sha256": "3972dad3656ef75e1944b5d6c0947a9953823033465614e4751edb43bba8bb66",
+    "before_sha256": "9d066a79fc6198c08dde327f66ed70d223365ce86da3379e86483625ac9d1ce2"
+  },
+  {
+    "kind": "monster",
+    "id": 84,
+    "storage": 3832176,
+    "after": "＜광＞속성의 격투가\n정신 수양이 부족해 이름값을 못함",
+    "source_sha256": "38c436ad752368c63ee19d7f866be588d470c66135867d2de3b5a34dde8626c9",
+    "before_sha256": "4e9e506cf43aa959fa3d70d3b0a1e926271d1f5fd37565150060824cfd02bb97"
+  },
+  {
+    "kind": "monster",
+    "id": 98,
+    "storage": 3832232,
+    "after": "＜지＞속성의 여자 마법사",
+    "source_sha256": "45eb4e768ec16ab51db27ca954f0a946417f8cfdd596a6fa5dc930caca482ee8",
+    "before_sha256": "83a889d1ad1f50a2715e5af668cc9523e5cc11d281adc111e0e5d2dec7090f26"
+  },
+  {
+    "kind": "monster",
+    "id": 99,
+    "storage": 3832236,
+    "after": "＜수＞속성의 여자 마법사",
+    "source_sha256": "337b0f96a13e95e73a891b78bc1ba3c029bb94d3811a878fa3d85ae8176119a5",
+    "before_sha256": "cdbba6e1eb3219c108fa7e9976a368a5d277a1edffce3d2d8f959a6dcc7bd5a7"
+  },
+  {
+    "kind": "monster",
+    "id": 100,
+    "storage": 3832240,
+    "after": "＜광＞속성의 여자 마법사",
+    "source_sha256": "377689c6a77bb8d7c6857a51506b0efd28078413cc8222b446c31f502c6c7343",
+    "before_sha256": "140d4df25dbebd248cf083ebdc498ba3e36c5e01dcb5a665adc4896a795d7fdc"
+  },
+  {
+    "kind": "monster",
+    "id": 101,
+    "storage": 3832244,
+    "after": "＜화＞속성의 여자 마법사",
+    "source_sha256": "77bf62404750329a528176d260cb34251eb1e83cccb19eb94bb67d0d08db4adf",
+    "before_sha256": "e8dfa7c8085a8636aa541fa18aca308220b8a4e99df139518966a2890b6271c3"
+  },
+  {
+    "kind": "monster",
+    "id": 103,
+    "storage": 3832252,
+    "after": "＜풍＞속성의 남자 마법사",
+    "source_sha256": "b91d42df5d80ee61cee1a00c3e94d3eba9d32df57c15a7cedfe3ba8a8a82cbff",
+    "before_sha256": "5711d8f644c471acaed24abd0d0fd7e7c9a2aeb55307441b82031d8d436a5ad2"
+  },
+  {
+    "kind": "monster",
+    "id": 104,
+    "storage": 3832256,
+    "after": "＜암＞속성의 남자 마법사",
+    "source_sha256": "ed0c21b28f736e3bda643f5633774fd25160809c9ceb3f13eaeb3f122afe8c4d",
+    "before_sha256": "13f725c36ec7b486bc39c9875b7c928832fab80a35e33edd7c22fcda1016a9af"
+  },
+  {
+    "kind": "monster",
+    "id": 105,
+    "storage": 3832260,
+    "after": "＜화＞속성의 남자 마법사",
+    "source_sha256": "1001a577a4787986e275a72a1801dfb2730ff61d239835a9d3e034f06db07171",
+    "before_sha256": "a765af63181cdfec3ac1496b152b8f770e39125b4cb0efdcc4c9a61abc32077d"
+  },
+  {
+    "kind": "monster",
+    "id": 106,
+    "storage": 3832264,
+    "after": "＜광＞속성의 남자 마법사",
+    "source_sha256": "e17d09d8ba9aee9e841e8ac781fc8826047f47dee03bb8bc767312bec3a078d2",
+    "before_sha256": "899ff506ece3e9075eb2fd5fd926430f72a3d44dabee52ea97719dae17556196"
+  }
+]

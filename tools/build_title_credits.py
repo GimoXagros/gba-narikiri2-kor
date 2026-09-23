@@ -193,6 +193,23 @@ def logo_raw(japanese, korean_reference):
     layers=refine_numeral(unpack(final,LOGO_SPRITES),unpack(original,LOGO_SPRITES))
     final=pack_into(final,LOGO_SPRITES,layers,lambda bank,x,y:
         bank in (1,2) and ((190<=x<216 and 26<=y<92) or (184<=x<193 and 75<=y<92)))
+    # Restore only the emblem differences inherited from the old Korean asset.
+    # Japanese lettering halos are deliberately not copied over the adopted halo.
+    native_backdrop=unpack(original,LOGO_SPRITES)[1]
+    inherited_backdrop=unpack(korean,LOGO_SPRITES)[1]
+    repairs={(x,y) for y in range(160) for x in range(240)
+             if native_backdrop[y][x]!=inherited_backdrop[y][x]}
+    if len(repairs)!=97 or any(28<=y<92 for x,y in repairs):
+        raise ValueError('Original emblem restoration scope changed')
+    layers=unpack(final,LOGO_SPRITES)
+    for x,y in repairs:layers[1][y][x]=native_backdrop[y][x]
+    final=pack_into(final,LOGO_SPRITES,layers,
+                    lambda bank,x,y:bank==1 and (x,y) in repairs)
+    # Five isolated pixels above the ribbon letters were inherited artifacts.
+    for x,y in ((115,16),(116,16),(117,16),(116,17),(117,17)):
+        layers[0][y][x]=0
+    final=pack_into(final,LOGO_SPRITES,layers,
+        lambda bank,x,y:bank==0 and 115<=x<=117 and 16<=y<=17)
     return final,unpack(final,LOGO_SPRITES)
 
 
@@ -242,20 +259,31 @@ def build(base,japanese):
         raise ValueError('Original staff table changed')
     if base[0xA5316:0xA5318]!=bytes.fromhex('3521'):
         raise ValueError('Final scroll phase instruction changed')
-    strings=['KOREAN TRANSLATION','TEAM FFR','XAGROS']
-    strings_start=CREDITS_TARGET+len(original)+5*4
+    strings=['-KOREAN TRANSLATION-','TEAM FFR','XAGROS','','(SPECIAL THANKS)','AND YOU']
+    strings_start=CREDITS_TARGET+len(original)+8*4
     strings_bytes=bytearray();pointers=[]
     for s in strings:
-        if not 0<len(s)<=30 or not s.isascii():raise ValueError('Credits line does not fit renderer')
+        if not 0<=len(s)<=30 or not s.isascii():raise ValueError('Credits line does not fit renderer')
         pointers.append(0x08000000+strings_start+len(strings_bytes))
         strings_bytes.extend(s.encode('ascii')+b'\0')
-    table=original[:-4]+struct.pack('<5I',0x08373FC0,0x08373FC0,*pointers)+bytes(4)
+    table=original[:-4]+struct.pack('<8I',0x08373FC0,0x08373FC0,*pointers)+bytes(4)
     payload=table+strings_bytes
     assert CREDITS_TARGET+len(table)==strings_start
     write('extended_staff_table',CREDITS_TARGET,payload,b'\xff'*len(payload))
     write('staff_table_pointer',0xA56E8,struct.pack('<I',0x08000000+CREDITS_TARGET),struct.pack('<I',0x087F9608))
-    # Five appended rows get five extra scroll rows, retaining original tail gap.
-    write('last_scroll_rows_53_to_58',0xA5316,bytes.fromhex('3a21'),bytes.fromhex('3521'))
+    # Eight appended rows get eight extra scroll rows, retaining original tail gap.
+    write('last_scroll_rows_53_to_61',0xA5316,bytes.fromhex('3d21'),bytes.fromhex('3521'))
+    # Staff roll uses native 8x8 ASCII indices. The localized shared font has a
+    # different layout, so restore the original stream only at staff-page entry.
+    # Ordinary menus and translated ending dialogue retain the shared font.
+    from build_banked_font import assemble
+    native_font,used=decompress_lz77_stream(japanese,0xCA3F4,0x10000)
+    if len(native_font)!=8192 or used!=1997:raise ValueError('Original staff font extent changed')
+    font_stream=japanese[0xCA3F4:0xCA3F4+used]
+    wrapper=assemble(ROOT/'asm/ending_original_font.s',0xC86F00,0,0x80)
+    write('native_staff_font_stream',0xC86000,font_stream,b'\xff'*len(font_stream))
+    write('native_staff_font_wrapper',0xC86F00,wrapper,b'\xff'*len(wrapper))
+    write('staff_page_font_entry',0xA59CC,bytes.fromhex('004b1847016fc808'),bytes.fromhex('00b503201e210022'))
     out=bytearray(image);end=0
     for off,data,name in sorted(writes):
         if off<end:raise ValueError('Overlapping writers: '+name)
@@ -265,10 +293,11 @@ def build(base,japanese):
     manifest={'base_sha256':sha(base),'japanese_sha256':sha(japanese),'target_sha256':sha(out),
               'title':'테일즈 오브 더 월드 나리키리 던전®2',
               'copyright':'© 이노마타 무츠미  © 후지시마 코스케','appended_credits':strings,
-              'original_credit_rows':191,'added_credit_rows':5,'final_scroll_rows':58,
+              'original_credit_rows':191,'added_credit_rows':8,'final_scroll_rows':61,
               'assets':assets,'writes':[{'offset':hex(o),'length':len(p),'purpose':n} for o,p,n in sorted(writes)],
               'logo_policy':'preserve ribbon/emblem; correct Korean lettering/halo; Japanese numeral and registered mark with adopted thin white rim from style H',
               'copyright_font':'Dalmoori native 8px; space after both copyright symbols',
+              'staff_font':'Original Japanese ASCII, selected only at staff-page entry; translated dialogue retains Korean font',
               'runtime_status':'PENDING','scope':'title and ending credits local test build'}
     return bytes(out),manifest
 
