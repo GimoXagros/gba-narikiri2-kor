@@ -38,7 +38,9 @@ def package(japanese: bytes, target: bytes):
         ('VERIFICATION.json', 'verification/v1.0.json'),
         ('DALMOORI_LICENSE', 'third_party/dalmoori-font/LICENSE'),
     ):
-        entries[name] = (ROOT / source).read_bytes()
+        data = (ROOT / source).read_bytes()
+        # README is a text file whose checkout line endings can vary by platform.
+        entries[name] = data.replace(b'\r\n', b'\n') if name == 'README.txt' else data
     internal_manifest = {
         'version': 'v1.0', 'source_sha256': SOURCE_SHA256,
         'target_sha256': TARGET_SHA256, 'patch_sha256': PATCH_SHA256,
