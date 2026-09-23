@@ -1,7 +1,15 @@
 {
   "schema": "narikiri2-v1-release-preparation-1",
-  "status": "NEEDS_USER_EVIDENCE",
-  "release_ready": false,
+  "status": "READY_FOR_RELEASE",
+  "release_ready": true,
+  "gameplay_validation_status": "NEEDS_USER_EVIDENCE",
+  "release_scope_decision": {
+    "date_kst": "2026-09-24",
+    "authority": "USER_AUTHORIZED",
+    "decision": "Publish v1.0 first; perform user and second-pass verification after publication",
+    "interpretation": "Release-specific acceptance of named unverified gameplay/hardware scope; no NOT_RUN result becomes PASS",
+    "issue_4": "OPEN_FOR_POST_RELEASE_VERIFICATION"
+  },
   "game_code": "AN9J",
   "source_size": 8388608,
   "source_sha256": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
@@ -69,9 +77,9 @@
     "all_branches_confirmed": false
   },
   "release_limits": [
-    "Issue #4 and RELEASE_POLICY.md require extended complete progression and hardware verification of the final artifact; the reported 20 hours span several builds and the final candidate is attested only from an existing save to the staff roll, with branch/event coverage unreported",
+    "The user explicitly authorized v1.0 distribution before user and second-pass validation; issue #4 remains open. The reported 20 hours span several builds and the final candidate is attested only from an existing save to the staff roll, with branch/event coverage unreported",
     "Issue #4 target hardware checks for new game, two cold reloads, custom or mixed names and suspend/resume on the final candidate are not reported; existing 8 KiB save continuation is user-attested",
     "Current-candidate PC mGBA save/name/suspend regressions do not establish the target-hardware cases; the default-name new-game route was incomplete",
-    "Final public tag, release upload/download and post-publication checks have not run"
+    "Public attachment download and application are verified after publication against the release manifest; this repository snapshot does not claim that result"
   ]
 }
