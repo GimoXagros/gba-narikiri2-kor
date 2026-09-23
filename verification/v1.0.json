@@ -1,0 +1,58 @@
+{
+  "schema": "narikiri2-v1-release-preparation-1",
+  "status": "NEEDS_USER_EVIDENCE",
+  "release_ready": false,
+  "game_code": "AN9J",
+  "source_size": 8388608,
+  "source_sha256": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+  "beta2_sha256": "f94cb5a128c8a98e6e18e6a0598ebf9b266f54da0750367af8defac3eb2df7d4",
+  "beta3_sha256": "c6d7a401aa2a22362b2d27d0d31632cb2180a86b094788815d949b84c7fc944d",
+  "target_size": 13270790,
+  "target_sha256": "7505ef506e4fc11e1e0f36672956627e7522d2441cedfb06a5f359e7f5bd2b50",
+  "patch_size": 5045193,
+  "patch_sha256": "8d4a102714dccca1228215d97ae38b55eaca7ed9b74552150d3ab6aee2fa16e6",
+  "previous_public_target_sha256": "69c5a3e22e00bcacfbaaa7eb28f2efc7d06c8ef37a646ac7236bc78bf76d4012",
+  "final_candidate_byte_identical": true,
+  "source_equivalent_notice_screen": {
+    "provenance": "Recovered from prior candidate runtime screenshot; original user PNG is not preserved locally",
+    "png_sha256": "38f5e3acfcfe3cbf78f961aa0bd3d48b2737931d49bb56a8e81730912763eddd",
+    "quantized_pixel_sha256": "82773ec065898089374f4e7834a1d8e83adb8e5be8f5ebbc91dd0bd742e52a75",
+    "matches_adopted_notice_manifest": true
+  },
+  "reproducible_build": {
+    "status": "PASS",
+    "runs": 2,
+    "scope": "Exact BETA2/BETA3/Japanese inputs through title, notice, places, hints, descriptions and dialogue stages",
+    "all_six_stage_roms_byte_identical": true,
+    "final_matches_adopted_candidate": true
+  },
+  "tests": {
+    "real_data_unittest": {"passed": 166, "failed": 0, "errors": 0, "skipped": 0, "log_sha256": "4a68f7521401b2b8054ab41dbd601a04650ca634b7274c15b9e8a6b76ae71948"},
+    "public_ci_subset": {"passed": 43, "failed": 0, "errors": 0, "skipped": 0, "log_sha256": "b0474ae078205993ce768b6c25b26b9129df5e2f93477d55fe4078fd0a69b290"},
+    "title_credits_contract": {"passed": 6, "failed": 0, "errors": 0, "skipped": 0},
+    "historical_japanese_app_contract": {"passed": 7, "failed": 0, "errors": 0, "skipped": 0},
+    "v1_actual_apply_cases": {"passed": 7, "failed": 0, "errors": 0, "skipped": 0, "evidence_sha256": "4328a4e3f56d4f8da3c68b2872267057d7288701c47689d1341baaa02d642809"},
+    "private_package": {"passed": 6, "failed": 0, "errors": 0, "skipped": 0, "scope": "Two deterministic ZIP builds, CRC and allowlist, internal member hashes, private-path scan, fresh extraction and enclosed application, exact ROM byte identity"},
+    "final_dialogue_independent_audit": {"passed": 25, "failed": 0, "errors": 0, "skipped": 0, "scope": "Static ROM, pointers, text, control, BPS and final dataset checks"},
+    "final_vbam_item_pages": {"passed": 156, "failed": 0, "errors": 0, "skipped": 0, "scope": "Isolated inventory flags; not natural acquisition"},
+    "final_vbam_monster_pages": {"passed": 142, "failed": 0, "errors": 0, "skipped": 0, "scope": "Isolated discovery flags; not natural encounter"},
+    "full_natural_branch_playthrough": "NOT_RUN",
+    "two_console_link_exchange": "NOT_RUN",
+    "two_hardware_cold_loads_of_exact_final_rom": "NOT_RUN",
+    "new_game_and_custom_mixed_names_on_exact_final_rom": "NOT_RUN",
+    "suspend_resume_on_exact_final_rom": "NOT_RUN"
+  },
+  "user_attestation": {
+    "status": "USER_ATTESTED",
+    "hardware": "OLD 2DS + DSPico + GBARunner3",
+    "progress": "Continued an existing save to the staff roll",
+    "extended_play": "About 20 hours spanning the dialogue translation stages; cheats were used for leveling bottlenecks and catalog inspection; existing save continued without reported issue",
+    "exact_final_sha256_explicitly_confirmed": false,
+    "all_branches_confirmed": false
+  },
+  "release_limits": [
+    "Issue #4 and RELEASE_POLICY.md require extended complete progression and hardware verification of the final artifact; current user report does not explicitly bind the route to the final SHA-256 or establish branch/event coverage",
+    "Historical save/name/suspend tests and isolated memory fixtures do not establish all final-ROM hardware cases",
+    "Final public tag, release upload/download and post-publication checks have not run"
+  ]
+}
