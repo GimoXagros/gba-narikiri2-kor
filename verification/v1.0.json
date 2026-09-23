@@ -26,6 +26,13 @@
     "all_six_stage_roms_byte_identical": true,
     "final_matches_adopted_candidate": true
   },
+  "clean_checkout_final_stage": {
+    "status": "PASS",
+    "commit": "4a4774b",
+    "scope": "Detached clean worktree; final dialogue builder with declared descriptions base, Japanese ROM and public correction ledger; no private dialogue corpus present",
+    "target_sha256": "7505ef506e4fc11e1e0f36672956627e7522d2441cedfb06a5f359e7f5bd2b50",
+    "private_dialogue_book_export": "NOT_RUN"
+  },
   "tests": {
     "real_data_unittest": {"passed": 166, "failed": 0, "errors": 0, "skipped": 0, "log_sha256": "4a68f7521401b2b8054ab41dbd601a04650ca634b7274c15b9e8a6b76ae71948"},
     "public_ci_subset": {"passed": 43, "failed": 0, "errors": 0, "skipped": 0, "log_sha256": "b0474ae078205993ce768b6c25b26b9129df5e2f93477d55fe4078fd0a69b290"},
@@ -39,8 +46,18 @@
     "full_natural_branch_playthrough": "NOT_RUN",
     "two_console_link_exchange": "NOT_RUN",
     "two_hardware_cold_loads_of_exact_final_rom": "NOT_RUN",
-    "new_game_and_custom_mixed_names_on_exact_final_rom": "NOT_RUN",
-    "suspend_resume_on_exact_final_rom": "NOT_RUN"
+    "new_game_and_custom_mixed_names_on_exact_final_rom": "PC_MGBA_PASS",
+    "default_name_new_game_save_on_exact_final_rom": "INCOMPLETE_ROUTE_MISMATCH",
+    "suspend_resume_on_exact_final_rom": "PC_MGBA_PASS",
+    "pc_mgba_final_candidate_regression": {
+      "status": "PASS_WITH_SCOPE_LIMIT",
+      "rom_sha256": "7505ef506e4fc11e1e0f36672956627e7522d2441cedfb06a5f359e7f5bd2b50",
+      "core": "mGBA libretro 0.11-219-e31759b",
+      "core_sha256": "0d3177c927d791fef897f735d88db3646f7932d02054af108619c6df4e1597f1",
+      "scope": "UI-input mixed custom names in a new game with no RAM intervention, 8 KiB save and two cold reloads; historical default and mixed 8 KiB saves cold-loaded twice; legacy 8 KiB save re-saved and reloaded; suspend save resumed and consumed",
+      "default_new_game_limit": "Historical automatic input route diverged at changed tutorial dialogue timing before save; not evidence of a game defect or of default-name new-game save completion",
+      "hardware_equivalence": false
+    }
   },
   "user_attestation": {
     "status": "USER_ATTESTED",
@@ -54,7 +71,7 @@
   "release_limits": [
     "Issue #4 and RELEASE_POLICY.md require extended complete progression and hardware verification of the final artifact; the reported 20 hours span several builds and the final candidate is attested only from an existing save to the staff roll, with branch/event coverage unreported",
     "Issue #4 target hardware checks for new game, two cold reloads, custom or mixed names and suspend/resume on the final candidate are not reported; existing 8 KiB save continuation is user-attested",
-    "Historical save/name/suspend tests and isolated memory fixtures do not establish these final-ROM hardware cases",
+    "Current-candidate PC mGBA save/name/suspend regressions do not establish the target-hardware cases; the default-name new-game route was incomplete",
     "Final public tag, release upload/download and post-publication checks have not run"
   ]
 }
