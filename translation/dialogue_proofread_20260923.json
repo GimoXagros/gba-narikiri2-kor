@@ -1,0 +1,884 @@
+[
+  {
+    "id": "D00624",
+    "binding": "D00624:002B31A8",
+    "storage": "002B31A8",
+    "after": "살아 있는 자를 죽이는 마검",
+    "reason": "사용자 지정: 슬레이어 소드 한 줄 표시",
+    "source_sha256": "fe487b8386d48bca0cf67e5b9a38db137b8f14af488e1cac6758c4764bddddb8",
+    "before_sha256": "d3702ed5a78d77f8398aa7ce1c8d38c38e94c1bc31f0d105c1a7ecd5431b0066"
+  },
+  {
+    "id": "D06322",
+    "binding": "D06322:003A7910",
+    "storage": "003A7910",
+    "after": "지옥을 지키는 개\n＜화＞속성에 강하다",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "8f6faf6de98f65f2700f35636354f9f5446ad51f9560f060fd17528b50474bd3",
+    "before_sha256": "680cfbd8067a6b19d9827a38039712377d786094b94fbbc790d1389a37c44bbd"
+  },
+  {
+    "id": "D06340",
+    "binding": "D06340:003A7958",
+    "storage": "003A7958",
+    "after": "＜풍＞속성의 궁수",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "ef01299d381e703aa4944ed44db4eedb519edf148e12154f7c07df0209d92ad1",
+    "before_sha256": "8f17233b1eee6afb175989098578b18b9e2a3e228b27710ca9a361c678de45a7"
+  },
+  {
+    "id": "D06341",
+    "binding": "D06341:003A795C",
+    "storage": "003A795C",
+    "after": "＜수＞속성의 궁수",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "66f7f52118bcd3deded7d54ed39d0d7107c816d52ce072371ce659fef0fe7024",
+    "before_sha256": "6fefa61fef095dc429c95790de90152cf233de8967fca806b6e26b59dd1f7c32"
+  },
+  {
+    "id": "D06342",
+    "binding": "D06342:003A7960",
+    "storage": "003A7960",
+    "after": "＜뇌＞속성의 궁수",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "f7d21f0af1d9899c0c8e39806774a0415a67c5b2e6d0e7c21e38c829ec50eb5f",
+    "before_sha256": "e9d26db0cf5b1c61b7d1a812e093a9e47daf06f43da482883e99ecf4604412ec"
+  },
+  {
+    "id": "D06343",
+    "binding": "D06343:003A7964",
+    "storage": "003A7964",
+    "after": "＜광＞속성의 궁수\n조준이 정확하다",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "3972dad3656ef75e1944b5d6c0947a9953823033465614e4751edb43bba8bb66",
+    "before_sha256": "9d066a79fc6198c08dde327f66ed70d223365ce86da3379e86483625ac9d1ce2"
+  },
+  {
+    "id": "D06346",
+    "binding": "D06346:003A7970",
+    "storage": "003A7970",
+    "after": "＜광＞속성의 격투가\n정신 수양이 부족해 이름값을 못함",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "38c436ad752368c63ee19d7f866be588d470c66135867d2de3b5a34dde8626c9",
+    "before_sha256": "4e9e506cf43aa959fa3d70d3b0a1e926271d1f5fd37565150060824cfd02bb97"
+  },
+  {
+    "id": "D06360",
+    "binding": "D06360:003A79A8",
+    "storage": "003A79A8",
+    "after": "＜지＞속성의 여자 마법사",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "45eb4e768ec16ab51db27ca954f0a946417f8cfdd596a6fa5dc930caca482ee8",
+    "before_sha256": "83a889d1ad1f50a2715e5af668cc9523e5cc11d281adc111e0e5d2dec7090f26"
+  },
+  {
+    "id": "D06361",
+    "binding": "D06361:003A79AC",
+    "storage": "003A79AC",
+    "after": "＜수＞속성의 여자 마법사",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "337b0f96a13e95e73a891b78bc1ba3c029bb94d3811a878fa3d85ae8176119a5",
+    "before_sha256": "cdbba6e1eb3219c108fa7e9976a368a5d277a1edffce3d2d8f959a6dcc7bd5a7"
+  },
+  {
+    "id": "D06362",
+    "binding": "D06362:003A79B0",
+    "storage": "003A79B0",
+    "after": "＜광＞속성의 여자 마법사",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "377689c6a77bb8d7c6857a51506b0efd28078413cc8222b446c31f502c6c7343",
+    "before_sha256": "140d4df25dbebd248cf083ebdc498ba3e36c5e01dcb5a665adc4896a795d7fdc"
+  },
+  {
+    "id": "D06363",
+    "binding": "D06363:003A79B4",
+    "storage": "003A79B4",
+    "after": "＜화＞속성의 여자 마법사",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "77bf62404750329a528176d260cb34251eb1e83cccb19eb94bb67d0d08db4adf",
+    "before_sha256": "e8dfa7c8085a8636aa541fa18aca308220b8a4e99df139518966a2890b6271c3"
+  },
+  {
+    "id": "D06365",
+    "binding": "D06365:003A79BC",
+    "storage": "003A79BC",
+    "after": "＜풍＞속성의 남자 마법사",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "b91d42df5d80ee61cee1a00c3e94d3eba9d32df57c15a7cedfe3ba8a8a82cbff",
+    "before_sha256": "5711d8f644c471acaed24abd0d0fd7e7c9a2aeb55307441b82031d8d436a5ad2"
+  },
+  {
+    "id": "D06366",
+    "binding": "D06366:003A79C0",
+    "storage": "003A79C0",
+    "after": "＜암＞속성의 남자 마법사",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "ed0c21b28f736e3bda643f5633774fd25160809c9ceb3f13eaeb3f122afe8c4d",
+    "before_sha256": "13f725c36ec7b486bc39c9875b7c928832fab80a35e33edd7c22fcda1016a9af"
+  },
+  {
+    "id": "D06367",
+    "binding": "D06367:003A79C4",
+    "storage": "003A79C4",
+    "after": "＜화＞속성의 남자 마법사",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "1001a577a4787986e275a72a1801dfb2730ff61d239835a9d3e034f06db07171",
+    "before_sha256": "a765af63181cdfec3ac1496b152b8f770e39125b4cb0efdcc4c9a61abc32077d"
+  },
+  {
+    "id": "D06368",
+    "binding": "D06368:003A79C8",
+    "storage": "003A79C8",
+    "after": "＜광＞속성의 남자 마법사",
+    "reason": "사용자 지정: 속성 괄호 다음 공백 제거",
+    "source_sha256": "e17d09d8ba9aee9e841e8ac781fc8826047f47dee03bb8bc767312bec3a078d2",
+    "before_sha256": "899ff506ece3e9075eb2fd5fd926430f72a3d44dabee52ea97719dae17556196"
+  },
+  {
+    "id": "D00120",
+    "binding": "D00120:00013D64",
+    "storage": "00013D64",
+    "after": "%l마물에게 들키지 않도록\n기척을 지웠다%k",
+    "reason": "일본어 「消した」의 완료 시제를 보존",
+    "source_sha256": "0eae403afaa78eb0278e24a2c725cc7ca093579e6f753d717453816b772d469d",
+    "before_sha256": "0f45fe07157b0a2d6f8d5f5abaef682f2ddbe6ae64e1a861b093a3f86231c790"
+  },
+  {
+    "id": "D00252",
+    "binding": "D00252:00091068",
+    "storage": "00091068",
+    "after": "안쪽 숲에서 수상한 여자아이를 봤다는 녀석이 있었는데…%k",
+    "reason": "「女の子」의 연령 정보 복원",
+    "source_sha256": "be65a968579ccf24ca88fd1b981dd7fc459671a1fceb0dd512c7dad2b8e304a1",
+    "before_sha256": "04a0aefa6cb7ab8dc52af126a3305e63e34b72ce5dd61d4c0cacfaf50ced3d1c"
+  },
+  {
+    "id": "D00270",
+    "binding": "D00270:00094C10",
+    "storage": "00094C10",
+    "after": " 도망칠 때는 화면 끝을 향해 계속 걸어야 해．%k",
+    "reason": "「歩き続ける」는 계속 걷는다는 조작 설명",
+    "source_sha256": "f949eb6a68efe874ab1b224a4657a5f70bad80cab537dd39a5d5d3045c3d0ddf",
+    "before_sha256": "b562086862439fb2b8ab3b97dc2a141d94580b153298596b951d279738e4fabb"
+  },
+  {
+    "id": "D01002",
+    "binding": "D01002:003148D8",
+    "storage": "003148D8",
+    "after": "그렇군요．원시적이지만 긴급 난방으로는 제격이군요．",
+    "reason": "「暖房」의 용도 정보 복원",
+    "source_sha256": "b189213bd406b2002c4f496c4ec130333d39c07370819292a1a960c56364b701",
+    "before_sha256": "b21030ca597f77e8e08cfd474c7c601d6214ea9f5d5d2a8002d3c6f8f43d9c67"
+  },
+  {
+    "id": "D01600",
+    "binding": "D01600:0031D30C",
+    "storage": "0031D30C",
+    "after": "와아～！오빠，언니～",
+    "reason": "「わーい！」의 환호를 보존",
+    "source_sha256": "41fa7975e8c71f33b199e33f3873cbac593ef1c5a90947c29acee4fe0f7e7fad",
+    "before_sha256": "4703dc6f1f35c27efbcf3ca4d5f0244814a9be876a20f5508116145ceb7bee7b"
+  },
+  {
+    "id": "D02181",
+    "binding": "D02181:00325B80",
+    "storage": "00325B80",
+    "after": "앞으로도 남몰래 응원하겠습니다…",
+    "reason": "「影ながら支援」은 드러나지 않게 지원한다는 뜻",
+    "source_sha256": "e3d5149d76688f375e64806b18671e9b1c24af4cb6270e393d315395b03b068c",
+    "before_sha256": "79cba24df1d8a15c817514ac19c73c0312e8ce9e1b328aaa513002c5a2e50701"
+  },
+  {
+    "id": "D02321",
+    "binding": "D02321:00327B24",
+    "storage": "00327B24",
+    "after": "고마워，루티．동생들에게 힘을 줘서…",
+    "reason": "「弟たち」의 가족 관계 복원",
+    "source_sha256": "69c59e7effedee7212fa44bf71a490a12196edc6c5aeb785c82680a5f0928015",
+    "before_sha256": "3c987b2d6fa5268581f10ad1e549519f77a340a9f6ef8667ff46c844dc10ce6b"
+  },
+  {
+    "id": "D02389",
+    "binding": "D02389:00328B50",
+    "storage": "00328B50",
+    "after": "그 때문에 주변의 에너지가 줄어드는 게 아닐까 싶어요…",
+    "reason": "「減少」은 소멸이 아닌 감소",
+    "source_sha256": "62ea63f14c5e3f55410c6a14a9b5b52bb98f05799fa26611fc001dc3f0253415",
+    "before_sha256": "c99a627a55cefa2cc55b874ee570092031375045c4e01df842d1f81b1b8b8dce"
+  },
+  {
+    "id": "D04027",
+    "binding": "D04027:003423E4",
+    "storage": "003423E4",
+    "after": "@L시시한 연극은 끝이야！\n슬슬 사라져 줘야겠어…",
+    "reason": "원문의 위협 또는 동행 조건을 정확하게 전달",
+    "source_sha256": "881af8fa4f749a0d0238abe1a9c39883ba48a11cdd2bc67b06d03c44d6f1e8fc",
+    "before_sha256": "bd39f24ced670fc37f3ff4788e47ee3896d89e13f9625d593ef0219e6aff616f"
+  },
+  {
+    "id": "D04350",
+    "binding": "D04350:003474B8",
+    "storage": "003474B8",
+    "after": "@L덧붙여，마을의 중심에 있는『중앙 광장』은 장남인 내가 맡는다",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "32f3de902d7b275a9e95baa7c05b96f99a211620afb2d05d3149302d44d264d0",
+    "before_sha256": "ec66e9e4361a61e400e4a330c115aa53f654f2ad752fcd88e2c36edaa8d6599c"
+  },
+  {
+    "id": "D04413",
+    "binding": "D04413:003484A0",
+    "storage": "003484A0",
+    "after": "옷은『스테비아 의상실』에서 구입하세요～",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "fe9d025fc2715d32ade7ebfa8f3b895e613142bcf1f2ab7f8be66b3faa93b2e3",
+    "before_sha256": "112e6b1cedef18ee0620ad5b9e04c53ec88f13a030758bb0a3b33b0d5262c4b5"
+  },
+  {
+    "id": "D04603",
+    "binding": "D04603:0034B468",
+    "storage": "0034B468",
+    "after": "아，저건『부유 사도』예요．",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "bae6990926403a2c3cffb8cfc3259291ccdd714aeccdeb9075df70850337599b",
+    "before_sha256": "636b1173af2a58d3fdaa194603cb0b7fd613623c1e80438fe0ed91aa9fbd0864"
+  },
+  {
+    "id": "D04604",
+    "binding": "D04604:0034B478",
+    "storage": "0034B478",
+    "after": "부유 사도？",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "c786fd546e21d7c7858bf83eb8757845da45f1d6226bea8f4ee1c484e7c52915",
+    "before_sha256": "7cec6faa73d1f961dc98abea8d47d2407dc1cf1bb7908249fc80fa2c791bab90"
+  },
+  {
+    "id": "D04609",
+    "binding": "D04609:0034B4B8",
+    "storage": "0034B4B8",
+    "after": "천공을 떠다니는 무덤…그래서『부유 사도』라고 부르죠…",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "0487d71810d31958347f7ed68bf243bd30f1fd2dd91e665ec567c1910e4a1eeb",
+    "before_sha256": "00ff72e88836e9ce77d4e3df30b121621ed9edb145b7c5480ecc0a1ec92b76d3"
+  },
+  {
+    "id": "D04650",
+    "binding": "D04650:0034BE80",
+    "storage": "0034BE80",
+    "after": "@L참，최근에『부유 사도』로 가는 장치가 고쳐졌대．",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "16f2d08a49d37cdb5a62eafeb203389d96b95ba943742f84283f6b752ef03275",
+    "before_sha256": "a8520da077212bc25ecd1502cd512f1216e4674b710dc43823823fafe07cd91b"
+  },
+  {
+    "id": "D04798",
+    "binding": "D04798:003580B4",
+    "storage": "003580B4",
+    "after": "오우！너희와 함께라면 무슨 일이든 괜찮아！@P좋았어．이번에 함께 세계정복하자！",
+    "reason": "원문의 위협 또는 동행 조건을 정확하게 전달",
+    "source_sha256": "3453d0c7d6985de215eb84ab17400670316b43f60995657b426edc970835e2b1",
+    "before_sha256": "1211ba7b81fa21494d9603e24767f5f11158281d22bdf8c67751f982db2bcd1e"
+  },
+  {
+    "id": "D06131",
+    "binding": "D06131:00375E38",
+    "storage": "00375E38",
+    "after": "부유 사도",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "57a983056edf59035f95d8abfa9ae0afeef1f5789f7e827b58722aa781d2ab8f",
+    "before_sha256": "bbf5937cd36fd3e9dda644c386bb38a64dfd7d1d4c933b190ffafa7a8e42d045"
+  },
+  {
+    "id": "D07000",
+    "binding": "D07000:00738FC4",
+    "storage": "00738FC4",
+    "after": "여긴『부유 사도』．@P이름 그대로 죽은 자들의 도시지．@P죽은 영혼에게는 검，활，맨손 같은\n물리 공격이 잘 통하지 않아．@P싸우려면 마법，특히〈화〉와〈광〉마법이 꼭 필요해．",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "54bb2cd62e3eea38078d53d9ab6b0be104b7946c4f06503b431f489c5e3b9677",
+    "before_sha256": "a40fdbb5f8920d5f184307fec8a228d5ed999e812be01e84635a81ab8bf06d0d"
+  },
+  {
+    "id": "D07003",
+    "binding": "D07003:00738FDC",
+    "storage": "00738FDC",
+    "after": "『부유 사도 최심부』는 이 문을 지나 한참 안쪽이야．\n남쪽에는『감옥』같은 방이 있지．",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "79b83e65024250b37f8d7e76dd3685d205e35988b5b8be123cc54e2c8308f5e5",
+    "before_sha256": "eaa6cc5408adfaab429efdc53626bf265a0ebcb440ec594a8a7dda5d1ec7e2ab"
+  },
+  {
+    "id": "D07575",
+    "binding": "D07575:007F5A28",
+    "storage": "007F5A28",
+    "after": "부유 사도의 전송 장치가 어느새 작동한대．@P대체 누가 고쳤을까…",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "7aa06f6465a280332640ee84d7a909afe74c6e2605726d8e2ff3151f4263e86b",
+    "before_sha256": "902b6a1d3757a9d139d4f3429e1a56c675f3647f9545996dfbb61009a6966cb7"
+  },
+  {
+    "id": "D07584",
+    "binding": "D07584:007F5A70",
+    "storage": "007F5A70",
+    "after": "『부유 사도』안에서 석상이 발견됐대．@P안경 쓴 석상이라니 이상하지…",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "0d234334794534a92682caefebe07274050fdd161df75e81bb6a1451ea9df33f",
+    "before_sha256": "8d7a936001b29e30cf8620a78dcc6e4b66050fe0f29dd78e8fc18a1991d7cb99"
+  },
+  {
+    "id": "D07635",
+    "binding": "D07635:007F5BA4",
+    "storage": "007F5BA4",
+    "after": "『부유 사도』에 간 모험가들이 다쳐서 돌아왔대…",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "3cd8b22e21b463febb6cf7a82d35856ad07d5ea22b2fbce18f796276b10d7583",
+    "before_sha256": "dbef010a604fd65669c5761bd7e04093aa96f02a25aa1aa08d91837e58af2d87"
+  },
+  {
+    "id": "D07636",
+    "binding": "D07636:007F5BA8",
+    "storage": "007F5BA8",
+    "after": "『부유 사도』는 죽은 영혼들의 소굴이 됐대…@P분명 천상인들의 영혼이겠지…",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "cfb8250adc597cdbf27f4bb10a32163e97a80e1694addcc2b4d8182b73cbf396",
+    "before_sha256": "e3dfe9fa0a27031ef4bf56c7c64115077c1670f43107382691d1dd8a0d9897b9"
+  },
+  {
+    "id": "D07686",
+    "binding": "D07686:007F69C0",
+    "storage": "007F69C0",
+    "after": "채집장",
+    "reason": "採取場(채집장)와 採掘場(채굴장)을 연결 위치별로 구분",
+    "source_sha256": "f6c30424aeb10b91add774d0de7fed68b1da91bda1a8ab9f363cd78b2e1e9ab8",
+    "before_sha256": "92121d9a46869f546e1019930efab52923a0af5d01e2bcb686a2e967944e70ba"
+  },
+  {
+    "id": "D07686",
+    "binding": "D07686:007F69D0",
+    "storage": "007F69D0",
+    "after": "채집장",
+    "reason": "採取場(채집장)와 採掘場(채굴장)을 연결 위치별로 구분",
+    "source_sha256": "f6c30424aeb10b91add774d0de7fed68b1da91bda1a8ab9f363cd78b2e1e9ab8",
+    "before_sha256": "92121d9a46869f546e1019930efab52923a0af5d01e2bcb686a2e967944e70ba"
+  },
+  {
+    "id": "D07686",
+    "binding": "D07686:007F69E0",
+    "storage": "007F69E0",
+    "after": "채집장",
+    "reason": "採取場(채집장)와 採掘場(채굴장)을 연결 위치별로 구분",
+    "source_sha256": "f6c30424aeb10b91add774d0de7fed68b1da91bda1a8ab9f363cd78b2e1e9ab8",
+    "before_sha256": "92121d9a46869f546e1019930efab52923a0af5d01e2bcb686a2e967944e70ba"
+  },
+  {
+    "id": "D07686",
+    "binding": "D07686:007F69F0",
+    "storage": "007F69F0",
+    "after": "채집장",
+    "reason": "採取場(채집장)와 採掘場(채굴장)을 연결 위치별로 구분",
+    "source_sha256": "f6c30424aeb10b91add774d0de7fed68b1da91bda1a8ab9f363cd78b2e1e9ab8",
+    "before_sha256": "92121d9a46869f546e1019930efab52923a0af5d01e2bcb686a2e967944e70ba"
+  },
+  {
+    "id": "D07706",
+    "binding": "D07706:007F6710",
+    "storage": "007F6710",
+    "after": "부유 사도 입구",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "263822eff49e68eb33550f4ad122cef8d9a5e00c5bc313ddf6579c46e506bb04",
+    "before_sha256": "65b0749e3317b2cb5b116cd0a7639d86ff68a5a41e5865c00d9c494590cdce7b"
+  },
+  {
+    "id": "D07707",
+    "binding": "D07707:007F6720",
+    "storage": "007F6720",
+    "after": "부유 사도 １층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "c4e5d4bcb4372501d9001da7c2eb09e7690a8f6f01db933c5be3bd59275989cd",
+    "before_sha256": "104af4e30785d7fae7f517c9cdaf92f72296402c1e6c4e9282408ba54ed455fd"
+  },
+  {
+    "id": "D07707",
+    "binding": "D07707:007F6730",
+    "storage": "007F6730",
+    "after": "부유 사도 １층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "c4e5d4bcb4372501d9001da7c2eb09e7690a8f6f01db933c5be3bd59275989cd",
+    "before_sha256": "104af4e30785d7fae7f517c9cdaf92f72296402c1e6c4e9282408ba54ed455fd"
+  },
+  {
+    "id": "D07707",
+    "binding": "D07707:007F6740",
+    "storage": "007F6740",
+    "after": "부유 사도 １층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "c4e5d4bcb4372501d9001da7c2eb09e7690a8f6f01db933c5be3bd59275989cd",
+    "before_sha256": "104af4e30785d7fae7f517c9cdaf92f72296402c1e6c4e9282408ba54ed455fd"
+  },
+  {
+    "id": "D07707",
+    "binding": "D07707:007F6750",
+    "storage": "007F6750",
+    "after": "부유 사도 １층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "c4e5d4bcb4372501d9001da7c2eb09e7690a8f6f01db933c5be3bd59275989cd",
+    "before_sha256": "104af4e30785d7fae7f517c9cdaf92f72296402c1e6c4e9282408ba54ed455fd"
+  },
+  {
+    "id": "D07707",
+    "binding": "D07707:007F6760",
+    "storage": "007F6760",
+    "after": "부유 사도 １층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "c4e5d4bcb4372501d9001da7c2eb09e7690a8f6f01db933c5be3bd59275989cd",
+    "before_sha256": "104af4e30785d7fae7f517c9cdaf92f72296402c1e6c4e9282408ba54ed455fd"
+  },
+  {
+    "id": "D07707",
+    "binding": "D07707:007F6770",
+    "storage": "007F6770",
+    "after": "부유 사도 １층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "c4e5d4bcb4372501d9001da7c2eb09e7690a8f6f01db933c5be3bd59275989cd",
+    "before_sha256": "104af4e30785d7fae7f517c9cdaf92f72296402c1e6c4e9282408ba54ed455fd"
+  },
+  {
+    "id": "D07707",
+    "binding": "D07707:007F6780",
+    "storage": "007F6780",
+    "after": "부유 사도 １층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "c4e5d4bcb4372501d9001da7c2eb09e7690a8f6f01db933c5be3bd59275989cd",
+    "before_sha256": "104af4e30785d7fae7f517c9cdaf92f72296402c1e6c4e9282408ba54ed455fd"
+  },
+  {
+    "id": "D07707",
+    "binding": "D07707:007F6790",
+    "storage": "007F6790",
+    "after": "부유 사도 １층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "c4e5d4bcb4372501d9001da7c2eb09e7690a8f6f01db933c5be3bd59275989cd",
+    "before_sha256": "104af4e30785d7fae7f517c9cdaf92f72296402c1e6c4e9282408ba54ed455fd"
+  },
+  {
+    "id": "D07707",
+    "binding": "D07707:007F67B0",
+    "storage": "007F67B0",
+    "after": "부유 사도 １층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "c4e5d4bcb4372501d9001da7c2eb09e7690a8f6f01db933c5be3bd59275989cd",
+    "before_sha256": "104af4e30785d7fae7f517c9cdaf92f72296402c1e6c4e9282408ba54ed455fd"
+  },
+  {
+    "id": "D07707",
+    "binding": "D07707:007F67C0",
+    "storage": "007F67C0",
+    "after": "부유 사도 １층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "c4e5d4bcb4372501d9001da7c2eb09e7690a8f6f01db933c5be3bd59275989cd",
+    "before_sha256": "104af4e30785d7fae7f517c9cdaf92f72296402c1e6c4e9282408ba54ed455fd"
+  },
+  {
+    "id": "D07707",
+    "binding": "D07707:007F67D0",
+    "storage": "007F67D0",
+    "after": "부유 사도 １층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "c4e5d4bcb4372501d9001da7c2eb09e7690a8f6f01db933c5be3bd59275989cd",
+    "before_sha256": "104af4e30785d7fae7f517c9cdaf92f72296402c1e6c4e9282408ba54ed455fd"
+  },
+  {
+    "id": "D07709",
+    "binding": "D07709:007F67E0",
+    "storage": "007F67E0",
+    "after": "부유 사도 ２층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "22a603fb403eef19abba42cc851eaf0a4eb3b81784e7c21975f6cc669498c6ee",
+    "before_sha256": "11a24f0a3f1675156300de4cb218b6e534b080b3d748cd9d6e10923ad032df57"
+  },
+  {
+    "id": "D07709",
+    "binding": "D07709:007F67F0",
+    "storage": "007F67F0",
+    "after": "부유 사도 ２층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "22a603fb403eef19abba42cc851eaf0a4eb3b81784e7c21975f6cc669498c6ee",
+    "before_sha256": "11a24f0a3f1675156300de4cb218b6e534b080b3d748cd9d6e10923ad032df57"
+  },
+  {
+    "id": "D07709",
+    "binding": "D07709:007F6800",
+    "storage": "007F6800",
+    "after": "부유 사도 ２층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "22a603fb403eef19abba42cc851eaf0a4eb3b81784e7c21975f6cc669498c6ee",
+    "before_sha256": "11a24f0a3f1675156300de4cb218b6e534b080b3d748cd9d6e10923ad032df57"
+  },
+  {
+    "id": "D07709",
+    "binding": "D07709:007F6810",
+    "storage": "007F6810",
+    "after": "부유 사도 ２층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "22a603fb403eef19abba42cc851eaf0a4eb3b81784e7c21975f6cc669498c6ee",
+    "before_sha256": "11a24f0a3f1675156300de4cb218b6e534b080b3d748cd9d6e10923ad032df57"
+  },
+  {
+    "id": "D07709",
+    "binding": "D07709:007F6820",
+    "storage": "007F6820",
+    "after": "부유 사도 ２층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "22a603fb403eef19abba42cc851eaf0a4eb3b81784e7c21975f6cc669498c6ee",
+    "before_sha256": "11a24f0a3f1675156300de4cb218b6e534b080b3d748cd9d6e10923ad032df57"
+  },
+  {
+    "id": "D07709",
+    "binding": "D07709:007F6830",
+    "storage": "007F6830",
+    "after": "부유 사도 ２층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "22a603fb403eef19abba42cc851eaf0a4eb3b81784e7c21975f6cc669498c6ee",
+    "before_sha256": "11a24f0a3f1675156300de4cb218b6e534b080b3d748cd9d6e10923ad032df57"
+  },
+  {
+    "id": "D07709",
+    "binding": "D07709:007F6840",
+    "storage": "007F6840",
+    "after": "부유 사도 ２층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "22a603fb403eef19abba42cc851eaf0a4eb3b81784e7c21975f6cc669498c6ee",
+    "before_sha256": "11a24f0a3f1675156300de4cb218b6e534b080b3d748cd9d6e10923ad032df57"
+  },
+  {
+    "id": "D07709",
+    "binding": "D07709:007F6850",
+    "storage": "007F6850",
+    "after": "부유 사도 ２층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "22a603fb403eef19abba42cc851eaf0a4eb3b81784e7c21975f6cc669498c6ee",
+    "before_sha256": "11a24f0a3f1675156300de4cb218b6e534b080b3d748cd9d6e10923ad032df57"
+  },
+  {
+    "id": "D07709",
+    "binding": "D07709:007F6860",
+    "storage": "007F6860",
+    "after": "부유 사도 ２층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "22a603fb403eef19abba42cc851eaf0a4eb3b81784e7c21975f6cc669498c6ee",
+    "before_sha256": "11a24f0a3f1675156300de4cb218b6e534b080b3d748cd9d6e10923ad032df57"
+  },
+  {
+    "id": "D07710",
+    "binding": "D07710:007F6870",
+    "storage": "007F6870",
+    "after": "부유 사도 ３층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "261d965acb37379ce8732568f76dd80fe8c7a28f312dcedd5d2e9d4269537f01",
+    "before_sha256": "24686280a239c0fc04593d23045ed0be40de82f846024ff5e197e04431094a61"
+  },
+  {
+    "id": "D07710",
+    "binding": "D07710:007F6880",
+    "storage": "007F6880",
+    "after": "부유 사도 ３층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "261d965acb37379ce8732568f76dd80fe8c7a28f312dcedd5d2e9d4269537f01",
+    "before_sha256": "24686280a239c0fc04593d23045ed0be40de82f846024ff5e197e04431094a61"
+  },
+  {
+    "id": "D07710",
+    "binding": "D07710:007F6890",
+    "storage": "007F6890",
+    "after": "부유 사도 ３층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "261d965acb37379ce8732568f76dd80fe8c7a28f312dcedd5d2e9d4269537f01",
+    "before_sha256": "24686280a239c0fc04593d23045ed0be40de82f846024ff5e197e04431094a61"
+  },
+  {
+    "id": "D07710",
+    "binding": "D07710:007F68B0",
+    "storage": "007F68B0",
+    "after": "부유 사도 ３층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "261d965acb37379ce8732568f76dd80fe8c7a28f312dcedd5d2e9d4269537f01",
+    "before_sha256": "24686280a239c0fc04593d23045ed0be40de82f846024ff5e197e04431094a61"
+  },
+  {
+    "id": "D07710",
+    "binding": "D07710:007F68C0",
+    "storage": "007F68C0",
+    "after": "부유 사도 ３층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "261d965acb37379ce8732568f76dd80fe8c7a28f312dcedd5d2e9d4269537f01",
+    "before_sha256": "24686280a239c0fc04593d23045ed0be40de82f846024ff5e197e04431094a61"
+  },
+  {
+    "id": "D07710",
+    "binding": "D07710:007F68D0",
+    "storage": "007F68D0",
+    "after": "부유 사도 ３층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "261d965acb37379ce8732568f76dd80fe8c7a28f312dcedd5d2e9d4269537f01",
+    "before_sha256": "24686280a239c0fc04593d23045ed0be40de82f846024ff5e197e04431094a61"
+  },
+  {
+    "id": "D07710",
+    "binding": "D07710:007F68E0",
+    "storage": "007F68E0",
+    "after": "부유 사도 ３층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "261d965acb37379ce8732568f76dd80fe8c7a28f312dcedd5d2e9d4269537f01",
+    "before_sha256": "24686280a239c0fc04593d23045ed0be40de82f846024ff5e197e04431094a61"
+  },
+  {
+    "id": "D07710",
+    "binding": "D07710:007F68F0",
+    "storage": "007F68F0",
+    "after": "부유 사도 ３층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "261d965acb37379ce8732568f76dd80fe8c7a28f312dcedd5d2e9d4269537f01",
+    "before_sha256": "24686280a239c0fc04593d23045ed0be40de82f846024ff5e197e04431094a61"
+  },
+  {
+    "id": "D07710",
+    "binding": "D07710:007F6900",
+    "storage": "007F6900",
+    "after": "부유 사도 ３층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "261d965acb37379ce8732568f76dd80fe8c7a28f312dcedd5d2e9d4269537f01",
+    "before_sha256": "24686280a239c0fc04593d23045ed0be40de82f846024ff5e197e04431094a61"
+  },
+  {
+    "id": "D07710",
+    "binding": "D07710:007F6910",
+    "storage": "007F6910",
+    "after": "부유 사도 ３층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "261d965acb37379ce8732568f76dd80fe8c7a28f312dcedd5d2e9d4269537f01",
+    "before_sha256": "24686280a239c0fc04593d23045ed0be40de82f846024ff5e197e04431094a61"
+  },
+  {
+    "id": "D07710",
+    "binding": "D07710:007F6920",
+    "storage": "007F6920",
+    "after": "부유 사도 ３층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "261d965acb37379ce8732568f76dd80fe8c7a28f312dcedd5d2e9d4269537f01",
+    "before_sha256": "24686280a239c0fc04593d23045ed0be40de82f846024ff5e197e04431094a61"
+  },
+  {
+    "id": "D07710",
+    "binding": "D07710:007F6930",
+    "storage": "007F6930",
+    "after": "부유 사도 ３층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "261d965acb37379ce8732568f76dd80fe8c7a28f312dcedd5d2e9d4269537f01",
+    "before_sha256": "24686280a239c0fc04593d23045ed0be40de82f846024ff5e197e04431094a61"
+  },
+  {
+    "id": "D07712",
+    "binding": "D07712:007F6940",
+    "storage": "007F6940",
+    "after": "부유 사도 ４층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "2b0de55f530e3fe095b417c60d5ff87be9086fcbecffdf5a798f32c880569105",
+    "before_sha256": "cdb2f6b2e1c3d82ce5adf279b38bd78c006856313711c06c64721233916b2b04"
+  },
+  {
+    "id": "D07712",
+    "binding": "D07712:007F6950",
+    "storage": "007F6950",
+    "after": "부유 사도 ４층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "2b0de55f530e3fe095b417c60d5ff87be9086fcbecffdf5a798f32c880569105",
+    "before_sha256": "cdb2f6b2e1c3d82ce5adf279b38bd78c006856313711c06c64721233916b2b04"
+  },
+  {
+    "id": "D07712",
+    "binding": "D07712:007F6960",
+    "storage": "007F6960",
+    "after": "부유 사도 ４층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "2b0de55f530e3fe095b417c60d5ff87be9086fcbecffdf5a798f32c880569105",
+    "before_sha256": "cdb2f6b2e1c3d82ce5adf279b38bd78c006856313711c06c64721233916b2b04"
+  },
+  {
+    "id": "D07712",
+    "binding": "D07712:007F6970",
+    "storage": "007F6970",
+    "after": "부유 사도 ４층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "2b0de55f530e3fe095b417c60d5ff87be9086fcbecffdf5a798f32c880569105",
+    "before_sha256": "cdb2f6b2e1c3d82ce5adf279b38bd78c006856313711c06c64721233916b2b04"
+  },
+  {
+    "id": "D07712",
+    "binding": "D07712:007F6980",
+    "storage": "007F6980",
+    "after": "부유 사도 ４층",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "2b0de55f530e3fe095b417c60d5ff87be9086fcbecffdf5a798f32c880569105",
+    "before_sha256": "cdb2f6b2e1c3d82ce5adf279b38bd78c006856313711c06c64721233916b2b04"
+  },
+  {
+    "id": "D07713",
+    "binding": "D07713:007F6990",
+    "storage": "007F6990",
+    "after": "부유 사도 최심부",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "884ce0dd492004bfe829207364cb9f60a3a981acbd24dfc40bdf767aaa1312b3",
+    "before_sha256": "5a84f89ea4d2bb2a70c3dc7572ccd03e66f55b0ee2446767a2dc0198ee00e37c"
+  },
+  {
+    "id": "D07786",
+    "binding": "D07786:007F7E50",
+    "storage": "007F7E50",
+    "after": "『부유 사도』이야기 들었어？난 보물 따위에는 관심 없어！@P거기에는『왕자님의 유령』이 나온대！@P공주를 지키지 못하고 죽은 왕자님…@P지금도 그 마음 때문에 편히 잠들지 못하고，영혼은 그 사명을…@P낭만적이지 않니？나도 그런 사랑을 받아보고 싶어…",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "154a19bd7861d45bec607b02bf06ab7a66a9f2a918380660ef650c956193d3e9",
+    "before_sha256": "6913c996e5c3fb16492b43865825728767e1933c14e8681cab2c6a157d4f81ba"
+  },
+  {
+    "id": "D07846",
+    "binding": "D07846:007F84E0",
+    "storage": "007F84E0",
+    "after": "『부유 사도』이야기 들었어？@P보물을 노리는 모험가들이 의욕에 넘치는 모양인데…@P언데드가 우글거려서 부상자가 끊이지 않는대．@P그리고…『보물을 지키는 검사』의 유령도 있다더라！@P헤헤，듣기만 해도 가슴이 뛰지？아～나도 가보고 싶어！",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "7bb3e25d84d7d8d750917046c18596855a70354a8d0399f62666b87d60f25418",
+    "before_sha256": "539d98b2474c8a243f356f3dd359da248c7fd0da6a4c8d801a8d990f60766cef"
+  },
+  {
+    "id": "D07904",
+    "binding": "D07904:007F8B38",
+    "storage": "007F8B38",
+    "after": "아，너희．루티 못 봤나？@P『부유 사도』이야기를 듣고부터 상태가 이상해…@P나한테도 속사정을 말하지 않고…혼자 끙끙 앓지 않으면 좋겠는데…",
+    "reason": "확정 지명과 띄어쓰기 통일",
+    "source_sha256": "7c34fd997d98179268505b7e6cbdb948991b96015e06d9d20b9f4cb456a8938e",
+    "before_sha256": "2b364ecc152d9b60e1093715975bab39fd23ff691fc947e560172cb442538fa5"
+  },
+  {
+    "id": "D00193",
+    "binding": "D00193:00083DD4",
+    "storage": "00083DD4",
+    "after": "흐음…보물 말이군…@P쓸 만한 건 거의 발견된 게 아닐까…@P가능성이 있다면『부유 사도 최심부』정도일까…",
+    "reason": "확정 지명 부유 사도와 일치",
+    "source_sha256": "22d0759f6f5d2f0993c70a497b11178410d4843651540aee7221c48a5eb21f4d",
+    "before_sha256": "c2a6c4495a700c425bab54077b537b7a7060c016d20fc7d9be6170c34049f21e"
+  },
+  {
+    "id": "D00401",
+    "binding": "D00401:0009D9EC",
+    "storage": "0009D9EC",
+    "after": "저기，『부유 사도』라는 곳에서 소란이 일어난 모양이야．%k",
+    "reason": "확정 지명 부유 사도와 일치",
+    "source_sha256": "de9783a4828a34421505b8c255695391d335d0c997aac63af60de48c4de24706",
+    "before_sha256": "5655816127d505f701c90dbeec0a63c9e87731268d66f88d556598d371ee727b"
+  },
+  {
+    "id": "D00411",
+    "binding": "D00411:0009DBA0",
+    "storage": "0009DBA0",
+    "after": "『부유 사도』로『보물』을 찾으러 가지 않을래？%k",
+    "reason": "확정 지명 부유 사도와 일치",
+    "source_sha256": "2986eb5458a357d0399ad1904cc5aac51c9daecaa1cd1722cf72acedb3aa326f",
+    "before_sha256": "b00b5e774a1c505063f9520d2daf3b82cc125d7357bb48107c9f5c57a7f02bbb"
+  },
+  {
+    "id": "D00424",
+    "binding": "D00424:0009DBD8",
+    "storage": "0009DBD8",
+    "after": "%l자아，『부유 사도』로 가자！%k",
+    "reason": "확정 지명 부유 사도와 일치",
+    "source_sha256": "2e2dc0f4f065d697d7db9a89b64a2073358155e64506f711140acf414fa95143",
+    "before_sha256": "8a478c7e40a59eb189b632ab4e4c325e637a1e427a66222e0a709368aa6f99b9"
+  },
+  {
+    "id": "D03315",
+    "binding": "D03315:00337514",
+    "storage": "00337514",
+    "after": "『부유 사도』는 알고 있어？",
+    "reason": "확정 지명 부유 사도와 일치",
+    "source_sha256": "6a0db98ad867125ce2b6d907c735f01f881e54e71baef5f5e6ac431335abefaf",
+    "before_sha256": "c4034b5a74234bbd950c49567e824da3331318c7fdd5f9dd9a0c5e9003833437"
+  },
+  {
+    "id": "D03465",
+    "binding": "D03465:0033A030",
+    "storage": "0033A030",
+    "after": "@L이『부유 사도』조사차 왔는데…",
+    "reason": "확정 지명 부유 사도와 일치",
+    "source_sha256": "f09df98be9be99213cf5aa3792ba2b6a016b9275b526fc65f5f11b0b195f8d77",
+    "before_sha256": "6f8ccb1773307bc3a8d920c7a5940cdf201e20ec2517476759c623cd5a6e30e8"
+  },
+  {
+    "id": "D01673",
+    "binding": "D01673:0031DF84",
+    "storage": "0031DF84",
+    "after": "@L그것은 〈광〉〈암〉〈뇌〉〈무〉의 힘입니다．",
+    "reason": "사용자 확정 속성 표기 뇌·무와 일치",
+    "source_sha256": "cdf99c993bf3cdedf0edfcfbd101125c87d1178373e3027ad5b556964bccb524",
+    "before_sha256": "4638d3eb2566fa30f8867c6976d52abbf2349712c74657488a9b4e08aba23f46"
+  },
+  {
+    "id": "D06984",
+    "binding": "D06984:00738EDC",
+    "storage": "00738EDC",
+    "after": "이런 추운 곳의 마물은 대개〈수〉속성이야．@P약점은〈화〉와〈뇌〉．@K특히〈뇌〉속성은 공격과 방어 양쪽에서\n〈수〉속성에 유리하지．",
+    "reason": "사용자 확정 속성 표기 뇌·무와 일치",
+    "source_sha256": "2612211e7996b73752bae196039139f3fb366130fa5c6189001335c285738c22",
+    "before_sha256": "bb71ff6003178ec0149395ada759112ae9a7ffcd469f41cdfeb194bb3c274d66"
+  },
+  {
+    "id": "D07620",
+    "binding": "D07620:007F5B0C",
+    "storage": "007F5B0C",
+    "after": "강력한 속성도 있어．〈광〉〈암〉〈뇌〉〈무〉，이 네 가지야．다른 네 속성보다 강한 특기를 쓸 수 있지！",
+    "reason": "사용자 확정 속성 표기 뇌·무와 일치",
+    "source_sha256": "0ac8445145b92b0f895a99b5c35cccf54cae280dad51e664eeffbec73e12287e",
+    "before_sha256": "9a5bd23775613b3c70902e503ae0fed9fa6e0da922c9a721c200c02d35a45aec"
+  },
+  {
+    "id": "D07620",
+    "binding": "D07620:007F5B5C",
+    "storage": "007F5B5C",
+    "after": "강력한 속성도 있어．〈광〉〈암〉〈뇌〉〈무〉，이 네 가지야．다른 네 속성보다 강한 특기를 쓸 수 있지！",
+    "reason": "사용자 확정 속성 표기 뇌·무와 일치",
+    "source_sha256": "0ac8445145b92b0f895a99b5c35cccf54cae280dad51e664eeffbec73e12287e",
+    "before_sha256": "9a5bd23775613b3c70902e503ae0fed9fa6e0da922c9a721c200c02d35a45aec"
+  },
+  {
+    "id": "D07620",
+    "binding": "D07620:007F5C3C",
+    "storage": "007F5C3C",
+    "after": "강력한 속성도 있어．〈광〉〈암〉〈뇌〉〈무〉，이 네 가지야．다른 네 속성보다 강한 특기를 쓸 수 있지！",
+    "reason": "사용자 확정 속성 표기 뇌·무와 일치",
+    "source_sha256": "0ac8445145b92b0f895a99b5c35cccf54cae280dad51e664eeffbec73e12287e",
+    "before_sha256": "9a5bd23775613b3c70902e503ae0fed9fa6e0da922c9a721c200c02d35a45aec"
+  },
+  {
+    "id": "D04455",
+    "binding": "D04455:00348CF8",
+    "storage": "00348CF8",
+    "after": "작별 선물이다．가져가！",
+    "reason": "センベツ는 떠나는 사람에게 주는 선물. 뒤 대사의 곡괭이 선물 문맥도 확인.",
+    "source_sha256": "ebfb100600b28cf2396dff4ca031d85886d74f904b617c323f969c36d27a4c95",
+    "before_sha256": "68836567b2fcd702918afb338d2f5c1457614fa607a22b90b66d89f198763bec"
+  },
+  {
+    "id": "D00600",
+    "binding": "D00600:002B2FC8",
+    "storage": "002B2FC8",
+    "after": "명공이 만든 스틸 소드",
+    "reason": "スティールソード는 확정 아이템명 스틸 소드. 일반명 강철검 대신 동일 고유명사 사용.",
+    "source_sha256": "25d00a334a7b1818837453f826cc36a9b4e478ed24a6ae251316e65df1545132",
+    "before_sha256": "64e699f4ffb6975b1a7e1cd70d9b09adc953ee062f665c20974aa586ed696312"
+  },
+  {
+    "id": "D00234",
+    "binding": "D00234:0008BF70",
+    "storage": "0008BF70",
+    "after": "%l『레그니아 마을』에 있지 않을까%k",
+    "reason": "확정 지명 레그니아 마을과 일치.",
+    "source_sha256": "1fd1ea4b3320c2bd93bf7cfab302a8f4ea10291bd025aef07a27f5c0437e4c78",
+    "before_sha256": "33c09eefb9b9b08a88fd87c9ceeb3adc457542a17016f7ce606cdeb1a9dcf151"
+  }
+]

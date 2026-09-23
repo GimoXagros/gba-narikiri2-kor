@@ -1,0 +1,2482 @@
+[
+  {
+    "kind": "item",
+    "id": 0,
+    "storage": 2829500,
+    "jp_sha256": "e3191afb162b46c0c4fa746ddeb064dd1f62532e9c98cd23c03a30d5c6a88c5b",
+    "previous_sha256": "d06e69b70bb953e72b9a7359f7642977a6ba47a943e141688952def830239551",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 1,
+    "storage": 2829520,
+    "jp_sha256": "5f255d9201b656672a051fdfd71b613b378b998118f47c4806a4a898e830b73d",
+    "previous_sha256": "e4a7fe347d78ae604067836ce0d2effc4522f68a0f0d837d2dc24638e9fa6232",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 2,
+    "storage": 2829540,
+    "jp_sha256": "7d3f356dbea6036803fd88dc15962a0af3d915130efa5d92334bcc980d62ceef",
+    "previous_sha256": "7ee5b4024fd649892afdf82a0a740800470329ed67bd7ecbf61c91dc1a35a8be",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 3,
+    "storage": 2829560,
+    "jp_sha256": "f31294bfc83a10828697f0ec5f4a35d1eea4ea059b6848b0a840fd2e10914259",
+    "previous_sha256": "4be1129277d119ed7a8b70a26a254bfc2a7b96cf66c23bb17e9653d61b6e89f5",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 4,
+    "storage": 2829580,
+    "jp_sha256": "c9edcdca680151354f923503875938a7e3d9c7dfaec1869feac548370cbb0880",
+    "previous_sha256": "a961ec457377cc44cf187c0c367f8767164d30781118db9e8ef53af57f0f7956",
+    "changed": true,
+    "final": "전투 중 수속성 피해를 줄임\n맵에서 추위 피해를 받지 않음"
+  },
+  {
+    "kind": "item",
+    "id": 5,
+    "storage": 2829600,
+    "jp_sha256": "173ae665b57c352e9b4ec4bdc2c537a16fb19af2fa6dd10ab729400943163e6f",
+    "previous_sha256": "bad28e269bb49952ae8d9572e5962c875a1b75e20f94ba09a5f1b44c8ee79b59",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 6,
+    "storage": 2829620,
+    "jp_sha256": "ed5533b0f228e74b46927a99bd9f6bfd3fbaf80586a48e3d44338c83af4b3f51",
+    "previous_sha256": "efd2dd7db8025e8857eca0e501558e21c05d44a6cc7818f2a579f21dae06c417",
+    "changed": true,
+    "final": "젤리 형태의 약\nＨＰ 최대치의 ３０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 7,
+    "storage": 2829640,
+    "jp_sha256": "0d76ac8d567296de18e681e18d225842c685a94c88b4e2a22fda51b3781dbabf",
+    "previous_sha256": "be59532ff950adbf199b89d11437aa21cf7f0ecb31c1345ce022f6aa4f37b0af",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 8,
+    "storage": 2829660,
+    "jp_sha256": "9a6af5de55fc000d9a97cd6f12923d3b90ee46ee3189928a6e8570235076a96e",
+    "previous_sha256": "bac626a8d35eb727a4fc0590bbd1fbbb28d063fe5589243c072e47156f451fd8",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 9,
+    "storage": 2829680,
+    "jp_sha256": "f651b91d0e0ae8bdfbe75bd101a007ea6e67d3e1a22eec90273d842523ab9715",
+    "previous_sha256": "2683ef99b9b2c50ae12c00efddd270f349a4d14566be845ef14ce0ee648315cf",
+    "changed": true,
+    "final": "요리 재료\n전원 ＴＰ 최대치의 ３％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 10,
+    "storage": 2829700,
+    "jp_sha256": "3fe7a8584883a9080675e743f3bfcebb79abefbd8f439f7e40835f3d82edf028",
+    "previous_sha256": "4a10959f02ada35f473b3b5c74d41752ff5580231fadca27402f2dc8eebb5296",
+    "changed": true,
+    "final": "푸르게 빛나는 칼날을 지닌 마검"
+  },
+  {
+    "kind": "item",
+    "id": 11,
+    "storage": 2829720,
+    "jp_sha256": "5820be11a11ca335e85c74837fde4db5d5f6ab0dd07e8d4f56e267cac7236700",
+    "previous_sha256": "b3c61d08db8ba23ea86a4767d5d8879bef8af63413b578c32a92d2d404817b5d",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 12,
+    "storage": 2829740,
+    "jp_sha256": "98dbe378798a9472b20e19357376e1839333f04ca0e3c77c66fe6ed56e7c366c",
+    "previous_sha256": "d8e27b8aa9b00a9f1d1445c90e7d5e1b3773ba0370ba5e25e5b739e5bef196d0",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 13,
+    "storage": 2829760,
+    "jp_sha256": "3153cac7cf216fb4680974e0ed0b175a3b5672e7f4062fd89edf257dbfef8531",
+    "previous_sha256": "1b77e28409921cb17a1f8e4b860c979e42cb03aed3c2a674596a56532f1500f1",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 14,
+    "storage": 2829780,
+    "jp_sha256": "7f628ba44379d179a095ab0fe1e5577925707d98e686d008086015f43a9b148b",
+    "previous_sha256": "8b8e362465f33933733464d9bd811282edfd7b7ab56c6e1e6408ea12f3f65ae0",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 15,
+    "storage": 2829800,
+    "jp_sha256": "f64393c370072349a9149c9994065f9786892739b429c18d30967493a3359899",
+    "previous_sha256": "093a0b7247ef685552de585bf229c66335b99d0c6b0bc34ccfb1e0b2de41a9da",
+    "changed": true,
+    "final": "신비한 약\nＨＰ와 ＴＰ를 완전히 회복"
+  },
+  {
+    "kind": "item",
+    "id": 16,
+    "storage": 2829820,
+    "jp_sha256": "ec7826255c08fad13cd9a96e69143ded4553006bbf2254032f2affaba6bbc14a",
+    "previous_sha256": "bc75ff13c629c1d64cc5f4ab19f5248d07bdbf712a59a1540819317c6546ac91",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 17,
+    "storage": 2829840,
+    "jp_sha256": "81fbe812f7b42c799345da3a6eee96647b218ecc376aafa440169dc4481dbee6",
+    "previous_sha256": "21e823f4350482ada4c53728ca94b9f370f7dda65ca18293c7e0e03e149cc94a",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 18,
+    "storage": 2829860,
+    "jp_sha256": "f06df09e4bab5c33b64adc0ca54b4fb2cbfab5265b19880cfd38358a6d5ad2ab",
+    "previous_sha256": "b0abf77d7d3de7da80b7ea8b979bf86f1312a58cce49fa2f43bd0423cad8a02f",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 19,
+    "storage": 2829880,
+    "jp_sha256": "6ccf62f40080d0e0ada734b7e1f8497c86793df6a7c15f6fd776cef7d8048498",
+    "previous_sha256": "6f7c765db86c99d7b20a3ece5a0828b66ab7f7f0d51d8f7986b4631ea7fbd7e5",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 20,
+    "storage": 2829900,
+    "jp_sha256": "6ff6e7db1fced6b44ef5d4129c45aaa0aa9c4058a63e08a9d31baea075bc81e7",
+    "previous_sha256": "5997c4733c91044fac741edadb879f1c07f3015c56e0373b3dc1d1cb791eea85",
+    "changed": true,
+    "final": "정성을 담아 빚은 주먹밥\n전원 ＨＰ 최대치의 ４０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 21,
+    "storage": 2829920,
+    "jp_sha256": "d4a46fb2d0b4e126bd29ff2aca7f11bed3f4c33b5115e9e79f995531687b8709",
+    "previous_sha256": "3986d3c32221e0898e989f61bafd94e8e60d1c8f4e723d7f5cbea397ff8f4577",
+    "changed": true,
+    "final": "젤리 형태의 약\nＴＰ 최대치의 ３０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 22,
+    "storage": 2829940,
+    "jp_sha256": "44f6c75cdde47b7e1f980c723df5638e3ccb00bc4ff9d112b1b568519e1f5077",
+    "previous_sha256": "2e9d1a44e57698d88f107f49c076083269ac02953ef81d7b2e469abe596a7309",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 23,
+    "storage": 2829960,
+    "jp_sha256": "6646081b937602232bb34ab1ca4438bd410a73e814b99fbfe1573aa76868b795",
+    "previous_sha256": "1d4058df84e94f9e0aa447d31400fd4c4e72d22298845d010279d8685d53854c",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 24,
+    "storage": 2829980,
+    "jp_sha256": "557abbe52a7cca1a9797810c1d6059d51293e134c4c1dc973a4c3128d96e8e1e",
+    "previous_sha256": "8e06a17ad663c18fe8c60b88456c433862bb10d669cd8a968183037eee3875ba",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 25,
+    "storage": 2830000,
+    "jp_sha256": "054c04023bbd6e0e87dd6c71c78e7ca9bf50ef0bb720bbaf6f273594a8350f68",
+    "previous_sha256": "807bfa75eb3e54cda5c85ce005340ddc46f458ebb7639d388250c6dbce8c60d7",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 26,
+    "storage": 2830020,
+    "jp_sha256": "f705b84d5e3fdeaac3e36425c8a0b4a7f707b9536484d340f0840a444e2d6154",
+    "previous_sha256": "9aaf9b2680409c148f44b13199fd54a288d454d5cf8f40d45af76932a4582c24",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 27,
+    "storage": 2830040,
+    "jp_sha256": "a743823640759118445ac4a9b6f739338f1bfa9c3e4421ffba8fd4f6fb236ba0",
+    "previous_sha256": "bf63b0b1e3a5d81ac94f07ec61ba1b141e8ca867d1608252c94a23c40b16325d",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 28,
+    "storage": 2830060,
+    "jp_sha256": "f5a10ee3c6bd4f57d82ad0f3045ac86fef146990acc3d06f3119ff3267169ddc",
+    "previous_sha256": "a05f42c810785adef3e7c0340a4086fba1310a007765405f1f723252e927a4ad",
+    "changed": true,
+    "final": "단백질이 풍부하고 진한 파스타\n전원 ＴＰ 최대치의 ４０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 29,
+    "storage": 2830080,
+    "jp_sha256": "bd575cee89399b7177b8f4c48efb614ae4baa84d903e9aad4a048e1187ad327a",
+    "previous_sha256": "bdc8e198c473deb97543b51d35515beabe2aebed9f59f10123207f263fa04129",
+    "changed": true,
+    "final": "일주일에 한 번은 카레라이스\n전원 ＨＰ 최대치의 ８０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 30,
+    "storage": 2830100,
+    "jp_sha256": "0b00265ce321aa8f84cbf452620c0232c1a510ed9c18602631f41b06d286e459",
+    "previous_sha256": "4aa81681ad163689eea5ba7ac444a30f0eebbe0550f4319e7ef6e41bf542d47f",
+    "changed": true,
+    "final": "＜황정석＞\n지속성의 옷을 만드는 돌"
+  },
+  {
+    "kind": "item",
+    "id": 31,
+    "storage": 2830120,
+    "jp_sha256": "478ae14165276b0ae6c42adb69fb1ce75f83f5a220856fb6f6faa81865c1e85c",
+    "previous_sha256": "207d21b95dec117e6255d7651acff0b57634920bc303a16b7a01a53553637782",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 32,
+    "storage": 2830140,
+    "jp_sha256": "28b6206cdc2d2eb90bce6a162db9914639f7adadeabe8f8959031eae9be5515c",
+    "previous_sha256": "c0b869e25419612ae9c34575f2c3a2eb7ddc7ce4543e98658f73ecc17b984f0d",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 33,
+    "storage": 2830160,
+    "jp_sha256": "3335ea5e48d088d20c14d50bfe1fe8882d07ead10a96c145a2ba07a3988d2f2f",
+    "previous_sha256": "dfa255d61c190a50a4f9a81a8975b164cc3a674e572275e7f97fec71930a6a72",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 34,
+    "storage": 2830180,
+    "jp_sha256": "dccb58c27a3d059e9e058605afe2d9d843cef6b1e3a67b1ba1169eb48739e87e",
+    "previous_sha256": "2c7a5a677a0648f62647296a612f445f9df936f3876b919d06267351a34476d5",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 35,
+    "storage": 2830200,
+    "jp_sha256": "06cea7a936fcf992775f2b5f486c73fbbaec7bc8d7e8d883c31c6a758d2dda5d",
+    "previous_sha256": "7f8626e943253eda203348b0625d69bba6b85d14cc0b9d3323d2d9751133a772",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 36,
+    "storage": 2830220,
+    "jp_sha256": "b2dbc1318ad06ad0d3a31be51f11a6bd9226d90c55079d985d6daf7b1abb0ae1",
+    "previous_sha256": "2c93df955a8e732b50f7cd00f015a2f8788d0aa248cc5700c67a7aeeaba19243",
+    "changed": true,
+    "final": "닌자의 옷을 만들 수 있는 루트"
+  },
+  {
+    "kind": "item",
+    "id": 37,
+    "storage": 2830240,
+    "jp_sha256": "c1c1307dc1f07c97d6b202898860090f43cf8fe9df752de0e4aee2d78561337e",
+    "previous_sha256": "2af5fba3c33b21b62e00f26ba4192eb519e177d138894690579c4c5732896bb1",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 38,
+    "storage": 2830260,
+    "jp_sha256": "32f042a6edfe76c191cd9886294fe022dab435b11f72862a6f7c98298a365849",
+    "previous_sha256": "eaaeffe55968c283025c6f31fac994edae8bad99e443d2028af1c70acafd9502",
+    "changed": true,
+    "final": "치즈와 화이트소스의 절묘한 요리\n전원 ＴＰ 최대치의 ５０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 39,
+    "storage": 2830280,
+    "jp_sha256": "25d00a334a7b1818837453f826cc36a9b4e478ed24a6ae251316e65df1545132",
+    "previous_sha256": "64e699f4ffb6975b1a7e1cd70d9b09adc953ee062f665c20974aa586ed696312",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 40,
+    "storage": 2830300,
+    "jp_sha256": "5434ab22a8469539a02ff132b3f5ffc12fa5dbb6aa91411a8d79680dfd33981a",
+    "previous_sha256": "6ab2ad35c88271f1a299eaf82254d212f832ec2701145110a04b572b07920609",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 41,
+    "storage": 2830320,
+    "jp_sha256": "eb1ad5102a21c86e9896d0fd6999c67dc3c618fe350ea63072da3cb5037a4c3e",
+    "previous_sha256": "6fefae8575d68f941f3f19c7ce85e6c0732407ab124de868a76764289eb80ccd",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 42,
+    "storage": 2830340,
+    "jp_sha256": "3909c9ae7155568b03db744414b3e8b2bcb8e6ea22706060502f6ba03356f44b",
+    "previous_sha256": "aaf6f29f4109dd636dc7de2ef355875a7ddd8d3ed22172f6e69ae771995db95d",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 43,
+    "storage": 2830360,
+    "jp_sha256": "968e3e1aeb6e8766106040818e120e767575179974d919054242c5f92d1a9fbd",
+    "previous_sha256": "d1a38822dd66aef959cd6d330ae2afb0d435ce854905ce16aaebfd71f78f6328",
+    "changed": true,
+    "final": "잎이 세 장인 것이 특징인 들풀"
+  },
+  {
+    "kind": "item",
+    "id": 44,
+    "storage": 2830380,
+    "jp_sha256": "08c3aa03c3c28ffc427490177fad3a1691f6af30bce3b4d6220d1a50057260b8",
+    "previous_sha256": "c16fd5ac3a366cac82aa75b070e943fe7c329aac9557b2fdf7758df81bb3664c",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 45,
+    "storage": 2830400,
+    "jp_sha256": "fcdd162432eb733c9fb9b7da3161844f494ced6918fab5591263efa74246d38d",
+    "previous_sha256": "97957a02bb8cf5e6093f5d93ece2b8c644ed1c061265df5ce365cf20b0ff5c47",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 46,
+    "storage": 2830420,
+    "jp_sha256": "5019daba53fc29c9b19553356ae3aac7bee91eca0c5cfeeaf307f3aab11f41c1",
+    "previous_sha256": "a4ddab6181622aa595b2bd1295229c7c1a307c507083c59d5a6624f6feefa9e8",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 47,
+    "storage": 2830440,
+    "jp_sha256": "9d3ec2bce2acdd6d53a45b7bc79cf5224506e0e8fc21b3df455a9c6996295952",
+    "previous_sha256": "a93db4ad76fa90699ea769f1f8728dc24de8b542f52811590958bb2b54e817d1",
+    "changed": true,
+    "final": "＜흑정석＞\n암속성의 옷을 만드는 돌"
+  },
+  {
+    "kind": "item",
+    "id": 48,
+    "storage": 2830460,
+    "jp_sha256": "56fcb84f4803a29fbc21a7edc3c9e27408604f7d7655fb7c9ede8412d9b55477",
+    "previous_sha256": "2b98ffff2a539d2967517f77c7bb694ff4fd40287d86e8b067d378ecc748a3e7",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 49,
+    "storage": 2830480,
+    "jp_sha256": "c7057edb6b47c4a9027c4c07f0a152221652f7fd993a3eec712e0b4f362379ac",
+    "previous_sha256": "1177a3ed85279c66e6668a84a28bd99be3b6c8a21eb06e6bee8bf2eea716b4de",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 50,
+    "storage": 2830500,
+    "jp_sha256": "169aa63e7a5ab94c45ba1a38512a71085ac413f4daf2d3c664cea0432dcac0fb",
+    "previous_sha256": "28f281233effce8649244b1a8bde7a5533edff584032f12455723c652ba1468e",
+    "changed": true,
+    "final": "번개 문양이 있는 망토\n뇌속성 피해를 줄인다"
+  },
+  {
+    "kind": "item",
+    "id": 51,
+    "storage": 2830520,
+    "jp_sha256": "e865bd4aba1c7eddc8b1dfad5017439742b26b12a9713a484d051dd53afa5f75",
+    "previous_sha256": "be372dd37834bde209ff7f8c706ac5fffaf37d52e74404793c00564def625112",
+    "changed": true,
+    "final": "도시락에 알맞은 요리\n전원 ＨＰ・ＴＰ 최대치３５％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 52,
+    "storage": 2830540,
+    "jp_sha256": "85ffe1b14fc42eef619ccc07180ad59cd0e142f41041128b21d528bcc492fe22",
+    "previous_sha256": "aa95fbd5e090a50dd492e85fad61db76cf011f8fd61204b5d823de18e979bcd2",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 53,
+    "storage": 2830560,
+    "jp_sha256": "ede65f7b8cb59c56524808362ea7a2d5923f32c4b8cf9f5db64dcb831ce9aef4",
+    "previous_sha256": "33a29a29de12c0d86356d803613f34ae863bc5e63827fb17a8836781188d16c9",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 54,
+    "storage": 2830580,
+    "jp_sha256": "ee45de2f2d021a45c5f5977d071da3bd6162f2d18045e1835c4ebe5e65f5cd6f",
+    "previous_sha256": "6e72e43c08d753c3219fd3aa6294a9addf0ff106d5786b6befd5295ff2e54678",
+    "changed": true,
+    "final": "＜자정석＞\n뇌속성의 옷을 만드는 돌"
+  },
+  {
+    "kind": "item",
+    "id": 55,
+    "storage": 2830600,
+    "jp_sha256": "232087d575973661ceff0591548eb60cd789f1023c9b6692957aaab72a5d8afe",
+    "previous_sha256": "a270db17a49d7fa671de66467373a8a34de2c2ea25172164d4c02e250a5945e4",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 56,
+    "storage": 2830620,
+    "jp_sha256": "32acaafaa9118ae8ad82490ec3c9ad653fbab5a5ad81be5c3bc68ed11019d0a1",
+    "previous_sha256": "09acb8ba1ee430c0b03ed857a6631b88658af6713939c41c36b309688055696c",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 57,
+    "storage": 2830640,
+    "jp_sha256": "b8928c0c326fbbdd850f7800a9844ec04772c20be335e778fe9cc2bf7feecd2a",
+    "previous_sha256": "c86dc4f88bd89c3a3d09ecb489efbd02585cff396867ca4aa2425a800616ccaa",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 58,
+    "storage": 2830660,
+    "jp_sha256": "c93fd5b7e9fa41d40dfaab0ec8de91ae49bcdb864ad8e018f283bca73302d7e3",
+    "previous_sha256": "ac031d21c3702c590caeaffb2a6ce2489530c015543cd03a4d0a1ea8bbcc024b",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 59,
+    "storage": 2830680,
+    "jp_sha256": "d37570b03438f10c35c6e2b7a1eccee9c785f2cdcc82183434e56f785d76d409",
+    "previous_sha256": "b6da83d71d7da5c1fe9ebfa21889f5451fff5a175090d740d281b07cde35dacf",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 60,
+    "storage": 2830700,
+    "jp_sha256": "79b6e29bb2a0d9e2dabb4ffe16b509dcf0e0dc9437f5bc8709399eec3ab4855d",
+    "previous_sha256": "d6356676ab045d328a8d5dd46740445e9f668f2d54741ddab604b36625e9488c",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 61,
+    "storage": 2830720,
+    "jp_sha256": "0a266b2561b214255e77fcffef45ec840914bebb7abfd0d77362816904f8c130",
+    "previous_sha256": "da42712e117878419eaf8588943e77ff2f71890febb50fea8e0d926bfe93ba2d",
+    "changed": true,
+    "final": "적의 자세한 정보를 알아볼 수\n있는 신비한 렌즈"
+  },
+  {
+    "kind": "item",
+    "id": 62,
+    "storage": 2830740,
+    "jp_sha256": "0cb30f8657a052431e97613800157f3ee42f4beeee772dfa5018c3b41ce3655a",
+    "previous_sha256": "915c2890a37f3e688c7cd6a9bd0729902f04d4d5ea0aa5744edd1e37ccb56a55",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 63,
+    "storage": 2830760,
+    "jp_sha256": "fe487b8386d48bca0cf67e5b9a38db137b8f14af488e1cac6758c4764bddddb8",
+    "previous_sha256": "d3702ed5a78d77f8398aa7ce1c8d38c38e94c1bc31f0d105c1a7ecd5431b0066",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 64,
+    "storage": 2830780,
+    "jp_sha256": "51db7ae7ffdf7825a5bfb80d882de79e96f17d2f555f45743694cfa5ef0250a9",
+    "previous_sha256": "054c11bdb4603e3377a341bdabe5fc31e5cfb6f780d9b26e9fe5deadb6b67fb5",
+    "changed": true,
+    "final": "＜청정석＞\n수속성의 옷을 만드는 돌"
+  },
+  {
+    "kind": "item",
+    "id": 65,
+    "storage": 2830800,
+    "jp_sha256": "9349b537f4a7bf1572ca2df3d2cf5aafb3aa15a523fe20df7d0a32bcd3651a2f",
+    "previous_sha256": "86fb1aeac8aceeb91097d13019be11f8c6bb50d18b1bd796e01bab57f11e5548",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 66,
+    "storage": 2830820,
+    "jp_sha256": "b389ecc56c18161ce00689a044cab1e3f79acd50b30b1c7019123d3dd8fc56d2",
+    "previous_sha256": "603c113e30e33fe37e2d30432c9336e6749273e5a9bf38c5bf58f0b56e30c7cc",
+    "changed": true,
+    "final": "＜홍정석＞\n화속성의 옷을 만드는 돌"
+  },
+  {
+    "kind": "item",
+    "id": 67,
+    "storage": 2830840,
+    "jp_sha256": "a55f7f7ade3875dbd356a4ed56e61d531f0d9f2d5ca87bc42356eeba734b6dc8",
+    "previous_sha256": "4b17eb2c9a5fdf5dc3f2f4dd65dbcf6f70188d8f2d61b30e443e0d267e24a372",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 68,
+    "storage": 2830860,
+    "jp_sha256": "22c61c3db4cc9eedf606e35f257a00c06f4d3c14594216842f59fafdda6e9282",
+    "previous_sha256": "890308dade0c547900c0010acbb6ab5a317e3e32fbd4ca9cbc8055a91ff130a9",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 69,
+    "storage": 2830880,
+    "jp_sha256": "31a64cef558dd4f974ff89d9580abfda543a0dba275cdc47db8c660201750a1f",
+    "previous_sha256": "f0829919490835822b0aadafbdb08e366e59226d97877d7df7b13587b136db90",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 70,
+    "storage": 2830900,
+    "jp_sha256": "9ea80adc622b540e01012122486d0e5650a99f770dd6fa4fe1aea5152696d480",
+    "previous_sha256": "61758ef1933e42b0b2b4766b35b63e8ebd15ba163e82202422bec4bdd31a47af",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 71,
+    "storage": 2830920,
+    "jp_sha256": "bf47fa849913ba0a8bdd9390f7d2cbaedd69ff1cefc104d986cdbb511caa0459",
+    "previous_sha256": "0b2f7719ea33e13e51ef114d33f129fe722f5e616af695c1f725040f4682ace0",
+    "changed": true,
+    "final": "요리 재료\n전원 ＨＰ 최대치의 ３％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 72,
+    "storage": 2830940,
+    "jp_sha256": "f651b91d0e0ae8bdfbe75bd101a007ea6e67d3e1a22eec90273d842523ab9715",
+    "previous_sha256": "2683ef99b9b2c50ae12c00efddd270f349a4d14566be845ef14ce0ee648315cf",
+    "changed": true,
+    "final": "요리 재료\n전원 ＴＰ 최대치의 ３％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 73,
+    "storage": 2830960,
+    "jp_sha256": "9ba29da0385c9fdd2c46dfd9ebb42ce7b0b4ecdf5c6c43420b7cf1cfebc3edfa",
+    "previous_sha256": "eecd8fc84f765eebfd6ff21044ca1a1a9c577c1eeee1da144463e43c55473c63",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 74,
+    "storage": 2830980,
+    "jp_sha256": "d0942e54075c19f642ee1b1d62fad64ecef7bc1f876eb9f1780ed4035c2fed25",
+    "previous_sha256": "431a9a882a736275280fc0b0cef894c96fffb9ea816cf57fe451111d4ca65566",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 75,
+    "storage": 2831000,
+    "jp_sha256": "bf47fa849913ba0a8bdd9390f7d2cbaedd69ff1cefc104d986cdbb511caa0459",
+    "previous_sha256": "0b2f7719ea33e13e51ef114d33f129fe722f5e616af695c1f725040f4682ace0",
+    "changed": true,
+    "final": "요리 재료\n전원 ＨＰ 최대치의 ３％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 76,
+    "storage": 2831020,
+    "jp_sha256": "489ba4c307f764822b22cbfd0c8fb30d7c475c94dba03437bcbcd3dee58b9915",
+    "previous_sha256": "9691302ca9ebad2d24285e48d083173bc7049405312825db195c9af3e81f927e",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 77,
+    "storage": 2831040,
+    "jp_sha256": "9a60a67914981eb6b04f78ac2fc94db4bbf4a68fe836efe0b9219bb4993eb5f2",
+    "previous_sha256": "080ccbeb9cc7a2f37d0a685162998081447f53484265e2a968deb3072e6eb726",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 78,
+    "storage": 2831060,
+    "jp_sha256": "9549e4acdc793a099115be58cde46a08c7abcd1a27b46301788f17c2a1bd29dd",
+    "previous_sha256": "e133830ed43082fa374cf6fab1ddeb3c16255a39d3df0b49ddcd6d8871db6919",
+    "changed": true,
+    "final": "참치를 속에 넣은 샌드위치\n전원 ＨＰ・ＴＰ 최대치３０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 79,
+    "storage": 2831080,
+    "jp_sha256": "ae603863b9dbced77ad68d501dca5421f08d8eb2fdc13ee139ea84e4e96baf98",
+    "previous_sha256": "43aea548302573cbe2ffafe2fa792f9438a3543cb90ddde9b972f17b67694585",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 80,
+    "storage": 2831100,
+    "jp_sha256": "ae392125ac8cfc7485fc039f044f3c0ba71c71f30a54fb309d8f75eadf1a699a",
+    "previous_sha256": "b65038d5a2b9aa3617d2c9f7dc1f0edf4d5c862a3eca65e1d72ea661a5621d1a",
+    "changed": true,
+    "final": "간단하면서도 호화로운 요리\n전원 ＨＰ 최대치의 ６０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 81,
+    "storage": 2831120,
+    "jp_sha256": "be6edf62ba2223a1198270283c6995a2d4531748b466778e2f6ec60372431bf3",
+    "previous_sha256": "d383a14d387373c67970368d67fbaceb0d7b8b40d97e1d66a2ff2ab3fbf7acb8",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 82,
+    "storage": 2831140,
+    "jp_sha256": "303cab616ac4f65eda84f9ca5c21f9f7088e6fda4710ecd32e826e15529b58a1",
+    "previous_sha256": "211da9e4723509d39bda297dd2d003cd480acf60c47a6b4c7deaacf5170285a5",
+    "changed": true,
+    "final": "＜철광석＞\n무속성의 옷을 만드는 돌"
+  },
+  {
+    "kind": "item",
+    "id": 83,
+    "storage": 2831160,
+    "jp_sha256": "bf47fa849913ba0a8bdd9390f7d2cbaedd69ff1cefc104d986cdbb511caa0459",
+    "previous_sha256": "0b2f7719ea33e13e51ef114d33f129fe722f5e616af695c1f725040f4682ace0",
+    "changed": true,
+    "final": "요리 재료\n전원 ＨＰ 최대치의 ３％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 84,
+    "storage": 2831180,
+    "jp_sha256": "a52903a86ea928b97d21ce6a2ba23c3fb9b7bfb68c2ea4f7a571a2513a50aed7",
+    "previous_sha256": "e3ba727158147bb20d71d87351e896ababb425991a1fb6eae03088d2c2432336",
+    "changed": true,
+    "final": "상태 이상을 치료하는 젤리 약\nＨＰ・ＴＰ 최대치의 １０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 85,
+    "storage": 2831200,
+    "jp_sha256": "a048d1a86732bd3e281fcc06a39e30930cfb2623c583bed8b08a8d21ac76a44b",
+    "previous_sha256": "8a68ebfee5b4a47e5fa914f7cdf6d9dea34c9b0864b1d3fe9918f560c46074d2",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 86,
+    "storage": 2831220,
+    "jp_sha256": "89d0ce011ba1b5f6c869c689039010debea29845d159a199b9efbc68bd605baa",
+    "previous_sha256": "7c7fbd3d0c485c7a320d4ba29769e8f3fd544634c07afa3d46a2170281a52ffa",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 87,
+    "storage": 2831240,
+    "jp_sha256": "f651b91d0e0ae8bdfbe75bd101a007ea6e67d3e1a22eec90273d842523ab9715",
+    "previous_sha256": "2683ef99b9b2c50ae12c00efddd270f349a4d14566be845ef14ce0ee648315cf",
+    "changed": true,
+    "final": "요리 재료\n전원 ＴＰ 최대치의 ３％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 88,
+    "storage": 2831260,
+    "jp_sha256": "00ad28b7c12d177b0afcd54d7f453152149b3684a322cd2d4da594bd04719323",
+    "previous_sha256": "2b1b6cde9c5e10517aadbe465f8987084426a87b504750e2dce9dc2f82647d3e",
+    "changed": true,
+    "final": "초보자는 다룰 수 없는 요리 재료\n전원 ＨＰ・ＴＰ ３０％ 회복＋마비"
+  },
+  {
+    "kind": "item",
+    "id": 89,
+    "storage": 2831280,
+    "jp_sha256": "ade4e9caad95822e2222037df31fb58598e1be87298d26a57039e92cc7bf9b4f",
+    "previous_sha256": "de1c607f1ad641a89d48d20f8581ba9307832c225320d1f50ec60a5711474faf",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 90,
+    "storage": 2831300,
+    "jp_sha256": "3c4252635fa03b23ac01dc339496a50486b0c9d849c51dcf89d87884d6466aee",
+    "previous_sha256": "026144baf78774a4f7cbf4ac777dfb3be832250cd1ad83aa30458163e9521fbb",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 91,
+    "storage": 2831320,
+    "jp_sha256": "5948666f25156519e24f705423abdc58d12267ef0ddda0dae9100d2df1a7221c",
+    "previous_sha256": "7c3a0c3dada480b1c66e2c479bae1cc278980166f733f928412bf355daabb963",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 92,
+    "storage": 2831340,
+    "jp_sha256": "79c493cd5bd22e419e25901fd29a2482c8bda6adc68206a0975cc4f4fca3ce7b",
+    "previous_sha256": "7d5de49069fad0e80f843c577acf6f1d53f5fec69edd77a28abe9bdd540d2c2d",
+    "changed": true,
+    "final": "토마토소스로 만든 정통 요리\n전원 ＴＰ 최대치의 ３０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 93,
+    "storage": 2831360,
+    "jp_sha256": "bf47fa849913ba0a8bdd9390f7d2cbaedd69ff1cefc104d986cdbb511caa0459",
+    "previous_sha256": "0b2f7719ea33e13e51ef114d33f129fe722f5e616af695c1f725040f4682ace0",
+    "changed": true,
+    "final": "요리 재료\n전원 ＨＰ 최대치의 ３％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 94,
+    "storage": 2831380,
+    "jp_sha256": "41b0fcaa58d7006998b50e004e0bd54f69d5f75491adc2c233f6fe37a64b33f6",
+    "previous_sha256": "0c7604c5b9d556f19e738fae8d5c3d200eb433d9c0e9c652abe45421a859ce4f",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 95,
+    "storage": 2831400,
+    "jp_sha256": "f9fd7e26f319b1912f99a1bb82b4c487f02393744683e3faf89829a459b0f5be",
+    "previous_sha256": "4438fb629a49021967a78bbfbfb2135ac3b7fe3e87cc5b4a3d60a78717101e4b",
+    "changed": true,
+    "final": "클라스의 옷을 만드는 루트\n그의 이미지에 가까운 옷이 필요"
+  },
+  {
+    "kind": "item",
+    "id": 96,
+    "storage": 2831420,
+    "jp_sha256": "9faec3448675e3bdbd95a3a0f673218cddeb124bb30bec72cd334bc9c52522cc",
+    "previous_sha256": "9a4c556ae56fcbcf0c73639379abca15a89b2a8decd75783ca82d051bc44485c",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 97,
+    "storage": 2831440,
+    "jp_sha256": "4411363ac39bba5a4132a32d7dec19a6052c325e4759c7dc7ef1a75ef764b4ce",
+    "previous_sha256": "fd776dbb44135ddcf88128a1a045072f970347b747ae7ccbf4ca6962b72b9151",
+    "changed": true,
+    "final": "젤리 형태의 약\nＴＰ 최대치의 ６０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 98,
+    "storage": 2831460,
+    "jp_sha256": "cff3648de865a3cff65df5f389a62b868208fc967124a8cb0d9c6d19cd16afdf",
+    "previous_sha256": "adb25ec56c9236aaca7e84640c25426024cb316cecdec0ce060b8b7b0d412279",
+    "changed": true,
+    "final": "＜백정석＞\n광속성의 옷을 만드는 돌"
+  },
+  {
+    "kind": "item",
+    "id": 99,
+    "storage": 2831480,
+    "jp_sha256": "f651b91d0e0ae8bdfbe75bd101a007ea6e67d3e1a22eec90273d842523ab9715",
+    "previous_sha256": "2683ef99b9b2c50ae12c00efddd270f349a4d14566be845ef14ce0ee648315cf",
+    "changed": true,
+    "final": "요리 재료\n전원 ＴＰ 최대치의 ３％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 100,
+    "storage": 2831500,
+    "jp_sha256": "effabbf77c486900107479114ad3ea08b791914f3314e6a9e8489e880570e6a6",
+    "previous_sha256": "4e1273c0d3ec842baf69b4d157ef7e0a29522e3f820b3b65ea0c52645f25d8f3",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 101,
+    "storage": 2831520,
+    "jp_sha256": "554c67bfd8a4390e332a37589a4862248017ee809d504c5044903fdf62307e5d",
+    "previous_sha256": "0ae96353c6d45ceebe2c3d988447579af679ec5fc8d9b110d190108920340126",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 102,
+    "storage": 2831540,
+    "jp_sha256": "13659b5053807c05cf2846d5e44d80c8924c2fd6a73f5f77162341b0139ad3be",
+    "previous_sha256": "884a90161b3a74a93ba841eb46fd312bd74b9ac91c1a81371150c4c60d6c2afd",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 103,
+    "storage": 2831560,
+    "jp_sha256": "e59679d113f7f2ea3fd68bbaf695f938441efb525a406efa5192dfbb38dc6117",
+    "previous_sha256": "b61290a341b0e4a28f6aa15e11c3cd6a2cdf24e85e02c8c03f8093ecfee41138",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 104,
+    "storage": 2831580,
+    "jp_sha256": "df8c246c84c65b4c0bab0b7dce0e9e9f0a937e07b5ff3fd525afba1da6c002c0",
+    "previous_sha256": "5045abb229509616b05257d40af77ba762af6e6f9e593e62e5bbc8e95ab89930",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 105,
+    "storage": 2831600,
+    "jp_sha256": "d1201cebf2737a0e583b32a366484459d06ae4839cc820181bb9bc9fa1901114",
+    "previous_sha256": "f1f8075560cce78aadaa07d519e24f7e3e846f42ceac006b1f0cbffe2f487bc7",
+    "changed": true,
+    "final": "빵 사이에 구운 고기를 끼운 요리\n전원 ＨＰ・ＴＰ 최대치２０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 106,
+    "storage": 2831620,
+    "jp_sha256": "29a1a098460c2207d515b066a232b0b2e1c14cae34f6d2b9e05cba575f9d9289",
+    "previous_sha256": "bb35defb2f8d911b77d043edda78e6eec9632b0db9614aded3e4975f1afddde2",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 107,
+    "storage": 2831640,
+    "jp_sha256": "10a55bce8ee0794c03bf8d0a9529f0196114286c4ea7d49a2bbfcb5e3438d20e",
+    "previous_sha256": "1dddd3df481b6079cc7a3aa2ff0eeeb798f2b26bb2bcabcc3a85b1e6343c20ad",
+    "changed": true,
+    "final": "장비자의 기절 시간을\n절반으로 줄이는 부적"
+  },
+  {
+    "kind": "item",
+    "id": 108,
+    "storage": 2831660,
+    "jp_sha256": "fff2c9f9d587a4b3e71096739aa02f1071423fb9f723d0e4b8f90c5a6d3df5bd",
+    "previous_sha256": "02e15dab1c9a0b6e577a6e0c788575f438ce96a425df343c18f94ef72515b4d0",
+    "changed": true,
+    "final": "나리키리사의 옷을 만드는 루트"
+  },
+  {
+    "kind": "item",
+    "id": 109,
+    "storage": 2831680,
+    "jp_sha256": "839a749c92a5867d235c9b537f577eee81a60da7e5649c9e12713d834da3378e",
+    "previous_sha256": "8a2ef92dcb11df7f0b03803fe4193f9da45eb778cbc2f9f9d4ce3de3aee33b4b",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 110,
+    "storage": 2831700,
+    "jp_sha256": "63b0e0df9a3425009e44bd9c51ee99e6f4661fab35bd62f55abcd88c1c550db2",
+    "previous_sha256": "c33f071ed77a2c156f02456403d566cf45c0c1f71e58e4f59cfa482def4a5151",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 111,
+    "storage": 2831720,
+    "jp_sha256": "d6084d302f1a4c808c52a48e2a12b348736b8bbcd28b9ac0788334a995b6e3e6",
+    "previous_sha256": "10f9248ff06afe33ffe237c731e7660e3ff12928758c21750a5e2222d06124c2",
+    "changed": true,
+    "final": "젤리 형태의 약\nＨＰ・ＴＰ 최대치６０％ 회복＋마비"
+  },
+  {
+    "kind": "item",
+    "id": 112,
+    "storage": 2831740,
+    "jp_sha256": "57612fc6c15319a0ac3c93ffa71ceaaef2f6f3fbd5623392f49591f8f5b17a92",
+    "previous_sha256": "7ca00a7f694e8af56ad32eea674e79e5c83fad0f0c0efc1d568c37a91a33bb72",
+    "changed": true,
+    "final": "전문가가 맛있고 안전하게 조리함\n전원 ＨＰ・ＴＰ 최대치４０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 113,
+    "storage": 2831760,
+    "jp_sha256": "0ceb4ae74cce85fdfa23b2953be619928f6dfe7875ccfb83410c6224898b0e55",
+    "previous_sha256": "46f5e2d6afe8e469e452450b57460ebfff5cba4dffa20cd96f9b19cd69d094a1",
+    "changed": true,
+    "final": "원더셰프의 옷을 만드는 루트"
+  },
+  {
+    "kind": "item",
+    "id": 114,
+    "storage": 2831780,
+    "jp_sha256": "5ed93f8d55bbea3d5d2b4b6eeade7762a9463ed59cdf894e4e41b4a2eccd0c45",
+    "previous_sha256": "bfa04a4d586045cc7a889270d3dfd1c9c970168d99d45f35e2e048d367817bda",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 115,
+    "storage": 2831800,
+    "jp_sha256": "85a7474bd4450d42172cc23a8cb9ea8c08e2c27c598408e24132d56de4958568",
+    "previous_sha256": "8ed38d61b270d4d1619a323aab0c08fdc99a517efc354aefb02de3a17cf39aad",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 116,
+    "storage": 2831820,
+    "jp_sha256": "67961c2f759eada0114fb1d9c504ecbe2679d3d50280c5e011675ddd607dbb06",
+    "previous_sha256": "69df2633368d8b9dee4615838e7ad55e96945bc9748bf4d2a6154f1e13dd0a96",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 117,
+    "storage": 2831840,
+    "jp_sha256": "2e6354903f988018bbf856ff5e3efcf453ab7e62607bc6a8b4b1d0bcc1d9d5e4",
+    "previous_sha256": "659c0af847cf60b7edfaf1dd6b827d883ddd40200f833e08b47c3f9382e78332",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 118,
+    "storage": 2831860,
+    "jp_sha256": "18b22e9114a14647ae08e23c437b037a6573cafabd0d02f49723cc877f4aafde",
+    "previous_sha256": "2d37ab1ef6b2c4e847a254e3d4b2711f235119e03bcd3abc87ba08c9d6ce1c1d",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 119,
+    "storage": 2831880,
+    "jp_sha256": "3da50e324b5a5f07d36d0f0af67dd97305f88d7acd6c5a8fe1bae914832286fd",
+    "previous_sha256": "12c589d3009dd63183fc9f11ad17d65f9bfe1b9d2449dd1017421b5684f7ea21",
+    "changed": true,
+    "final": "전투 중 화속성 피해를 줄임\n맵에서 열 피해를 받지 않음"
+  },
+  {
+    "kind": "item",
+    "id": 120,
+    "storage": 2831900,
+    "jp_sha256": "bf47fa849913ba0a8bdd9390f7d2cbaedd69ff1cefc104d986cdbb511caa0459",
+    "previous_sha256": "0b2f7719ea33e13e51ef114d33f129fe722f5e616af695c1f725040f4682ace0",
+    "changed": true,
+    "final": "요리 재료\n전원 ＨＰ 최대치의 ３％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 121,
+    "storage": 2831920,
+    "jp_sha256": "25e1f380bdce8dbd1bfeb270b78f90424d608df1141092aef0dbe8f04a723c74",
+    "previous_sha256": "c4e5352d44f2b2c7bcc7436a2aac64364b58ff26f8b19b0752eca091ffa0139a",
+    "changed": true,
+    "final": "전쟁의 신이 새겨진 반지\n무속성 피해를 줄인다"
+  },
+  {
+    "kind": "item",
+    "id": 122,
+    "storage": 2831940,
+    "jp_sha256": "4ddb1d69568b9224526a5bec300ecac5076dd61c92dc627bf0b40ec135c0ff34",
+    "previous_sha256": "8f279f79fee1ab036075559e5d01954c0b777e8ec41a4abedcca5dd38cedc7eb",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 123,
+    "storage": 2831960,
+    "jp_sha256": "753a38453738601c5238605b8c81892de6c2eff24cddafa04c8d9904eafb1ad5",
+    "previous_sha256": "9e8629c78c2ffc6fb884284eb373ff4300537ce07fd598fe477d3c9394ad886e",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 124,
+    "storage": 2831980,
+    "jp_sha256": "151aa8535e9d124158330dc0ae1184607dd6ec3513a13256c956a835d7c0de87",
+    "previous_sha256": "0bf92e114983d3b5b3edb5b51a64921908c7c8e8f495de88388df7052eb4fd68",
+    "changed": true,
+    "final": "ＨＰ를 줄이는 독과\nＴＰ를 줄이는 쇠약을 막는 부적"
+  },
+  {
+    "kind": "item",
+    "id": 125,
+    "storage": 2832000,
+    "jp_sha256": "a78f7f1e621fc5a2dbfadb16f5346b621af64a305cf1e8a177f5508c23a92127",
+    "previous_sha256": "b72c904e07afb230edf9675bf003e88be27edb5fd9815e7024c97a156d07d3e5",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 126,
+    "storage": 2832020,
+    "jp_sha256": "e1553675c0cdc994f2e46a305868265408a5047814910b77cb98b7f497e130f2",
+    "previous_sha256": "581b273190b76665b4c7885d6d1d762f4aedd99fb7c67d28435eb788fc4bc2b9",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 127,
+    "storage": 2832040,
+    "jp_sha256": "faa2a9bfe5dcb458a0e4bd1197dd146897c6d3078c26c2833510c1931492f55e",
+    "previous_sha256": "f30ccc739d35ea5eecd752a64188e0805d74cab9d87f3a59ea9ffe1491dd1533",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 128,
+    "storage": 2832060,
+    "jp_sha256": "c53d1fbae63922c05c7d9183d4faa68a589a7e98307c9bbeaa69cd61091990ac",
+    "previous_sha256": "206afd4a58cdb3b327921bd93b6bff9a1b47934e8a4b1adb90ddacdcb97b110e",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 129,
+    "storage": 2832080,
+    "jp_sha256": "2b809b229860f0415276f65630ca5f545a264a5d16696a8004395825f74caa6b",
+    "previous_sha256": "5c173b379da903d1dba28bbd065a24c57aecaa0854e0c7b25033c2ff71d563d7",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 130,
+    "storage": 2832100,
+    "jp_sha256": "18d82f8a7ce6b3f4be0e5c01ce4dd482210a55b58939f2fca59d09dd7d17d94a",
+    "previous_sha256": "a8ea3435f49ae42f467c4eeeda6944b6faff7709aad4323c686c14678078a59f",
+    "changed": true,
+    "final": "전원의 상태 이상을 치료하고\nＨＰ 최대치의 ８０％를 회복"
+  },
+  {
+    "kind": "item",
+    "id": 131,
+    "storage": 2832120,
+    "jp_sha256": "bf47fa849913ba0a8bdd9390f7d2cbaedd69ff1cefc104d986cdbb511caa0459",
+    "previous_sha256": "0b2f7719ea33e13e51ef114d33f129fe722f5e616af695c1f725040f4682ace0",
+    "changed": true,
+    "final": "요리 재료\n전원 ＨＰ 최대치의 ３％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 132,
+    "storage": 2832140,
+    "jp_sha256": "05ced9694e7cf3f6c8d965d5f4e5e7b332684959a7e0d37c395c078110bb4344",
+    "previous_sha256": "e170b13a1872824ba6b42622ba4784f742e77ebd7073e89b0814c2c8394d4b79",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 133,
+    "storage": 2832160,
+    "jp_sha256": "3a9fdcc741acb74799c1fda9fd7290b5317ecc9650d8b9f40b85daedf2c800ac",
+    "previous_sha256": "7723a62f821516fff170174c3347aff7b789bf61443015812b8752569c3ff31c",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 134,
+    "storage": 2832180,
+    "jp_sha256": "e49ee2d606cb059a033563990fa0bb993e247bf1a4c5d18861b4197bcb1d91c4",
+    "previous_sha256": "f4dac8b669f99fb628ed365b6751f4d1d427b5c921738b530d1bd19361809a04",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 135,
+    "storage": 2832200,
+    "jp_sha256": "b5a979c3103d1542582e29cfc73f82bfd40937388f4ed86053165d11d8100793",
+    "previous_sha256": "52524b70176425dd1279313d260683abbf7cb1a996aa246c8e674495c8b10889",
+    "changed": true,
+    "final": "스탄의 옷을 만드는 루트\n그의 이미지에 가까운 옷이 필요"
+  },
+  {
+    "kind": "item",
+    "id": 136,
+    "storage": 2832220,
+    "jp_sha256": "79b84b4246e9a08222735f21a5f117978d222d2d6f464f33f038a8974ce3cff1",
+    "previous_sha256": "7304b395b80450e5086bc114caf3d82aa57e3caf65ba12bce85ec7f10a56ad3d",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 137,
+    "storage": 2832240,
+    "jp_sha256": "ec79511c73df4449b8a0a1ad255f4d2b16c71e63be9bd62c6b7e031246117d68",
+    "previous_sha256": "304cea67ed8796faaa95ec7be8cc5d60cfaac16d3dd4498d51800efa93fd43be",
+    "changed": true,
+    "final": "포그의 옷을 만드는 루트\n그의 이미지에 가까운 옷이 필요"
+  },
+  {
+    "kind": "item",
+    "id": 138,
+    "storage": 2832260,
+    "jp_sha256": "197d1d2a56f527647dd15d78d2c0fed212550c5243d095ee218120f617d8d779",
+    "previous_sha256": "4c4e5c8f24a054a2d68c7f8edeeddb51008ca4698b40a854fd3144294879f056",
+    "changed": true,
+    "final": "신비로운 문장\n주문 영창 시간이 짧아진다"
+  },
+  {
+    "kind": "item",
+    "id": 139,
+    "storage": 2832280,
+    "jp_sha256": "9df06b6834508c5ce586cd3c427571226ac4b7f93845709232b4712903c9ab22",
+    "previous_sha256": "3eb840fccc0ca5fd6c35d7fda342fba48567477ee42237f8c2e189bba93bdcc6",
+    "changed": true,
+    "final": "젤리 형태의 약\nＨＰ・ＴＰ 최대치의 ３０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 140,
+    "storage": 2832300,
+    "jp_sha256": "0cdefbd3cd6dbb2519f545c9e73b575486ae30d1db17f383b60f148524d8f369",
+    "previous_sha256": "14ac03ecb8461f57a67c92c1e9fec424b906a03aa9f9fc83b531bc18ad4c2fd8",
+    "changed": true,
+    "final": "젤리 형태의 약\nＨＰ・ＴＰ 최대치의 ６０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 141,
+    "storage": 2832320,
+    "jp_sha256": "85db92fdf99ce95b8d449b08893f5067a6d9158efb5c3c8911f0c6e9725bc658",
+    "previous_sha256": "3b4f1fd60a826c87b6cb6a48adb013166c752ff82de8ce21a3c1e2a3b0ea8094",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 142,
+    "storage": 2832340,
+    "jp_sha256": "37cc74edcae9fdc1d949021cb0230299cea53d46a69968c76ea227e136b3b86e",
+    "previous_sha256": "8005de44566d9938c328acea8224fbe8d73f98a1c048a1e286285bba69f22ff4",
+    "changed": true,
+    "final": "마음이 편안해지는 반지\n일정 시간마다 ＴＰ최대치１％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 143,
+    "storage": 2832360,
+    "jp_sha256": "bf47fa849913ba0a8bdd9390f7d2cbaedd69ff1cefc104d986cdbb511caa0459",
+    "previous_sha256": "0b2f7719ea33e13e51ef114d33f129fe722f5e616af695c1f725040f4682ace0",
+    "changed": true,
+    "final": "요리 재료\n전원 ＨＰ 최대치의 ３％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 144,
+    "storage": 2832380,
+    "jp_sha256": "a000e3aeee6ecc4e30906f851ca5369b8e38d8b741c332c3d9a9dd6599feadfd",
+    "previous_sha256": "825fd48427f417ae8a0965a5ba5d125293a66fee20a6011946fe1f3c6e9e489f",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 145,
+    "storage": 2832400,
+    "jp_sha256": "ae5e26fae5f37670aaa3577975162f210d2e1c67b2a90332fd59adf24bb944ba",
+    "previous_sha256": "6fb9f6c9c30639050df81bf8ef809c8807093abf0b81ac4eef650017ec7a2a75",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 146,
+    "storage": 2832420,
+    "jp_sha256": "806d217a38cb180332a40d25e70584797722c4ba099d9802ce0cd410ba0aa45e",
+    "previous_sha256": "0450944220c09a3e1095190fb71cb6bb626014352040f151cad00f1c978ca008",
+    "changed": true,
+    "final": "리드의 옷을 만드는 루트\n그의 이미지에 가까운 옷이 필요"
+  },
+  {
+    "kind": "item",
+    "id": 147,
+    "storage": 2832440,
+    "jp_sha256": "6918e96cc26c10bdd0df19613a90c4d22cfd483db506275ee472640c55640711",
+    "previous_sha256": "38ff178626bac360a4ef89932eb748e9ff202fd6f4162bb82594de6621e0a33f",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 148,
+    "storage": 2832460,
+    "jp_sha256": "35d5412e4306b7054eed0822c03b5ac4773b5c4c90251f0c652afaef64153ae4",
+    "previous_sha256": "414d8760378a949713c40d27a5f0ffd9c64e13defe334fa14f081ee8c1ff6885",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 149,
+    "storage": 2832480,
+    "jp_sha256": "1d0dab865f6a7fe8db8136aa635fb573eb6257c791ba2482c0fabc8f89e17361",
+    "previous_sha256": "fd000672f3c53add527c297aaf91a9bdaf38891ee58cdb52866d87f7fac25a4e",
+    "changed": true,
+    "final": "＜녹정석＞\n풍속성의 옷을 만드는 돌"
+  },
+  {
+    "kind": "item",
+    "id": 150,
+    "storage": 2832500,
+    "jp_sha256": "2b5075c1d98317a6640f408a186b419eb8c305698230c44f2ac4b19d530fc1a3",
+    "previous_sha256": "1be72e86ac09b46652b1f79bd9473d041cc5ae287537da3df60d654048697171",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 151,
+    "storage": 2832520,
+    "jp_sha256": "549eec89ea64a9f2bb52170ac4f91e149e8311274338c5f267368d9521e72594",
+    "previous_sha256": "f5c68c08cdf36809720671503e24513038abd1a699ca94a573a1f0eafdd22d7a",
+    "changed": true,
+    "final": "여신이 새겨진 반지\n암속성 피해를 줄인다"
+  },
+  {
+    "kind": "item",
+    "id": 152,
+    "storage": 2832540,
+    "jp_sha256": "f651b91d0e0ae8bdfbe75bd101a007ea6e67d3e1a22eec90273d842523ab9715",
+    "previous_sha256": "2683ef99b9b2c50ae12c00efddd270f349a4d14566be845ef14ce0ee648315cf",
+    "changed": true,
+    "final": "요리 재료\n전원 ＴＰ 최대치의 ３％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 153,
+    "storage": 2832560,
+    "jp_sha256": "d93fc075572c942ede2f6359cf1a756f4d56c3a17ea3c4a90ce89529ceb1ab97",
+    "previous_sha256": "f406f1c64a3529ee1b7213e2e778982f7718e6ccdad89cb502be4782dabd2710",
+    "changed": true,
+    "final": "젤리 형태의 약\nＨＰ 최대치의 ６０％ 회복"
+  },
+  {
+    "kind": "item",
+    "id": 154,
+    "storage": 2832580,
+    "jp_sha256": "f900d7af6697cbf32af75dc396a6f577d50e4b4173fea255934a7cfd6ed804da",
+    "previous_sha256": "4662b1d439705f39f68731cc497c10fca3135a760fec5e32d7114f0fc9438c74",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 155,
+    "storage": 2832600,
+    "jp_sha256": "4383faf8d6e54a5a3e05abdec2be06e51242a973aa8978ef9636741bfb51fcf8",
+    "previous_sha256": "c150cb634b118de681d959b4d4b3a4fe35c175174b431ac12dcd707b61c8a0a6",
+    "changed": false
+  },
+  {
+    "kind": "item",
+    "id": 156,
+    "storage": 2832620,
+    "jp_sha256": "9850dc92d430bca5d30efee23542a124f50508ee75923b8fb577923d861080ba",
+    "previous_sha256": "e4376bfd4e1c8d228bbd67ad603dd0f5d77da9cd170bf2602e76e69e16a55fcf",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 1,
+    "storage": 3831844,
+    "jp_sha256": "2ed730a68ec07d908c74bda508fe4aa834cdd928b005717be0d122b66e48053d",
+    "previous_sha256": "824c74789fd1611108baeea69a6a40b0e9f2b7427c6a88b5f2f7ffde3227721f",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 2,
+    "storage": 3831848,
+    "jp_sha256": "2ddc4f69f9dd54a3f7c617edb94935270345b6c0062b8c821016ae69d8bd819d",
+    "previous_sha256": "ac7735172dba58ec2469a881526f5ec089fbd647ae67738e0e46ca70fa373f98",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 3,
+    "storage": 3831852,
+    "jp_sha256": "657bae304bddefb767b0854ba5a079c695995f288da588895a7dddb378621e3c",
+    "previous_sha256": "c5ef448da12de746a3b3b293687730951c3ca23b36de788d26a9919e59b04b8b",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 4,
+    "storage": 3831856,
+    "jp_sha256": "97bd04fe6c87f365e509c980865774761936f1ae5f88380c9cc2ef016d86382f",
+    "previous_sha256": "6c42a7a57dcbae4254db138dca0443c12b7d037b911479439e9692df2bf183dc",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 5,
+    "storage": 3831860,
+    "jp_sha256": "3eaa67896d4a16701cecc66e31d6c54edbf9b023ff176b07386c9ddb9a1a126d",
+    "previous_sha256": "f21649d6b400aac9b5b1fc384cae920f224771fd08bc027a3c8360c0d788252b",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 6,
+    "storage": 3831864,
+    "jp_sha256": "fee36a767445e8c4c4acad3abd7ab760a3890136fa69a0b61689ed45fdf1b46a",
+    "previous_sha256": "a11ba6c795e02121f85e5d2318fc0b3146f9a2fca4c3f0108461de5de127ac50",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 7,
+    "storage": 3831868,
+    "jp_sha256": "1770d46de0bd79f4bf41e90e941d973433a2a6cd0100e29cb459cedf285cec77",
+    "previous_sha256": "2e560d543852b8cc99e0075bfa8b127aa1f68ca9d8aa1620d007317b20376ccf",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 8,
+    "storage": 3831872,
+    "jp_sha256": "b40cc5a0a8c0bfffd5074b3d3dc8d30c42d263c577844b30cb4cce39f14cc8f4",
+    "previous_sha256": "cb1fceca72420ecbf0f7bf9534b92aca91ba7956700cb080ebe0208012bf5ab9",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 9,
+    "storage": 3831876,
+    "jp_sha256": "c2cd60b57fa1acb32fb5db6ea044735599cb98e9e39677f627d4f6a87db87f1d",
+    "previous_sha256": "78cbe12a1b80900cd1e118a8f450f04caeb6cd64b021e93ba17b5b1239a026ad",
+    "changed": true,
+    "final": "사신을 닮은 언데드\n접근전에 강하며 마법도 쓴다"
+  },
+  {
+    "kind": "monster",
+    "id": 10,
+    "storage": 3831880,
+    "jp_sha256": "8324e49e8dfef7ac430e7dcf4acec26fd111d94bf02be0f23859b4ab6823987f",
+    "previous_sha256": "be99f09bd136a9b18dc47d72732efb31e390e6d6d8cd12ece2468e81ce8b3a76",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 11,
+    "storage": 3831884,
+    "jp_sha256": "a963548442511f97f8fd79a4f9f7f5862ec6d878ee78c5615edd446eb518874e",
+    "previous_sha256": "14bc1ad8eb936336d64aa14a9f51e940b73c9e8d881580b1c48ed04a8dc8b288",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 12,
+    "storage": 3831888,
+    "jp_sha256": "b5bc091e6b0e3b80adaa71511d2f4bd447c280cdae8a3166f046152fc7d873c5",
+    "previous_sha256": "d03f7ecc134b4e3970243ad0381ef4dd0558a9859dd813cef7dad76c527e6246",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 13,
+    "storage": 3831892,
+    "jp_sha256": "1fcb7c62abb38f31901ccf424d9872687c65ebc5b1eec5c25df0fe142b3c08b0",
+    "previous_sha256": "2ddf2605197a02705e3bd884e8285bcc16896a86beca13e6bf8e317a0ab7916d",
+    "changed": true,
+    "final": "냉기를 내뿜는 극한의 새\n그 냉기는 어떤 고열도 막아 낸다"
+  },
+  {
+    "kind": "monster",
+    "id": 14,
+    "storage": 3831896,
+    "jp_sha256": "764aa79c0899e438a7fa1ed4f1d28d276a315f2b26d4e2232aea66cad9633aec",
+    "previous_sha256": "83520f2e302a06504d5053957faa0cdc19840c98c6ce730b682a878d8e7b67b9",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 15,
+    "storage": 3831900,
+    "jp_sha256": "27da458fed6e193f0e9d3b3ebf10fb24709249c31bffb61fe93b06b7d15c7f67",
+    "previous_sha256": "d8e3b0c993d91be03b532a2699331ca8a68b4675589fa072adb476dd6b6f7875",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 16,
+    "storage": 3831904,
+    "jp_sha256": "67406c538c71a36d7042a71372ddae3c710a8a7b91c65318bd8efe311bb38738",
+    "previous_sha256": "529007385c56542029eac1ae839609a25b7df9bc247f84bcae07535d517ffc54",
+    "changed": true,
+    "final": "어둠에 숨어 덮쳐드는\n육식성 나방"
+  },
+  {
+    "kind": "monster",
+    "id": 17,
+    "storage": 3831908,
+    "jp_sha256": "82949d832e5a74b9803a4f10a3ff12dccb87e7d77cf8c46ae25f5ca6b692e213",
+    "previous_sha256": "fe6d3505e425966f209e93cd480d68d3209238c5ada6238bb377734ece694456",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 18,
+    "storage": 3831912,
+    "jp_sha256": "3aca999a655e4c7133ddae6eac144672d8fffb7ea375e1d75cc2350abc8b7a29",
+    "previous_sha256": "431b988f5b535d3d59e5525ea86f9c3ee4a7fd0141047dd3e7bb4ca3ec98639d",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 19,
+    "storage": 3831916,
+    "jp_sha256": "8eabdcaaeb5dfdf362c26bd0b757e2e05c5a5937569187e1c9014df588008cdb",
+    "previous_sha256": "32b77929b600ef5aa350067c3ba2a794619aa88146a4594e3a0ba13b27896095",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 20,
+    "storage": 3831920,
+    "jp_sha256": "682af32107a50954cc04ed24d241aa8a22fe80d90442026e3581238cb1dab629",
+    "previous_sha256": "5800789cfabe538d936a094231eaa96e6f017b2eda28ffe90b882fbd4af91b2b",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 21,
+    "storage": 3831924,
+    "jp_sha256": "b6a325b7550ce04aefffa5c5cea96dd1fd0de862d871324ba06b7e3acde5a570",
+    "previous_sha256": "b718a5b3fe8504f2680425bf95819b03f7ddc457116c1a25dd8a4d43c7182477",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 22,
+    "storage": 3831928,
+    "jp_sha256": "585fe6456d76b902c8a880a0a565f4f93e50f49bedef0112f47df3826321c52c",
+    "previous_sha256": "26344a272079dc8f83360e8a99dedac95287e29b14eb6bd7f892ce8396167ed7",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 23,
+    "storage": 3831932,
+    "jp_sha256": "f6fd7c8cef19e544fe7815e0263a30de75a32789078d8ef2f91c9790fef2116a",
+    "previous_sha256": "4f3a0d09ac9d5b47dae00e9d7acbb28fe52cd116c99833faf14f21f3c4bea494",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 24,
+    "storage": 3831936,
+    "jp_sha256": "9decd20cd4381bf61b05d53c5e85296c2a2589bd07ab682e3692fda636b17236",
+    "previous_sha256": "69e9bec86a50b2990c3178a47af66ede9252e536479cda4e3cf4b9d0a123be0a",
+    "changed": true,
+    "final": "산과 들에 서식한다\n뿔을 이용한 돌진 공격이 위협적"
+  },
+  {
+    "kind": "monster",
+    "id": 25,
+    "storage": 3831940,
+    "jp_sha256": "005cd54dc0456ed293752ea2ba6ae824d591f44f5215c1f20ae55672e84ec27d",
+    "previous_sha256": "9de12f59cc4783eb58db0f0e3ffe451b4a28668271e0c43e1d04e5ca9437c0c4",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 26,
+    "storage": 3831944,
+    "jp_sha256": "5a37a8c9ab37eee1fc92f11f00ca03a7a49649f61d489d5da2c50f56b47219e9",
+    "previous_sha256": "de2f300bf68f91e7f275f55c569b848fcb2c4407c37dd13213a4ac2b32438947",
+    "changed": true,
+    "final": "미스릴로 만든 골렘\n속성 내성이 많아 처치하기 어렵다"
+  },
+  {
+    "kind": "monster",
+    "id": 27,
+    "storage": 3831948,
+    "jp_sha256": "be2a381391cb0e940c153181b891258f3a3810299138675e032a1e7dbfb06c1a",
+    "previous_sha256": "1021e1c31c8df2649f95068d862560dd71e5c0ef7c5683ca449a96b6c958a62f",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 28,
+    "storage": 3831952,
+    "jp_sha256": "fae0477fce15f23327facf105e32077d03da01ecda1f60ecbfce5982cc7ea0a0",
+    "previous_sha256": "70a93cca221287eb97d0f40032feb21eb0c5437f7768ccf70ff7371720b53c86",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 29,
+    "storage": 3831956,
+    "jp_sha256": "0c702e4d6f3be49b89898201a6ee78fbd760d49fcbb0e0df62f738acd0d18a7c",
+    "previous_sha256": "d202da53d241d8ecaf6b47d9a82caee721b714523e2e1160942047d0298ae174",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 30,
+    "storage": 3831960,
+    "jp_sha256": "f4471dc3642571540460ac5507d68f903b6cb55121a44c76b9bd5bb4514f084d",
+    "previous_sha256": "c2ca31813f1b322337c1ed623d1c6a92449940894f6397b10de6fed724ec0c96",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 31,
+    "storage": 3831964,
+    "jp_sha256": "74375ecbc94743ed9ef5fc31c70ef99c2236e8b5be7bc961543bbc26f565f253",
+    "previous_sha256": "331425151a83ecd94c1008f995a3df5e7eef28c85cf76d1d65e83a765bbfe574",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 32,
+    "storage": 3831968,
+    "jp_sha256": "9f2d56966f7488fcf7d0145e1c99309d340a51ecaa4f65845017be57883f2a1a",
+    "previous_sha256": "36da6e6017d8895319c37aedc3e97079a558af5169d99065892d1f1fabdda14e",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 33,
+    "storage": 3831972,
+    "jp_sha256": "13870b456fa1d7e0fbc0e72668582e9e2b1b6c35ad5a3790ce6b18ad8f187a57",
+    "previous_sha256": "684f94a4ffb38ab522ece944c323bfb688dd33eecca6791b4ff985b40ec0a45c",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 34,
+    "storage": 3831976,
+    "jp_sha256": "b19285ac4943f3108822e183b6b0a9425c1c8ff151ab9a703de5b5b7e4d305dc",
+    "previous_sha256": "d333798b69dfd0bf1f5be18d4b6b1e67bf57e5fa2fad579d75eb3fae5b518c4a",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 35,
+    "storage": 3831980,
+    "jp_sha256": "22e88708f9a442fa3571b5af008609b9ffff054a100edb5d159480627a271bde",
+    "previous_sha256": "507964d35f03a7f55721dc54b5e34a0ac72f381501442faf4daa495036f54477",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 36,
+    "storage": 3831984,
+    "jp_sha256": "be927bce687fc04a623de63e7ca1c8bc5728ad7116ccdbe4ba08a68b7ba11363",
+    "previous_sha256": "7fac2c4ec4c7ee21da68131d56ce513335ae47535e77a59c3012e1c039a9fa81",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 37,
+    "storage": 3831988,
+    "jp_sha256": "a70167e1b1526675805de066b3736446f300bb0fe5c9096534252f6ac6ae2546",
+    "previous_sha256": "8f36ac130438e4f0bf5ffe9fb57bb37ecba82ec3059e6073d3b16f231b787250",
+    "changed": true,
+    "final": "슬라임의 일종\n서식 범위가 넓다"
+  },
+  {
+    "kind": "monster",
+    "id": 38,
+    "storage": 3831992,
+    "jp_sha256": "4f81911458158853083cb590d50559efed6e0a1b4ce31e26b04876c702996d1a",
+    "previous_sha256": "6c66d240f661b3590a36f59d56437a2068c7aca8a07a63c6dea4327db2496e6c",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 39,
+    "storage": 3831996,
+    "jp_sha256": "52be188ddfea476ca9b51e12f96d535d9488b8220369da9d8ef804796889e37c",
+    "previous_sha256": "3bb55f31f1051623d46a3d97c2d3f3af2820ebf85f2e57b6e2b29c8d8f52dfbd",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 40,
+    "storage": 3832000,
+    "jp_sha256": "10dacafd6e3495c8a2875fd09ca890924c797d1ae7cdea521711f6236c73ccd1",
+    "previous_sha256": "e4f7b0b47f0fe8f0b6d65c4e0299f8317b2fe36bae650ceb92f113a3888a0b2e",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 41,
+    "storage": 3832004,
+    "jp_sha256": "a93be3088afce94433d927e091c3a7079129e25310c0cff374733937deee62a6",
+    "previous_sha256": "d00209e85667f6d8ecd11c7145c4194dd081d8fdef50301c95eae61386f78f7b",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 42,
+    "storage": 3832008,
+    "jp_sha256": "48cdcc7df60432c2ca270971ac0fae8de8a538b1283252873eaf0057aaf77913",
+    "previous_sha256": "d452ac4c33205f72a0d61e205d1e33d71135c58acb86767b29a16213c22edc6d",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 43,
+    "storage": 3832012,
+    "jp_sha256": "8f99dbf7ed3607be45c06478191088a9c3ece7d82386ad71e14d5c366b6c04a3",
+    "previous_sha256": "cd47c23c7cee3b54809bde77df47d5180bde4cb25faeaf22ee6d6311eda7e97a",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 44,
+    "storage": 3832016,
+    "jp_sha256": "1fa2cb8a286af9a3a00620c58f6b037d2fc556eacae8e52fbbc0e3e3fda1daab",
+    "previous_sha256": "ea2e4fb5689ba52e8db37760716b02093bcdd386ab332eb5f4264a6729930986",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 45,
+    "storage": 3832020,
+    "jp_sha256": "dabd0afe8da5ca185fcd4f4dbc191c0df77eb1ac8974c7bf00e2879e5f129768",
+    "previous_sha256": "5402f168802382be35d0e77c658acdef433ac14f463a64a2ba143f9ee970f65c",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 46,
+    "storage": 3832024,
+    "jp_sha256": "37a651661cb596e693659ad6eb803f821c007ce8426491224650fdf202ad7ed0",
+    "previous_sha256": "1a1b0a38c18a849d8ec2a97e4adf31e62a9ed6722ffd0f580a2ae0e6bb7f0753",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 47,
+    "storage": 3832028,
+    "jp_sha256": "6aa5804e6cb61a05f0a19eafcf0ec52a9c08ccc31991d3298f423d0af12923ec",
+    "previous_sha256": "57ab8b0baac8d7c31e07bcd02c83882c68007ff448d0d5da7376df94e98de317",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 48,
+    "storage": 3832032,
+    "jp_sha256": "cd464623dcafad8f05705df9aa63cff39a8e1c58696450a8f8660da7f16cf1ff",
+    "previous_sha256": "c8e808873fb5288843f55e15aa3b2b123845afb2975b2da120f51c67b12b94c3",
+    "changed": true,
+    "final": "앞뒤 가리지 않고\n난동을 부리는 괴물"
+  },
+  {
+    "kind": "monster",
+    "id": 49,
+    "storage": 3832036,
+    "jp_sha256": "3c3010e8d2d16afeb502fe59ec35caf10de3a9fca53e822e9e8705590d99428a",
+    "previous_sha256": "b2a0740a57b6bf160d0a606f9b7cd2a5f678cc6fd8e6efcd6a80ac6ddfbdb0ea",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 50,
+    "storage": 3832040,
+    "jp_sha256": "e7fdeab025be0f20c5f554282ce75bf63e07fbd240564c40f33c79b9a8b7aab0",
+    "previous_sha256": "b196010cc0161f95ebe4d2668d52937feba54d7caeea2ce163894c479374985f",
+    "changed": true,
+    "final": "단단한 껍질을 지녔다\n침을 이용한 강력한 일격이 특징"
+  },
+  {
+    "kind": "monster",
+    "id": 51,
+    "storage": 3832044,
+    "jp_sha256": "66ad21ba19115b88d231f4e0aefa9fe6a0497f040f511a7ed696da6ba6ada753",
+    "previous_sha256": "6d88022b7643cb4cd6741041844c7b5388e411a19cde9e70c746d0266ee1d136",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 52,
+    "storage": 3832048,
+    "jp_sha256": "f7ded388b159e95f877d27b57e8cde2bc422d8e39314075e6f9e90981f9cdc26",
+    "previous_sha256": "d78477e6c69693a07e138a03b3be9af1254f6a5e357e2f23e5621e47bf89ebd8",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 53,
+    "storage": 3832052,
+    "jp_sha256": "63879ea70a80ad1deb24015998873f4ca1b58aaa0c4488bc8747f624114a9d94",
+    "previous_sha256": "c15ff148a50659a22f839df95f3af164bbd61afeced4c2d45f9987f8c9eabbcf",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 54,
+    "storage": 3832056,
+    "jp_sha256": "f957d8dcc4646e042ce4852b83d813bbd219bd30e65e38e77f210a5bdeee7132",
+    "previous_sha256": "e7532d12a5e8c0227e27b07ebc314c8ffe942daa5101fde6ba93a440aa1af736",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 55,
+    "storage": 3832060,
+    "jp_sha256": "fe9ff2d5d35edddc59b2acb61c9a49b330165a49f3edaa8fc5cb9d28f24940e7",
+    "previous_sha256": "908080bef38a9d51ed7757a3e9257cf732f1e0fb7b210730dcc18d99917230c4",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 56,
+    "storage": 3832064,
+    "jp_sha256": "1bccdfc193f8fcaf4b8c0bca42c814b9b7904757791e444b895fc36bcea62f4d",
+    "previous_sha256": "f32d7d7909258fbbc7cf894a9057b61c3b5eba9c432ac7ac2e6e03f1b7d91c86",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 57,
+    "storage": 3832068,
+    "jp_sha256": "401bd9389ac0837b29c6c0ee14ff047756aa74ae3f28f26b9fe2a86679019d91",
+    "previous_sha256": "b975156bac9f13d8bb47af4a8a8a055163254049f54656df65ba550c3bace135",
+    "changed": true,
+    "final": "도깨비불\n지력이 높아 마법이 잘 안 통한다"
+  },
+  {
+    "kind": "monster",
+    "id": 58,
+    "storage": 3832072,
+    "jp_sha256": "6a27a31465d7117adfc78559558a34d04d113fbb0b9b727cda9fcba47aec179b",
+    "previous_sha256": "5aff3ff5ef3859241f8d598f9e34c5bb7178a965fcdb9e45600533ba7fd6d872",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 59,
+    "storage": 3832076,
+    "jp_sha256": "bc5a5e369bf66d77827839ddfcae3e671add00f385ad75cd05d35cde561e9838",
+    "previous_sha256": "a5275e275b360602e07b5869f9eec2cb2405349e752110d44fc830697e0b5346",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 60,
+    "storage": 3832080,
+    "jp_sha256": "8f6faf6de98f65f2700f35636354f9f5446ad51f9560f060fd17528b50474bd3",
+    "previous_sha256": "9a325ba19c0aa42335d4c2a8cc7a878eeb76e3548c778eee66f388f0188040cd",
+    "changed": true,
+    "final": "지옥을 지키는 개\n＜화＞ 속성에 강하다"
+  },
+  {
+    "kind": "monster",
+    "id": 61,
+    "storage": 3832084,
+    "jp_sha256": "ffaac73ade1d2752ba22e424d8718c0728a0462f8bc1450e99ea1af2d1e17fc7",
+    "previous_sha256": "b69a90dec7a1c8941cfabc7a92de1ab6612bcd6a732567fd058805316ef36462",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 62,
+    "storage": 3832088,
+    "jp_sha256": "17ccefe5577f004a3cb877c2fb63b237e5ae2b8a008549725fec53b28e9c24a1",
+    "previous_sha256": "84451007147e5cead668337ef927b6b8dce914752838ce0fa9dc548f8a27e38a",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 63,
+    "storage": 3832092,
+    "jp_sha256": "204e159c058e511e0cfaf59be65a8baba7fb0f01ffa155b34b01a23849d0545a",
+    "previous_sha256": "ff5f1d020a9e700c886a98f13b7ab55f9388ddfcd3b0a9365c9253c825d11025",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 64,
+    "storage": 3832096,
+    "jp_sha256": "4c4046d12b10dcc55caca8b862e25b312666c3f8344fe3d20f997b9a59637675",
+    "previous_sha256": "06679a6ec9333f180e16fb1bc40608c85e95521e1a3a380db341ea37579f8909",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 65,
+    "storage": 3832100,
+    "jp_sha256": "559ac3fcebfe623abb802cb89c06d50ff7c30f9456713a943e3fd58415b5d695",
+    "previous_sha256": "eabb537b5e529236a2a58d2bfff82514ddb2effb0f9ce44d285313b77639a4ec",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 66,
+    "storage": 3832104,
+    "jp_sha256": "6de4619e814bbb73e9b6355480fb3afcd8d8615c0142d94a9d0cd30f52c7c681",
+    "previous_sha256": "d944072a5aaac9bc822c6d11c727b9582720946106039e3dd74540e99193c6bb",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 67,
+    "storage": 3832108,
+    "jp_sha256": "4aad1956111c4bcbd9736cbd8aa80fdc33843f9d4145492e1ad7708542747127",
+    "previous_sha256": "7ce95295b4932ab8eb9855b127e7c37b3f176463cb9df5c5d09fdc116268a63a",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 68,
+    "storage": 3832112,
+    "jp_sha256": "49dcc26ea93847d2296e01458599abacb456257e13afabf522267da24b994a2d",
+    "previous_sha256": "9085206bb611dcee79ecb9998a7a0ce60b23e5544a6b503967fb52f07d07d32a",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 69,
+    "storage": 3832116,
+    "jp_sha256": "bd333db9f28de84ad9e6313bafcb838e083551c69e4726f49f389ff5aea1f915",
+    "previous_sha256": "8eabcdd854b850e678fd39766adcb93c8202f130f5945461d9fc36e4946d6050",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 70,
+    "storage": 3832120,
+    "jp_sha256": "99b514626c6cc138561fe36afa173838b9157a564745f94fc090679eec505c13",
+    "previous_sha256": "424d847d8183512d6deb8f98e558c1db174acec40f2e6e5a0e24d9d6bd75fc69",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 71,
+    "storage": 3832124,
+    "jp_sha256": "792ea5f180230f995b3e0019b8350d0b5412549ec96abc7421a1932928a9cd8d",
+    "previous_sha256": "e1c6ce6c08331a3098e9e0daadda8aab56e56dcc59e527e21cc4d0fb7932181a",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 72,
+    "storage": 3832128,
+    "jp_sha256": "2dde27fee4a6bfdd2f3cd1b29cdb4575a42fec516f9ff9ff92e88daa02b41394",
+    "previous_sha256": "357c90566b4b87220ee4ccf1596baf30f9379e1aba831d8abf37653057fd580f",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 73,
+    "storage": 3832132,
+    "jp_sha256": "9e6eb157fe2ade5594f91671082cd7a25a867568ace8be8b167d6bb9c384ce72",
+    "previous_sha256": "ffe5b1272ffa97b99d6b04c6a4262a21e2af57df63eba837b7805114f5c08a06",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 74,
+    "storage": 3832136,
+    "jp_sha256": "e148f640d157db0f87dd4482ee2ef4ae3fe1f8505accf77adb7e6f696afe7acb",
+    "previous_sha256": "300885267bcf5ab6fc5e4730ce6741019688f99e196ea632abf99b8da4ea7aab",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 75,
+    "storage": 3832140,
+    "jp_sha256": "e10a4de4923d3034d6a8c1f322e3e659726c90f28bbe6c6833f27a6c33699b6b",
+    "previous_sha256": "e0a5b1ac9310da7f91362c1674dbf2be687219fcf30e36ffe21ca262b76d73c1",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 76,
+    "storage": 3832144,
+    "jp_sha256": "49b5acbe03eeee443e2a219ee7a925a6f55190ff2b3958662fce800bf006cf8a",
+    "previous_sha256": "91711865278d9301a7561069993fff04283585ff8ceb75dd3abeb491d40aa087",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 77,
+    "storage": 3832148,
+    "jp_sha256": "6d64c24b9dfa84eedbe5c87ade956360d5a579996c6b881acf8d3fff8f5a190f",
+    "previous_sha256": "413cf9f230ec98033e36113edf26e612023ac86ddafd53b85660a6b9e2c04606",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 78,
+    "storage": 3832152,
+    "jp_sha256": "ef01299d381e703aa4944ed44db4eedb519edf148e12154f7c07df0209d92ad1",
+    "previous_sha256": "8f17233b1eee6afb175989098578b18b9e2a3e228b27710ca9a361c678de45a7",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 79,
+    "storage": 3832156,
+    "jp_sha256": "66f7f52118bcd3deded7d54ed39d0d7107c816d52ce072371ce659fef0fe7024",
+    "previous_sha256": "6fefa61fef095dc429c95790de90152cf233de8967fca806b6e26b59dd1f7c32",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 80,
+    "storage": 3832160,
+    "jp_sha256": "f7d21f0af1d9899c0c8e39806774a0415a67c5b2e6d0e7c21e38c829ec50eb5f",
+    "previous_sha256": "38141300ab6ce2bb3f2d58b3ac9d9287f85d3eb9df0fc4c52eca094c3d9c62f1",
+    "changed": true,
+    "final": "＜뇌＞ 속성의 궁수"
+  },
+  {
+    "kind": "monster",
+    "id": 81,
+    "storage": 3832164,
+    "jp_sha256": "3972dad3656ef75e1944b5d6c0947a9953823033465614e4751edb43bba8bb66",
+    "previous_sha256": "9d066a79fc6198c08dde327f66ed70d223365ce86da3379e86483625ac9d1ce2",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 82,
+    "storage": 3832168,
+    "jp_sha256": "d3a49df68a96ffea9e2f760b33eea4ec6cb96bfb14a475c56d7f72c49a986a55",
+    "previous_sha256": "4ae6d9c81533e93fce08f612a8d31b3cdc181a3dfb94c0cb141cff721da2117b",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 83,
+    "storage": 3832172,
+    "jp_sha256": "a91aea6e453de564f9fd76c3946bd50e76870163546276f94a87b5eba72e93a1",
+    "previous_sha256": "f836c036251eb0fe1d525861a5e2dd00880230413ca075e9e5723ffc0fc3aa4c",
+    "changed": true,
+    "final": "＜뇌＞속성의 격투가"
+  },
+  {
+    "kind": "monster",
+    "id": 84,
+    "storage": 3832176,
+    "jp_sha256": "38c436ad752368c63ee19d7f866be588d470c66135867d2de3b5a34dde8626c9",
+    "previous_sha256": "7ae8827961f12128965f54ea9b1b58048a7343271ab8bd52475e574244792f66",
+    "changed": true,
+    "final": "＜광＞ 속성의 격투가\n정신 수양이 부족해 이름값을 못함"
+  },
+  {
+    "kind": "monster",
+    "id": 85,
+    "storage": 3832180,
+    "jp_sha256": "e211e922540f9d1db05704ed16144e03853033743d38c0748c6624b324e50040",
+    "previous_sha256": "6972abf0b4bcd63a453c695d6795ca8a92f4a48d7e66e2561ba8b6338d10d101",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 86,
+    "storage": 3832184,
+    "jp_sha256": "0eb53a32ad93cafd7657cd242c5923d5e8f6608f3d3dce4260184c30642717ac",
+    "previous_sha256": "62b256e5248b6ecb51fd059ea252ba07f6788c36d629df70444aeebab0cf3218",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 87,
+    "storage": 3832188,
+    "jp_sha256": "04860ed95f2b6149382374f8c556846b95a40c160c75e7a0e44e6e3701c0c8fa",
+    "previous_sha256": "fa265a80ef09d48213006a93e7eaae27ea6e6cff71c325f277dfe0ed99c2448c",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 88,
+    "storage": 3832192,
+    "jp_sha256": "ae3fc3ce5bc7f4ac527f695a2df3df2658793c3fa93369a6543b6d361ac634fb",
+    "previous_sha256": "22ff43b0b8838362c5caabc035777036790bca8e0f4e50f2887a346415b170bf",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 89,
+    "storage": 3832196,
+    "jp_sha256": "bd5b853140ac93c40cfb56355cc529dffcba726b1615694c3dd666dcb94d5194",
+    "previous_sha256": "af9cf14c28160b3589a1709a0a1aa518ee51f33e0f148a17347c7f1945468356",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 90,
+    "storage": 3832200,
+    "jp_sha256": "6758a0065507f28bf594deca05310c19da9f272c7bcce090311e8e054a5853b5",
+    "previous_sha256": "0853a2fff52402d6f186b2238b8925ce3546ca464560fa98204f5bba4a8c02d6",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 91,
+    "storage": 3832204,
+    "jp_sha256": "e2396a0cb649f525f0f61344764b4c3d802c86e4816a328a72aaaeeb43833e44",
+    "previous_sha256": "3f25c7d4429188c60f30c3134551be3d5efe2709efae51dcc65a017057a2a594",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 92,
+    "storage": 3832208,
+    "jp_sha256": "7d8160cd49ce0fb858ff068c15118647ec29f23cf6c3830733bc96f75ff1545d",
+    "previous_sha256": "f543bd344bf42d1453f7bcd35c083818086757b297ca511a6c3db87c506e2914",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 93,
+    "storage": 3832212,
+    "jp_sha256": "61f538d8e1439b579cca5785c1b23cb6ff6b66c9b526651f06c799b2ce98af40",
+    "previous_sha256": "9b477bde2c81dfef0f15662238789b239cfaf2cbfca8b259480e00f0c69c5bba",
+    "changed": true,
+    "final": "＜뇌＞속성의 중전사"
+  },
+  {
+    "kind": "monster",
+    "id": 94,
+    "storage": 3832216,
+    "jp_sha256": "d893e2c3769ef15389a3dae66993e7a7cba3e6132cabb505b3da42452347b202",
+    "previous_sha256": "f5f6fb631bcdf82deb12d0beedcd7c29d209cc612eecdc4d262decc12bc5d236",
+    "changed": true,
+    "final": "＜무＞속성의 중전사"
+  },
+  {
+    "kind": "monster",
+    "id": 95,
+    "storage": 3832220,
+    "jp_sha256": "5e430896f5b4e4e143b69b58258452dc0e96999af94b8dfb9c6a36325d10f666",
+    "previous_sha256": "c01ce64d37576c8c9f09bd6eae9ca4bea6d62ed7b003e1033a69dc909e88a771",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 96,
+    "storage": 3832224,
+    "jp_sha256": "ee808bb666b8e7695ce0a51ceb8f30fd01dd2d320e0d05fad5d02c90cd6fa18c",
+    "previous_sha256": "e568cc29410fd0f49846d27726333532b484d99aa0678b379ae6be57d52833d6",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 97,
+    "storage": 3832228,
+    "jp_sha256": "92a10b6c14d1aefda6773eb68c0d36526423898d2f079059c662ddd31ecedd42",
+    "previous_sha256": "70c4c3e23a5c95e0e11843f640accde83208817c2e3c99ce4aff5af47a05037c",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 98,
+    "storage": 3832232,
+    "jp_sha256": "45eb4e768ec16ab51db27ca954f0a946417f8cfdd596a6fa5dc930caca482ee8",
+    "previous_sha256": "83a889d1ad1f50a2715e5af668cc9523e5cc11d281adc111e0e5d2dec7090f26",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 99,
+    "storage": 3832236,
+    "jp_sha256": "337b0f96a13e95e73a891b78bc1ba3c029bb94d3811a878fa3d85ae8176119a5",
+    "previous_sha256": "cdbba6e1eb3219c108fa7e9976a368a5d277a1edffce3d2d8f959a6dcc7bd5a7",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 100,
+    "storage": 3832240,
+    "jp_sha256": "377689c6a77bb8d7c6857a51506b0efd28078413cc8222b446c31f502c6c7343",
+    "previous_sha256": "140d4df25dbebd248cf083ebdc498ba3e36c5e01dcb5a665adc4896a795d7fdc",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 101,
+    "storage": 3832244,
+    "jp_sha256": "77bf62404750329a528176d260cb34251eb1e83cccb19eb94bb67d0d08db4adf",
+    "previous_sha256": "e8dfa7c8085a8636aa541fa18aca308220b8a4e99df139518966a2890b6271c3",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 102,
+    "storage": 3832248,
+    "jp_sha256": "12172fde2cbc322c7165e56eeeef8adf0b7da4139b09d4d19cf448f088f75f3c",
+    "previous_sha256": "76e0dac18ce6ffc927c882df1e464fd87f208535d377954a67d6f7b52c0c4af9",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 103,
+    "storage": 3832252,
+    "jp_sha256": "b91d42df5d80ee61cee1a00c3e94d3eba9d32df57c15a7cedfe3ba8a8a82cbff",
+    "previous_sha256": "5711d8f644c471acaed24abd0d0fd7e7c9a2aeb55307441b82031d8d436a5ad2",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 104,
+    "storage": 3832256,
+    "jp_sha256": "ed0c21b28f736e3bda643f5633774fd25160809c9ceb3f13eaeb3f122afe8c4d",
+    "previous_sha256": "13f725c36ec7b486bc39c9875b7c928832fab80a35e33edd7c22fcda1016a9af",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 105,
+    "storage": 3832260,
+    "jp_sha256": "1001a577a4787986e275a72a1801dfb2730ff61d239835a9d3e034f06db07171",
+    "previous_sha256": "a765af63181cdfec3ac1496b152b8f770e39125b4cb0efdcc4c9a61abc32077d",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 106,
+    "storage": 3832264,
+    "jp_sha256": "e17d09d8ba9aee9e841e8ac781fc8826047f47dee03bb8bc767312bec3a078d2",
+    "previous_sha256": "899ff506ece3e9075eb2fd5fd926430f72a3d44dabee52ea97719dae17556196",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 107,
+    "storage": 3832268,
+    "jp_sha256": "e6a0e290ea71131839d3537e7154071e680cf179c670b4dbcc433b0f7eaba1c4",
+    "previous_sha256": "c9d34eb8f0fadb04717f04585637a00e10e43c29f6ae6d73627547e9474a1d2f",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 108,
+    "storage": 3832272,
+    "jp_sha256": "7d29718d4dc8f41ce9e5db3271cb4181cf05fab2792d4b6124138b06e48b1eaa",
+    "previous_sha256": "8ad7a010710ec7d5655b0fb5f02e5f867278c741b57b4ff5ef4dde1fe3f3b8f8",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 109,
+    "storage": 3832276,
+    "jp_sha256": "ddd0af092419c3615c88e34b57f42b46935c8d6339bb036d1d72b79cb0b31c44",
+    "previous_sha256": "a89ae13945ac5a3c7bad787ac0b9c713574143a191b2948fa1080af8e9c1ca90",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 110,
+    "storage": 3832280,
+    "jp_sha256": "357621a2e37b50e200528420ba178373e324a460ab4293b9f824dfe4c6132946",
+    "previous_sha256": "6850a24b27932a05f04de71cdf6aca0978fec708d50bc392878427d866d5372e",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 111,
+    "storage": 3832284,
+    "jp_sha256": "539160fc11f07326611e0c28d8e2bfcabb33dabc8196b77ebaeb95c6607b9af8",
+    "previous_sha256": "6a43355850dbb6497f7749902804aa9679bfeb1e2a080fef897aba072464ff0a",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 112,
+    "storage": 3832288,
+    "jp_sha256": "cf8699c320af80017607ae9e0a88604bc71f4a3d0dc23c5133976e41611ce5b6",
+    "previous_sha256": "5ff32c6b3a74aaae7f27db4cd52349742ec33a8876f73af6efcfc35fb9cdaf57",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 113,
+    "storage": 3832292,
+    "jp_sha256": "2c64badc1e393bb2e1b4b890d1e64a05eb253fa936ce8d45fbcd1d1199bf2a57",
+    "previous_sha256": "03f57a6df97e0e25ff99257209fcd28cc32c35c64d863b6d40640664719e37da",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 114,
+    "storage": 3832296,
+    "jp_sha256": "cf26832557a496ea8dcc4022867f40e68995213f2623e8fecdd6cdf062d08073",
+    "previous_sha256": "62456c80e86714bdaa30c8c0ab083a000d3a275dd74693155d46ea25068591ea",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 115,
+    "storage": 3832300,
+    "jp_sha256": "b0aea02deafa7ded4cc524cc0df7a6e191dd8f5c7d51ced81ffd21200f207561",
+    "previous_sha256": "fca0103b3384be7d5eb8d40551b24bbfbf7f27887999615e6a64a9ead7f12531",
+    "changed": true,
+    "final": "혼이 깃든 마검．모든 것을 삼키는\n어둠의 칼날로 쇠약하게 만든다"
+  },
+  {
+    "kind": "monster",
+    "id": 116,
+    "storage": 3832304,
+    "jp_sha256": "5def373fa6fd46b1254210f630d0564c50b12e9520a891e65c76e200161098a7",
+    "previous_sha256": "9ad3710c4d7f5a1c015773e62f5b75c7866331da05ab13d46cced4f4a768efed",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 117,
+    "storage": 3832308,
+    "jp_sha256": "b7487f055fe47a5be4ca53284d2d754329b5996b7ef45e98881289509d535b0b",
+    "previous_sha256": "6a64f700830315d5861bff99458bc01db4567a24c05577793a96969ea74ad6ea",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 118,
+    "storage": 3832312,
+    "jp_sha256": "3c06fbede7f267feed3d494bea2dfd649f1fea3a1cc6a175c8aa21b7e563da16",
+    "previous_sha256": "07ee601df312ce00f456bb8de2cfbbb8403108d0465b9f698f9b700793401ec5",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 119,
+    "storage": 3832316,
+    "jp_sha256": "8f9d96ac9a85c289f5d0da53ac5bc96fb05bc8fdd95ae7fa373180daa3538ba4",
+    "previous_sha256": "8b3d92795334d8d15f77ac23072be9f535d249eb2169fbab1578a47a7128a897",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 120,
+    "storage": 3832320,
+    "jp_sha256": "5d847c45179d533d1db0711fc516dd7f6e2b884042c3cb17bf9a756673244f6e",
+    "previous_sha256": "8293fc72888d4420f4f82fa38e0d70f44a4d84fc7588446b94fb87d71aee1e77",
+    "changed": true,
+    "final": "뛰어난 다리 힘으로\n추운 땅에서 살아가는 토끼"
+  },
+  {
+    "kind": "monster",
+    "id": 121,
+    "storage": 3832324,
+    "jp_sha256": "12dc3a208df844c035afeb9b953e9b26eef1f43f93e2373edce4e849d65fda48",
+    "previous_sha256": "be887f60f5e52a3af54ea6c061f0a4fe8d96d5b3578cb6e7d5ef01c3c5d322cd",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 122,
+    "storage": 3832328,
+    "jp_sha256": "8ff235c2305d22701fc10aa500f40a3b7ba349e8fdbd7e108f5950ceb1a1d6b9",
+    "previous_sha256": "2e19ffbb56810a3390c4e0d708e9761abcbce65886400be2d12f0969790daf18",
+    "changed": true,
+    "final": "물속의 실력자\n꼬리 연타로 적의 움직임을 막는다"
+  },
+  {
+    "kind": "monster",
+    "id": 123,
+    "storage": 3832332,
+    "jp_sha256": "a54bb33d2be0f178319aee9662653ec6d9c915870f529bc44c00ad9d4d0160f0",
+    "previous_sha256": "49f9c26f4fbb1a40da98c964693242582b64bead9af0f073825aa0bce3bd9805",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 124,
+    "storage": 3832336,
+    "jp_sha256": "a925799f445e9755dc3784a0e7ad479c8bf4234898492130dce7182d6d6a2786",
+    "previous_sha256": "98c541ffc0d6f45dc2499d398c4214d07bce933d1bc52938cc42a3c7156da43e",
+    "changed": true,
+    "final": "물가에 사는 불가사리\n쇠약 효과가 있는 침을 날린다"
+  },
+  {
+    "kind": "monster",
+    "id": 125,
+    "storage": 3832340,
+    "jp_sha256": "4fcd8c8b6d23cbc8455b67a29512686b9223be291336dbddbbffe691a64a22ed",
+    "previous_sha256": "de3e1ea534c56c46ff06f9961f19613918c259faaaba56afe47af3f609719744",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 126,
+    "storage": 3832344,
+    "jp_sha256": "70a6c802b31d31c0f05aa2096a581637bede804f66836656476d2f93e4ce44f5",
+    "previous_sha256": "a43a3190d853b6e4dbc9223ad0a71d3d939742034b46e3962bbbbc054c0fc8d9",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 127,
+    "storage": 3832348,
+    "jp_sha256": "d2b1d2d3a3c0619f4a24174915349eefc3917fa2e53adaab6aa50aa5c12f60e3",
+    "previous_sha256": "10ca6018d0a68d6c66d0ab86429a46d045f3b78b8d615649108e57f458a08d51",
+    "changed": true,
+    "final": "거대한 개구리\n겉보기와 다른 놀라운 점프력"
+  },
+  {
+    "kind": "monster",
+    "id": 128,
+    "storage": 3832352,
+    "jp_sha256": "988a19fef2bedc923262e393fc6d7eee582699027bc2b13975ef91bdcedac844",
+    "previous_sha256": "e948bc5462797d80821e531c52ba8bf6b08ff016a4d1fdb9a5edea719fbcbd13",
+    "changed": true,
+    "final": "공격력과 방어력이 높아\n얕볼 수 없다"
+  },
+  {
+    "kind": "monster",
+    "id": 129,
+    "storage": 3832356,
+    "jp_sha256": "a62017d74f2872b0e1d0f4a2ea4bae0fabbce82a9077ff663432651bd72b7149",
+    "previous_sha256": "ddf2451b3072baedda5612b2b0a107b0d1643140ac5326d19476eabdcc466703",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 130,
+    "storage": 3832360,
+    "jp_sha256": "9cf9bc821dbb8db6d090f14be5b8934f2ffe040b6e93cd0067339856a96a549e",
+    "previous_sha256": "bc7e740a9acb64ff20a2bcc6874811a8b41a320fbb5a9ff468abe90cab75ae87",
+    "changed": true,
+    "final": "사람에게 해를 끼치려고\n존재하는 악령"
+  },
+  {
+    "kind": "monster",
+    "id": 131,
+    "storage": 3832364,
+    "jp_sha256": "048f632ec7a1b73bd7d44dbb654143d9a60e2823be879d3ad3bde9d7fc90d1e9",
+    "previous_sha256": "9455d07c565019b7c53f816d476afeed319b52714c83e9f762c9baf99f9d21ee",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 132,
+    "storage": 3832368,
+    "jp_sha256": "9ca180ffe51e884d425549ae26d4e07ab791b0c3c7c90446a0651d03974c4084",
+    "previous_sha256": "250d2366594c83386742e58466913f8df93d56aeb6e8f4e264b8a216cdc10521",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 133,
+    "storage": 3832372,
+    "jp_sha256": "742a332e1bb0404b747205116bdb3a638f65f48b0fc02cf24909128fa6ce9a07",
+    "previous_sha256": "d63b60f9469fdc6c2b0c347933295ed584f7119468eab0d6470b74347fbbd7ff",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 134,
+    "storage": 3832376,
+    "jp_sha256": "b28c1d37f31285c5cdfe70ecad37fc843938a6658da6d262b859a4fb9478c399",
+    "previous_sha256": "d58f848cbe55a8c34d3233a275829dd74d114bffd102fd2cc8501797686609a2",
+    "changed": true,
+    "final": "리온과 닮았고 기술도 같다\n리온 본인은 가짜라고 단정했지만…"
+  },
+  {
+    "kind": "monster",
+    "id": 135,
+    "storage": 3832380,
+    "jp_sha256": "76b6959454152546f161e22f3053be8f1719e79edd4c0e3947623c665e4b4dc7",
+    "previous_sha256": "d2e9f544cdfd1ea83f90168d8bb03d390d1ac96383fdf7a97142f93068fd5a15",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 136,
+    "storage": 3832384,
+    "jp_sha256": "d9d809e2f8b37b1ee22fe02534c6a8a1535be5e9c69f9ce61b2a83c5a85db3b8",
+    "previous_sha256": "b01db40b03e43ed3fb67c93a68c973289765344f2a169b55140e14efd74fe4ad",
+    "changed": false
+  },
+  {
+    "kind": "monster",
+    "id": 137,
+    "storage": 3832388,
+    "jp_sha256": "218de0dc727f8bbc9ea61af1f5927ebba191fb19a71a46c7a716790468b02d17",
+    "previous_sha256": "b23eb65f5550189b2e556291b404180dd77528a18e3007c06e8e2c3a97bc7440",
+    "changed": true,
+    "final": "오딘의 사도\n그 대검에는 다양한 힘이 깃들었다"
+  },
+  {
+    "kind": "monster",
+    "id": 138,
+    "storage": 3832392,
+    "jp_sha256": "46915365b6ff7554a8a482388740409a43214ab42b94aad14c992e90a9a8d3f3",
+    "previous_sha256": "8fc5b5ce554dbbaeb0952f1fa1966b64a7cdeb008b546888c67056da521d3d18",
+    "changed": true,
+    "final": "본거지를 떠나 １００％는 아니지만\n그래도 충분히 높은 능력을 지녔다"
+  },
+  {
+    "kind": "monster",
+    "id": 139,
+    "storage": 3832396,
+    "jp_sha256": "7820a7fe7d0701d19f4006879aa0387f03ab1068dd120b8d1dc0fd080728a817",
+    "previous_sha256": "f31ab547dbeedfd897cdc5d70e1273ca790e4bc800229b8cba68de61d81ac52a",
+    "changed": true,
+    "final": "사나토스가 만들어 낸\n용사의 그림자"
+  },
+  {
+    "kind": "monster",
+    "id": 140,
+    "storage": 3832400,
+    "jp_sha256": "7820a7fe7d0701d19f4006879aa0387f03ab1068dd120b8d1dc0fd080728a817",
+    "previous_sha256": "f31ab547dbeedfd897cdc5d70e1273ca790e4bc800229b8cba68de61d81ac52a",
+    "changed": true,
+    "final": "사나토스가 만들어 낸\n용사의 그림자"
+  },
+  {
+    "kind": "monster",
+    "id": 141,
+    "storage": 3832404,
+    "jp_sha256": "7820a7fe7d0701d19f4006879aa0387f03ab1068dd120b8d1dc0fd080728a817",
+    "previous_sha256": "f31ab547dbeedfd897cdc5d70e1273ca790e4bc800229b8cba68de61d81ac52a",
+    "changed": true,
+    "final": "사나토스가 만들어 낸\n용사의 그림자"
+  },
+  {
+    "kind": "monster",
+    "id": 142,
+    "storage": 3832408,
+    "jp_sha256": "c2d6a5b9ef4833c4efd9cb63352168c4f52e28fb946d867c50ecefc16a830e84",
+    "previous_sha256": "daf0c82df5f4611e8a5b7c6b8eb0363831b6adf0401ffa1ea3c4741334d25f3c",
+    "changed": false
+  }
+]

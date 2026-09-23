@@ -1,5 +1,7 @@
 # Build and tests
 
+The local v1.0 candidate build and its exact source chain are documented in [docs/V1_BUILD.md](docs/V1_BUILD.md). Release readiness is recorded in [verification/v1.0.json](verification/v1.0.json); the candidate is not public while required final-artifact progression evidence is incomplete.
+
 Current original-Japanese-input prerelease: see [v0.9d generation and verification](docs/V09D_PRERELEASE.md). End users apply the new test package directly to the exact Japanese ROM; no separate FFR input is required. The historical build below remains unchanged for reproduction of v0.9b/v0.9c.
 
 ## Historical v0.9b build
