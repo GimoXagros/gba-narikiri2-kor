@@ -47,12 +47,14 @@
     "hardware": "OLD 2DS + DSPico + GBARunner3",
     "progress": "Continued an existing save to the staff roll",
     "extended_play": "About 20 hours spanning the dialogue translation stages; cheats were used for leveling bottlenecks and catalog inspection; existing save continued without reported issue",
+    "final_candidate_linkage": "Inferred from the immediately preceding delivery context, not an independently recorded ROM identity on device",
     "exact_final_sha256_explicitly_confirmed": false,
     "all_branches_confirmed": false
   },
   "release_limits": [
-    "Issue #4 and RELEASE_POLICY.md require extended complete progression and hardware verification of the final artifact; current user report does not explicitly bind the route to the final SHA-256 or establish branch/event coverage",
-    "Historical save/name/suspend tests and isolated memory fixtures do not establish all final-ROM hardware cases",
+    "Issue #4 and RELEASE_POLICY.md require extended complete progression and hardware verification of the final artifact; the reported 20 hours span several builds and the final candidate is attested only from an existing save to the staff roll, with branch/event coverage unreported",
+    "Issue #4 target hardware checks for new game, two cold reloads, custom or mixed names and suspend/resume on the final candidate are not reported; existing 8 KiB save continuation is user-attested",
+    "Historical save/name/suspend tests and isolated memory fixtures do not establish these final-ROM hardware cases",
     "Final public tag, release upload/download and post-publication checks have not run"
   ]
 }
