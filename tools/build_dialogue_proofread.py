@@ -42,24 +42,30 @@ def build(base,jp,changes):
  assert all(a==b or i in allowed for i,(a,b) in enumerate(zip(base,result)))
  for r in writes:assert normalized(decode_game_text(result,source_text(result,int(r['storage'],16))[1]))==r['after']
  return bytes(result),dict(base_sha256=sha(base),japanese_sha256=sha(jp),target_sha256=sha(result),changed_bindings=len(writes),original_data_moved=False,existing_changes_limited_to_reviewed_pointers=True,element_icons_unchanged=True,writes=writes)
-def final_dataset(rom,report):
- d=json.loads((ROOT/'private_validation/dialogue-proofread-20260923/latest-dialogue-book.json').read_text('utf-8'))
+def final_dataset(rom,report,dialogue_book):
+ d=json.loads(dialogue_book.read_text('utf-8'))
+ originals={r[10]:(r[4],normalized(r[5])) for r in d['full']}
  changes={r['storage']:r for r in report['writes']}
  for r in d['full']:
   off,raw=source_text(rom,int(r[10],16));text=decode_game_text(rom,raw)
   r[5]=text;r[6]=readable(text);r[12]=f'{off:08X}'
   r[7]='교정' if r[10] in changes else '원문 대조·유지'
- d['changes']=report['writes'];d['meta']['korean_sha256']=sha(rom)
+ d['changes']=[{**r,'source':originals[r['storage']][0],'before':originals[r['storage']][1]}
+               for r in report['writes']]
+ d['meta']['korean_sha256']=sha(rom)
  d['meta']['review_status']='Awaiting complete review coverage ledger; builder does not confer semantic review'
  return d
 if __name__=='__main__':
  p=argparse.ArgumentParser()
  for n in ['base','japanese','changes','out']:p.add_argument('--'+n,type=Path,required=True)
+ p.add_argument('--dialogue-book',type=Path,help='Optional private source-bound book dataset to export alongside the ROM')
  a=p.parse_args();base=a.base.read_bytes();jp=a.japanese.read_bytes();changes=json.loads(a.changes.read_text('utf-8'))
  rom,report=build(base,jp,changes);patch=create_bps(jp,rom);assert apply_bps(jp,patch)==rom
  a.out.mkdir(parents=True,exist_ok=False)
  (a.out/'Xagros_Narikiri2_KOR_proofread_test.gba').write_bytes(rom)
  (a.out/'Xagros_Narikiri2_KOR_proofread_test_JP.bps').write_bytes(patch)
  (a.out/'BUILD_MANIFEST.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),'utf-8')
- (a.out/'final-dialogue-book.json').write_text(json.dumps(final_dataset(rom,report),ensure_ascii=False),'utf-8')
- print(json.dumps({k:v for k,v in report.items() if k!='writes'}))
+ if a.dialogue_book:
+  (a.out/'final-dialogue-book.json').write_text(json.dumps(final_dataset(rom,report,a.dialogue_book),ensure_ascii=False),'utf-8')
+ print(json.dumps({**{k:v for k,v in report.items() if k!='writes'},
+                   'private_dialogue_book_export':'PASS' if a.dialogue_book else 'NOT_RUN'}))

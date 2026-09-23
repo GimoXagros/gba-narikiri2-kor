@@ -22,6 +22,8 @@ python tools/build_description_review.py --base "$OUT/hints/Xagros_Narikiri2_KOR
 python tools/build_dialogue_proofread.py --base "$OUT/descriptions/Xagros_Narikiri2_KOR_descriptions_test.gba" --japanese "$JP" --changes translation/dialogue_proofread_20260923.json --out "$OUT/proofread"
 ```
 
+마지막 명령의 ROM/BPS 재현에는 전체 비공개 대사집이 필요하지 않습니다. 개인 대사집 내보내기가 필요한 경우에만 `--dialogue-book <비공개 latest-dialogue-book.json>`을 추가하십시오. 생략하면 `private_dialogue_book_export=NOT_RUN`으로 보고하고 ROM/BPS 빌드는 완료됩니다.
+
 최종 두 산출물 `proofread/Xagros_Narikiri2_KOR_proofread_test.gba`는 모두 13,270,790 bytes, SHA-256 `7505ef506e4fc11e1e0f36672956627e7522d2441cedfb06a5f359e7f5bd2b50`로 보고되었습니다.
 
 ## 실행 환경
