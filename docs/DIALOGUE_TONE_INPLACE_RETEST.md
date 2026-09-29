@@ -15,3 +15,5 @@ python tools/build_dialogue_tone_inplace.py --base private_validation/release-v1
 python tools/verify_dialogue_tone_inplace.py --base private_validation/release-v1.0/Xagros_Narikiri2_KOR_v1.0.gba --japanese Japanese.gba --baseline-book private_validation/release-v1.0/build-a/final-dialogue-book.json --prior-candidate-book private_validation/tone-pass01/build-h/final-dialogue-book.json --build-a <첫-출력-경로> --build-b <둘째-출력-경로> --report <새-비공개-검증-경로>
 python -m unittest tests.test_dialogue_tone_inplace -v
 ```
+
+2026-09-30 후속 확인: 사용자가 위 원슬롯 후보를 받아 신고된 펍 로즈 장면의 정상 진행과 자연스러운 문맥을 확인했다. 기록은 `private_validation/tone-freeze-debug/USER_RETEST_20260930.json`이며 상태는 `USER_CONFIRMED_SCENE_PASS`이다. 사용자 메시지는 직전에 전달한 후보와 연결되지만 사용자 쪽에서 ROM 해시를 새로 측정하지는 않았다. 위의 `LOCAL_RETEST_CANDIDATE_VBA_UNVERIFIED`와 재시험 필요 표기는 당시 빌드·기술 검증의 역사적 상태이다. 후속 대사 검수의 입력 기준은 SHA-256 `8d4c8dca40d7fdaa561dfa64fecc6ef42c04a11cdd345553e7bc5bb30313c142`인 원슬롯 ROM이다. 이 확인이 신고 장면 밖의 전수 검수나 VBA-M 오류의 엔진 원인을 확인한 것은 아니다.
