@@ -26,6 +26,7 @@ from strict_asset_writeplan import (plan_title_assets, plan_small_font,
 JP_SHA = "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7"
 KO_SHA = "eac45b3345e865f1fea68bbb07f62aff0f6ccdf03004090f57b55f75b6f82b73"
 PROBE_SHA = "75bcd99c2c517646a59dacd1af8219e11a130f26070fdaf1d141cec0f8c32d3b"
+GUARDED_PROBE_SHA = "c70c5ec1ab0964ea4e44010790917cc616027b6b318caf0050afe10694a3ef22"
 TITLE_UNIT = 0x37E1F0
 TITLE_UNIT_LIMIT = 0x37E36D
 BUILD_DIR = SOURCE / "private_validation/v11-runtime-20261003/owned-all-extra-a"
@@ -57,10 +58,11 @@ def read_inputs(japanese: Path, adopted: Path, probe: Path, build: Path):
         raise ValueError("Exact Japanese 8 MiB source required")
     if len(ko) != 13270790 or sha(ko) != KO_SHA:
         raise ValueError("Exact adopted Korean source required")
-    if sha(diagnostic) != PROBE_SHA:
+    diagnostic_sha=sha(diagnostic)
+    if diagnostic_sha not in (PROBE_SHA,GUARDED_PROBE_SHA):
         raise ValueError("Exact frozen alias diagnostic required")
     report = json.loads(build.read_text(encoding="utf-8"))
-    if (report.get("sha256") != PROBE_SHA or report.get("bindings") != 10172
+    if (report.get("sha256") != diagnostic_sha or report.get("bindings") != 10172
             or report.get("unique_starts") != 9246 or not report.get("aliases")):
         raise ValueError("Diagnostic manifest denominator changed")
     return jp, ko, diagnostic, report
@@ -499,6 +501,8 @@ def main():
     parser.add_argument("--plan-only", action="store_true")
     parser.add_argument("--owned-menus", action="store_true")
     parser.add_argument("--fast-full-draw", action="store_true")
+    parser.add_argument("--direct-dialogue", action="store_true")
+    parser.add_argument("--arte-description-length", action="store_true")
     args = parser.parse_args()
     jp, ko, probe, manifest = read_inputs(args.japanese, args.adopted, args.probe, args.build)
     segments, plan = plan_segments(manifest)
@@ -523,6 +527,24 @@ def main():
             replace(ledger,'performance:'+write['name'],at,optimized[at:end],
                 'guarded retired font owner or native full-font callsite')
         if bytes(ledger.image)!=optimized:raise ValueError('Fast draw write plan differs')
+    dialogue_report=None
+    if args.direct_dialogue:
+        from strict_direct_dialogue import diagnostic_patch
+        decoded,dialogue_report=diagnostic_patch(jp,bytes(ledger.image))
+        for write in dialogue_report['writes']:
+            at=write['offset'];end=at+write['bytes']
+            replace(ledger,'direct_dialogue:'+hex(at),at,decoded[at:end],
+                'exact input profile; synchronous native dialogue with caller-owned decoded buffer')
+        if bytes(ledger.image)!=decoded:raise ValueError('Direct dialogue write plan differs')
+    length_report=None
+    if args.arte_description_length:
+        from strict_arte_desc_length import diagnostic_patch as patch_description_length
+        decoded,length_report=patch_description_length(jp,bytes(ledger.image))
+        for write in length_report['writes']:
+            at=write['offset'];end=at+write['bytes']
+            replace(ledger,'arte_description_length:'+hex(at),at,decoded[at:end],
+                'decoded native byte length before original description layout branch')
+        if bytes(ledger.image)!=decoded:raise ValueError('Description length write plan differs')
     suspicious = annotate_pointer_shapes(ledger, jp, suspicious, ko)
     unresolved = annotate_pointer_shapes(ledger, jp, unresolved, ko)
     if not all(0 <= s.new < s.end <= ROM_SIZE for s in segments):
@@ -545,6 +567,8 @@ def main():
         changed_expanded_refs_open=unresolved, protected_bindings=bindings,
         frozen_streams=stream_check,
         fast_full_draw=draw_report,
+        direct_dialogue=dialogue_report,
+        arte_description_length=length_report,
         font_profile=font_report.get("status"), asset_details=font_report, owned_menus=menu_report,
         remaining_gates=["lower-ROM carryover owner/consumer closure",
                          "unclassified expanded-reference closure",

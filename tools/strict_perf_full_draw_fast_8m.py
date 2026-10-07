@@ -8,6 +8,7 @@ from pathlib import Path
 from keystone import Ks, KS_ARCH_ARM, KS_MODE_THUMB
 
 BASE_SHA = 'dc14db5d22f43657d61cd25f9fb672fa122a81b292f7cdf15a869cfa20fa599e'
+GUARDED_BASE_SHA = 'b1f4fddc83a94786b6fdd164c86875513a06164392731962de9258e122903826'
 # Active recompressed font ends at CAA10; original owned resource ends CABC1.
 RETIRED_SMALL_FONT_SHA = 'b730a9dfbf01efd4f3d5ad420b3b68b6798f7fb974a5bfa84556c3afcbedfe52'
 
@@ -28,7 +29,8 @@ def assemble(source: str, offset: int) -> bytes:
 
 
 def build(base: bytes) -> tuple[bytes, dict]:
-    if len(base) != 0x800000 or sha(base) != BASE_SHA:
+    baseline_sha=sha(base)
+    if len(base) != 0x800000 or baseline_sha not in (BASE_SHA,GUARDED_BASE_SHA):
         raise ValueError("Frozen exact 8 MiB identity changed")
     if sha(base[SLOT[0]:SLOT[1]]) != RETIRED_SMALL_FONT_SHA:
         raise ValueError("Retired font owner changed")
@@ -52,7 +54,7 @@ def build(base: bytes) -> tuple[bytes, dict]:
                            target=hex(0x08000000 + destination + 1),
                            before_sha256=sha(before), after_sha256=sha(after)))
     return bytes(out), {"status": "FULL_DRAW_FAST_8MIB_DIAGNOSTIC_NOT_PRODUCT",
-                        "baseline_sha256": BASE_SHA, "candidate_sha256": sha(out),
+                        "baseline_sha256": baseline_sha, "candidate_sha256": sha(out),
                         "size": len(out), "code_bytes": len(code),
                         "code_capacity": SLOT[1] - SLOT[0],
                         "text_pointer_changes": 0, "compressed_stream_changes": 0,

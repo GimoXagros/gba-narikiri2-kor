@@ -36,25 +36,23 @@ def assemble_arte_accessor(address,*,fail_stop):
     if address&3 or not fail_stop&1:raise ValueError('ARTE link ABI')
     source=f'''
     push {{r4,r5,lr}}
+    cmp r0,#232
+    bhs failed
     movs r4,r0
     movs r5,r1
     bl original
     cmp r5,#0
     bne done
-    cmp r4,#158
-    beq left
-    cmp r4,#159
-    bne done
-    ldr r1,original_source
-    cmp r0,r1
-    bne failed
-    ldr r0,right_tag
-    b done
-left:
+    subs r4,#158
+    cmp r4,#1
+    bhi done
     ldr r1,original_source
     cmp r0,r1
     bne failed
     ldr r0,left_tag
+    cmp r4,#0
+    beq done
+    ldr r0,right_tag
 done:
     pop {{r4,r5}}
     pop {{r1}}
@@ -81,5 +79,6 @@ stop_ptr: .word {fail_stop}
 table_ptr: .word 0x08374a38
 '''
     code=bytes(Ks(KS_ARCH_ARM,KS_MODE_THUMB).asm(source,addr=address)[0])
+    if len(code)!=88:raise ValueError('Frozen ARTE accessor footprint changed')
     validate_thumb(code,5)
     return code

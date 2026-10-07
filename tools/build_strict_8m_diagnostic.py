@@ -48,7 +48,8 @@ def build(japanese,adopted,catalog,audit,out):
     run('strict_runtime_linker.py',[
         '--japanese',inputs[0],'--adopted',inputs[1],
         '--probe',components/'RUNTIME_COMPONENT_SOURCE.bin','--build',components/'BUILD.json',
-        '--text-build',text,'--owned-menus','--fast-full-draw','--out',linked])
+        '--text-build',text,'--owned-menus','--fast-full-draw','--direct-dialogue',
+        '--arte-description-length','--out',linked])
     target=(linked/'FIXED_8MIB_DIAGNOSTIC_NOT_PRODUCT.gba').read_bytes()
     if len(target)!=0x800000:raise ValueError('Integrated ROM is not exactly 8 MiB')
     patch=create_bps(jp,target)

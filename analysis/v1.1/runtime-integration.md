@@ -1,102 +1,130 @@
 # v1.1 runtime integration checkpoint
 
-Status: **INTEGRATED_DIAGNOSTIC__PERFORMANCE_NOT_MET**. This record is not a
-release approval. No v1.1 release, tag or remote update has been performed.
+Status: **INTEGRATED_DIAGNOSTIC__PERFORMANCE_NOT_MET**. This is not release
+approval. No v1.1 release, tag or remote update has been performed.
 
-The baseline is local commit `6caa05608d65d565181474c7e29e6768df07d6a0`.
-The integrated diagnostic is exactly 8,388,608 bytes with SHA-256
-`7105161a1d81c8e445265163c786880d66a79dacfb1f214e358313ef6b6c5916`.
-The earlier integrated baseline was `dc14db5d22f43657d61cd25f9fb672fa122a81b292f7cdf15a869cfa20fa599e`.
+Storage baseline: 6caa05608d65d565181474c7e29e6768df07d6a0.
+First integration checkpoint: d00ccb076dae0f49c535b91529b77f12ad25dfac.
+Current diagnostic: exactly 8,388,608 bytes, SHA-256
+d5c375379369916bd1a5309678be2e9e28c5b0fff6955ebddb73537c64c187f5.
+BPS SHA-256:
+81930631ded05cd71ff560f8c030663f0c343d2cfe150d14ad28834a462f5110.
 
-## Implemented
+## Integrated behavior
 
-- Original storage and pointer values for 10,172 historical bindings and
-  9,246 original stream starts; separately identified 197 UI bindings.
-- Packed glyph dictionary v2, exact bounded stream lookup, caller-owned
-  decoding, event allocation, default name and persistent actor adapters.
+- Original storage and raw pointer values for 10,172 historical bindings and
+  9,246 original stream starts; 197 additional UI bindings remain separate.
+  Korean template bytes and shared variants are preserved.
+- Packed glyph dictionaries, exact-start lookup, caller-owned decoding,
+  event allocation, original-slot default names and persistent actor adapters.
 - Six static menu tables and the bounded thirteen-command runtime table
-  decode into a menu-owned buffer with explicit release.
-- Lossless full-font compression, compact font derivation, and in-cartridge
+  decode into menu-owned memory released after the native menu returns.
+- Lossless full-font compression, compact-font derivation and in-cartridge
   placement of the adopted title, notice, credits and map resources.
-- A Thumb-1 full-font compositor uses nibble lookup to preserve native pixels,
-  neighboring pixels and background colors. It occupies 328 bytes of the
-  verified retired small-font suffix and changes two original callsites.
-  It adds no persistent RAM and preserves unusual background-byte behavior
-  through the original routine. Pixel/ABI differential: 122,880 cases pass.
-- Restoration of the omitted map table references that caused palette
-  corruption in an earlier diagnostic. The aligned changed-word census now
-  classifies all 865 address-shaped values. This does not establish complete
-  unaligned/relative reference or consumer coverage.
+- A 328-byte Thumb-1 full-font compositor preserves pixels and backgrounds.
+  Its 122,880 glyph/color/parity CPU cases passed on the earlier compositor
+  candidate; those bytes are unchanged here. No persistent RAM was added.
+- ARTE indices outside 0..231 are rejected before record memory access.
+  Valid records, nonzero modes and both shared-name tags retain their ABI.
+
+Two actual game defects were found after the initial integration:
+
+1. Pub Rose reentry uses the separate native dialogue consumer at 0809A43C.
+   The event-expansion adapter did not cover this path. The added synchronous
+   wrapper holds decoded bytes in its 288-byte stack buffer until the original
+   renderer returns. Offscreen comparison includes the second visit and later
+   pages, as well as the unchanged first-visit sequence.
+2. The skill-description branch at 08013DEE measured compressed bytes with
+   native strlen while its display path already decoded them. A 48-byte adapter
+   now decodes for the duration of strlen. The original 35-byte threshold and
+   native byte-count semantics are preserved. All 232 linked lengths match
+   adopted Korean bytes using the real decoder and real strlen, without stubs.
+   Opposite branch directions at skill indices 2 and 153 were reproduced in
+   the native menu; repaired pixels match the adopted comparator. These skill
+   fixtures modify a learned-skill record and do not prove natural acquisition.
+
+The direct wrapper occupies CAB58..CABAC, its prologue trampoline
+CA3A8..CA3C4, and the length helper CA3C4..CA3F4. These are bounded retired-font
+owners. No spare full-font suffix remains; the small-font owner has 21 bytes.
 
 ## Evidence and limits
 
-The linked decoder executes all 10,172 historical and 197 additional binding
-cases with exact output and intact guards in a CPU harness. Caller context
-supplied by that corpus is not proof of natural alias reachability.
+The current linked CPU corpus executes all 10,172 historical and 197 additional
+bindings with exact output and intact guards. Corpus-supplied alias selection
+does not establish natural game-context reachability. Independent review of
+the length helper covers 232 records on each of IWRAM and EWRAM stacks:
+464 calls preserve native bytes, length, buffer lifetime, registers and guards.
 
-The 222-test baseline remains intact. The later source suite passed 337 tests
-with no failures or skips. The private linked-menu CPU suite passed two cases covering all
-six static tables, dynamic entries and native-RAM passthrough.
+The original 222-test baseline remains intact. The later working-tree suite
+passes 344 tests with no failures or skips. This includes preexisting local
+experimental tests; it is not a clean public-checkout test count. New adapter
+tests cover native pass-through, embedded NUL, long temporary input, ABI and
+failure handling.
 
-Offscreen game evidence includes the Pub Rose dialogue, ordinary menu
-routes, default and mixed-name new-game saves, two process-cold loads and
-resaving. Two party records (120 bytes) and inventory quantities (79 bytes)
-match before saving and after both cold loads. These save checks are bound
-to the dc14 baseline; final-candidate repetition remains required. Legacy and
-newly created suspend data resume and are consumed. The full default new-game
-controller route (38,091 frames) reproduces the same save and final pixels.
-Same-ROM VBA v10 state conversion has exact inverse checks
-and two separate offscreen resume trials; desktop UI and hardware are not
-claimed.
+On this exact ROM, controller-only new-game routes with default and mixed
+custom names reach native save completion after 55,503 and 71,788 frames.
+No old state was loaded and no RAM was edited. Default, mixed and original
+user saves each pass separate-process cold read, native resave and another
+cold read. Party records (120 bytes), inventory quantities (79 bytes) and
+names agree across each sequence. Original saves remain unchanged. Legacy
+suspend data, native suspend creation, cold resume and consumption also pass
+the bounded offscreen replay. These are not hardware/full-game claims.
 
-SGM publication now stages both the state and its provenance file before
-publication, and rolls back only owned files on ordinary failure. Injected
-second-write failure, retry and competing-output preservation pass. This is
-not an assertion of two-path atomicity across abrupt power/process loss.
+Three SGM v10 checkpoints were freshly generated on this ROM and inverse-
+converted for separate offscreen VBA resume trials. The intro, Mint and
+reentry trials continue beyond the previously missed second Pub Rose entry.
+The intro and Mint trials reach identical final frames/pixels. A changed ROM
+requires fresh state generation and binding. Desktop UI compatibility and
+cross-ROM state compatibility are not claimed.
 
-The private bilingual export directly decodes 10,371 final-ROM bindings
-(10,172 historical, 197 additional UI and two fixed names). CSV roundtrips
-and XLSX text/address cells match all rows; the workbook contains no formulas
-or macros. Export publication failure/retry and foreign-file preservation
-are tested. Two keyboard rows retain explicit raw font-code markers; their
-Unicode appearance is not inferred. This is a candidate export, not a new
-translation review or a final release artifact.
+SGM and dialogue-export publication stage outputs and roll back only owned
+files on ordinary failure. Failure/retry and competing-file preservation are
+tested; multi-path atomicity across power loss is not claimed.
 
-A naturally entered battle and command submenu, without RAM modification,
-has a pixel-identical final screen and identical 180-byte party records to
-the adopted Korean baseline. A different historical battle input replay
-failed to reach battle and is explicitly excluded from that evidence.
+The earlier bilingual export has 10,371 rows: 10,172 historical, 197 additional
+UI and two fixed names. CSV/XLSX text and address roundtrips matched all rows,
+without formulas or macros. Two keyboard rows retain explicit raw font-code
+markers. The workbook is still tied to the earlier 7105161a ROM, so it is not
+the current diagnostic's final dialogue book.
 
-`build_strict_8m_diagnostic.py` builds text, runtime components and the
-integrated diagnostic from explicit local inputs. Two output trees reproduced
-the dc14 baseline. Two fresh complete source builds with the fast compositor
-match the independently built 7105 candidate, with exact BPS roundtrip.
-Current diagnostic BPS SHA-256:
-`b4e0fcece9bce5d0f5b4e1e33d3beaa96c472eea13225542b61e809e5c13ccba`.
-This is not a clean public-history or final-package approval.
+Two fresh complete builds reproduce the current ROM/BPS byte-for-byte, with
+exact BPS reapplication. A bounded reference audit checks 69 relocated
+PC-relative loads, 23 original hook relocations, 23 relative resources,
+22 signed map references, the new dialogue entry/trampoline/literals and
+the description-length call/literals. This is not complete computed-reference
+or clean public-source/package closure.
 
-## Remaining gates
+## Frozen performance on the current ROM
 
-The fast compositor yields frozen-route P99 values of item 8, monster 8,
-shop buy 7, shop sell 8, costume 8 and character 17. Costume still misses its
-frozen 7-frame baseline target, so the overall performance gate is not met.
-All six paths have zero unresolved display observations. A separate faster
-font decoder and proposed caches are not enabled in the integrated diagnostic.
+Each route was repeated five times under the frozen sampling rules.
+Every unresolved display-observation count is zero.
 
-All six SELECT_JOB alias pairs have controlled game-context menu evidence:
-after natural battle entry, one explicit WRAM state intervention reaches the
-original menu, and controller inputs select all 18 alternating indices.
-All 201 live strings match a frozen independent oracle on every entry.
-This fixture does not prove natural reachability of that battle substate.
+| Route | Observations | P99 frames | Frozen target | Result |
+| --- | ---: | ---: | ---: | --- |
+| Item | 1,560 | 8 | 8 | pass |
+| Monster | 1,420 | 8 | 8 | pass |
+| Shop buy | 1,050 | 7 | 7 | pass |
+| Shop sell | 1,080 | 8 | 8 | pass |
+| Costume | 2,000 | 8 | 7 | **fail** |
+| Character | 220 | 17 | 17 | pass |
 
-A bounded reference audit verifies 69 relocated PC-relative loads, 23 hooks,
-23 relative resources and 22 signed map references. These checks pass, but
-dynamic computed-pointer and full consumer closure remain open. The ARTE
-accessor's out-of-range index handling also remains under review; valid
-indices and the two shared variants are covered by the existing CPU tests.
+Profiling identifies the small-font tile cache as the main costume cost.
+Skipping live-tile checks changes pixels and is invalid. The tested ARM
+scanner preserves pixels but is slower, so it is excluded. Metadata caches
+lack complete writer/invalidation proof and are also excluded. No threshold,
+cadence, sample selection or display-correctness rule was changed.
 
-Required shared-variant game contexts, complete consumer/reference closure,
-final six-path performance, final-ROM save/state regression, hardware
-evidence, private final dialogue exports, and the public source/package
-audit remain open. Earlier v1.0 hardware evidence is not transferred to this
-new ROM hash. Diagnostic tools cannot mark their output release eligible.
+## Remaining release gates
+
+All six SELECT_JOB alias pairs have controlled native-menu A/B/A, reentry and
+same-ROM state-resume evidence on the preceding guarded diagnostic. The normal
+Japanese selector exposes indices 0..3 while this substate needs index 4;
+natural reachability remains unproved. ARTE variants have native-menu and
+EEPROM-resume evidence with an explicit learned-skill fixture. These fixtures
+do not prove natural unlocking or complete shared-context closure.
+
+Required consumer/context closure, computed-reference ownership, costume
+performance, complete final-hash regressions, final dialogue/state artifacts,
+hardware and public source/package audit remain open. Earlier v1.0 hardware
+evidence is not transferred to this ROM. Diagnostic builds cannot mark their
+output release eligible.

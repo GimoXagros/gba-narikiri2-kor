@@ -18,8 +18,16 @@ from capstone import CS_ARCH_ARM, CS_MODE_THUMB, Cs
 
 JP_SHA = "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7"
 ADOPTED_SHA = "eac45b3345e865f1fea68bbb07f62aff0f6ccdf03004090f57b55f75b6f82b73"
-PROBE_SHA = "75bcd99c2c517646a59dacd1af8219e11a130f26070fdaf1d141cec0f8c32d3b"
-ROM_SHA = "7105161a1d81c8e445265163c786880d66a79dacfb1f214e358313ef6b6c5916"
+PROFILES = {
+    "7105161a1d81c8e445265163c786880d66a79dacfb1f214e358313ef6b6c5916":
+        ("75bcd99c2c517646a59dacd1af8219e11a130f26070fdaf1d141cec0f8c32d3b", False),
+    "d31150acad4e9bd92ed8c22776028c561ebb9317688b20fca68843b960f2ff21":
+        ("c70c5ec1ab0964ea4e44010790917cc616027b6b318caf0050afe10694a3ef22", False),
+    "3abc759d104e2edee4db63e2f4ec7eb18d5e870f1e0c20d070656c5b6a72680f":
+        ("c70c5ec1ab0964ea4e44010790917cc616027b6b318caf0050afe10694a3ef22", True),
+    "d5c375379369916bd1a5309678be2e9e28c5b0fff6955ebddb73537c64c187f5":
+        ("c70c5ec1ab0964ea4e44010790917cc616027b6b318caf0050afe10694a3ef22", True),
+}
 ROM_BASE = 0x08000000
 DIRECT_HOOKS = {0x100, 0x1AF4, 0x1E14, 0x9896C, 0x37D98C, 0x37E1BC}
 ENCODED_OWNERS = ("relocated:full_book", "relocated:full_bounds",
@@ -44,10 +52,15 @@ def source_bytes(path: Path, expected: str, length: int | None = None) -> bytes:
 def run(args: argparse.Namespace) -> dict:
     jp = source_bytes(args.japanese, JP_SHA, 0x800000)
     adopted = source_bytes(args.adopted, ADOPTED_SHA)
-    probe = source_bytes(args.probe, PROBE_SHA)
-    rom = source_bytes(args.rom, ROM_SHA, 0x800000)
+    rom = args.rom.read_bytes()
+    rom_sha = sha(rom)
+    if len(rom) != 0x800000 or rom_sha not in PROFILES:
+        raise ValueError("Exact supported linked ROM identity required")
+    probe_sha, has_direct_dialogue = PROFILES[rom_sha]
+    has_description_length = rom_sha == "d5c375379369916bd1a5309678be2e9e28c5b0fff6955ebddb73537c64c187f5"
+    probe = source_bytes(args.probe, probe_sha)
     link = json.loads(args.link.read_text(encoding="utf-8"))
-    if link["output_sha256"] != ROM_SHA or len(link["layout"]["segments"]) != 52:
+    if link["output_sha256"] != rom_sha or len(link["layout"]["segments"]) != 52:
         raise ValueError("Wrong linked report or segment inventory")
     parts = link["layout"]["segments"]
     by_name = {p["name"]: p for p in parts}
@@ -136,6 +149,44 @@ def run(args: argparse.Namespace) -> dict:
     callsites.append({"name": "native_menu_entry", "at": hex(0x4D98),
                       "target": hex(menu_target)})
 
+    # These slices were added after the relocated component inventory. Audit
+    # their actual native entry, copied prologue and literal targets explicitly.
+    # This is an independent byte contract, not a call to the patch assembler.
+    direct = []
+    if has_direct_dialogue:
+        entry, wrapper, trampoline = 0x9A43C, 0xCAB58, 0xCA3A8
+        if (rom[entry:entry+12] != bytes.fromhex("08b4024b9c4608bc604700bf")
+                or word(rom, entry+12) != ROM_BASE+wrapper+1):
+            raise AssertionError("Direct dialogue native entry contract differs")
+        if (rom[trampoline:trampoline+20] != jp[entry:entry+20]
+                or rom[trampoline+20:trampoline+24] != bytes.fromhex("004b1847")
+                or word(rom, trampoline+24) != ROM_BASE+entry+21):
+            raise AssertionError("Direct dialogue prologue/continuation differs")
+        literals = tuple(word(rom, wrapper+68+i*4) for i in range(4))
+        expected = (0x080B9C01, ROM_BASE+trampoline+1, 0x080035DD, 0x080B9DE5)
+        if literals != expected:
+            raise AssertionError("Direct dialogue wrapper literal targets differ")
+        if (rom[wrapper+84:0xCABC1] != bytes(21)
+                or (not has_description_length
+                    and rom[trampoline+28:0xCA3F4] != jp[trampoline+28:0xCA3F4])):
+            raise AssertionError("Direct dialogue unused owner suffix changed")
+        direct = [{"entry": hex(entry), "wrapper": hex(wrapper),
+                   "trampoline": hex(trampoline), "wrapper_bytes": 84,
+                   "trampoline_bytes": 28, "native_prologue_bytes": 20,
+                   "literal_targets": [hex(v) for v in literals]}]
+    length = []
+    if has_description_length:
+        at, helper = 0x13DEE, 0xCA3C4
+        instruction = next(cs.disasm(rom[at:at+4], ROM_BASE+at, count=1), None)
+        if (instruction is None or instruction.mnemonic != 'bl'
+                or int(instruction.op_str.replace('#',''),0) != ROM_BASE+helper):
+            raise AssertionError('Description native length call differs')
+        literals = tuple(word(rom,helper+36+i*4) for i in range(3))
+        if literals != (0x080B9C01,0x080A6BDD,0x080B9DE5):
+            raise AssertionError('Description length literal targets differ')
+        length = [{"callsite":hex(at),"helper":hex(helper),"helper_bytes":48,
+                   "literal_targets":[hex(v) for v in literals]}]
+
     # Census every byte phase, then separate source-inherited shapes from new
     # encoded bytes. These are candidates, not automatically live references.
     old_shapes = []
@@ -197,12 +248,14 @@ def run(args: argparse.Namespace) -> dict:
             raise AssertionError(f"Map label relative chain differs: {r['row']}")
 
     return {"status": "BOUNDED_REFERENCE_CONTRACTS_PASS__CONSUMER_CLOSURE_OPEN",
-            "rom_sha256": ROM_SHA, "segment_count": len(parts),
+            "rom_sha256": rom_sha, "segment_count": len(parts),
             "code_literal_relocations": len(fixed),
             "pc_relative_literal_sites": sum(pc_refs.values()),
             "external_bl_from_relocated_code": external_bl,
             "hook_relocations": hooks,
             "callsite_contracts": callsites,
+            "direct_dialogue_contracts": direct,
+            "description_length_contracts": length,
             "old_segment_pointer_shapes": shaped,
             "restored_relative_resources": relative,
             "signed_map_relative_resources": map_rows,
