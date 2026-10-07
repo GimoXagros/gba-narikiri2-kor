@@ -7,6 +7,11 @@
  * alternatives use parts [prefix,left,right,suffix], masks 11 and 13.
  * Shared immutable tree must be validated at build time. Runtime checks all
  * traversed node indices, leaves and input/output extents. No game hook yet.
+ * Book must be halfword aligned; input/output may be byte aligned. All spans
+ * are nonempty, must not wrap, and output must not overlap input, dictionary,
+ * or this frame/stack arguments. Caller proves readable/writable bus regions.
+ * Only documented selections 1 (plain), 11/13 (bundle) are accepted.
+ * Failure returns 0/0; output may be partial and must not be consumed.
  */
 strict_unit_bundle_decode:
     push {r4-r7, lr}
@@ -16,19 +21,53 @@ strict_unit_bundle_decode:
     str r1, [sp, #16]
     ldr r4, [sp, #48]
     ldr r5, [sp, #52]
+    /* Check spans before any input, book or output memory access. */
+    cmp r1, #0
+    beq unit_header_fail
+    cmp r3, #0
+    beq unit_header_fail
+    movs r6, #1
+    tst r4, r6
+    bne unit_header_fail
+    adds r6, r0, r1
+    bcs unit_header_fail
+    adds r7, r2, r3
+    bcs unit_header_fail
+    cmp r2, r6
+    bhs unit_source_disjoint
+    cmp r0, r7
+    blo unit_header_fail
+unit_source_disjoint:
+    adds r6, r4, r5
+    bcs unit_header_fail
+    cmp r2, r6
+    bhs unit_book_disjoint
+    cmp r4, r7
+    blo unit_header_fail
+unit_book_disjoint:
+    mov r6, sp
+    cmp r7, r6
+    bls unit_stack_disjoint
+    adds r6, #64
+    cmp r2, r6
+    blo unit_header_fail
+unit_stack_disjoint:
     ldr r6, [sp, #56]
+    ldr r7, [sp, #60]
     cmp r6, #1
-    beq unit_count_ok
+    bne unit_bundle_count
+    cmp r7, #1
+    bne unit_header_fail
+    b unit_count_ok
+unit_bundle_count:
     cmp r6, #4
+    bne unit_header_fail
+    cmp r7, #11
+    beq unit_count_ok
+    cmp r7, #13
     bne unit_header_fail
 unit_count_ok:
     str r6, [sp, #20]
-    ldr r7, [sp, #60]
-    cmp r7, #0
-    beq unit_header_fail
-    movs r0, r7
-    lsrs r0, r6
-    bne unit_header_fail
     str r7, [sp, #24]
     ldr r0, [sp, #8]
     cmp r5, #28
