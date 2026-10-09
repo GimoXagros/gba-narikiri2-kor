@@ -394,6 +394,18 @@ def annotate_pointer_shapes(ledger: Ledger, japanese: bytes, refs: list[dict], a
                        if w["start"] < at + 4 and at < w["end"]), None)
         name = writer["name"] if writer else "unchanged_japanese"
         complete=writer and writer['start']<=at and at+4<=writer['end']
+        final_word=struct.unpack_from('<I',ledger.image,at)[0]
+        current=final_word==row['value']
+        if not current:
+            # This census preceded later guarded adapters. Never describe an
+            # overwritten font word as if it were still present in final code.
+            result.append(dict(row,owner=name,final_word=final_word,
+                observation_is_current=False,
+                classification='superseded_scan_observation' if complete else 'unclassified_superseded_observation',
+                proof=dict(kind='later_guarded_write',writer=writer,
+                    qualification='Historical shape only; classify final bytes with an independent final-image scan') if writer else None,
+                japanese_word=struct.unpack_from('<I',japanese,at)[0]))
+            continue
         kind = ("encoded_payload_pointer_shape" if complete and name.startswith((
             "owned_probe:stream_", "asset:font_rows8", "asset:title_resource_",
             "asset:small_korean_font", "relocated:boot_notice_1bpp_pixels",
@@ -404,6 +416,7 @@ def annotate_pointer_shapes(ledger: Ledger, japanese: bytes, refs: list[dict], a
         proof=extra_classification(japanese,adopted,ledger.image,owners,at,writer) if adopted is not None else None
         if proof:kind=proof['kind']
         result.append(dict(row, owner=name, classification=kind,proof=proof,
+                           final_word=final_word,observation_is_current=True,
                            japanese_word=struct.unpack_from("<I", japanese, at)[0]))
     return result
 
