@@ -27,6 +27,14 @@ PROFILES = {
         ("c70c5ec1ab0964ea4e44010790917cc616027b6b318caf0050afe10694a3ef22", True),
     "d5c375379369916bd1a5309678be2e9e28c5b0fff6955ebddb73537c64c187f5":
         ("c70c5ec1ab0964ea4e44010790917cc616027b6b318caf0050afe10694a3ef22", True),
+    "360bc541cbf7bb23b2d8282313c3d99c1ed128a27773b8cc92e2d21953044663":
+        ("c70c5ec1ab0964ea4e44010790917cc616027b6b318caf0050afe10694a3ef22", True),
+    "66018681d04de90ec9a58cf7e318f9fe9a6b2a6a209c195d23904358b55d7306":
+        ("c70c5ec1ab0964ea4e44010790917cc616027b6b318caf0050afe10694a3ef22", True),
+    "a4865cec1b831ab85b6701e1ceab45dca132f6651443c2e2aa78429b97349327":
+        ("c70c5ec1ab0964ea4e44010790917cc616027b6b318caf0050afe10694a3ef22", True),
+    "ac0ad35924ee76ade7ca4ff4d085ebb1cc4e96ff391f7f24f070bc29f5f03175":
+        ("c70c5ec1ab0964ea4e44010790917cc616027b6b318caf0050afe10694a3ef22", True),
 }
 ROM_BASE = 0x08000000
 DIRECT_HOOKS = {0x100, 0x1AF4, 0x1E14, 0x9896C, 0x37D98C, 0x37E1BC}
@@ -57,7 +65,11 @@ def run(args: argparse.Namespace) -> dict:
     if len(rom) != 0x800000 or rom_sha not in PROFILES:
         raise ValueError("Exact supported linked ROM identity required")
     probe_sha, has_direct_dialogue = PROFILES[rom_sha]
-    has_description_length = rom_sha == "d5c375379369916bd1a5309678be2e9e28c5b0fff6955ebddb73537c64c187f5"
+    has_comparison = rom_sha == "ac0ad35924ee76ade7ca4ff4d085ebb1cc4e96ff391f7f24f070bc29f5f03175"
+    has_popup = has_comparison or rom_sha == "a4865cec1b831ab85b6701e1ceab45dca132f6651443c2e2aa78429b97349327"
+    has_honorific = has_popup or rom_sha == "66018681d04de90ec9a58cf7e318f9fe9a6b2a6a209c195d23904358b55d7306"
+    has_profile_copy = has_honorific or rom_sha == "360bc541cbf7bb23b2d8282313c3d99c1ed128a27773b8cc92e2d21953044663"
+    has_description_length = has_profile_copy or rom_sha == "d5c375379369916bd1a5309678be2e9e28c5b0fff6955ebddb73537c64c187f5"
     probe = source_bytes(args.probe, probe_sha)
     link = json.loads(args.link.read_text(encoding="utf-8"))
     if link["output_sha256"] != rom_sha or len(link["layout"]["segments"]) != 52:
@@ -187,6 +199,68 @@ def run(args: argparse.Namespace) -> dict:
         length = [{"callsite":hex(at),"helper":hex(helper),"helper_bytes":48,
                    "literal_targets":[hex(v) for v in literals]}]
 
+    profile = []
+    if has_profile_copy:
+        helper=0x3A83AC
+        if sha(rom[helper:helper+72]) != 'c0122ecf67d9c536de6c8db3745643bec700060526d9e0607fae4ff163795ab3':
+            raise AssertionError('Bounded profile name-copy instructions differ')
+        for at,entry,capacity in ((0x76AA,helper,19),(0x76BC,helper+4,13)):
+            instruction=next(cs.disasm(rom[at:at+4],ROM_BASE+at,count=1),None)
+            if (instruction is None or instruction.mnemonic!='bl'
+                    or int(instruction.op_str.replace('#',''),0)!=ROM_BASE+entry):
+                raise AssertionError('Profile copy native call target differs')
+            if struct.unpack_from('<H',rom,entry)[0] != 0x2200+capacity:
+                raise AssertionError('Profile field capacity differs')
+            profile.append({'callsite':hex(at),'entry':hex(entry),'capacity_including_nul':capacity})
+        if tuple(word(rom,helper+64+i*4) for i in range(2))!=(0x080B9C01,0x080B9DE5):
+            raise AssertionError('Profile copy decoder/failure targets differ')
+        # This retired suffix retains adopted lower-ROM bytes, not JP bytes.
+        suffix_start=0x3A8464 if has_popup else 0x3A842C if has_honorific else helper+72
+        unused=[(suffix_start,0x3A8520),(0x3A8554,0x3A8555)] if has_comparison else [(suffix_start,0x3A8555)]
+        if any(rom[a:b]!=adopted[a:b] for a,b in unused):
+            raise AssertionError('Name helpers changed unowned shop suffix')
+
+    honorific=[]
+    if has_honorific:
+        helper=0x3A83F4
+        if sha(rom[helper:helper+56])!='96505be74bf9105a134c893b8519c4a8a0672fee4f88334509b9256a3c37c417':
+            raise AssertionError('Honorific instructions differ')
+        for at in (0x92A4,0x92BC):
+            instruction=next(cs.disasm(rom[at:at+4],ROM_BASE+at,count=1),None)
+            if (instruction is None or instruction.mnemonic!='bl'
+                    or int(instruction.op_str.replace('#',''),0)!=ROM_BASE+helper):
+                raise AssertionError('Honorific native call target differs')
+            honorific.append(dict(callsite=hex(at),helper=hex(helper),helper_bytes=56,stack_bytes=288))
+        if tuple(word(rom,helper+44+i*4) for i in range(3))!=(0x080B9C01,0x080A6AED,0x080B9DE5):
+            raise AssertionError('Honorific literal targets differ')
+
+    popup=[]
+    if has_popup:
+        helper=0x3A842C
+        if sha(rom[helper:helper+56])!='5408005a978eabef5785262634a1d32979b8695bb62561f26adf8abced78c0c9':
+            raise AssertionError('Popup instructions differ')
+        for at in (0x25AC8,0x25C00):
+            instruction=next(cs.disasm(rom[at:at+4],ROM_BASE+at,count=1),None)
+            if (instruction is None or instruction.mnemonic!='bl'
+                    or int(instruction.op_str.replace('#',''),0)!=ROM_BASE+helper):
+                raise AssertionError('Popup native call target differs')
+            popup.append(dict(callsite=hex(at),helper=hex(helper),helper_bytes=56,stack_bytes=288))
+        if tuple(word(rom,helper+44+i*4) for i in range(3))!=(0x080B9C01,0x08025D01,0x080B9DE5):
+            raise AssertionError('Popup literal targets differ')
+
+    comparison=[]
+    if has_comparison:
+        helper=0x3A8520;at=0x1A18C
+        if sha(rom[helper:helper+52])!='f9779116e5e0e503f03fbc5a8fc003ca213565a1f7ce724d47c3a79de92276bc':
+            raise AssertionError('Name comparison instructions differ')
+        instruction=next(cs.disasm(rom[at:at+4],ROM_BASE+at,count=1),None)
+        if (instruction is None or instruction.mnemonic!='bl'
+                or int(instruction.op_str.replace('#',''),0)!=ROM_BASE+helper):
+            raise AssertionError('Name comparison call target differs')
+        if tuple(word(rom,helper+40+i*4) for i in range(3))!=(0x080B9C01,0x080A6B35,0x080B9DE5):
+            raise AssertionError('Name comparison literal targets differ')
+        comparison=[dict(callsite=hex(at),helper=hex(helper),helper_bytes=52,stack_bytes=288)]
+
     # Census every byte phase, then separate source-inherited shapes from new
     # encoded bytes. These are candidates, not automatically live references.
     old_shapes = []
@@ -256,6 +330,10 @@ def run(args: argparse.Namespace) -> dict:
             "callsite_contracts": callsites,
             "direct_dialogue_contracts": direct,
             "description_length_contracts": length,
+            "profile_name_copy_contracts": profile,
+            "honorific_append_contracts": honorific,
+            "popup_name_copy_contracts": popup,
+            "profile_name_compare_contracts": comparison,
             "old_segment_pointer_shapes": shaped,
             "restored_relative_resources": relative,
             "signed_map_relative_resources": map_rows,

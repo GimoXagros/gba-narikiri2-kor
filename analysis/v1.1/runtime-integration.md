@@ -1,130 +1,95 @@
-# v1.1 runtime integration checkpoint
+# v1.1 실행부 통합 검증 기록
 
-Status: **INTEGRATED_DIAGNOSTIC__PERFORMANCE_NOT_MET**. This is not release
-approval. No v1.1 release, tag or remote update has been performed.
+상태: **INTEGRATED_DIAGNOSTIC__CONSUMER_CLOSURE_OPEN__PERFORMANCE_NOT_MET**.
+정식 배포 승인이 아니다. v1.1 태그·Release·원격 반영은 하지 않았다.
 
-Storage baseline: 6caa05608d65d565181474c7e29e6768df07d6a0.
-First integration checkpoint: d00ccb076dae0f49c535b91529b77f12ad25dfac.
-Current diagnostic: exactly 8,388,608 bytes, SHA-256
-d5c375379369916bd1a5309678be2e9e28c5b0fff6955ebddb73537c64c187f5.
-BPS SHA-256:
-81930631ded05cd71ff560f8c030663f0c343d2cfe150d14ad28834a462f5110.
+기준 소스: `6caa05608d65d565181474c7e29e6768df07d6a0`.
+2026-10-09 이름 처리 통합 후보는 정확히 8,388,608바이트이다.
 
-## Integrated behavior
+- ROM SHA-256: `ac0ad35924ee76ade7ca4ff4d085ebb1cc4e96ff391f7f24f070bc29f5f03175`
+- BPS SHA-256: `3f7a05ac1880a5cb988c07a9b7d6cddcd628e66a3129d8de52ae1bb8b9d42756`
+- 수정하지 않은 일본어 원본에 BPS를 재적용하면 같은 ROM을 재현한다.
 
-- Original storage and raw pointer values for 10,172 historical bindings and
-  9,246 original stream starts; 197 additional UI bindings remain separate.
-  Korean template bytes and shared variants are preserved.
-- Packed glyph dictionaries, exact-start lookup, caller-owned decoding,
-  event allocation, original-slot default names and persistent actor adapters.
-- Six static menu tables and the bounded thirteen-command runtime table
-  decode into menu-owned memory released after the native menu returns.
-- Lossless full-font compression, compact-font derivation and in-cartridge
-  placement of the adopted title, notice, credits and map resources.
-- A 328-byte Thumb-1 full-font compositor preserves pixels and backgrounds.
-  Its 122,880 glyph/color/parity CPU cases passed on the earlier compositor
-  candidate; those bytes are unchanged here. No persistent RAM was added.
-- ARTE indices outside 0..231 are rejected before record memory access.
-  Valid records, nonzero modes and both shared-name tags retain their ABI.
+## 주소·데이터 보존
 
-Two actual game defects were found after the initial integration:
+기존 10,172개 바인딩의 저장 위치·원래 포인터 값과 문자열 시작 9,246곳을
+유지한다. 추가 UI 197개는 별도 집계한다. 채택한 한국어 바이트·공유 변형,
+저장 레코드와 파일 형식도 변경하지 않는다.
 
-1. Pub Rose reentry uses the separate native dialogue consumer at 0809A43C.
-   The event-expansion adapter did not cover this path. The added synchronous
-   wrapper holds decoded bytes in its 288-byte stack buffer until the original
-   renderer returns. Offscreen comparison includes the second visit and later
-   pages, as well as the unchanged first-visit sequence.
-2. The skill-description branch at 08013DEE measured compressed bytes with
-   native strlen while its display path already decoded them. A 48-byte adapter
-   now decodes for the duration of strlen. The original 35-byte threshold and
-   native byte-count semantics are preserved. All 232 linked lengths match
-   adopted Korean bytes using the real decoder and real strlen, without stubs.
-   Opposite branch directions at skill indices 2 and 153 were reproduced in
-   the native menu; repaired pixels match the adopted comparator. These skill
-   fixtures modify a learned-skill record and do not prove natural acquisition.
+실제 후보 코드를 8MiB ROM만 매핑한 CPU 환경에서 실행하여 기존 10,172개와
+추가 UI 197개의 복원 바이트를 확인했다. 불일치와 출력 경계 침범은 0건이다.
+공유 변형 선택값은 검사 코드가 제공하므로 자연 진행 중의 선택 검증은 별도다.
 
-The direct wrapper occupies CAB58..CABAC, its prologue trampoline
-CA3A8..CA3C4, and the length helper CA3C4..CA3F4. These are bounded retired-font
-owners. No spare full-font suffix remains; the small-font owner has 21 bytes.
+폰트·타이틀·시작 안내·엔딩·지도 자원은 카트리지 내부에 배치한다. 제한된
+독립 참조 검사는 PC 상대 로드 69곳, 기존 훅 23곳, 상대 자원 23개, 부호 있는
+지도 참조 22개와 추가 어댑터의 호출·리터럴을 확인한다. 주소처럼 보이는
+압축 데이터는 실제 포인터와 구분한다. 계산된 참조 전체의 도달 가능성을
+증명한 것은 아니다.
 
-## Evidence and limits
+## 발견한 오류와 수정
 
-The current linked CPU corpus executes all 10,172 historical and 197 additional
-bindings with exact output and intact guards. Corpus-supplied alias selection
-does not establish natural game-context reachability. Independent review of
-the length helper covers 232 records on each of IWRAM and EWRAM stacks:
-464 calls preserve native bytes, length, buffer lifetime, registers and guards.
+| 경로 | 오류 | 수정·검증 범위 |
+| --- | --- | --- |
+| 펍 로즈 재입장 0809A43C | 별도 대화 경로가 압축 바이트를 사용 | 동기 대화가 끝날 때까지 호출자 복원 버퍼 유지. 이전 후보에서 양쪽 오프스크린 코어의 재입장·후속 대사 확인 |
+| 기술 설명 08013DEE | 길이 판정에 압축 바이트의 strlen 사용 | 복원 후 원래 strlen 호출. 232개 길이·원래 35바이트 분기 보존; 실제 2·153번 화면 비교 |
+| 프로필 이름 080076AA/76BC | 동료 이름을 압축된 상태로 저장 | 원래 19/13바이트 필드 안에서 복원. 생성 범위 0..21의 두 슬롯 44건을 전체 레코드·ABI·경계와 대조 |
+| 호칭 080092A4/92BC | 씨·짱·대장의 압축 바이트를 RAM에 복사 | 복원 후 원래 strcat 호출. 실제 09228의 61×61=3,721개 조합이 채택본 출력·ABI와 일치 |
+| 전투 알림 이름 08025AC8/25C00 | 기술명 등을 압축 상태로 변환기에 전달 | 복원 후 기존 banked/native 변환기 호출. 232개 기술×양쪽 호출 464건 및 정적 리터럴 50건의 결과·ABI·경계 일치 |
+| 기본 이름 판별 0801A18C | 압축된 표와 RAM 이름을 비교하여 기본 이름을 사용자 이름으로 오판 | 복원 후 같은 인수 순서로 native strcmp. 기본 58·사용자 지정 59·빈 이름 1개, 총 118건의 판정과 signed 비교 결과 일치 |
 
-The original 222-test baseline remains intact. The later working-tree suite
-passes 344 tests with no failures or skips. This includes preexisting local
-experimental tests; it is not a clean public-checkout test count. New adapter
-tests cover native pass-through, embedded NUL, long temporary input, ABI and
-failure handling.
+프로필·호칭·알림·비교 어댑터는 각각 72/56/56/52바이트이다. 상점 자원의
+실제 소비 끝 3A83A9 이후, 원래 자원 소유 범위 끝 3A8555 이전에 배치한다.
+활성 상점 자원의 해제 결과와 테이블 바인딩은 전후 동일하다. 예상 바이트와
+입력 전체 해시가 다르면 빌드를 거부한다. 임시 스택 버퍼를 반환하지 않고
+새 영구 RAM이나 저장 필드를 만들지 않는다.
 
-On this exact ROM, controller-only new-game routes with default and mixed
-custom names reach native save completion after 55,503 and 71,788 frames.
-No old state was loaded and no RAM was edited. Default, mixed and original
-user saves each pass separate-process cold read, native resave and another
-cold read. Party records (120 bytes), inventory quantities (79 bytes) and
-names agree across each sequence. Original saves remain unchanged. Legacy
-suspend data, native suspend creation, cold resume and consumption also pass
-the bounded offscreen replay. These are not hardware/full-game claims.
+## 저장 검증 정정
 
-Three SGM v10 checkpoints were freshly generated on this ROM and inverse-
-converted for separate offscreen VBA resume trials. The intro, Mint and
-reentry trials continue beyond the previously missed second Pub Rose entry.
-The intro and Mint trials reach identical final frames/pixels. A changed ROM
-requires fresh state generation and binding. Desktop UI compatibility and
-cross-ROM state compatibility are not claimed.
+이전 3abc 및 d5 후보에서 앞 2명, 120바이트만 비교한 결과는 4명 전체의
+저장 안전성을 입증하지 못했다. 뒤 2명의 이름에 압축 바이트가 저장되는
+오류를 추가 확인했으므로 당시 이름·저장 결과를 완전 통과로 해석해서는
+안 된다. 해당 개발 중 SAV는 최종 제공용으로 사용하지 않는다.
 
-SGM and dialogue-export publication stage outputs and roll back only owned
-files on ordinary failure. Failure/retry and competing-file preservation are
-tested; multi-path atomicity across power loss is not claimed.
+프로필 수정 후보 360bc541에서 새 게임 기본 이름 55,503프레임, 혼합 이름
+71,788프레임을 상태 불러오기·RAM 수정 없이 진행했다. 새 프로세스로 다시
+시작한 뒤 4명 240바이트, 8개 이름 필드, 아이템 수량 79개를 채택본과
+비교하여 일치를 확인했다. 원본 사용자 SAV도 보존·대조했다.
 
-The earlier bilingual export has 10,371 rows: 10,172 historical, 197 additional
-UI and two fixed names. CSV/XLSX text and address roundtrips matched all rows,
-without formulas or macros. Two keyboard rows retain explicit raw font-code
-markers. The workbook is still tied to the earlier 7105161a ROM, so it is not
-the current diagnostic's final dialogue book.
+생성 경로의 0..21 범위는 직접 호출·콜백 바인딩·원래 생성 루프로 확인했으며
+전역 간접 쓰기 증명은 아니다. getter 전체 범위를 생성 범위로 가정하지
+않는다. 생성 범위 밖 22/24/55의 긴 이름은 13바이트를 넘으므로 거부한다.
 
-Two fresh complete builds reproduce the current ROM/BPS byte-for-byte, with
-exact BPS reapplication. A bounded reference audit checks 69 relocated
-PC-relative loads, 23 original hook relocations, 23 relative resources,
-22 signed map references, the new dialogue entry/trampoline/literals and
-the description-length call/literals. This is not complete computed-reference
-or clean public-source/package closure.
+최종 ROM 해시 선택 후 자연 저장·완전 종료 후 재로드·중단 저장을 다시
+묶어서 확인한다. 이전 d5 후보의 SGM 3개와 대사집은 해당 해시의 과거
+검사 자료다. 최종 SAV/SGM과 10,371행 대사집을 새 후보로 재생성해야 한다.
 
-## Frozen performance on the current ROM
+## 검사 수와 성능
 
-Each route was repeated five times under the frozen sampling rules.
-Every unresolved display-observation count is zero.
+현재 작업 트리 전체 회귀는 **357개 통과, 실패·건너뜀 0개**다. 기존
+222개 기준 회귀와 기존 로컬 실험용 테스트를 포함한다. 이 숫자를 깨끗한
+공개 체크아웃의 검사 수로 사용하지 않는다.
 
-| Route | Observations | P99 frames | Frozen target | Result |
+다음은 d5 후보의 고정된 5회 측정이다. 새 후보의 성능으로 재표기하지
+않는다. 표시 관측 미해결 건수는 0이다.
+
+| 경로 | 표본 | P99 프레임 | 목표 | 결과 |
 | --- | ---: | ---: | ---: | --- |
-| Item | 1,560 | 8 | 8 | pass |
-| Monster | 1,420 | 8 | 8 | pass |
-| Shop buy | 1,050 | 7 | 7 | pass |
-| Shop sell | 1,080 | 8 | 8 | pass |
-| Costume | 2,000 | 8 | 7 | **fail** |
-| Character | 220 | 17 | 17 | pass |
+| 아이템 | 1,560 | 8 | 8 | 통과 |
+| 몬스터 | 1,420 | 8 | 8 | 통과 |
+| 구매 | 1,050 | 7 | 7 | 통과 |
+| 판매 | 1,080 | 8 | 8 | 통과 |
+| 의상 | 2,000 | 8 | 7 | 미달 |
+| 캐릭터 | 220 | 17 | 17 | 통과 |
 
-Profiling identifies the small-font tile cache as the main costume cost.
-Skipping live-tile checks changes pixels and is invalid. The tested ARM
-scanner preserves pixels but is slower, so it is excluded. Metadata caches
-lack complete writer/invalidation proof and are also excluded. No threshold,
-cadence, sample selection or display-correctness rule was changed.
+타일 검사 생략은 화면을 바꾸므로 제외했다. 원래 숫자 서식·공백 문자열까지
+반복 검색하는 비용을 확인하여 별도로 최적화 중이다. 관측한 몇 주소만 예외
+처리하거나 측정 간격·표본·허용 기준을 바꾸지 않는다. 실험 후보의 1회 개선은
+최종 6경로 5회 검증을 대신하지 않는다.
 
-## Remaining release gates
+## 남은 관문
 
-All six SELECT_JOB alias pairs have controlled native-menu A/B/A, reentry and
-same-ROM state-resume evidence on the preceding guarded diagnostic. The normal
-Japanese selector exposes indices 0..3 while this substate needs index 4;
-natural reachability remains unproved. ARTE variants have native-menu and
-EEPROM-resume evidence with an explicit learned-skill fixture. These fixtures
-do not prove natural unlocking or complete shared-context closure.
-
-Required consumer/context closure, computed-reference ownership, costume
-performance, complete final-hash regressions, final dialogue/state artifacts,
-hardware and public source/package audit remain open. Earlier v1.0 hardware
-evidence is not transferred to this ROM. Diagnostic builds cannot mark their
-output release eligible.
+필수 소비자·계산 참조의 범위 확정, 7개 공유 그룹의 자연 선택 범위,
+의상 성능 목표, 최종 해시의 저장·화면·입력 회귀, 최종 대사집과 SAV/SGM,
+실기 및 공개 소스·패키지 검사가 남아 있다. 이전 v1.0 실기 기록은 이번
+ROM의 실기 검증으로 전용하지 않는다. 알려진 오류가 있는 이전 후보를
+완성본으로 제공하지 않으며 G0~G10 충족 전에 정식 배포하지 않는다.

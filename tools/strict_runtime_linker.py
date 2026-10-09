@@ -503,6 +503,10 @@ def main():
     parser.add_argument("--fast-full-draw", action="store_true")
     parser.add_argument("--direct-dialogue", action="store_true")
     parser.add_argument("--arte-description-length", action="store_true")
+    parser.add_argument("--profile-name-copy", action="store_true")
+    parser.add_argument("--honorific-append", action="store_true")
+    parser.add_argument("--popup-name-copy", action="store_true")
+    parser.add_argument("--profile-name-compare", action="store_true")
     args = parser.parse_args()
     jp, ko, probe, manifest = read_inputs(args.japanese, args.adopted, args.probe, args.build)
     segments, plan = plan_segments(manifest)
@@ -545,6 +549,42 @@ def main():
             replace(ledger,'arte_description_length:'+hex(at),at,decoded[at:end],
                 'decoded native byte length before original description layout branch')
         if bytes(ledger.image)!=decoded:raise ValueError('Description length write plan differs')
+    profile_report=None
+    if args.profile_name_copy:
+        from strict_profile_name_copy import diagnostic_patch as patch_profile_name_copy
+        decoded,profile_report=patch_profile_name_copy(jp,bytes(ledger.image))
+        for write in profile_report['writes']:
+            at=write['offset'];end=at+write['bytes']
+            replace(ledger,'profile_name_copy:'+hex(at),at,decoded[at:end],
+                'bounded native compact/full names in the existing persistent profile fields')
+        if bytes(ledger.image)!=decoded:raise ValueError('Profile name-copy write plan differs')
+    honorific_report=None
+    if args.honorific_append:
+        from strict_honorific_append import diagnostic_patch as patch_honorific_append
+        decoded,honorific_report=patch_honorific_append(jp,bytes(ledger.image))
+        for write in honorific_report['writes']:
+            at=write['offset'];end=at+write['bytes']
+            replace(ledger,'honorific_append:'+hex(at),at,decoded[at:end],
+                'original suffix decoded in caller-owned stack before native name concatenation')
+        if bytes(ledger.image)!=decoded:raise ValueError('Honorific write plan differs')
+    popup_report=None
+    if args.popup_name_copy:
+        from strict_popup_name_copy import diagnostic_patch as patch_popup_name_copy
+        decoded,popup_report=patch_popup_name_copy(jp,bytes(ledger.image))
+        for write in popup_report['writes']:
+            at=write['offset'];end=at+write['bytes']
+            replace(ledger,'popup_name_copy:'+hex(at),at,decoded[at:end],
+                'original name decoded before synchronous native/banked popup conversion')
+        if bytes(ledger.image)!=decoded:raise ValueError('Popup name-copy write plan differs')
+    comparison_report=None
+    if args.profile_name_compare:
+        from strict_profile_name_compare import diagnostic_patch as patch_profile_name_compare
+        decoded,comparison_report=patch_profile_name_compare(jp,bytes(ledger.image))
+        for write in comparison_report['writes']:
+            at=write['offset'];end=at+write['bytes']
+            replace(ledger,'profile_name_compare:'+hex(at),at,decoded[at:end],
+                'decoded native default name versus native persistent profile name')
+        if bytes(ledger.image)!=decoded:raise ValueError('Profile comparison write plan differs')
     suspicious = annotate_pointer_shapes(ledger, jp, suspicious, ko)
     unresolved = annotate_pointer_shapes(ledger, jp, unresolved, ko)
     if not all(0 <= s.new < s.end <= ROM_SIZE for s in segments):
@@ -569,6 +609,10 @@ def main():
         fast_full_draw=draw_report,
         direct_dialogue=dialogue_report,
         arte_description_length=length_report,
+        profile_name_copy=profile_report,
+        honorific_append=honorific_report,
+        popup_name_copy=popup_report,
+        profile_name_compare=comparison_report,
         font_profile=font_report.get("status"), asset_details=font_report, owned_menus=menu_report,
         remaining_gates=["lower-ROM carryover owner/consumer closure",
                          "unclassified expanded-reference closure",
