@@ -21,11 +21,15 @@ sys.path.insert(0,str(ROOT/'tools'))
 from strict_stream_lookup24 import unpack_bounds24
 
 BASE_SHA='ac0ad35924ee76ade7ca4ff4d085ebb1cc4e96ff391f7f24f070bc29f5f03175'
+LAYOUT_SHA='a93613327898e83876d0a5561d0dabf5bf1d71221cde47f88b1f664b1aeea179'
 sha=lambda data:hashlib.sha256(data).hexdigest()
 
 def address_contracts(data,baseline,link):
     require(len(data)==len(baseline)==0x800000,'8MiB exact size')
     require(sha(baseline)==BASE_SHA and link['output_sha256']==BASE_SHA,'Stage3 identity')
+    canonical_layout=json.dumps(link['layout']['segments'],sort_keys=True,separators=(',',':')).encode('ascii')
+    require(len(link['layout']['segments'])==52 and sha(canonical_layout)==LAYOUT_SHA,
+            'Frozen stage3 layout metadata differs')
     parts={p['name']:p for p in link['layout']['segments']}
     for name in ('owned','lookup','unit'):
         require((parts[name]['new'],parts[name]['new']+parts[name]['size'])==OWNERS[name][:2],('Owner moved',name))
@@ -99,6 +103,7 @@ def address_contracts(data,baseline,link):
         require(data[at:at+16]==baseline[at:at+16],'Native compositor entry differs')
     return {'status':'PASS_BOUNDED_STAGE4_ADDRESS_CONTRACTS',
       'baseline_sha256':BASE_SHA,'candidate_sha256':sha(data),'rom_bytes':len(data),
+      'baseline_52_segment_layout_sha256':LAYOUT_SHA,
       'changed_owner_bytes':sum(end-start for start,end,_ in OWNERS.values()),
       'outside_owner_changed_bytes':0,
       'direct_reachable_instructions':sum(r['instruction_count'] for r in rows),
@@ -133,6 +138,11 @@ def main():
     except ValueError:bad.append('direct_branch_outside_owner')
     else:raise ValueError('Failed to reject branch corruption')
     report['independent_corrupt_copy_rejections']=bad
+    altered_link=json.loads(json.dumps(link))
+    altered_link['layout']['segments'][0]['size']+=4
+    try:address_contracts(data,baseline,altered_link)
+    except ValueError:bad.append('baseline_layout_metadata_changed')
+    else:raise ValueError('Failed to reject modified baseline layout')
     if any(r['span_bytes']==8 for r in report['owners'][0]['adr_data']):
         for name,at,value in [('compact_capacity_changed',0xB9C78,0x201C),
                               ('compact_ldm_consumer',0xB9C7C,0xCB61),
