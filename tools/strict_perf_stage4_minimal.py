@@ -1,4 +1,4 @@
-"""Direct six-owner stage4 review build from explicit immutable source inputs."""
+"""Five performance writes; preserve the reviewed stage3 unit decoder exactly."""
 from pathlib import Path
 import argparse,hashlib,json,re,struct
 from keystone import Ks,KS_ARCH_ARM,KS_MODE_THUMB
@@ -6,14 +6,22 @@ from strict_perf_native_numeric_gaps import current_bounds,unpack_bounds24,deriv
 ROOT=Path(__file__).resolve().parents[1]
 BASE='ac0ad35924ee76ade7ca4ff4d085ebb1cc4e96ff391f7f24f070bc29f5f03175'
 LAYOUT='a93613327898e83876d0a5561d0dabf5bf1d71221cde47f88b1f664b1aeea179'
-FINAL='ca8326a0065b78cae8eedcf3075985b2b1a3cb9d37f6bc6357abb81ce2bf3ccc'
+FINAL='9fd341b827a8ba282781d7f8f214f2ba8641365b541564d53e9ef5267511889b'
+UNIT_START,UNIT_END=0x37E1F0,0x37E336
+UNIT_SHA='b9af84d74757197b5f8531e50e1e9c03b9d03089efdddb09c32e559b23802460'
 sha=lambda b:hashlib.sha256(b).hexdigest()
 OWNERS=[('owned_alias_order',0xB9C00,0xB9D3C,'strict_perf_owned_alias_order.s'),
  ('exact_lookup_shifted',0xB9D3C,0xB9DE4,'strict_perf_lookup_shifted_key.s'),
  ('tile_idhome4_first_home_prefilter_balanced',0xC5BA8,0xC5E50,'strict_perf_tile_first_home_prefilter_balanced.s'),
  ('full_draw_lut16_strh',0xCAA10,0xCAB58,'strict_perf_full_draw_strh.s'),
- ('unit_r8_leaf_header_byte',0x37E1F0,0x37E336,'strict_perf_unit_decode_header_byte.s'),
  ('native_ram_numeric_gap_guard',0x3A8464,0x3A8520,'strict_perf_native_ram_gap_guard.s')]
+
+def preserved_unit(image,part):
+    if (part['new'],part['size'])!=(UNIT_START,UNIT_END-UNIT_START):
+        raise ValueError('Preserved stage3 unit extent differs')
+    if sha(image[UNIT_START:UNIT_END])!=UNIT_SHA:
+        raise ValueError('Preserved stage3 unit bytes differ')
+    return dict(start=UNIT_START,end=UNIT_END,size=UNIT_END-UNIT_START,sha256=UNIT_SHA)
 
 def build(base,*,jp,adopted,link):
     if len(base)!=0x800000 or sha(base)!=BASE:raise ValueError('Exact stage3 ac0 input identity')
@@ -22,7 +30,8 @@ def build(base,*,jp,adopted,link):
     if len(layout)!=52 or sha(json.dumps(layout,sort_keys=True,separators=(',',':')).encode('ascii'))!=LAYOUT:
         raise ValueError('Current stage3 canonical52-segment layout identity')
     seg={s['name']:s for s in link['layout']['segments']}
-    for name,owner_name in (('owned','owned_alias_order'),('lookup','exact_lookup_shifted'),('unit','unit_r8_leaf_header_byte'),('tile_cache','tile_idhome4_first_home_prefilter_balanced')):
+    preserved=preserved_unit(base,seg['unit'])
+    for name,owner_name in (('owned','owned_alias_order'),('lookup','exact_lookup_shifted'),('tile_cache','tile_idhome4_first_home_prefilter_balanced')):
         part=seg[name];owner=next(v for v in OWNERS if v[0]==owner_name)
         if (part['new'],part['new']+part['size'])!=owner[1:3]:raise ValueError('Current baseline owner differs')
     bounds=current_bounds(base,link);tables={n:unpack_bounds24(t) for n,t in bounds.items()}
@@ -63,7 +72,7 @@ def build(base,*,jp,adopted,link):
             if code[:8]!=bytes.fromhex('f0b588b004000691'):raise ValueError('Exact fallback first8 replay')
             code=bytes.fromhex('004b1847')+struct.pack('<I',0x083A8465)+code[8:]
         else:
-            expected={'exact_lookup_shifted':164,'full_draw_lut16_strh':288,'unit_r8_leaf_header_byte':312}[name]
+            expected={'exact_lookup_shifted':164,'full_draw_lut16_strh':288}[name]
             if used!=expected:raise ValueError('Exact reviewed code size')
             code+=bytes.fromhex('c046')*((end-start-used)//2)
         if len(code)!=end-start:raise ValueError('Owner extent changed')
@@ -72,17 +81,19 @@ def build(base,*,jp,adopted,link):
             'before_sha256':sha(base[start:end]),'after_sha256':sha(code),'source_path':'asm/'+file,
             'source_sha256':sha(path.read_bytes()),'assembled_bytes':used,'changed_bytes':sum(a!=b for a,b in zip(base[start:end],code))})
     image=bytes(image)
+    preserved_unit(image,seg['unit'])
     if sha(image)!=FINAL:raise ValueError('Exact reviewed stage4 output identity')
     changed=[i for i,(a,b) in enumerate(zip(base,image)) if a!=b]
-    if any(not any(start<=i<end for _,start,end,_ in OWNERS) for i in changed):raise ValueError('Outside six owners changed')
+    if any(not any(start<=i<end for _,start,end,_ in OWNERS) for i in changed):raise ValueError('Outside five performance owners changed')
     slots={p:n for values in tables.values() for p,n in values}
     for pointer,size in slots.items():
         at=pointer-0x08000000
         if base[at:at+size]!=image[at:at+size]:raise ValueError('Original compressed stream changed')
     files=['tools/strict_perf_stage4_minimal.py','tools/strict_perf_native_numeric_gaps.py']+['asm/'+v[3] for v in OWNERS]
-    return image,{'status':'SIX_OWNER_STAGE4_DIAGNOSTIC_NOT_PRODUCT','performance_gate_approved':False,'release_eligible':False,
+    return image,{'status':'FIVE_OWNER_STAGE4_DIAGNOSTIC_NOT_PRODUCT','performance_gate_approved':False,'release_eligible':False,
         'stage3_input_sha256':BASE,'stage3_canonical_layout_sha256':LAYOUT,'stage4_output_sha256':FINAL,'rom_bytes':len(image),'writes':writes,
-        'total_changed_bytes':len(changed),'original_compressed_slots_unchanged':len(slots),'complete_alias_starts':aliases,
+        'total_changed_bytes':len(changed),'preserved_stage3_unit':preserved,
+        'original_compressed_slots_unchanged':len(slots),'complete_alias_starts':aliases,
         'complete_native_numeric_proof':proof,'selected_gap_pairs':gaps,'guard_code_table_split':[96,92],
         'public_source_files':[{'path':f,'sha256':sha((ROOT/f).read_bytes())} for f in files],
         'new_ram_or_metadata':False,'original_pointers_or_compressed_streams_changed':False,
