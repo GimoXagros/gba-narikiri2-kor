@@ -24,6 +24,41 @@ BASE_SHA='ac0ad35924ee76ade7ca4ff4d085ebb1cc4e96ff391f7f24f070bc29f5f03175'
 LAYOUT_SHA='a93613327898e83876d0a5561d0dabf5bf1d71221cde47f88b1f664b1aeea179'
 sha=lambda data:hashlib.sha256(data).hexdigest()
 
+def tile_global_block(data,row):
+    """Verify the optional three-word RAM read, including its real consumer.
+
+    The compact prologue replaces three independent PC loads with one LDM.
+    Inspect the physical setup even if a corrupt branch makes it unreachable.
+    This proves this explicit access span, not general LDM data flow.
+    """
+    start=OWNERS['tile'][0]
+    setup,consumer=start+6,start+8
+    half=struct.unpack_from('<H',data,consumer)[0]
+    if half & 0xF800 != 0xC800:
+        return None
+    require(data[start:setup]==struct.pack('<3H',0xB5F0,0xB085,0x1C04),
+            'Tile global block entry setup differs')
+    load=struct.unpack_from('<H',data,setup)[0]
+    require(load & 0xFF00 == 0x4800 and half==0xC80E,
+            'Tile global block must load r0 then exactly r1/r2/r3')
+    pool=((setup+4)&~3)+(load&255)*4
+    end=OWNERS['tile'][1]
+    require(start<=pool<=end-4,'Tile global pointer literal outside owner')
+    pointer=struct.unpack_from('<I',data,pool)[0]
+    require(pointer==0x0300004C,'Tile global block source differs')
+    sites={int(i['address'],16)-BASE for i in row['instructions']}
+    require({start,start+2,start+4,setup,consumer}<=sites,
+            'Tile global block setup is not reachable')
+    require(all(not start<int(b['target'],16)-BASE<=consumer for b in row['direct_branches']),
+            'Branch bypasses tile global block setup')
+    matches=[p for p in row['literals'] if int(p['storage'],16)-BASE==pool]
+    require(len(matches)==1 and int(matches[0]['value'],16)==pointer
+            and hex(BASE+setup) in matches[0]['sites'],'Tile global pointer inventory differs')
+    return dict(setup=hex(BASE+setup),consumer=hex(BASE+consumer),
+                source=hex(pointer),end_exclusive=hex(pointer+12),span_bytes=12,
+                destinations=['r1','r2','r3'],writeback='r0',
+                fields=['map_global','font_base_global','tilebase_global'])
+
 def address_contracts(data,baseline,link):
     require(len(data)==len(baseline)==0x800000,'8MiB exact size')
     require(sha(baseline)==BASE_SHA and link['output_sha256']==BASE_SHA,'Stage3 identity')
@@ -53,6 +88,10 @@ def address_contracts(data,baseline,link):
       'unit':[],
       'gap':[0x082C0000,0x083A84C4,0x080B9C09],
     }
+    tile_block=tile_global_block(data,by_name['tile'])
+    if tile_block is not None:
+        expected['tile'].remove(0x03000050)
+        expected['tile'].remove(0x03000054)
     for name,values in expected.items():
         require(Counter(literals(name))==Counter(values),(name,'Unexpected PC-relative literal'))
     # ADR/LDM profile triples contain non-PC-loaded data addresses too.
@@ -110,6 +149,7 @@ def address_contracts(data,baseline,link):
       'direct_branches':sum(len(r['direct_branches']) for r in rows),
       'pc_literal_sites':sum(len(x['sites']) for r in rows for x in r['literals']),
       'profile_count':3,'profile_spans':[r['span_bytes'] for r in by_name['owned']['adr_data']],
+      'tile_global_block':tile_block,
       'complete_sorted_alias_count':len(alias_starts),
       'runtime_starts_checked':len(starts),'numeric_gap_pairs':len(pairs),
       'immutable_data_ranges':data_ranges,'owners':rows,
@@ -151,6 +191,14 @@ def main():
             try:address_contracts(bytes(changed),baseline,link)
             except ValueError:bad.append(name)
             else:raise ValueError(('Failed to reject compact profile corruption',name))
+    if report['tile_global_block'] is not None:
+        for name,at,value in [('tile_global_extra_word',0xC5BB0,0xC81E),
+                              ('tile_global_wrong_base',0xC5BB0,0xC90E),
+                              ('tile_global_setup_bypass',0xC5BA8,0xE002)]:
+            changed=bytearray(data);struct.pack_into('<H',changed,at,value)
+            try:address_contracts(bytes(changed),baseline,link)
+            except ValueError:bad.append(name)
+            else:raise ValueError(('Failed to reject tile block corruption',name))
     a.out.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k not in ('owners','immutable_data_ranges')}))
 if __name__=='__main__':main()

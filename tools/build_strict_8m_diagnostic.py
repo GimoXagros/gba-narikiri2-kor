@@ -24,7 +24,7 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def build(japanese,adopted,catalog,audit,out):
+def build(japanese,adopted,catalog,audit,out,stage4_perf=False):
     inputs=[Path(p).resolve() for p in (japanese,adopted,catalog,audit)]
     out=Path(out).resolve()
     if out.exists():raise FileExistsError('A fresh diagnostic output directory is required')
@@ -35,7 +35,8 @@ def build(japanese,adopted,catalog,audit,out):
         for name,p in zip(('japanese','adopted','catalog','audit'),inputs)}
     out.mkdir(parents=True,exist_ok=False)
     def run(script,arguments):
-        command=[sys.executable,str(ROOT/'tools'/script),*map(str,arguments)]
+        flags=(['-B'] if sys.dont_write_bytecode else [])+(['-O'] if sys.flags.optimize else [])
+        command=[sys.executable,*flags,str(ROOT/'tools'/script),*map(str,arguments)]
         completed=subprocess.run(command,cwd=ROOT,capture_output=True,text=True,encoding='utf-8',errors='replace')
         atomic_write_new(out/(script+'.log'),(completed.stdout+completed.stderr).encode('utf-8'))
         if completed.returncode:raise RuntimeError(f'{script} failed; inspect its diagnostic log')
@@ -51,7 +52,26 @@ def build(japanese,adopted,catalog,audit,out):
         '--text-build',text,'--owned-menus','--fast-full-draw','--direct-dialogue',
         '--arte-description-length','--profile-name-copy','--honorific-append',
         '--popup-name-copy','--profile-name-compare','--out',linked])
-    target=(linked/'FIXED_8MIB_DIAGNOSTIC_NOT_PRODUCT.gba').read_bytes()
+    target_path=linked/'FIXED_8MIB_DIAGNOSTIC_NOT_PRODUCT.gba'
+    stage3_target=target_path
+    if stage4_perf:
+        stage4=out/'stage4'
+        run('strict_perf_stage4_minimal.py',[
+            '--baseline',stage3_target,'--jp',inputs[0],'--adopted',inputs[1],
+            '--link',linked/'LINK.json','--out',stage4])
+        target_path=stage4/'STAGE4_PERF_DIAGNOSTIC_NOT_PRODUCT.gba'
+        # Re-read the final image independently of the stage4 assembler/ledger.
+        from strict_perf_stage4_minimal import FINAL
+        run('strict_perf_address_audit.py',[
+            '--baseline',stage3_target,'--link',linked/'LINK.json',
+            '--rom',target_path,'--sha256',FINAL,'--out',stage4/'ADDRESS_AUDIT.json'])
+        from strict_runtime_linker import verify_binding_storage,verify_frozen_streams
+        final_image=target_path.read_bytes()
+        content=dict(bindings=verify_binding_storage(final_image,jp,text/'TEXT_BINDINGS.csv'),
+            streams=verify_frozen_streams(final_image,text/'SLOT_FIT_REPORT.csv',
+                text/'TEXT_SLOT_IMAGE_NOT_PLAYABLE.bin',text),rom_sha256=digest(final_image))
+        atomic_write_new(stage4/'FROZEN_TEXT_AUDIT.json',(json.dumps(content,indent=2)+'\n').encode('utf-8'))
+    target=target_path.read_bytes()
     if len(target)!=0x800000:raise ValueError('Integrated ROM is not exactly 8 MiB')
     patch=create_bps(jp,target)
     if apply_bps(jp,patch)!=target:raise ValueError('Diagnostic BPS roundtrip differs')
@@ -60,6 +80,8 @@ def build(japanese,adopted,catalog,audit,out):
     source_files.extend(sorted(ROOT.joinpath('config').glob('*.json')))
     report=dict(status='INTEGRATED_DIAGNOSTIC_REPRODUCTION_ONLY',release_eligible=False,
         inputs=identities,python=sys.version.split()[0],target_size=len(target),target_sha256=digest(target),
+        target_relative_path=target_path.relative_to(out).as_posix(),stage4_perf=bool(stage4_perf),
+        stage3_sha256=digest(stage3_target.read_bytes()),
         patch_size=len(patch),patch_sha256=digest(patch),bps_apply_exact=True,
         source_files={p.relative_to(ROOT).as_posix():digest(p.read_bytes()) for p in source_files},
         remaining_gates=['required game consumer closure','alias game-context reachability',
@@ -71,6 +93,7 @@ def build(japanese,adopted,catalog,audit,out):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('japanese','adopted','catalog','audit','out'):p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--stage4-perf',action='store_true',help='Apply the reviewed fixed-owner performance layer and independently verify final addresses/text')
     args=p.parse_args();report=build(**vars(args))
     print(json.dumps({k:report[k] for k in ('status','target_size','target_sha256','patch_sha256','release_eligible')}))
 
