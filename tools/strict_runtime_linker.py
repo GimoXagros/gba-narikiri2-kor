@@ -412,7 +412,7 @@ def annotate_pointer_shapes(ledger: Ledger, japanese: bytes, refs: list[dict], a
             "relocated:full_book", "relocated:compact_book",
             "relocated:full_bounds", "relocated:compact_bounds",
             "relocated:extra_book", "relocated:extra_bounds", "owned_probe:extra_ui_stream_",
-            "asset:native_row_decoder", "asset:relative_")) else "unclassified_changed_reference")
+            "asset:relative_")) else "unclassified_changed_reference")
         proof=extra_classification(japanese,adopted,ledger.image,owners,at,writer) if adopted is not None else None
         if proof:kind=proof['kind']
         result.append(dict(row, owner=name, classification=kind,proof=proof,

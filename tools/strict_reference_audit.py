@@ -42,6 +42,19 @@ def extra_classification(japanese,adopted,image,owners,at,writer):
         name=writer['name']
         if name.startswith(('asset:map_resource_','asset:native_staff_font')):
             return dict(kind='encoded_native_graphic_payload',start=writer['start'],end=writer['end'])
+        if name=='asset:native_row_decoder':
+            # This aligned address-shaped word is executable Thumb, not font
+            # payload. Require the complete emitted owner, not its name alone.
+            from strict_asset_fontrows8 import DECODER,DECODER_SOURCE,WRAPPER_14E0
+            from strict_asset_fontpages import _assemble
+            expected=_assemble(DECODER_SOURCE,DECODER,WRAPPER_14E0-DECODER)
+            if (len(expected)==128 and writer['start']==DECODER
+                and writer['end']==DECODER+len(expected) and at==DECODER+8
+                and image[DECODER:DECODER+len(expected)]==expected
+                and word(image,at)==0x08C24607):
+                return dict(kind='thumb_instruction_pair',start=DECODER,end=DECODER+len(expected),
+                    instructions='mov r7,r0; lsrs r2,r0,#3',
+                    qualification='complete emitted native row decoder matches; no blanket code-owner exemption')
         if name=='relocated:boot_notice_1bpp_wrapper':
             relative=at-writer['start']
             if relative==36 and word(image,at)==0x09053402:
