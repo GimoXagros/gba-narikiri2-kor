@@ -1,0 +1,234 @@
+{
+  "schema": "narikiri2-v11-local-candidate-1",
+  "version": "v1.1",
+  "status": "LOCAL_CANDIDATE_HARDWARE_NOT_RUN",
+  "release_eligible": false,
+  "hardware_status": "NOT_RUN",
+  "source_sha256": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+  "source_size": 8388608,
+  "target_sha256": "9fd341b827a8ba282781d7f8f214f2ba8641365b541564d53e9ef5267511889b",
+  "target_size": 8388608,
+  "patch_sha256": "4e4ad0229b22ea5bd8e6b351adfa79a749e2b5288aabb24d7d1e356a7bfafade",
+  "patch_size": 378033,
+  "runtime_source_commit": "bd4328334d658f4c5c76ee10af0e40104689bc19",
+  "previous_v1_release_waiver_inherited": false,
+  "gates": {
+    "G0": {
+      "status": "PASS",
+      "scope": "Pinned 6caa056 baseline and inputs; historical baseline tests retained"
+    },
+    "G1": {
+      "status": "PASS",
+      "scope": "10172 bindings, 9246 starts, seven aliases; 197 additional UI records"
+    },
+    "G2": {
+      "status": "PASS",
+      "scope": "Actual ARM7 decoder corpus and identified consumers within recorded CPU/runtime scope"
+    },
+    "G3": {
+      "status": "PASS",
+      "scope": "Native six JOB shared groups and ARTE, alternating access, reentry and same-ROM resume"
+    },
+    "G4": {
+      "status": "PASS",
+      "scope": "Exact 8MiB; pinned layout, owners, decoder starts and identified address contracts"
+    },
+    "G5": {
+      "status": "PASS",
+      "scope": "New/default/mixed saves, existing populated save, cold reloads, suspend consumption, paired same-ROM offscreen VBA state"
+    },
+    "G6": {
+      "status": "PASS",
+      "scope": "Six unchanged five-repeat routes and P99 limits; no interval filtering"
+    },
+    "G7": {
+      "status": "PASS",
+      "scope": "Bounded final-image CPU/runtime/pixel regressions; prior candidate input failures retained and corrected"
+    },
+    "G8": {
+      "status": "NOT_RUN",
+      "scope": "Exact final-hash target hardware checks required"
+    },
+    "G9": {
+      "status": "PASS",
+      "scope": "Two clean complete builds, identical ROM/BPS and fresh-process ZIP-local standalone application to exact Japanese source"
+    },
+    "G10": {
+      "status": "NOT_RUN",
+      "scope": "Actual candidate ZIP and write-safety checks PASS; final committed history and final regenerated package audit pending"
+    }
+  },
+  "tests": {
+    "working_tree": {
+      "passed": 391,
+      "failed": 0,
+      "skipped": 0,
+      "optimized_python": true,
+      "log_sha256": "60ba54504ae0387a101e8acb47d43816d10eb0b03eb7c3401d5d473c82eccd30",
+      "scope": "Includes preserved private experiments; not the count of tests in a clean public checkout"
+    },
+    "v11_package": {
+      "passed": 25,
+      "failed": 0,
+      "skipped": 1,
+      "optimized_python": true,
+      "actual_symlink": "NOT_RUN: Windows privilege 1314; hardlink and synthetic dangling-link guards passed",
+      "actual_patch_negative_processes": 7,
+      "standalone_fresh_process": true,
+      "preliminary_report_sha256": "ce123cc6d7012f5b41744c513d832b924f58b22c7f331bbee2d335f6087f02ab"
+    }
+  },
+  "performance": {
+    "core_sha256": "0d3177c927d791fef897f735d88db3646f7932d02054af108619c6df4e1597f1",
+    "runs_per_route": 5,
+    "estimator": "sorted(intervals)[floor((N-1)*0.99)]",
+    "all_intervals_retained": true,
+    "report_sha256": "acc2a843d8f4e2e9c0fe200e0ae210162ee368e718bf212dda136659bbe9e4d3",
+    "routes": [
+      {
+        "route": "item",
+        "movements": 1560,
+        "intervals": 1550,
+        "interval_histogram": {
+          "7": 302,
+          "8": 1238,
+          "17": 10
+        },
+        "selection_intervals_frames": {
+          "p50": 8,
+          "p95": 8,
+          "p99": 8,
+          "max": 17
+        },
+        "p99_limit": 8,
+        "p99_pass": true,
+        "unresolved_display_events": 0
+      },
+      {
+        "route": "monster",
+        "movements": 1420,
+        "intervals": 1410,
+        "interval_histogram": {
+          "7": 1387,
+          "8": 13,
+          "17": 10
+        },
+        "selection_intervals_frames": {
+          "p50": 7,
+          "p95": 7,
+          "p99": 8,
+          "max": 17
+        },
+        "p99_limit": 8,
+        "p99_pass": true,
+        "unresolved_display_events": 0
+      },
+      {
+        "route": "shop-buy",
+        "movements": 1050,
+        "intervals": 1040,
+        "interval_histogram": {
+          "7": 1030,
+          "17": 10
+        },
+        "selection_intervals_frames": {
+          "p50": 7,
+          "p95": 7,
+          "p99": 7,
+          "max": 17
+        },
+        "p99_limit": 7,
+        "p99_pass": true,
+        "unresolved_display_events": 0
+      },
+      {
+        "route": "shop-sell",
+        "movements": 1080,
+        "intervals": 1070,
+        "interval_histogram": {
+          "7": 1060,
+          "17": 10
+        },
+        "selection_intervals_frames": {
+          "p50": 7,
+          "p95": 7,
+          "p99": 7,
+          "max": 17
+        },
+        "p99_limit": 8,
+        "p99_pass": true,
+        "unresolved_display_events": 0
+      },
+      {
+        "route": "costume",
+        "movements": 2000,
+        "intervals": 1990,
+        "interval_histogram": {
+          "7": 1973,
+          "8": 7,
+          "17": 10
+        },
+        "selection_intervals_frames": {
+          "p50": 7,
+          "p95": 7,
+          "p99": 7,
+          "max": 17
+        },
+        "p99_limit": 7,
+        "p99_pass": true,
+        "unresolved_display_events": 0
+      },
+      {
+        "route": "character",
+        "movements": 220,
+        "intervals": 210,
+        "interval_histogram": {
+          "7": 200,
+          "17": 10
+        },
+        "selection_intervals_frames": {
+          "p50": 7,
+          "p95": 7,
+          "p99": 17,
+          "max": 17
+        },
+        "p99_limit": 17,
+        "p99_pass": true,
+        "unresolved_display_events": 0
+      }
+    ]
+  },
+  "clean_full_builds": {
+    "status": "PASS",
+    "runs": 2,
+    "source_commit": "bd4328334d658f4c5c76ee10af0e40104689bc19",
+    "source_files": 199,
+    "rom_and_bps_identical": true,
+    "report_sha256": "74befa0cb6670b2c104d10cb9714dab5226bc8b20edfb315cc3c2d9d305c9690"
+  },
+  "evidence_sha256": {
+    "address_contract": "a9902fbef5414b2cab708c3f9fe69a882ce15636ec5b787546a18503236e7a70",
+    "cpu_corpus": "003fe884139ef85aa568aa827b20f4fc712759ec96329b7d95a3ff2db45ca89d",
+    "native_shared_selection": "9d0f4880f526b13322581f8b77ffcf0a67a25a0ab917a83072d80271426cac74",
+    "independent_minimal_builder": "32f9bc88dbd4b37c64f57c3cdc75af1d1d4752c5c3a29a602eede81308616ea8",
+    "independent_save_B_to_F": "c9012214cfacc3df7d50a90895232ef4069a118da1d510d48f1dd6099c629c19",
+    "independent_new_game_and_book": "ad8c2a034e4018ce02ab622680ba0ef0067f28b5a9c5af49528e23b6eba1ee63",
+    "final_expanded_address_rescan": "04c5614be335efbe2b3338357bb22e8e62ab173f1d0a444c02547d73b44a1dc6",
+    "pub27_sgm_fresh_resume": "71d84df42c4a1b466a8880df61964d927e08166b82b397c88b868c49d9580510"
+  },
+  "private_dialogue_export": {
+    "rows": 10371,
+    "xlsx_sha256": "9958d04318aad88270d07be4d0b65bc16031219bd7a5b190762229da5ab285cd",
+    "publicly_included": false,
+    "scope": "Actual final-ROM output; prior review labels retained, no new translation review"
+  },
+  "limitations": [
+    "No hardware evidence for this exact target hash; previous v1.0 hardware play does not transfer.",
+    "No complete natural playthrough, all branches or two-console link exchange.",
+    "Ending pixel coverage uses a disclosed 4-byte test entry dispatch; not natural story completion.",
+    "SGM supported scope is the same-ROM offscreen VBA core with paired EEPROM; no cross-core or GUI claim.",
+    "Inherited RL map resources 32/43 remain byte-preserved; their full consumer reachability is not established.",
+    "Controlled audio route has equal counts, callback partitions and silence intervals, but 62 of 3295102 stereo pairs differ from ac0; listening and cause are not established.",
+    "Bounded address and CPU checks do not prove every possible computed address or event."
+  ]
+}
