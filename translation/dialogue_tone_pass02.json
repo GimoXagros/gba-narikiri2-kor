@@ -1,0 +1,2718 @@
+[
+  {
+    "change_id": "TONE-PASS02-001",
+    "id": "D03257",
+    "binding": "D03257:003365F4",
+    "storage": "003365F4",
+    "use_site_ids": [
+      "meredy_cooking_reisu:003365F0"
+    ],
+    "scene_id": "meredy_cooking_reisu",
+    "speaker_id": "ACTOR_0012_MEREDY",
+    "addressee_id": "ACTOR_0015_REIS",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "89648d0f4474a271b0e8f256816a911943fb9411223cd6b6c753606d7e0e2ab1",
+    "before_sha256": "7515d5897b5edbc4a3752a76bbb51869e5a5070c02d5e746681f3211d9d83f5e",
+    "after": "정말이야？ 메르디 기뻐！",
+    "old_slot_offset": "00C104A3",
+    "old_payload_bytes": 27,
+    "new_payload_bytes": 26,
+    "reason": "Meredy self-reference and informal endings at D03249, D03250, D03262; answers actor15 praise at D03256.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03257:003365F4"
+    ],
+    "evidence_refs": [
+      "D03249:0033655C",
+      "D03250:00336564",
+      "D03256:003365DC",
+      "D03262:00336634"
+    ],
+    "before_raw_sha256": "dcaa7614b580d90d4aae68e124abd5d5353560820be6c8d804daad7f206ab1c6",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03257:003365F4": "89648d0f4474a271b0e8f256816a911943fb9411223cd6b6c753606d7e0e2ab1"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-002",
+    "id": "D01121",
+    "binding": "D01121:00316190",
+    "storage": "00316190",
+    "use_site_ids": [
+      "rose_polpol_interest:0031618C"
+    ],
+    "scene_id": "rose_polpol_interest",
+    "speaker_id": "ACTOR_0020_ROSE",
+    "addressee_id": "ACTOR_003A_JULIO",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "b2a351217462644b5ca649610b0b1a44eb2feafd47bbd033ebb57c3e78ac46f7",
+    "before_sha256": "fe4d653ebdd2d195e28017a68fe2d796ee6dc1f3d84c740316c395cbb0540f7d",
+    "after": "에？@S그래…",
+    "old_slot_offset": "00818932",
+    "old_payload_bytes": 16,
+    "new_payload_bytes": 12,
+    "reason": "Rose replies to Julio teasing; surrounding child-directed Rose lines are informal and JP has no polite shift.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D01121:00316190"
+    ],
+    "evidence_refs": [
+      "D01116:00316150",
+      "D01120:00316180",
+      "D01122:003161A0",
+      "D01126:003161C8"
+    ],
+    "before_raw_sha256": "fc210f432cef093c695b8ba86a73a44c4bcb3e595465331b338fc3f5dfac75c3",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D01121:00316190": "b2a351217462644b5ca649610b0b1a44eb2feafd47bbd033ebb57c3e78ac46f7"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-003",
+    "id": "D01122",
+    "binding": "D01122:003161A0",
+    "storage": "003161A0",
+    "use_site_ids": [
+      "rose_polpol_interest:0031619C"
+    ],
+    "scene_id": "rose_polpol_interest",
+    "speaker_id": "ACTOR_0020_ROSE",
+    "addressee_id": "ACTOR_003A_JULIO",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "e4fabc788d3617fdf1a0803b577e9a0e39e885d1a18d76296d326897a9970d30",
+    "before_sha256": "4a9f02ca5719ad44ff7b2c286703e073bd99a9b6eefe09095c25eddd988ee80c",
+    "after": "싫지는 않아♪",
+    "old_slot_offset": "00818921",
+    "old_payload_bytes": 16,
+    "new_payload_bytes": 14,
+    "reason": "Same response pair; preserve JP playful ♪ while removing isolated formal ending.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D01122:003161A0"
+    ],
+    "evidence_refs": [
+      "D01116:00316150",
+      "D01120:00316180",
+      "D01121:00316190",
+      "D01126:003161C8"
+    ],
+    "before_raw_sha256": "99f5b8b5c8601dc3d5eeef6d78c3485814662593de2c50440a4d99660aa26c3a",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D01122:003161A0": "e4fabc788d3617fdf1a0803b577e9a0e39e885d1a18d76296d326897a9970d30"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-004",
+    "id": "D01150",
+    "binding": "D01150:003168EC",
+    "storage": "003168EC",
+    "use_site_ids": [
+      "rose_dine_dash_report:003168E8"
+    ],
+    "scene_id": "rose_dine_dash_report",
+    "speaker_id": "ACTOR_003B_CAROL",
+    "addressee_id": "ACTOR_0020_ROSE",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "b4c4115c21fc046321a1cb89c6a1f122cdf0d6ed2c17c435c09cf21f661e4cb2",
+    "before_sha256": "46caeea95b2884c254be8f5b3442ded7a8f80ce60fb767ad8fc5822aff004154",
+    "after": "@L무슨 일이에요？ 대체…",
+    "old_slot_offset": "00818EE3",
+    "old_payload_bytes": 27,
+    "new_payload_bytes": 26,
+    "reason": "JP どうしたんですか is polite and Carol addresses Rose politely at D01162.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D01150:003168EC"
+    ],
+    "evidence_refs": [
+      "D01147:003168BC",
+      "D01149:003168DC",
+      "D01151:003168FC",
+      "D01162:00316A54"
+    ],
+    "before_raw_sha256": "4069e7ece7dea14a64cb4d993014af64f7f416eb72413eb09044ccd85c4ba23e",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D01150:003168EC": "b4c4115c21fc046321a1cb89c6a1f122cdf0d6ed2c17c435c09cf21f661e4cb2"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-005",
+    "id": "D01161",
+    "binding": "D01161:00316A4C",
+    "storage": "00316A4C",
+    "use_site_ids": [
+      "rose_dine_dash_report:00316A48"
+    ],
+    "scene_id": "rose_dine_dash_report",
+    "speaker_id": "ACTOR_0020_ROSE",
+    "addressee_id": "ACTOR_003A_JULIO",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "b0c260eb292f2f43aae057252b55886456fb48efd0e161e14302795f4f695c6d",
+    "before_sha256": "151fd7420b50eccdb821ce95b42b9782e05cbe2b595f0ca3352629bd2b837651",
+    "after": "『빗자루』를 타고 날아서 도망갔어．",
+    "old_slot_offset": "00C24FD7",
+    "old_payload_bytes": 42,
+    "new_payload_bytes": 38,
+    "reason": "Rose directly answers Julio D01160; nearby child-directed speech is informal, Japanese ends わ.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D01161:00316A4C"
+    ],
+    "evidence_refs": [
+      "D01159:00316A3C",
+      "D01160:00316A44",
+      "D01163:00316A5C"
+    ],
+    "before_raw_sha256": "643077863add5f4357dcdccfda800788565955070f92eb40032f11c5d2dcc403",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D01161:00316A4C": "b0c260eb292f2f43aae057252b55886456fb48efd0e161e14302795f4f695c6d"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-006",
+    "id": "D01044",
+    "binding": "D01044:003152B0",
+    "storage": "003152B0",
+    "use_site_ids": [
+      "polpol_pub_bet:003152AC"
+    ],
+    "scene_id": "polpol_pub_bet",
+    "speaker_id": "ACTOR_003A_JULIO",
+    "addressee_id": "ACTOR_0022_POLPOL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "477669a249c85d47709c771954f7c9c5326af619ee92af4872c579bb642c8180",
+    "before_sha256": "fcc8ccf482f42bd7b9383caf23af74fc1c176a8217c7d6beb89ecc8e657393e1",
+    "after": "안녕하세요，사부！어，풀이 죽으셨네요…",
+    "old_slot_offset": "00C2467C",
+    "old_payload_bytes": 44,
+    "new_payload_bytes": 40,
+    "reason": "Julio greets his master and observes a gloomy expression; adjoining direct addresses use polite endings.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D01044:003152B0"
+    ],
+    "evidence_refs": [
+      "D01017:00314CEC",
+      "D01045:003152C0",
+      "D01046:003152C8",
+      "D01047:003152D8",
+      "D01051:00315358"
+    ],
+    "before_raw_sha256": "9a8cb4cf32426889851d4fa6901c9eedc1569f36e454dd98509ed46bb348e5d2",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D01044:003152B0": "477669a249c85d47709c771954f7c9c5326af619ee92af4872c579bb642c8180"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-007",
+    "id": "D01048",
+    "binding": "D01048:003152F0",
+    "storage": "003152F0",
+    "use_site_ids": [
+      "polpol_pub_bet:003152EC"
+    ],
+    "scene_id": "polpol_pub_bet",
+    "speaker_id": "ACTOR_003A_JULIO",
+    "addressee_id": "ACTOR_0022_POLPOL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "b66499fc1f8def6490dc6bf3bf28594b0a70528d86be608a05ad904512066e1b",
+    "before_sha256": "87d62cbc717ce135885f39e2b23d1e4199d506a5f572923f826c42349e27d8ba",
+    "after": "@L응？왜 그러세요？",
+    "old_slot_offset": "00C24716",
+    "old_payload_bytes": 20,
+    "new_payload_bytes": 20,
+    "reason": "Julio reacts to master; op0C actor22 followed by op0D actor3A before this text, then master response. Keep 응 as interjection.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D01048:003152F0"
+    ],
+    "evidence_refs": [
+      "D01045:003152C0",
+      "D01046:003152C8",
+      "D01047:003152D8",
+      "D01049:00315318",
+      "D01051:00315358"
+    ],
+    "before_raw_sha256": "a10c8c79b84db498c6f54e8db9521f77a31dc1e1df12c3a5eb902b497c8e43e1",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D01048:003152F0": "b66499fc1f8def6490dc6bf3bf28594b0a70528d86be608a05ad904512066e1b"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-008",
+    "id": "D01968",
+    "binding": "D01968:00322760",
+    "storage": "00322760",
+    "use_site_ids": [
+      "woodrow_chester_archery:0032275C"
+    ],
+    "scene_id": "woodrow_chester_archery",
+    "speaker_id": "ACTOR_000A_WOODROW",
+    "addressee_id": "ACTOR_0001_CHESTER",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "091c5b1e027d4365db59ac5376b1033e0152cfb01493c931259db8bc95ff0867",
+    "before_sha256": "4067637b513d580f86f23006c0e21b438360474b1f192c3db188bf912619fb9d",
+    "after": "@L다시 묻네…@S체스터…자넨 왜 힘을 원하나？",
+    "old_slot_offset": "0082072A",
+    "old_payload_bytes": 48,
+    "new_payload_bytes": 48,
+    "reason": "Same interlocutor Chester: Woodrow uses 자네 at D01959, but this one turn switches to 넌 while JP uses 君 in both. Keep @L/@S and concise advising register.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D01968:00322760"
+    ],
+    "evidence_refs": [
+      "D01959:00322708",
+      "D01963:00322730",
+      "D01967:00322758",
+      "D01969:00322768",
+      "D01971:00322788"
+    ],
+    "before_raw_sha256": "1cc42b8ffefcd97075a6e9c07a2c679d0f773339b2b7f3023165bb37b5f69e8c",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D01968:00322760": "091c5b1e027d4365db59ac5376b1033e0152cfb01493c931259db8bc95ff0867"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-009",
+    "id": "D02023",
+    "binding": "D02023:003234B8",
+    "storage": "003234B8",
+    "use_site_ids": [
+      "arche_chester_omelet:003234B4"
+    ],
+    "scene_id": "arche_chester_omelet",
+    "speaker_id": "ACTOR_0004_ARCHE",
+    "addressee_id": "ACTOR_0001_CHESTER",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "4e8643d96a32b93d1b0e3062f2d3fa8be6366c495eccb7d2b85957493db289b4",
+    "before_sha256": "06d20f7d05c96bbd4bb57b860f58fa99ce5eb522aac9a5b3fb3b02c6b3e6f116",
+    "after": "뭐야― 특별히 널 위해 만들었는데…",
+    "old_slot_offset": "00820FCF",
+    "old_payload_bytes": 42,
+    "new_payload_bytes": 38,
+    "reason": "Arche speaks casually to Chester throughout the omelet scene; Japanese あんた, Korean 당신만 동료 호칭에서 튄다. Preserve exclamation and せっかく.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D02023:003234B8"
+    ],
+    "evidence_refs": [
+      "D02021:00323498",
+      "D02022:003234A8",
+      "D02024:003234D8",
+      "D02029:00323540",
+      "D02032:00323578"
+    ],
+    "before_raw_sha256": "457c9bd15f42542467b2be223697b361659d6fb278325c23463a2c32cf02013a",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D02023:003234B8": "4e8643d96a32b93d1b0e3062f2d3fa8be6366c495eccb7d2b85957493db289b4"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-010",
+    "id": "D01869",
+    "binding": "D01869:00320F64",
+    "storage": "00320F64",
+    "use_site_ids": [
+      "00320F60"
+    ],
+    "scene_id": "mint_cares_for_julio_carol",
+    "speaker_id": "ACTOR_0002_MINT",
+    "addressee_id": "ACTOR_003A_JULIO_AND_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "f75e650003a0146b4fd6fe6365743249e5cca00d57e997d9ff2fc3308037bb98",
+    "before_sha256": "e1a4c3ff8fa4dc6f418b187fa9d8691835dba5007fb48bb54199d157d95481a3",
+    "after": "그럼，조심해서 가세요…",
+    "old_slot_offset": "0081F856",
+    "old_payload_bytes": 24,
+    "new_payload_bytes": 24,
+    "reason": "Mint gives a gentle farewell after care; Japanese お気をつけくださいね and neighboring spoken polite register.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D01869:00320F64"
+    ],
+    "evidence_refs": [
+      "D01865:00320F34",
+      "D01868:00320F5C",
+      "D01870:00320F6C"
+    ],
+    "before_raw_sha256": "e6df2ffff634558b6123b5ab17de96bc03d40feb44c420c5c5cff792cc3653b7",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D01869:00320F64": "f75e650003a0146b4fd6fe6365743249e5cca00d57e997d9ff2fc3308037bb98"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-011",
+    "id": "D02198",
+    "binding": "D02198:00326038",
+    "storage": "00326038",
+    "use_site_ids": [
+      "00326034"
+    ],
+    "scene_id": "rose_suzu_lonely_trip",
+    "speaker_id": "ACTOR_0020_ROSE",
+    "addressee_id": "ACTOR_000F_SUZU",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "d10e79c5927b7a81ac0547aabf18bdc7ce7cdb45ccb6d678d2cf11ca122fdc54",
+    "before_sha256": "efad6b17597277bbb686cd71a00931bd79930cab3c980764df18ea6f8e1c34db",
+    "after": "저기，혼자 여행하는 거야？",
+    "old_slot_offset": "00822985",
+    "old_payload_bytes": 42,
+    "new_payload_bytes": 28,
+    "reason": "Rose asks child Suzu at first meeting; the following turns retain casual child-directed endings.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D02198:00326038"
+    ],
+    "evidence_refs": [
+      "D02199:00326040",
+      "D02200:00326048",
+      "D02207:00326088"
+    ],
+    "before_raw_sha256": "91d8bf147636cd24db557d905692ecb241a6fe28af542aaf003a11304a85d433",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D02198:00326038": "d10e79c5927b7a81ac0547aabf18bdc7ce7cdb45ccb6d678d2cf11ca122fdc54"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-012",
+    "id": "D02227",
+    "binding": "D02227:00326568",
+    "storage": "00326568",
+    "use_site_ids": [
+      "00326564"
+    ],
+    "scene_id": "rutee_wakes_stan",
+    "speaker_id": "ACTOR_0007_RUTEE",
+    "addressee_id": "ACTOR_0000_STAN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "aefd151ae673c509f098c26022ee62ce89523b1ebb740e4723e31dfed87413c6",
+    "before_sha256": "f0170a0b728b0dcab010b0d965b177a76b498b1b2694625d8a50ef4e1d9c450f",
+    "after": "@L야！！ 일어나！촌놈！！",
+    "old_slot_offset": "00822B7E",
+    "old_payload_bytes": 29,
+    "new_payload_bytes": 26,
+    "reason": "Japanese くぉらぁ is a shouted call, not an insult equivalent to 머저리; preserve repeated exclamations and 田舎モノ.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D02227:00326568"
+    ],
+    "evidence_refs": [
+      "D02225:00326550",
+      "D02226:00326558",
+      "D02228:00326580"
+    ],
+    "before_raw_sha256": "2dc0d6b2dae65b24684e44d0e3b877469145ab4dc594c4888423e8a57e20a641",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D02227:00326568": "aefd151ae673c509f098c26022ee62ce89523b1ebb740e4723e31dfed87413c6"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-013",
+    "id": "D02365",
+    "binding": "D02365:003287DC",
+    "storage": "003287DC",
+    "use_site_ids": [
+      "003287D8"
+    ],
+    "scene_id": "rutee_carol_thief_outfit",
+    "speaker_id": "ACTOR_0007_RUTEE",
+    "addressee_id": "ACTOR_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "f1ab89d621b2e399706218d52f22eb300b1a746e3b415f95c3c710706bb00538",
+    "before_sha256": "e0144d198d474b0b4f7171376421cc297ebbf3d3232254ae170019294a809681",
+    "after": "왜 그래？그 모습，산적이라도 할 생각이야？",
+    "old_slot_offset": "00823FCD",
+    "old_payload_bytes": 47,
+    "new_payload_bytes": 46,
+    "reason": "Rutee addresses Carol directly in casual speech; replace isolated archaic 냐 with colloquial 야 while retaining meaning.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D02365:003287DC"
+    ],
+    "evidence_refs": [
+      "D02366:003287E4",
+      "D02367:003287F0"
+    ],
+    "before_raw_sha256": "b8bfcdbce5eaf46d5ccbb9a7fe6384e841b14403a5c036b2f15e3b7b3aea26f1",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D02365:003287DC": "f1ab89d621b2e399706218d52f22eb300b1a746e3b415f95c3c710706bb00538"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-014",
+    "id": "D02379",
+    "binding": "D02379:00328AD0",
+    "storage": "00328AD0",
+    "use_site_ids": [
+      "00328ACC",
+      "0034C204"
+    ],
+    "scene_id": "philia_black_crystal_briefing",
+    "speaker_id": "ACTOR_003A_JULIO",
+    "addressee_id": "ACTOR_0009_PHILIA_AND_0024_MILL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "0e65cff605edb191f605f6529ba697205afa2d7c033794841a458d601b06d81f",
+    "before_sha256": "551098b902cce641a9a5a66558f08e8f6196ff1b81fa89e7e96cf87518a49854",
+    "after": "뭔데？",
+    "old_slot_offset": "00824317",
+    "old_payload_bytes": 8,
+    "new_payload_bytes": 6,
+    "reason": "Two original pointers alias the same text target. In both static events actor 0x3A speaks casually: to Philia (nearby 응/피는구나/충분해), and after greeting 밀 누나 (안녕).",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D02379:00328AD0",
+      "D02379:0034C208"
+    ],
+    "evidence_refs": [
+      "D02384:00328B18",
+      "D02391:00328B78",
+      "D04663:0034C1E0",
+      "D04665:0034C1F8",
+      "D04666:0034C218"
+    ],
+    "before_raw_sha256": "b066043fdbc4277b08db58757927e8f9cde90520287d67adcb29a9cffb20277f",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D02379:00328AD0": "0e65cff605edb191f605f6529ba697205afa2d7c033794841a458d601b06d81f",
+      "D02379:0034C208": "0e65cff605edb191f605f6529ba697205afa2d7c033794841a458d601b06d81f"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-015",
+    "id": "D00937",
+    "binding": "D00937:00313970",
+    "storage": "00313970",
+    "use_site_ids": [
+      "0031396C"
+    ],
+    "scene_id": "stan_rutee_knight",
+    "speaker_id": "ACTOR_0007_RUTEE",
+    "addressee_id": "ACTOR_0016_KNIGHT",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "67736a84b2b33d3cdbe90f60dc8679249b1d85a82fe2f7b564ea933ce7c4e8d4",
+    "before_sha256": "df18d05d5bb08f58f8002db2c66a70a10b44f3a890c142ea17cf3f1e0955d7ce",
+    "after": "잠깐만！",
+    "old_slot_offset": "0081756B",
+    "old_payload_bytes": 10,
+    "new_payload_bytes": 8,
+    "reason": "Rutee interrupts a knight with ちょっと待ったぁ; adjacent lines use blunt casual speech, so 기사-like 멈추어라 is out of voice.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D00937:00313970"
+    ],
+    "evidence_refs": [
+      "D00936:00313960",
+      "D00938:00313998",
+      "D00939:003139A0",
+      "D00943:003139E8",
+      "D00944:003139F0"
+    ],
+    "before_raw_sha256": "9559ec4c4333823e72c81c68b6e788903b437ed8d8453838b435c960f62ac6d6",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D00937:00313970": "67736a84b2b33d3cdbe90f60dc8679249b1d85a82fe2f7b564ea933ce7c4e8d4"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-016",
+    "id": "D02843",
+    "binding": "D02843:00330008",
+    "storage": "00330008",
+    "use_site_ids": [
+      "00330004"
+    ],
+    "scene_id": "static_event_0032FF74",
+    "speaker_id": "ACTOR_000D_KONGMAN",
+    "addressee_id": "ACTOR_000F_REID",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "7823682d0696ad93ccc69ebc4d4331bed0ec46b1cd3b570e3ff12c126ca0ce02",
+    "before_sha256": "852412567ea3cf3e3ab239e088b10c0008611cf5a92a641a5d620bf2541e41a4",
+    "after": "@L너，꽤 강하다고 들었다！",
+    "old_slot_offset": "00C7137E",
+    "old_payload_bytes": 30,
+    "new_payload_bytes": 28,
+    "reason": "Kongman addresses Reid as 너/네 around this turn; isolated 자네 is out of his blunt voice.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D02843:00330008"
+    ],
+    "evidence_refs": [
+      "D02840:0032FFD8",
+      "D02842:00330000",
+      "D02844:00330010",
+      "D02849:00330068"
+    ],
+    "before_raw_sha256": "08ed304ae033f8aa17600df503c3a63353db21310e772a352b254586c172cb2a",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D02843:00330008": "7823682d0696ad93ccc69ebc4d4331bed0ec46b1cd3b570e3ff12c126ca0ce02"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-017",
+    "id": "D02861",
+    "binding": "D02861:00330460",
+    "storage": "00330460",
+    "use_site_ids": [
+      "0033045C"
+    ],
+    "scene_id": "static_event_003303A4",
+    "speaker_id": "ACTOR_0020_ROSE",
+    "addressee_id": "ACTOR_000F_REID_AND_003A_JULIO",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "4df6943a6d738f05aee31b77ccf7a3df8294d28735e4c9aa28e74618c4e4e98f",
+    "before_sha256": "5d9516f0c8774b4e55d2a932372501e0b1a1d8f6f0d830030101b8b8e37cfe5c",
+    "after": "응，응\n잠깐만 기다려…",
+    "old_slot_offset": "008286BB",
+    "old_payload_bytes": 27,
+    "new_payload_bytes": 23,
+    "reason": "Rose just calls the boys 먹보들 in casual speech. JP はい、はい／ちょっとまってね has casual ね; preserve original newline and ellipsis.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D02861:00330460"
+    ],
+    "evidence_refs": [
+      "D02858:00330428",
+      "D02860:00330450",
+      "D02862:003304A0"
+    ],
+    "before_raw_sha256": "aa139537f8c6a372bad7e1d906c14e04a45cc2b06969f45fed16a645df56f2f6",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D02861:00330460": "4df6943a6d738f05aee31b77ccf7a3df8294d28735e4c9aa28e74618c4e4e98f"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-018",
+    "id": "D00971",
+    "binding": "D00971:00314124",
+    "storage": "00314124",
+    "use_site_ids": [
+      "00314120"
+    ],
+    "scene_id": "suzu_ninja_meeting",
+    "speaker_id": "ACTOR_003B_CAROL",
+    "addressee_id": "ACTOR_0005_SUZU",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "112921137483ae21863cf30323854576181272093a1777984ca1bdcef71d8510",
+    "before_sha256": "297de881e561bb9f975e431e01df16e1530a2057375ee65d64467429d060c352",
+    "after": "아，이 옷 말이야．어？그럼 너도 여신님이 부르신 거야？",
+    "old_slot_offset": "00C709C8",
+    "old_payload_bytes": 62,
+    "new_payload_bytes": 60,
+    "reason": "Carol speaks casually before and after Suzu identifies her ninja outfit; JP also has no register shift.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D00971:00314124"
+    ],
+    "evidence_refs": [
+      "D00969:00314114",
+      "D00970:0031411C",
+      "D00974:0031413C",
+      "D00978:00314174"
+    ],
+    "slot_pattern_exception": {
+      "classification": "STATIC_FALSE_POSITIVE_PATTERN",
+      "pattern_position": "0040930B",
+      "pattern_target": "00C70A00",
+      "baseline_and_japanese_region_offset": "004092F8",
+      "region_length": 48,
+      "region_sha256": "716f8793d0f877dc219ed4616f0cedbadbe05d561c3bf06ecb012ca9a77ae00c",
+      "aligned_u32_at_409308": "00000007",
+      "aligned_u32_at_40930C": "0008C70A",
+      "aligned_u32_at_409310": "0000000F",
+      "catalog_binding_at_pattern_position": false,
+      "target_outside_original_8mb_jp_rom": true,
+      "scope": "Only this exact pattern hit; actual consumer routine not dynamically traced."
+    },
+    "before_raw_sha256": "fc450773ddf8dcfcbcfc3a2bc81a46334553d2be374061ac1ef3a4bc912ede6f",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D00971:00314124": "112921137483ae21863cf30323854576181272093a1777984ca1bdcef71d8510"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-019",
+    "id": "D02869",
+    "binding": "D02869:0033081C",
+    "storage": "0033081C",
+    "use_site_ids": [
+      "00330818"
+    ],
+    "scene_id": "static_event_003307C0",
+    "speaker_id": "ACTOR_0010_FARAH",
+    "addressee_id": "ACTOR_003A_JULIO_AND_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "a53ab3c77cad38d10406ed072edd563aaa1f536c72cff85d551a2cd92738788e",
+    "before_sha256": "c80be6f4ff59e4ca865428196f645a3d9454a61001f85a16c2eb38a10838bccb",
+    "after": "저기，너희들！",
+    "old_slot_offset": "00828944",
+    "old_payload_bytes": 14,
+    "new_payload_bytes": 14,
+    "reason": "Farah addresses the same pair as 너희 later in this event; 당신들 is an isolated formal address.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D02869:0033081C"
+    ],
+    "evidence_refs": [
+      "D02871:00330844",
+      "D02876:00330884",
+      "D02886:00330904"
+    ],
+    "before_raw_sha256": "915fc74aa34cef80c3f3b4283e2f81c315f92314c98bf8ef32eea77b03d17125",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D02869:0033081C": "a53ab3c77cad38d10406ed072edd563aaa1f536c72cff85d551a2cd92738788e"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-020",
+    "id": "D02918",
+    "binding": "D02918:0033124C",
+    "storage": "0033124C",
+    "use_site_ids": [
+      "00331248"
+    ],
+    "scene_id": "static_event_003311B0",
+    "speaker_id": "ACTOR_0010_FARAH",
+    "addressee_id": "ACTOR_0015_REIS",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "21be4d671737cdacab512653dbad284140b0d68ff7fb45668fe244b03bc527b2",
+    "before_sha256": "bfbe277c01f998efef8ce5616625706d2e7d9c928e571796e381faf56dd6c2be",
+    "after": "@L왜 나한테 그렇게 마음 써 줘？",
+    "old_slot_offset": "00C2E893",
+    "old_payload_bytes": 42,
+    "new_payload_bytes": 36,
+    "reason": "Farah speaks casually with Reis immediately before and after; JP 親身になってくれるの has no formal ending.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D02918:0033124C"
+    ],
+    "evidence_refs": [
+      "D02917:00331244",
+      "D02919:0033126C",
+      "D02920:00331274",
+      "D02922:00331294"
+    ],
+    "before_raw_sha256": "c454366d54bdaacf20119af314d71576cc72c598844a3edaba1a437e1752b1ce",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D02918:0033124C": "21be4d671737cdacab512653dbad284140b0d68ff7fb45668fe244b03bc527b2"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-021",
+    "id": "D02922",
+    "binding": "D02922:00331294",
+    "storage": "00331294",
+    "use_site_ids": [
+      "00331290"
+    ],
+    "scene_id": "static_event_003311B0",
+    "speaker_id": "ACTOR_0010_FARAH",
+    "addressee_id": "ACTOR_0015_REIS",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "0bb59f96cbc4651efac238f7e76904fbc2a5047a886693e83ebbf2e9c61a32a7",
+    "before_sha256": "2ef93d58cd345e0aba01fddee2dc7c827015c12d4c931d19448a97412d3a6140",
+    "after": "에― 그럼 내가\n엄청난 말썽꾸러기 같잖아！",
+    "old_slot_offset": "00C2E90C",
+    "old_payload_bytes": 47,
+    "new_payload_bytes": 45,
+    "reason": "Same casual Farah/Reis exchange; replace isolated 제가/같잖아요 while preserving source/KO newline.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D02922:00331294"
+    ],
+    "evidence_refs": [
+      "D02918:0033124C",
+      "D02920:00331274",
+      "D02921:0033127C",
+      "D02923:003312AC"
+    ],
+    "before_raw_sha256": "23bd9484f47a66e0b1d8dfe2bab29f308497e4de2214d11f022b0c45f5ce56fb",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D02922:00331294": "0bb59f96cbc4651efac238f7e76904fbc2a5047a886693e83ebbf2e9c61a32a7"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-022",
+    "id": "D02948",
+    "binding": "D02948:003319D8",
+    "storage": "003319D8",
+    "use_site_ids": [
+      "003319D4"
+    ],
+    "scene_id": "static_event_00331904",
+    "speaker_id": "ACTOR_0010_FARAH",
+    "addressee_id": "ACTOR_000D_KONGMAN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "ac4112c07a070352bce26c90b9433f7de3b1a88c1ca51f4fe8437fb8db763861",
+    "before_sha256": "c72e7c12f14d028ddcfc04ad36953c2602a6860a7fe432e840cc2565e3caf1da",
+    "after": "뭐라고！그럼 대련할 테니까 상대해 봐！",
+    "old_slot_offset": "00C2EB1C",
+    "old_payload_bytes": 44,
+    "new_payload_bytes": 42,
+    "reason": "Farah angrily challenges Kongman, JP 相手しなさいよ; surrounding challenge is blunt, not polite.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D02948:003319D8"
+    ],
+    "evidence_refs": [
+      "D02946:003319C0",
+      "D02947:003319C8",
+      "D02949:003319F0",
+      "D02951:00331A10"
+    ],
+    "before_raw_sha256": "2659a7dece94672d840109e816624493d97f3dcb0c78bbbdf48ad6a0123b8697",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D02948:003319D8": "ac4112c07a070352bce26c90b9433f7de3b1a88c1ca51f4fe8437fb8db763861"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-023",
+    "id": "D02970",
+    "binding": "D02970:00331F98",
+    "storage": "00331F98",
+    "use_site_ids": [
+      "00331F94"
+    ],
+    "scene_id": "static_event_00331F34",
+    "speaker_id": "ACTOR_003A_JULIO",
+    "addressee_id": "ACTOR_0011_KEEL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "a64ab08169bfd00aa49e185de509ef2b503a8e12228ad991cb90c5701872d1b9",
+    "before_sha256": "bc4ee516bc1a86e74107e8fe9e58c302aa4d80f23e77462ce1052970deffeb82",
+    "after": "어떤 건데？",
+    "old_slot_offset": "00829597",
+    "old_payload_bytes": 14,
+    "new_payload_bytes": 12,
+    "reason": "Julio asks Keel どんなことだい in his casual register; 어떤 것이지 is unusually stiff before the follow-up 그게 뭔데.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D02970:00331F98"
+    ],
+    "evidence_refs": [
+      "D02969:00331F88",
+      "D02971:00331FA0",
+      "D02973:00331FC8"
+    ],
+    "before_raw_sha256": "7066fdc00be18f0dd8d840ed8f8a4e81c076690d1d1283dcb781230bd42c679c",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D02970:00331F98": "a64ab08169bfd00aa49e185de509ef2b503a8e12228ad991cb90c5701872d1b9"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-024",
+    "id": "D03080",
+    "binding": "D03080:003339AC",
+    "storage": "003339AC",
+    "use_site_ids": [
+      "003339A8"
+    ],
+    "scene_id": "static_event_00333888",
+    "speaker_id": "ACTOR_0012_MEREDY",
+    "addressee_id": "ACTOR_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "218c0205c1a7ee09467af036d3bcc682e46d2339b669cccf2666084b3b795b0c",
+    "before_sha256": "1ada03a381a7c4769c0bf6cf55164f5ca226a6d2ab83185a9c0c0d04199faa3a",
+    "after": "응！",
+    "old_slot_offset": "0082A24C",
+    "old_payload_bytes": 4,
+    "new_payload_bytes": 4,
+    "reason": "Meredy replies はいな to Carol in casual talk; the same catchphrase at D03073 is rendered 응, and isolated 네 introduces an unintended formal ending.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03080:003339AC"
+    ],
+    "evidence_refs": [
+      "D03073:0033391C",
+      "D03074:00333934",
+      "D03075:00333944",
+      "D03079:003339A4",
+      "D03081:003339EC"
+    ],
+    "before_raw_sha256": "a67c1460ba802e1227026f7ea230e090a073f0725fe3ed6f8162f1d16408280a",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03080:003339AC": "218c0205c1a7ee09467af036d3bcc682e46d2339b669cccf2666084b3b795b0c"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-025",
+    "id": "D03422",
+    "binding": "D03422:003392E0",
+    "storage": "003392E0",
+    "use_site_ids": [
+      "003392DC"
+    ],
+    "scene_id": "static_event_003390EC",
+    "speaker_id": "ACTOR_000A_WOODROW",
+    "addressee_id": "ACTOR_003A_JULIO_AND_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "0da55e2cfcc60be5fecb7bf62257630e31c7d8e5c3094151d0b4fada37a96174",
+    "before_sha256": "979c34a2f7b642da5cc28a6705bed60739532dc79d80f98d8bd47f1dbd63ec96",
+    "before_raw_sha256": "56f4bc1993f04f7d087a7745639a13dc8ca0a288ddfabc866443c7ce768c52ee",
+    "after": "후후，힘내게나．",
+    "old_slot_offset": "0082D0CD",
+    "old_payload_bytes": 18,
+    "new_payload_bytes": 16,
+    "reason": "Woodrow encourages the children with がんばりたまえ; 힘내게나 makes prospective encouragement clearer while retaining his register.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03422:003392E0"
+    ],
+    "evidence_refs": [
+      "D03420:003392A0",
+      "D03421:003392A8",
+      "D03423:003392E8"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03422:003392E0": "0da55e2cfcc60be5fecb7bf62257630e31c7d8e5c3094151d0b4fada37a96174"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-026",
+    "id": "D03426",
+    "binding": "D03426:00339648",
+    "storage": "00339648",
+    "use_site_ids": [
+      "00339644"
+    ],
+    "scene_id": "static_event_00339604",
+    "speaker_id": "ACTOR_000D_KONGMAN",
+    "addressee_id": "ACTOR_0006_STAN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "d68943034baef4cf762b72f47800123c953b49e8c8c3c39c631deeb1eae66546",
+    "before_sha256": "cc982c225db98235f487032fbe15a012a4d2b41ac05051c06ef97bb8fca6054c",
+    "before_raw_sha256": "625d41ad151443e3f1df56bd6d9a2285ed9404b5bcf98aec61b0719dc8372c93",
+    "after": "야아！ 스탄！이　자식，이　몸을　언제까지　기다리게　할　생각이냐！",
+    "old_slot_offset": "00C10602",
+    "old_payload_bytes": 67,
+    "new_payload_bytes": 67,
+    "after_raw_hex": "8fc18fa88149208efe92ee814990aa814090b88f48814390aa81408ce4909981408fd290e2898a91728140897e8acf8c9c88d28140944281408e8588a090aa8a5c8149",
+    "raw_edit_policy": {
+      "kind": "EXACT_SUFFIX_REPLACEMENT",
+      "old_suffix_hex": "8e8588a090ac889f8149",
+      "new_suffix_hex": "8e8588a090aa8a5c8149",
+      "suffix_start_offset": "00C1063B",
+      "original_ascii_space_preserved": true,
+      "unique_old_suffix_occurrence": 1
+    },
+    "reason": "Kongman opens a rough challenge (てめぇ) and continues with 싸워/촌놈; isolated 생각인가 is stiff. Replace only the ending bytes, keeping original single-byte ASCII space.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03426:00339648"
+    ],
+    "evidence_refs": [
+      "D03427:00339650",
+      "D03430:00339680",
+      "D03431:00339688"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03426:00339648": "d68943034baef4cf762b72f47800123c953b49e8c8c3c39c631deeb1eae66546"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-027",
+    "id": "D03497",
+    "binding": "D03497:0033A5B4",
+    "storage": "0033A5B4",
+    "use_site_ids": [
+      "0033A5B0"
+    ],
+    "scene_id": "static_event_0033A3B8",
+    "speaker_id": "ACTOR_0011_KEEL",
+    "addressee_id": "ACTOR_003A_JULIO_AND_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "510114b72ea098beebe324626a7412ebc043418dc47c59e18cd646f5c7e26125",
+    "before_sha256": "43e2ac2602adda2326662501fb9251451a02d3c242b658450ba88d3c1895cd13",
+    "before_raw_sha256": "63e2ff41fa13bd479f0046f0e8d5bbb24c7b0c23bd0d8c86591d7b1285f83163",
+    "after": "@L아아，너희들．혹시 여신의？",
+    "old_slot_offset": "0082DB44",
+    "old_payload_bytes": 30,
+    "new_payload_bytes": 30,
+    "reason": "Keel addresses the pair as 君たち, then 너희 in D03504; isolated 당신들 is too distant.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03497:0033A5B4"
+    ],
+    "evidence_refs": [
+      "D03496:0033A5AC",
+      "D03498:0033A5E4",
+      "D03504:0033A65C"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03497:0033A5B4": "510114b72ea098beebe324626a7412ebc043418dc47c59e18cd646f5c7e26125"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-028",
+    "id": "D03508",
+    "binding": "D03508:0033A6CC",
+    "storage": "0033A6CC",
+    "use_site_ids": [
+      "0033A6C8"
+    ],
+    "scene_id": "static_event_0033A3B8",
+    "speaker_id": "ACTOR_0012_MEREDY",
+    "addressee_id": "ACTOR_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "6ec9d579eac850a3fa264e7fbbe37129f19b819bca6c82d5e55351ba7cce65c6",
+    "before_sha256": "07752c523b8807da9f41d00ecb255b626b0795ba6213ef5dacc8c00ba1197e7f",
+    "before_raw_sha256": "a66b9c5ffce865c92f7dc7257df373b7d48abada847d1113d856ddb36c5ce904",
+    "after": "응！부탁해♪ 부탁해♪",
+    "old_slot_offset": "0082D9CE",
+    "old_payload_bytes": 22,
+    "new_payload_bytes": 22,
+    "reason": "Meredy responds はいな in her familiar voice; same phrase is 응 at D03073 and D03080, and Carol just speaks casually.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03508:0033A6CC"
+    ],
+    "evidence_refs": [
+      "D03073:0033391C",
+      "D03080:003339AC",
+      "D03500:0033A624",
+      "D03507:0033A694"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03508:0033A6CC": "6ec9d579eac850a3fa264e7fbbe37129f19b819bca6c82d5e55351ba7cce65c6"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-029",
+    "id": "D03610",
+    "binding": "D03610:0033C240",
+    "storage": "0033C240",
+    "use_site_ids": [
+      "0033C23C"
+    ],
+    "scene_id": "static_event_0033C0AC",
+    "speaker_id": "ACTOR_0024_MILL",
+    "addressee_id": "ACTOR_003A_JULIO_AND_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "05f61a89697b6b6f9e3cbe62308e1690b74cef929791d279a03f32e75eeba0d6",
+    "before_sha256": "255af640cdfc35d5e52794430227c7bdb40fe688527c25c2c1967fdf979f72a6",
+    "before_raw_sha256": "39f9b720f407dbdc410845eb550f1736d96b6a3238055e6b55a11ed679a3d724",
+    "after": "자，어서 신전으로 가렴．",
+    "old_slot_offset": "0082E947",
+    "old_payload_bytes": 28,
+    "new_payload_bytes": 26,
+    "reason": "Mill continues her guardian-like child-directed voice (하렴/돌아와야 해); JP 行ってらっしゃい has no explicit polite ending.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03610:0033C240"
+    ],
+    "evidence_refs": [
+      "D03600:0033C188",
+      "D03601:0033C190",
+      "D03602:0033C1B8",
+      "D03612:0033C268"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03610:0033C240": "05f61a89697b6b6f9e3cbe62308e1690b74cef929791d279a03f32e75eeba0d6"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-030",
+    "id": "D03762",
+    "binding": "D03762:0033E840",
+    "storage": "0033E840",
+    "use_site_ids": [
+      "0033E83C"
+    ],
+    "scene_id": "static_event_0033E4D4",
+    "speaker_id": "ACTOR_003B_CAROL",
+    "addressee_id": "ACTOR_002A_THANATOS",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "1454d77218a3efb67b89887160469d3acaee24cbfc05a66a2847ee4f5442ec9a",
+    "before_sha256": "25caf87ab0f7f1c0162e3e8bb6f8fb34f109979b73c08044e65999da2de3e1aa",
+    "before_raw_sha256": "81c83835735f9c4bf1462c4f2697cd0fbfbc8018247a05c6ba69f306acbea1e0",
+    "after": "게다가…@S게다가 너는…",
+    "old_slot_offset": "00830477",
+    "old_payload_bytes": 26,
+    "new_payload_bytes": 24,
+    "reason": "Carol addresses Thanatos as 네 in the immediately preceding persuasion and 너 in later explanation; JP あなた remains same. Isolated 당신 elevates the same addressee.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03762:0033E840"
+    ],
+    "evidence_refs": [
+      "D03760:0033E830",
+      "D03761:0033E838",
+      "D03773:0033E900",
+      "D03782:0033EA18"
+    ],
+    "slot_pattern_exception": {
+      "classification": "STATIC_FALSE_POSITIVE_PATTERN",
+      "pattern_position": "0038C56B",
+      "pattern_target": "0083047B",
+      "baseline_and_japanese_region_offset": "0038C558",
+      "region_length": 48,
+      "region_sha256": "14bf6171cac3eefdbbdff6947b32499d16f0ce3b8248fd81638c848c509814b7",
+      "aligned_u32_at_38C568": "7B144A80",
+      "aligned_u32_at_38C56C": "23088304",
+      "aligned_u32_at_38C570": "03402363",
+      "catalog_binding_at_pattern_position": false,
+      "target_outside_original_8mb_jp_rom": true,
+      "scope": "Only this exact unaligned pattern; dynamic consumer not traced."
+    },
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03762:0033E840": "1454d77218a3efb67b89887160469d3acaee24cbfc05a66a2847ee4f5442ec9a"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-031",
+    "id": "D03805",
+    "binding": "D03805:0033F720",
+    "storage": "0033F720",
+    "use_site_ids": [
+      "0033F71C"
+    ],
+    "scene_id": "static_event_0033F63C",
+    "speaker_id": "ACTOR_003A_JULIO",
+    "addressee_id": "ACTOR_002A_THANATOS",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "ab09f768fd286684de573f68517d18c4efe4228ab34fc7cac5224365d862a2e5",
+    "before_sha256": "446972b53a456e84032509d3db56cea47cffda5f919bb186c4de61c212884053",
+    "before_raw_sha256": "83073345771fab897978422a9bc2f97e5a2b1545deffcec863d14742f428e412",
+    "after": "@L모두가…모두가 있어！",
+    "old_slot_offset": "00830BDD",
+    "old_payload_bytes": 24,
+    "new_payload_bytes": 24,
+    "reason": "Julio rallies his allies with みんながいるんだ; informal 있어 matches his surrounding young speech, unlike stiff 있다.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03805:0033F720"
+    ],
+    "evidence_refs": [
+      "D03804:0033F718",
+      "D03808:0033F738",
+      "D03809:0033F740"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03805:0033F720": "ab09f768fd286684de573f68517d18c4efe4228ab34fc7cac5224365d862a2e5"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-032",
+    "id": "D03810",
+    "binding": "D03810:0033F798",
+    "storage": "0033F798",
+    "use_site_ids": [
+      "0033F794"
+    ],
+    "scene_id": "static_event_0033F63C",
+    "speaker_id": "ACTOR_002A_THANATOS",
+    "addressee_id": "ACTOR_003A_JULIO_AND_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "ab60b03960b7895099d46d0e25872501064a678cef3e0f0fe273b9fdad7f77c3",
+    "before_sha256": "cc01eac008ec2fe9503b761d8519bad17a93a27c1e284cc04f368d2b8bedf06c",
+    "before_raw_sha256": "cd25b8cd72448a31ffa87f16187622232dfe0fa966cd9e80675e3af5fd6ec269",
+    "after": "@L싫어！",
+    "old_slot_offset": "00830AEE",
+    "old_payload_bytes": 8,
+    "new_payload_bytes": 8,
+    "reason": "Thanatos bursts out 嫌いだ as a hurt child; 싫어 preserves the emotional exclamation and matches his later childlike grief.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03810:0033F798"
+    ],
+    "evidence_refs": [
+      "D03811:0033F7A8",
+      "D03812:0033F7B8",
+      "D03817:0033FAEC"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03810:0033F798": "ab60b03960b7895099d46d0e25872501064a678cef3e0f0fe273b9fdad7f77c3"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-033",
+    "id": "D03811",
+    "binding": "D03811:0033F7A8",
+    "storage": "0033F7A8",
+    "use_site_ids": [
+      "0033F7A4"
+    ],
+    "scene_id": "static_event_0033F63C",
+    "speaker_id": "ACTOR_002A_THANATOS",
+    "addressee_id": "ACTOR_003A_JULIO_AND_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "aa4c8eb2fe0d9bb22a7236954f5d21e33095cc619ca12454503eb818c9253495",
+    "before_sha256": "dc5a186dae39c70c55520e8453575b0c79e8fe813c888bae3ab88381ece15882",
+    "before_raw_sha256": "af823cb11e80948cb19fb93fe6021db948473d010af6ac2858f11fde93f133a0",
+    "after": "@L정말 싫어！",
+    "old_slot_offset": "00830ADF",
+    "old_payload_bytes": 14,
+    "new_payload_bytes": 14,
+    "reason": "Continuation 大嫌いだ in the same outburst; natural emotional ending 싫어, without changing @L.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03811:0033F7A8"
+    ],
+    "evidence_refs": [
+      "D03810:0033F798",
+      "D03812:0033F7B8"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03811:0033F7A8": "aa4c8eb2fe0d9bb22a7236954f5d21e33095cc619ca12454503eb818c9253495"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-034",
+    "id": "D03812",
+    "binding": "D03812:0033F7B8",
+    "storage": "0033F7B8",
+    "use_site_ids": [
+      "0033F7B4"
+    ],
+    "scene_id": "static_event_0033F63C",
+    "speaker_id": "ACTOR_002A_THANATOS",
+    "addressee_id": "ACTOR_003A_JULIO_AND_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "436560529fc74da71f794d97fe8cfcedfaf96b7f5a5508d7468866d11c4c75f3",
+    "before_sha256": "94c3be0944d5ae829f395bdb9ecd32d5deb3b514996dff2e37e6af19a14f6105",
+    "before_raw_sha256": "26f60b188f988eae83dbec47ee56cad4932c71ded2ca4be8e5427293f47a1bf5",
+    "after": "@L그러니까 너희 인간들은 정말 싫어！",
+    "old_slot_offset": "00830AB6",
+    "old_payload_bytes": 40,
+    "new_payload_bytes": 40,
+    "reason": "Same childlike outburst about humans; aligns the three repeated 嫌い endings while retaining accusatory 너희 인간들은.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03812:0033F7B8"
+    ],
+    "evidence_refs": [
+      "D03810:0033F798",
+      "D03811:0033F7A8",
+      "D03813:0033F7C8"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03812:0033F7B8": "436560529fc74da71f794d97fe8cfcedfaf96b7f5a5508d7468866d11c4c75f3"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-035",
+    "id": "D03841",
+    "binding": "D03841:0033FC34",
+    "storage": "0033FC34",
+    "use_site_ids": [
+      "0033FC30"
+    ],
+    "scene_id": "static_event_0033FA90",
+    "speaker_id": "ACTOR_002A_THANATOS",
+    "addressee_id": "ACTOR_0029_CIEL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "5d3e0de78b4fa40d86b5e3332adb7c7e8c4d19a3eaccd1b9b4b943bb896bdb10",
+    "before_sha256": "66b1a23928bfbf6592f88c376a32ece5c5690e64928ce020229369766a36a82f",
+    "before_raw_sha256": "17e5efe15eedaf051dfcdd3e529b14cc671bb413d9e1b50d00b254445dd51fe4",
+    "after": "잘 자요．@S엄마…",
+    "old_slot_offset": "00C33E8B",
+    "old_payload_bytes": 26,
+    "new_payload_bytes": 18,
+    "reason": "Thanatos tells his mother he will sleep and they can play on waking; 잘 자요 fits their close exchange, retaining polite nuance, full stop and @S. Prior 안녕히 주무세요 is also a valid bedtime greeting, not a semantic mistranslation.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D03841:0033FC34"
+    ],
+    "evidence_refs": [
+      "D03839:0033FC1C",
+      "D03840:0033FC2C",
+      "D03842:00340048"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D03841:0033FC34": "5d3e0de78b4fa40d86b5e3332adb7c7e8c4d19a3eaccd1b9b4b943bb896bdb10"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-036",
+    "id": "D04067",
+    "binding": "D04067:003432BC",
+    "storage": "003432BC",
+    "use_site_ids": [
+      "003432B8"
+    ],
+    "scene_id": "static_event_003431F0",
+    "speaker_id": "ACTOR_0017_POSSESSED_MENDEL_THANATOS",
+    "addressee_id": "ACTOR_003A_JULIO_AND_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "4f89f85923fa0a94c12e9752649bda3fccc0604a7fef2196f528e2649f9242b2",
+    "before_sha256": "b4d51903e31b953938d63f5cffcc8fa72338dc0811f164c57b192f3e936ffff4",
+    "before_raw_sha256": "8d9a634be64c81bc424ad65043a0dde934e86210c8d2844bc2eaf5b37fb3105d",
+    "after": "아하하하하！야아，또 만났네！",
+    "old_slot_offset": "00833305",
+    "old_payload_bytes": 30,
+    "new_payload_bytes": 30,
+    "reason": "Thanatos lightly mocks the pair with また会えたね; 만났네 aligns this scene voice. Prior 만났군 was grammatical but stiff here.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04067:003432BC"
+    ],
+    "evidence_refs": [
+      "D04068:003432CC",
+      "D04071:003432E4",
+      "D04072:003432EC"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04067:003432BC": "4f89f85923fa0a94c12e9752649bda3fccc0604a7fef2196f528e2649f9242b2"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-037",
+    "id": "D04082",
+    "binding": "D04082:00343374",
+    "storage": "00343374",
+    "use_site_ids": [
+      "00343370"
+    ],
+    "scene_id": "static_event_003431F0",
+    "speaker_id": "ACTOR_0017_POSSESSED_MENDEL_THANATOS",
+    "addressee_id": "ACTOR_003A_JULIO_AND_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "2d019a69b7aff527cbe7301657db341d009191fd7b762e33166b0e0b68a73bfa",
+    "before_sha256": "d69af6c1890fba1fb111172f4897b0e850b7200d05fc5e33e64b38ab2e8e8812",
+    "before_raw_sha256": "63f91cb13afa6387fb7671009b49ea6713210570180637b8270d7a491d802556",
+    "after": "시끄럿！거슬리는 녀석！",
+    "old_slot_offset": "0083302C",
+    "old_payload_bytes": 24,
+    "new_payload_bytes": 24,
+    "reason": "JP 気にさわる says the pair irritates him; the next line separately states they hinder him, so keep the emotional distinction.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04082:00343374"
+    ],
+    "evidence_refs": [
+      "D04080:00343354",
+      "D04081:0034335C",
+      "D04083:0034337C"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04082:00343374": "2d019a69b7aff527cbe7301657db341d009191fd7b762e33166b0e0b68a73bfa"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-038",
+    "id": "D04146",
+    "binding": "D04146:0034446C",
+    "storage": "0034446C",
+    "use_site_ids": [
+      "00344468"
+    ],
+    "scene_id": "static_event_00344358",
+    "speaker_id": "ACTOR_0007_RUTEE",
+    "addressee_id": "ACTOR_0008_LEON",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "c9788e80c5635768e69e5837ca08a4734524aa61caade5c0319fb997fd81ddec",
+    "before_sha256": "d82604fdc9c58f2272460e4c7733fcee0530f7433352628f77a74b9698531e35",
+    "before_raw_sha256": "470daf6abd61e71633e03d59109747ef92620940ff92d8d863a535766c06ce69",
+    "after": "그건 내가 할 말이야！이런 꼬맹이와는 달라！",
+    "old_slot_offset": "00833B2A",
+    "old_payload_bytes": 48,
+    "new_payload_bytes": 48,
+    "reason": "Rutee snaps それはこっちのセリフよ at Leon; 자연스러운 내가 할 말이야 removes literal 이쪽의 대사야 while preserving retort.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04146:0034446C"
+    ],
+    "evidence_refs": [
+      "D04143:00344414",
+      "D04145:00344464",
+      "D04147:00344474"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04146:0034446C": "c9788e80c5635768e69e5837ca08a4734524aa61caade5c0319fb997fd81ddec"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-039",
+    "id": "D04147",
+    "binding": "D04147:00344474",
+    "storage": "00344474",
+    "use_site_ids": [
+      "00344470"
+    ],
+    "scene_id": "static_event_00344358",
+    "speaker_id": "ACTOR_003A_JULIO",
+    "addressee_id": "ACTOR_0007_RUTEE_AND_0008_LEON",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "d321cd1fd3e2dcfe3dc1a226ec955842cbbecabb9c6071268a34bf1af764bf5f",
+    "before_sha256": "88c8a77368dab39e75f2b8662931145062c4a2eeced89b06664a4f6c282ddacb",
+    "before_raw_sha256": "0b59c9a51721eafda7f823471055b9067554a5ec1ef15c82fb7a2ee65bffd044",
+    "after": "헤헤，미안．그냥 좀 닮은 것 같아서…",
+    "old_slot_offset": "00833AFD",
+    "old_payload_bytes": 44,
+    "new_payload_bytes": 40,
+    "reason": "Julio softens his teasing なんとなくそう思っただけでさ; reference to immediate 닮았네 is explicit, and Korean apologetic voice becomes natural.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04147:00344474"
+    ],
+    "evidence_refs": [
+      "D04144:0034443C",
+      "D04145:00344464",
+      "D04146:0034446C"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04147:00344474": "d321cd1fd3e2dcfe3dc1a226ec955842cbbecabb9c6071268a34bf1af764bf5f"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-040",
+    "id": "D04093",
+    "binding": "D04093:00343884",
+    "storage": "00343884",
+    "use_site_ids": [
+      "00343880"
+    ],
+    "scene_id": "static_event_003437C8",
+    "speaker_id": "ACTOR_003B_CAROL",
+    "addressee_id": "ACTOR_0017_MENDEL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "667bd5ef0b387c29f7c34d1770318a8445dc841dd3924e830cd645f9c71db9ff",
+    "before_sha256": "9bb3f61a3b6369047d27b124a3ff5432af5e06090bc1cbfd2971f81f22f74545",
+    "before_raw_sha256": "5f4886c0a2a6f335a29f1550fee89fd2b07fd0e28923d5bf6591491eb833a860",
+    "after": "그래！충분히 강하잖아！",
+    "old_slot_offset": "00833421",
+    "old_payload_bytes": 28,
+    "new_payload_bytes": 24,
+    "reason": "Carol reassures newly met Mendel in informal speech (그렇지 않아). Omitting Korean 당신 keeps Japanese reassurance and avoids awkward mixed address.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04093:00343884"
+    ],
+    "evidence_refs": [
+      "D04089:00343844",
+      "D04090:0034385C",
+      "D04091:00343874",
+      "D04095:00343894"
+    ],
+    "slot_pattern_exceptions": {
+      "classification": "STATIC_FALSE_POSITIVE_PATTERN",
+      "scope": "Only these five exact unaligned hits; consumer routines not dynamically traced.",
+      "hits": [
+        {
+          "pattern_position": "0062A4FB",
+          "pattern_target": "00833432",
+          "aligned_region_offset": "0062A4F0",
+          "aligned_region_sha256": "6b03093e848c574a6c3d696da75bd1ecf29b17049b64ea02174fcc3f4ae63cad",
+          "aligned_u32_before": "320733B4",
+          "aligned_u32_after": "20088334",
+          "target_outside_original_8mb_jp_rom": true,
+          "catalog_binding_at_pattern_position": false
+        },
+        {
+          "pattern_position": "0062D02A",
+          "pattern_target": "00833432",
+          "aligned_region_offset": "0062D020",
+          "aligned_region_sha256": "5d294d3b732f0484171edb5d1d0f64ae9023a8162d96cd8a19ef50e8b6e1d808",
+          "aligned_u32_before": "34320733",
+          "aligned_u32_after": "93200883",
+          "target_outside_original_8mb_jp_rom": true,
+          "catalog_binding_at_pattern_position": false
+        },
+        {
+          "pattern_position": "0062D0AE",
+          "pattern_target": "00833432",
+          "aligned_region_offset": "0062D0A4",
+          "aligned_region_sha256": "5d294d3b732f0484171edb5d1d0f64ae9023a8162d96cd8a19ef50e8b6e1d808",
+          "aligned_u32_before": "34320733",
+          "aligned_u32_after": "93200883",
+          "target_outside_original_8mb_jp_rom": true,
+          "catalog_binding_at_pattern_position": false
+        },
+        {
+          "pattern_position": "0062D563",
+          "pattern_target": "00833432",
+          "aligned_region_offset": "0062D558",
+          "aligned_region_sha256": "dec6c3fa26a5fc943ee1957ace84c2ac5982ac51d1482196ada6e3989db8bc0e",
+          "aligned_u32_before": "32073334",
+          "aligned_u32_after": "20088334",
+          "target_outside_original_8mb_jp_rom": true,
+          "catalog_binding_at_pattern_position": false
+        },
+        {
+          "pattern_position": "0052DC52",
+          "pattern_target": "0083343C",
+          "aligned_region_offset": "0052DC48",
+          "aligned_region_sha256": "b87b1205a56abd8d7c11982bef49a753684208309913f652b44672877b705161",
+          "aligned_u32_before": "343C8998",
+          "aligned_u32_after": "33CE0883",
+          "target_outside_original_8mb_jp_rom": true,
+          "catalog_binding_at_pattern_position": false
+        }
+      ]
+    },
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04093:00343884": "667bd5ef0b387c29f7c34d1770318a8445dc841dd3924e830cd645f9c71db9ff"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-041",
+    "id": "D04252",
+    "binding": "D04252:00345548",
+    "storage": "00345548",
+    "use_site_ids": [
+      "00345544"
+    ],
+    "scene_id": "static_event_00345284",
+    "speaker_id": "ACTOR_0028_STELLA",
+    "addressee_id": "ACTOR_003A_JULIO_AND_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "ac5673e210292761521009e56c78823674be42e4d66af293c22227a29c63cba2",
+    "before_sha256": "aadeed1c1afcb905265e7d9787d8d5c0babf27c34186d8ec05949be5bf5d52d8",
+    "before_raw_sha256": "78e646df814af78ee1964418757470cfce531c7d92c66abc9e552e3ebb14efe2",
+    "after": "그리고 더욱더 독 열매가 늘었어요…",
+    "old_slot_offset": "00834912",
+    "old_payload_bytes": 38,
+    "new_payload_bytes": 38,
+    "reason": "Stella continues an explanatory passage; isolated 평체 늘어났다 diverges from neighboring polite narration, while JP 増えた remains past.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04252:00345548"
+    ],
+    "evidence_refs": [
+      "D04251:00345540",
+      "D04253:00345550",
+      "D04254:00345558"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04252:00345548": "ac5673e210292761521009e56c78823674be42e4d66af293c22227a29c63cba2"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-042",
+    "id": "D04254",
+    "binding": "D04254:00345558",
+    "storage": "00345558",
+    "use_site_ids": [
+      "00345554"
+    ],
+    "scene_id": "static_event_00345284",
+    "speaker_id": "ACTOR_0028_STELLA",
+    "addressee_id": "ACTOR_003A_JULIO_AND_003B_CAROL",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "729bc3b812e48e2c4435bd6c38746fc8fa0f1b38cdb292d751bb4d229fe3465e",
+    "before_sha256": "e8a8d8371d3c52f9b1a6572437d037079edb55776aa2ad41469b0ba6d7ad80c1",
+    "before_raw_sha256": "499ead0b5de239c9101ea6a11e31ccdd6127a9dad0df1c7c76a7c458eebab2ea",
+    "after": "하지만 한계가 있었겠죠．",
+    "old_slot_offset": "008348C2",
+    "old_payload_bytes": 28,
+    "new_payload_bytes": 26,
+    "reason": "JP 限界があったのでしょう is past inference, while Korean 있는 거죠 is present assertion. Restore conjectural past and Stella’s polite voice.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04254:00345558"
+    ],
+    "evidence_refs": [
+      "D04252:00345548",
+      "D04253:00345550",
+      "D04255:00345560"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04254:00345558": "729bc3b812e48e2c4435bd6c38746fc8fa0f1b38cdb292d751bb4d229fe3465e"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-043",
+    "id": "D04302",
+    "binding": "D04302:003467A8",
+    "storage": "003467A8",
+    "use_site_ids": [
+      "003467A4"
+    ],
+    "scene_id": "static_event_003466FC",
+    "speaker_id": "ACTOR_002A_THANATOS",
+    "addressee_id": "MOTHER_IN_SAME_STATIC_EVENT",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "4a9ed6223cada7611f579d0c1c9079cf065903c19765085986ef06542dcecc83",
+    "before_sha256": "94e8e51611adf7ed28348ea9aca0ff835ca936eb2de818240f79740d46acecce",
+    "before_raw_sha256": "a176906459e567d5c8ecab1f55d3323994dfcc9e8225e520d4c2bde36a6abc62",
+    "after": "이건『복수』니까！！",
+    "old_slot_offset": "00835319",
+    "old_payload_bytes": 28,
+    "new_payload_bytes": 20,
+    "reason": "In the same child-to-mother argument, なんだからね！！ has colloquial insistence and a doubled exclamation. Shorten stiff nominal Korean while preserving 『복수』 and intensity; this is voice alignment, not a mechanical ending replacement.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04302:003467A8"
+    ],
+    "evidence_refs": [
+      "D04298:00346758",
+      "D04301:00346798",
+      "D04303:003467B8"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04302:003467A8": "4a9ed6223cada7611f579d0c1c9079cf065903c19765085986ef06542dcecc83"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-044",
+    "id": "D01065",
+    "binding": "D01065:00315690",
+    "storage": "00315690",
+    "use_site_ids": [
+      "0031568C",
+      "0034B1EC",
+      "0034B8D0"
+    ],
+    "scene_id": "SHARED_STATIC_EVENTS_003155CC_0034B18C_0034B880",
+    "speaker_id": "ACTOR_0022_POLPOR_AND_ACTOR_003A_JULIO",
+    "addressee_id": "ACTOR_003B_CAROL_OR_ACTOR_0002_MINT",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "97a3749374c4dcf007d5962f7bbe2a7ed038eeb1e0c2793fc11a7e7d88d79c32",
+    "before_sha256": "4f5e64a95e35365565f60142df6efa15e5f7d3bffa8990bc7e92150a91544589",
+    "before_raw_sha256": "f307a164d8a4feceaaec97a1e361a14f258abc69017cae36ad1cfe50f7b4f2e5",
+    "after": "무슨 일？",
+    "old_slot_offset": "00C70B46",
+    "old_payload_bytes": 12,
+    "new_payload_bytes": 10,
+    "slot_padding_bytes": 2,
+    "reason": "The same original slot has three static consumers with different Japanese prompts/addressees: Polpor answers Carol’s call, Julio asks Mint about her inability to accompany them, and Julio asks Carol about the place. Original Korean 왜 그러냐？ imposes a casual sentence ending on Mint. Neutral 무슨 일？ preserves the question and suits all three without adding an absent pause; one shared slot write, all three unchanged pointers and readbacks.",
+    "decision": "CORRECT_AFTER_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_SEQUENCE_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D01065:00315690",
+      "D01065:0034B1F0",
+      "D01065:0034B8D4"
+    ],
+    "shared_slot_policy": "ONE_WRITER_THREE_EXACT_CONSUMERS",
+    "source_bindings": [
+      {
+        "binding": "D01065:00315690",
+        "source_jp": "なんでぇ？",
+        "source_sha256": "97a3749374c4dcf007d5962f7bbe2a7ed038eeb1e0c2793fc11a7e7d88d79c32"
+      },
+      {
+        "binding": "D01065:0034B1F0",
+        "source_jp": "どうかしたのか？",
+        "source_sha256": "9c98af1108aae987de649551034900f45ac6169d10ef6ea99ab9c501392b39a1"
+      },
+      {
+        "binding": "D01065:0034B8D4",
+        "source_jp": "どうした？",
+        "source_sha256": "18d162531d5f9652f5090e392594e21551e1fc20748023a27800d522426cc30b"
+      }
+    ],
+    "evidence_refs": [
+      "D01065:00315690",
+      "D01065:0034B1F0",
+      "D01065:0034B8D4"
+    ],
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D01065:00315690": "97a3749374c4dcf007d5962f7bbe2a7ed038eeb1e0c2793fc11a7e7d88d79c32",
+      "D01065:0034B1F0": "9c98af1108aae987de649551034900f45ac6169d10ef6ea99ab9c501392b39a1",
+      "D01065:0034B8D4": "18d162531d5f9652f5090e392594e21551e1fc20748023a27800d522426cc30b"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-045",
+    "id": "D04724",
+    "binding": "D04724:00357E64",
+    "storage": "00357E64",
+    "use_site_ids": [
+      "NPC_8BYTE_TABLE_INDEX_25_STATIC"
+    ],
+    "scene_id": "UNKNOWN_NON_EVENT_CONSUMER",
+    "speaker_id": "NPC_NAME_INDEX_05_SUZU_STATIC_SELECTOR",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "9adcc932c6b0bf655b1141d23c442e135d0a86d17804ef2038140229bbb48d31",
+    "before_sha256": "f1b5750b5e0fb80e6f3fdf58fc08a3456cde541c88b6ffc6fb0bcb1e14a826e6",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "8e6d5129f1c76f0b687ceed23b7e0b68ff082f6508acc4e516b393ee5fe104a3",
+    "after": "안녕하세요．매일 정진을 잊지 마세요．그럼…",
+    "old_slot_offset": "00846B75",
+    "old_payload_bytes": 46,
+    "new_payload_bytes": 46,
+    "reason": "Within one Japanese utterance, こんにちは and お忘れなく are polite, while baseline Korean starts with casual 안녕 and ends 마세요. Use 안녕하세요; compress 정진하는 걸 to 정진을 to retain full meaning and exact 46-byte original slot. Actor and consumer path remain unknown. Subsequent static selector audit: identified init/setters bound relationship state to 0..99, deriving r6 0..4; index25 uniquely maps r7=5, and the name getter resolves index5 to JP スズ / KO 스즈. Runtime branch and actual displayed name remain unverified.",
+    "decision": "CORRECT_AFTER_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_SENTENCE_INTERNAL_REGISTER_STATIC_NAME_INDEX_05_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04724:00357E64"
+    ],
+    "evidence_refs": [
+      "D04724:00357E64",
+      "NPC_8BYTE_TABLE:00357E64:INDEX_25_R7_5_R6_0"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04724:00357E64": "9adcc932c6b0bf655b1141d23c442e135d0a86d17804ef2038140229bbb48d31"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-046",
+    "id": "D06466",
+    "binding": "D06466:00738390",
+    "storage": "00738390",
+    "use_site_ids": [
+      "UNKNOWN_CONSUMER_PATH"
+    ],
+    "scene_id": "UNKNOWN_NON_EVENT_CONSUMER",
+    "speaker_id": "UNKNOWN",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "4b4ef05e7875d72770f17030b9d111e66d634f14f916e0fc0cd0df49125a90d8",
+    "before_sha256": "3376b7bcccb2ee18175e20d45b4849a41eab7316962f5e18852d8a168cd0fe62",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "c24399aae886a3bdcc4c4b61494d5184cb9b2b88fd406ab605f02ec73ad1b956",
+    "after": "있지，@I 있어？@P깜빡하고 놓고 왔거든～\n있으면 좀 줄 수 없을까～@P농담이야！",
+    "old_slot_offset": "00C49771",
+    "old_payload_bytes": 87,
+    "new_payload_bytes": 83,
+    "reason": "Japanese なんてね! explicitly softens the item request as a joke; baseline @P해서! is an incomplete Korean sentence. Compress the opening ownership question while retaining @I, both @P tokens, the original newline, forgotten-item reason and request. Sentence-internal semantic correction; actor and runtime consumer remain UNKNOWN.",
+    "decision": "CORRECT_AFTER_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_SENTENCE_INTERNAL_MEANING_CONSUMER_UNKNOWN_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D06466:00738390"
+    ],
+    "evidence_refs": [
+      "D06466:00738390"
+    ],
+    "aligned_pointer_refs": [
+      "00738390"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D06466:00738390": "4b4ef05e7875d72770f17030b9d111e66d634f14f916e0fc0cd0df49125a90d8"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-047",
+    "id": "D07202",
+    "binding": "D07202:007F2D60",
+    "storage": "007F2D60",
+    "use_site_ids": [
+      "UNKNOWN_CONSUMER_PATH"
+    ],
+    "scene_id": "UNKNOWN_NON_EVENT_CONSUMER",
+    "speaker_id": "UNKNOWN",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "57cd49791936b4fbdd12ec2f764bfeb626c9cdf5f3f701c83428f1ec7285ae27",
+    "before_sha256": "2b063c7e68c1e7d4b69413ab67c3b6fff6a3d7f7acf667c58b2bff4c25a3200c",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "536d0f950dea558abefb91c6676cb883d065c357b0ab65d1b3a2c61d7d0a20c1",
+    "after": "아，안녕하세요…부탁이 있는데요…",
+    "old_slot_offset": "0083EDC9",
+    "old_payload_bytes": 34,
+    "new_payload_bytes": 34,
+    "reason": "Japanese greeting こんにちは and polite request あるんですけど form one utterance. Baseline Korean begins casual 안녕 then uses formal 있습니다만; the following D07203 also addresses クレスさん politely. Shorten redundant 저 hesitation to fit exact 34B original slot while preserving hesitant punctuation and the request. Japanese line break is not present in baseline Korean and no existing Korean control/newline changes. Actor and runtime consumer remain UNKNOWN.",
+    "decision": "CORRECT_AFTER_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_SENTENCE_INTERNAL_REGISTER_CONSUMER_UNKNOWN_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D07202:007F2D60"
+    ],
+    "evidence_refs": [
+      "D07202:007F2D60",
+      "D07203:007F2D64"
+    ],
+    "aligned_pointer_refs": [
+      "007F2D60"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D07202:007F2D60": "57cd49791936b4fbdd12ec2f764bfeb626c9cdf5f3f701c83428f1ec7285ae27"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-048",
+    "id": "D07469",
+    "binding": "D07469:007F5404",
+    "storage": "007F5404",
+    "use_site_ids": [
+      "UNKNOWN_CONSUMER_PATH"
+    ],
+    "scene_id": "UNKNOWN_NON_EVENT_CONSUMER",
+    "speaker_id": "UNKNOWN",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "90280581d1f0a698052a7d02e87f2defc75e1df8ef0ef4f49889ae82dee2f0c4",
+    "before_sha256": "ec0af4607ad3378af1afda7b615654c31a174bfb2e21749338439467928006c0",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "6bb5ebb96dc96f5934ea04936ef63d5b0ea9496e1d73009b350a6ca63d490e8b",
+    "after": "마을 사람들 모두를 찾자！여기에 있을 거야！",
+    "old_slot_offset": "008435ED",
+    "old_payload_bytes": 50,
+    "new_payload_bytes": 48,
+    "reason": "Japanese さがそう／ここにいるハズだ conveys an immediate conversational plan and confidence. Korean 찾자／있을 것이다 shifts only the second sentence to stiff expository register; use 있을 거야 within the same original slot, preserving the location meaning. Actor and runtime consumer remain UNKNOWN.",
+    "decision": "CORRECT_AFTER_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_VOICE_CONSUMER_UNKNOWN_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D07469:007F5404"
+    ],
+    "evidence_refs": [
+      "D07469:007F5404"
+    ],
+    "aligned_pointer_refs": [
+      "007F5404"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D07469:007F5404": "90280581d1f0a698052a7d02e87f2defc75e1df8ef0ef4f49889ae82dee2f0c4"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-049",
+    "id": "D07528",
+    "binding": "D07528:007F5504",
+    "storage": "007F5504",
+    "use_site_ids": [
+      "UNKNOWN_CONSUMER_PATH"
+    ],
+    "scene_id": "UNKNOWN_NON_EVENT_CONSUMER",
+    "speaker_id": "UNKNOWN",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "a5c9b727c44c6a2839d818cee4342f3cb201e49772216ad831558dfc2a6b88c6",
+    "before_sha256": "33de27ee3bb3dca537665401fea847779b9f556cc72a5593e4a2f90ec813d1a7",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "b5d27fe8eb88270cc4c58011cfc2d063509bf0ae9f07a416eaff9083c267ffb0",
+    "after": "죽을 때까지 뭘 하느냐…@P그게 사람의『가치』라는 거 아닐까？@P내겐 여기서 만드는 것들이 그『가치』지．",
+    "old_slot_offset": "008438B5",
+    "old_payload_bytes": 138,
+    "new_payload_bytes": 112,
+    "reason": "The original philosophical question じゃねぇかな is reflective, not a hostile challenge. Reduce the Korean nominalized literal phrasing (그것이…것이 / 나에게 있어서는…) while retaining the question about what one does before death and the speaker finding value in things made here. Preserve both @P controls and original slot. Actor/runtime consumer remain UNKNOWN.",
+    "decision": "CORRECT_AFTER_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_NATURALNESS_CONSUMER_UNKNOWN_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D07528:007F5504"
+    ],
+    "evidence_refs": [
+      "D07528:007F5504"
+    ],
+    "aligned_pointer_refs": [
+      "007F5504"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D07528:007F5504": "a5c9b727c44c6a2839d818cee4342f3cb201e49772216ad831558dfc2a6b88c6"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-050",
+    "id": "D07624",
+    "binding": "D07624:007F5B40",
+    "storage": "007F5B40",
+    "use_site_ids": [
+      "SELECTED_TEXT_LIST_STATIC_CONSUMER"
+    ],
+    "scene_id": "UNKNOWN_RANDOM_SELECTED_TEXT",
+    "speaker_id": "UNKNOWN",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "f08b88050fa6e1783811ba28bcffec16dff0415a4f44db73fb6b664ee8b3e8fb",
+    "before_sha256": "cbbcbf6308e4b3a831670cdbc82cb0cc019f24c8434d6c38b884e5fcc48f511e",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "9961f5dcb78fa61cc5e5eb6309c2d0c1dd25cd33bfa8a59e5f1d717a5c19abf9",
+    "after": "저기，그라이드가 정말 기사야？@P아니，왠지 집안일만 하는 것 같아서…",
+    "old_slot_offset": "00853EB1",
+    "old_payload_bytes": 94,
+    "new_payload_bytes": 74,
+    "reason": "Within one selected line, the Japanese なぁ/なのか uses casual speech while the Korean first question switches to polite -입니까. Restore casual voice without inferring an unseen speaker; なんか implies an impression, not habitual frequency, so 왠지 and 집안일만 preserve the source. The unfinished second clause alone is not evidence of register. Two selected-list bindings share the exact slot; actor/runtime order remain UNKNOWN.",
+    "decision": "CORRECT_AFTER_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_REGISTER_CONSUMER_STATIC_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D07624:007F5B40",
+      "D07624:007F5B70"
+    ],
+    "evidence_refs": [
+      "D07624:007F5B40",
+      "D07624:007F5B70",
+      "private_validation/tone-consistency-20260930/luna/pass03-consumer-mapping/identified-table-consumer-joins.csv"
+    ],
+    "aligned_pointer_refs": [
+      "007F5B40",
+      "007F5B70"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D07624:007F5B40": "f08b88050fa6e1783811ba28bcffec16dff0415a4f44db73fb6b664ee8b3e8fb",
+      "D07624:007F5B70": "f08b88050fa6e1783811ba28bcffec16dff0415a4f44db73fb6b664ee8b3e8fb"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-051",
+    "id": "D07629",
+    "binding": "D07629:007F5B60",
+    "storage": "007F5B60",
+    "use_site_ids": [
+      "SELECTED_TEXT_LIST_STATIC_CONSUMER"
+    ],
+    "scene_id": "UNKNOWN_RANDOM_SELECTED_TEXT",
+    "speaker_id": "UNKNOWN",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "f38d2e9e432b91731b333c2ed7ecbc977be8cfa8e856849be876c3fbb9276db4",
+    "before_sha256": "3b33ca44f7691826f384286a671c1e84c7ea746cf6f74a0b2eb5b9c559e41a43",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "66b3a51a53af8ce685347517d1eca013dc875ded5d8bb6633f26ed5db45d7a69",
+    "after": "『사냥꾼의 숲』에는 수렵용 함정이 있으니 조심해！",
+    "old_slot_offset": "0085456A",
+    "old_payload_bytes": 64,
+    "new_payload_bytes": 54,
+    "reason": "The Japanese warning 注意しろよ is casual; Korean -주의해요 is a within-line register mismatch. Preserve forest name and warning, simplify 수렵 목적의 to 수렵용 without changing meaning. Random-selected list consumer is statically identified; actor/runtime order remain UNKNOWN.",
+    "decision": "CORRECT_AFTER_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_REGISTER_CONSUMER_STATIC_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D07629:007F5B60"
+    ],
+    "evidence_refs": [
+      "D07629:007F5B60",
+      "private_validation/tone-consistency-20260930/luna/pass03-consumer-mapping/identified-table-consumer-joins.csv"
+    ],
+    "aligned_pointer_refs": [
+      "007F5B60"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D07629:007F5B60": "f38d2e9e432b91731b333c2ed7ecbc977be8cfa8e856849be876c3fbb9276db4"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-052",
+    "id": "D04783",
+    "binding": "D04783:0035803C",
+    "storage": "0035803C",
+    "use_site_ids": [
+      "STATIC_TABLE_SELECTOR"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "NAME_INDEX_16_FARAH_STATIC_SELECTOR",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "45decc31c8fc93d0d6c5d7efcbf72afa2735e2244ab1c64c66266e744fa345eb",
+    "before_sha256": "2fa98e41a9ec1c6e54d3778575d965adaa5bce1e204b5b7bb0122515b047aa4b",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "a18354a9e3005846f4acf9d0aa147b8a2124b626d4658466d48efa36130ba153",
+    "after": "너희를 만나서 잘 됐어！최고의 친구가 될 것 같은 기분이 들어！",
+    "old_slot_offset": "0084565C",
+    "old_payload_bytes": 72,
+    "new_payload_bytes": 70,
+    "reason": "The bounded NPC selector maps this line to Farah name index16 stage4. Nearby five-stage Farah lines address the two children casually; Korean 당신들을 is distancing in a warm friend declaration. Japanese あなたたち is compatible with 너희를. Static selector and name path proven, runtime branch not run.",
+    "decision": "CORRECT_AFTER_STATIC_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_CONTEXT_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04783:0035803C"
+    ],
+    "evidence_refs": [
+      "npc_8byte_table_review_queue.csv",
+      "D04783:0035803C"
+    ],
+    "aligned_pointer_refs": [
+      "0035803C"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04783:0035803C": "45decc31c8fc93d0d6c5d7efcbf72afa2735e2244ab1c64c66266e744fa345eb"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-053",
+    "id": "D04816",
+    "binding": "D04816:0035A888",
+    "storage": "0035A888",
+    "use_site_ids": [
+      "STATIC_TABLE_SELECTOR"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "NAME_INDEX_22_LEONIS_STATIC_GROUP",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "818d63003c90d4761bf368eca0da5fca81f3f3e270a6c11162e2d7993348bd63",
+    "before_sha256": "3016702ccc230efad6e14a1e564c1ba7a9b399130e3262e465d348dabbfe11c5",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "79035a7e5e652277ce3908b40b89ef2460c22228b6e804d81698a80ea9bbd402",
+    "after": "물건 찾기는 기사의 사명이 아니다！@P그런 건 너희 일이다，아닌가？",
+    "old_slot_offset": "00C39EE3",
+    "old_payload_bytes": 74,
+    "new_payload_bytes": 72,
+    "reason": "The actor*0x80 quest table group maps raw index0 to Leonis. Japanese 使命にあらず/貴様たち/そうであろう and surrounding stern directives make Korean 아니야/일이잖아 overly casual. Restore authoritative declarative and rhetorical question, preserve the existing @P. Runtime quest choice not run.",
+    "decision": "CORRECT_AFTER_STATIC_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_CONTEXT_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04816:0035A888"
+    ],
+    "evidence_refs": [
+      "actor_selector_35A86C_binding_crosswalk.csv",
+      "D04816:0035A888"
+    ],
+    "aligned_pointer_refs": [
+      "0035A888"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04816:0035A888": "818d63003c90d4761bf368eca0da5fca81f3f3e270a6c11162e2d7993348bd63"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-054",
+    "id": "D04825",
+    "binding": "D04825:0035A8AC",
+    "storage": "0035A8AC",
+    "use_site_ids": [
+      "STATIC_TABLE_SELECTOR"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "NAME_INDEX_22_LEONIS_STATIC_GROUP",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "ffdb9aa55d0118d6046a9fc74fdceaf22f9a60feed907dfc851ec0b154e4ba0d",
+    "before_sha256": "fb353bcaf23d9f8dbcc95daa861d0443b9fe17f47157c05c045e7a33c2a98f3c",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "9f19fed2db78e6ab7e36a35583fdc58aff82e0625997b37d3b22ecc96c83ef9c",
+    "after": "그럼 부탁한다．",
+    "old_slot_offset": "0084F35F",
+    "old_payload_bytes": 16,
+    "new_payload_bytes": 16,
+    "reason": "Two Leonis quest-table cells share one exact original string target. Japanese では頼んだぞ is directive and surrounding lines use 명령/받아라, so 부탁한다 fits the same voice. Both bindings use identical after; one in-place writer only. Runtime alternatives not run.",
+    "decision": "CORRECT_AFTER_STATIC_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_CONTEXT_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04825:0035A8AC",
+      "D04825:0035A8C8"
+    ],
+    "evidence_refs": [
+      "actor_selector_35A86C_binding_crosswalk.csv",
+      "D04825:0035A8AC",
+      "D04825:0035A8C8"
+    ],
+    "aligned_pointer_refs": [
+      "0035A8AC",
+      "0035A8C8"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04825:0035A8AC": "ffdb9aa55d0118d6046a9fc74fdceaf22f9a60feed907dfc851ec0b154e4ba0d",
+      "D04825:0035A8C8": "ffdb9aa55d0118d6046a9fc74fdceaf22f9a60feed907dfc851ec0b154e4ba0d"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-055",
+    "id": "D04995",
+    "binding": "D04995:0035AB70",
+    "storage": "0035AB70",
+    "use_site_ids": [
+      "STATIC_TABLE_SELECTOR"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "NAME_INDEX_32_ROSE_STATIC_GROUP",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "cdab04d9c9b9f1640da88757f20cfceb369eb01e0c98be74bf29958d8e9bbf3d",
+    "before_sha256": "64d42b37b57fdc8bd170694e4fbbe34f602178c2457695e2e5c4e72596c0f5ca",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "d314a9b17aa82fe8bd269f96779f6cec4794ace8425c7a7fa60b6e92caec5fc4",
+    "after": "저기，잠깐 괜찮아？너희에게 부탁이 있어．@P들어주지 않을래？",
+    "old_slot_offset": "0084CD1F",
+    "old_payload_bytes": 66,
+    "new_payload_bytes": 64,
+    "reason": "The actor*0x80 group maps raw index6 to Rose. Same group addresses the children 너희 and warmly offers help; Korean 당신들에게 is stiff in an otherwise casual request. Japanese あなたたち need not imply formal distance. Preserve @P and source meaning.",
+    "decision": "CORRECT_AFTER_STATIC_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_CONTEXT_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04995:0035AB70"
+    ],
+    "evidence_refs": [
+      "actor_selector_35A86C_binding_crosswalk.csv",
+      "D04995:0035AB70"
+    ],
+    "aligned_pointer_refs": [
+      "0035AB70"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04995:0035AB70": "cdab04d9c9b9f1640da88757f20cfceb369eb01e0c98be74bf29958d8e9bbf3d"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-056",
+    "id": "D04996",
+    "binding": "D04996:0035AB74",
+    "storage": "0035AB74",
+    "use_site_ids": [
+      "STATIC_TABLE_SELECTOR"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "NAME_INDEX_32_ROSE_STATIC_GROUP",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "ab9a06df56300b89a1a898ddf99d6f0903e78b5ab0bb5ee7b981c6dbd4288e90",
+    "before_sha256": "852002c2ef29749105c4a458ddded7fed9446ec2843352633f6150c6d6cdc80f",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "ea5800ed2df29d3a6c6e0e8168926835a9f14f322205d0cb8fa99d78b9208240",
+    "after": "기다렸어！너희에게 부탁이 있어！@P들어주지 않을래？",
+    "old_slot_offset": "0084CCE6",
+    "old_payload_bytes": 56,
+    "new_payload_bytes": 54,
+    "reason": "Second Rose request in the same static group; replace stiff 당신들에게 with 너희에게 while preserving Japanese request meaning, @P, and warm casual register. Runtime alternative branch not run.",
+    "decision": "CORRECT_AFTER_STATIC_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_CONTEXT_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D04996:0035AB74"
+    ],
+    "evidence_refs": [
+      "actor_selector_35A86C_binding_crosswalk.csv",
+      "D04996:0035AB74"
+    ],
+    "aligned_pointer_refs": [
+      "0035AB74"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D04996:0035AB74": "ab9a06df56300b89a1a898ddf99d6f0903e78b5ab0bb5ee7b981c6dbd4288e90"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-057",
+    "id": "D05203",
+    "binding": "D05203:0035AF08",
+    "storage": "0035AF08",
+    "use_site_ids": [
+      "STATIC_TABLE_SELECTOR"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "NAME_INDEX_03_KLARTH_STATIC_GROUP",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "d409930d6fd97d5ab21e2e7fac7f224bd0a2fa5fb3e5d5aceacb35ee131a2732",
+    "before_sha256": "4fe54645d49b531a25d3c3cb88e8b8b92de72e2984e5a9bda32425cd29baf991",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "926813a30e9d95a24c239f8776fd9d9d89821c5de960ed0fc3624f346d6ec6c3",
+    "after": "지금 하고 있는 연구에 필요한 것이 있어서…@P찾고 있지만 좀처럼 찾지 못하겠군…",
+    "old_slot_offset": "00849B35",
+    "old_payload_bytes": 94,
+    "new_payload_bytes": 88,
+    "reason": "The actor*0x80 group maps raw index13 to Klarth. Korean 더라고 is an off-register firsthand ending amid neighboring 하네/다오/군, while Japanese 発見できなくてな is reflective. Use 못하겠군 to retain difficulty and character voice; preserve @P.",
+    "decision": "CORRECT_AFTER_STATIC_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_CONTEXT_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D05203:0035AF08"
+    ],
+    "evidence_refs": [
+      "actor_selector_35A86C_binding_crosswalk.csv",
+      "D05203:0035AF08"
+    ],
+    "aligned_pointer_refs": [
+      "0035AF08"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D05203:0035AF08": "d409930d6fd97d5ab21e2e7fac7f224bd0a2fa5fb3e5d5aceacb35ee131a2732"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-058",
+    "id": "D05212",
+    "binding": "D05212:0035AF40",
+    "storage": "0035AF40",
+    "use_site_ids": [
+      "STATIC_TABLE_SELECTOR"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "NAME_INDEX_03_KLARTH_STATIC_GROUP",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "1850a3f08f0241eb080e3a9523bc068c343a3be696ffa87588e9bd3d04633314",
+    "before_sha256": "ca12f563466ce217c920abf5c775ef034c00ac579d79043399d65c5907c53903",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "474c4a1054a9c2f908a81404c3dfaf7049949210712e6e8272b6f8e8663bb595",
+    "after": "응？혹시 거절하고 싶은 건가？",
+    "old_slot_offset": "00849972",
+    "old_payload_bytes": 32,
+    "new_payload_bytes": 32,
+    "reason": "The same Klarth table group and direct +0x54 consumer path support the line. Japanese 断りたいのかな asks desire to decline; Korean 거야 is unusually casual beside this group’s 하네/다오/말게. 거절하고 싶은 건가 retains desire and question without changing the interjection.",
+    "decision": "CORRECT_AFTER_STATIC_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_CONTEXT_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D05212:0035AF40"
+    ],
+    "evidence_refs": [
+      "actor_selector_35A86C_binding_crosswalk.csv",
+      "D05212:0035AF40"
+    ],
+    "aligned_pointer_refs": [
+      "0035AF40"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D05212:0035AF40": "1850a3f08f0241eb080e3a9523bc068c343a3be696ffa87588e9bd3d04633314"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-059",
+    "id": "D05533",
+    "binding": "D05533:00368B38",
+    "storage": "00368B38",
+    "use_site_ids": [
+      "STATIC_TABLE_SELECTOR"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "UNKNOWN_PARTY_DEPARTURE_STATIC_TABLE",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "8bafc3d7ed74fc097b2f1e8fddaaf4ead325f07f6088fbabc8e030d4eb095e3b",
+    "before_sha256": "312e44695510e6742bfffdae6f691c2db3a17b7fec21715068ee44474103b752",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "8e65971540091a6d03025b5998b091658da1a9c1b7f386cc4a5b82610d6f882e",
+    "after": "일단 여기서 헤어지자．또 함께 가자！",
+    "old_slot_offset": "008568A8",
+    "old_payload_bytes": 40,
+    "new_payload_bytes": 40,
+    "reason": "Japanese ひとまずここでお別れだ/また一緒に行こう is a temporary parting and friendly future invitation. Korean 여기서 이별이다 is needlessly dramatic in the same sentence; 헤어지자 preserves temporary parting and matches 또 함께 가자. Neighboring six-cell departure group suggests Cress but actual speaker/runtime path remains unverified.",
+    "decision": "CORRECT_AFTER_STATIC_CONTEXT_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_NATURALNESS_SPEAKER_UNVERIFIED",
+    "affected_bindings": [
+      "D05533:00368B38"
+    ],
+    "evidence_refs": [
+      "remaining-full-corpus-queue.csv",
+      "D05533:00368B38"
+    ],
+    "aligned_pointer_refs": [
+      "00368B38"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D05533:00368B38": "8bafc3d7ed74fc097b2f1e8fddaaf4ead325f07f6088fbabc8e030d4eb095e3b"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-060",
+    "id": "D00516",
+    "binding": "D00516:000A033C",
+    "storage": "000A033C",
+    "use_site_ids": [
+      "STATIC_CODE_RENDERER"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "NAME_INDEX_04_ARCHE_STATIC_CUTSCENE",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "d5d1cf4bafda994474014f44c15a8011453ccd9505d9baa1fe108479bc2cea7e",
+    "before_sha256": "12b775e1bc23a3d2a07c2ed8de88031081fdd9af0e64cdb4f01d2bd7b62a5259",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "c685776b6e1d7d5b8f10b12fe336ef2f1091b4cccfb3e1b704193a9b9acde828",
+    "after": "%l너희도，그게 목적이야？%k",
+    "old_slot_offset": "00852EDF",
+    "old_payload_bytes": 32,
+    "new_payload_bytes": 28,
+    "reason": "Thumb 080A02EE calls name getter with index4=Arche, then 080A02FE passes this literal to text renderer. The following Arche lines and Rutee retorts use casual 너희. Japanese あんたたちも/それが目当てなの is casual; Korean 당신들도/그것이 목적이지 is stiff. Preserve raw %l/%k controls; branch runtime not run.",
+    "decision": "CORRECT_AFTER_STATIC_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_CONTEXT_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D00516:000A033C"
+    ],
+    "evidence_refs": [
+      "thumb_080A02A0",
+      "D00516:000A033C"
+    ],
+    "aligned_pointer_refs": [
+      "000A033C"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D00516:000A033C": "d5d1cf4bafda994474014f44c15a8011453ccd9505d9baa1fe108479bc2cea7e"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-061",
+    "id": "D00522",
+    "binding": "D00522:000A0484",
+    "storage": "000A0484",
+    "use_site_ids": [
+      "STATIC_CODE_RENDERER"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "NAME_INDEX_04_ARCHE_STATIC_CUTSCENE",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "23e31e0a3fbdbef6430dc802a1c4c65ded9a11c975576c27618e1a702cd1be3f",
+    "before_sha256": "31ee14d5f5bcd20e5bebe04eb4d8d54b4cd327df78b88d76870c85efdaa07ed5",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "537c5a9cbd1f1510adfc59662ecaf658eaccd211fd4135b6289040e480cb216a",
+    "after": "%l시끄러워！%k",
+    "old_slot_offset": "00852F9A",
+    "old_payload_bytes": 16,
+    "new_payload_bytes": 14,
+    "reason": "In Thumb sb==0 branch, 080A043C gets index4 Arche name and 080A044C passes this line to renderer before D00523. Japanese うっさいわねぇ is a sharp casual retort; Korean 시끄럽구만 sounds old-fashioned against this Arche/Rutee argument. Preserve %l/%k and original no-newline payload.",
+    "decision": "CORRECT_AFTER_STATIC_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_CONTEXT_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D00522:000A0484"
+    ],
+    "evidence_refs": [
+      "thumb_080A02A0",
+      "D00522:000A0484"
+    ],
+    "aligned_pointer_refs": [
+      "000A0484"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D00522:000A0484": "23e31e0a3fbdbef6430dc802a1c4c65ded9a11c975576c27618e1a702cd1be3f"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-062",
+    "id": "D00523",
+    "binding": "D00523:000A0488",
+    "storage": "000A0488",
+    "use_site_ids": [
+      "STATIC_CODE_RENDERER"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "NAME_INDEX_04_ARCHE_STATIC_CUTSCENE",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "f417f2bf599f2f8b4d75c7edacabae4fb247d65cc88e6788293fbfe2aa8e52f3",
+    "before_sha256": "a070c4dffa0d33ee3859bb717f39c0ad315133b155965a034e431c2c8c91e9d9",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "afa5b805dfc6a8619f897a1f72fa109fd165154b0f240f3d47ac9acbf83082a1",
+    "after": "아무튼 내 것이니까 방해하지 마！%k",
+    "old_slot_offset": "00C22B6A",
+    "old_payload_bytes": 40,
+    "new_payload_bytes": 38,
+    "reason": "Immediately after D00522, Thumb 080A0458 passes this literal to renderer in the same index4 Arche branch. Japanese 邪魔しないでよね is casual; Korean 방해하지 마요 is polite amid Arche and Rutee’s casual argument. Change only 마요 to 마, preserve %k and meaning.",
+    "decision": "CORRECT_AFTER_STATIC_CONTEXT_REVIEW",
+    "confidence": "HIGH_STATIC_CONTEXT_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D00523:000A0488"
+    ],
+    "evidence_refs": [
+      "thumb_080A02A0",
+      "D00523:000A0488"
+    ],
+    "aligned_pointer_refs": [
+      "000A0488"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D00523:000A0488": "f417f2bf599f2f8b4d75c7edacabae4fb247d65cc88e6788293fbfe2aa8e52f3"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-063",
+    "id": "D00126",
+    "binding": "D00126:00015E6C",
+    "storage": "00015E6C",
+    "use_site_ids": [
+      "STATIC_CODE_CONDITIONAL_RENDERER"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_PATH",
+    "speaker_id": "UNKNOWN_SHOPKEEPER",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "14fa72fbdb0cbea611a673175b3df56d06a51553f881642d01fc1a9199ac0be9",
+    "before_sha256": "2c4fce30cd91bc004016c068a8943c92c7ddde5bee5557698244250e7c597711",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "a79e80273d20f5049d1134bc2766ab42b8467f56b704662add7fd7abe9ae48e9",
+    "after": "%l손님，돈 모자란데이%k",
+    "old_slot_offset": "0080688C",
+    "old_payload_bytes": 24,
+    "new_payload_bytes": 24,
+    "reason": "Exact low-funds branch at Thumb 08015E60 calls renderer with this literal. Japanese dialectal あんさん is customer address; Korean bare vocative 니 is unnatural. 손님 keeps the address and 모자란데이 retains dialect. Identity and runtime shop path remain UNKNOWN.",
+    "decision": "CORRECT_AFTER_STATIC_OR_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_OR_STATIC_PATH_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D00126:00015E6C"
+    ],
+    "evidence_refs": [
+      "D00126:00015E6C",
+      "thumb_low_address_code_literal"
+    ],
+    "aligned_pointer_refs": [
+      "00015E6C"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D00126:00015E6C": "14fa72fbdb0cbea611a673175b3df56d06a51553f881642d01fc1a9199ac0be9"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-064",
+    "id": "D00497",
+    "binding": "D00497:0009F3D0",
+    "storage": "0009F3D0",
+    "use_site_ids": [
+      "STATIC_CODE_CONDITIONAL_RENDERER"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_PATH",
+    "speaker_id": "UNKNOWN_CONDITIONAL_DIALOGUE",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "0cee8d4ddfe8b56b303d440d84fc88d597df160c663eae2550a58ca6f62b8db9",
+    "before_sha256": "691c110e43daf7214193fa6fbde7d71ae3b7848900449424105f8b55c248a8dd",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "f4b885c8c403293bf55c097b6124967108ff30035af53239f052f71a332fa181",
+    "after": "앗！잠깐 기다려요．%k",
+    "old_slot_offset": "0084FAC8",
+    "old_payload_bytes": 24,
+    "new_payload_bytes": 22,
+    "reason": "Thumb 0809F3AC passes this literal to renderer in conditional 0x6B path. Japanese ちょっと待ってください is an explicit polite request, while Korean 기다려 줘 is casual. 기다려요 restores respect while keeping the brief wait and raw %k control. Actor/runtime choice UNKNOWN.",
+    "decision": "CORRECT_AFTER_STATIC_OR_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_OR_STATIC_PATH_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D00497:0009F3D0"
+    ],
+    "evidence_refs": [
+      "D00497:0009F3D0",
+      "thumb_low_address_code_literal"
+    ],
+    "aligned_pointer_refs": [
+      "0009F3D0"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D00497:0009F3D0": "0cee8d4ddfe8b56b303d440d84fc88d597df160c663eae2550a58ca6f62b8db9"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-065",
+    "id": "D00012",
+    "binding": "D00012:0000B884",
+    "storage": "0000B884",
+    "use_site_ids": [
+      "STATIC_CODE_CONDITIONAL_RENDERER"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_PATH",
+    "speaker_id": "NAME_INDEX_36_SISTER_MILL_STATIC",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "a04460f40d3313e007fb161819b6705294d7bb27c4cd1dd52e2268edfdc03a6a",
+    "before_sha256": "a1ed9598d061baea913b5441d3bf02cd72b73efc65e5d37681222d402c341d71",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "7acbcb9e0eb116bc6f13b1b156f5b0cf6488df067bfc37b2ba7fddf120606e78",
+    "after": "어서 와．어머，무슨 일이야…자，기운 내！%k",
+    "old_slot_offset": "00C200B7",
+    "old_payload_bytes": 48,
+    "new_payload_bytes": 46,
+    "reason": "Thumb 0800B806 passes index36 to name getter, source name table has ｼｽﾀｰﾐﾙ; conditional path 0800B840 renders this literal. Korean same-speaker line uses 어서 와/무슨 일이야 then unexpectedly 기운 내요; Japanese 元気を出しなさい is a close encouraging command. 기운 내 keeps within-line casual address. Actual path/reachability not run.",
+    "decision": "CORRECT_AFTER_STATIC_OR_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_OR_STATIC_PATH_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D00012:0000B884"
+    ],
+    "evidence_refs": [
+      "D00012:0000B884",
+      "thumb_low_address_code_literal"
+    ],
+    "aligned_pointer_refs": [
+      "0000B884"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D00012:0000B884": "a04460f40d3313e007fb161819b6705294d7bb27c4cd1dd52e2268edfdc03a6a"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-066",
+    "id": "D00026",
+    "binding": "D00026:0000D54C",
+    "storage": "0000D54C",
+    "use_site_ids": [
+      "STATIC_CODE_CONDITIONAL_RENDERER"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_PATH",
+    "speaker_id": "UNKNOWN_EARLY_SCENE",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "cd46af322c71d38a44ffe49220856ba061a2ce5aeda44ef011aaa8b1ccad41d6",
+    "before_sha256": "06e017cf0d23c76f246c7ed444bd9136c0b98d6b6adb67b7c0dab323a96d8c1a",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "8080d81e53f2d7ccc7ac29bafdafa26baf5c2601031df48a07cdc09ab5946d2e",
+    "after": "훌리오，마리엘．크레스 씨 말씀 잘 들으렴%k",
+    "old_slot_offset": "00C20260",
+    "old_payload_bytes": 60,
+    "new_payload_bytes": 46,
+    "reason": "Japanese addresses Julio/Mariel with soft 聞くのですよ; Korean 들이어야 한다 is formal impersonal instruction. 말씀 잘 들으렴 is a natural gentle directive to the two children while preserving Cress name. This low-address path may be early/test content; runtime story role unverified.",
+    "decision": "CORRECT_AFTER_STATIC_OR_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_OR_STATIC_PATH_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D00026:0000D54C"
+    ],
+    "evidence_refs": [
+      "D00026:0000D54C",
+      "thumb_low_address_code_literal"
+    ],
+    "aligned_pointer_refs": [
+      "0000D54C"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D00026:0000D54C": "cd46af322c71d38a44ffe49220856ba061a2ce5aeda44ef011aaa8b1ccad41d6"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-067",
+    "id": "D00363",
+    "binding": "D00363:0009D488",
+    "storage": "0009D488",
+    "use_site_ids": [
+      "STATIC_CODE_OR_TABLE_CONSUMER_UNVERIFIED"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "UNKNOWN",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "281b6137f283cf0f2b81bbc9c1f9783c54fc41e57096823cae7f876b6f2736da",
+    "before_sha256": "6a2abebb3bf49dadbbbf8fbda74185f00d4ec93d5262070003def3d59f901c1e",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "9e6c6b731c07fb738567acd68d458990b2fffca2364abd18f1c0d7a150081743",
+    "after": "핫핫하，힘껏 분발하게！%k",
+    "old_slot_offset": "00842085",
+    "old_payload_bytes": 30,
+    "new_payload_bytes": 26,
+    "reason": "Japanese がんばりたまえ appears inside an explicit quoted imitation: preceding いつもなら/とか and following って感じじゃん indicate a Leonis-style line being mimicked. Keep formal-authoritative 하게 inside quote, without assigning actual speaker or runtime branch.",
+    "decision": "CORRECT_AFTER_STATIC_OR_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_OR_STATIC_PATH_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D00363:0009D488"
+    ],
+    "evidence_refs": [
+      "D00363:0009D488"
+    ],
+    "aligned_pointer_refs": [
+      "0009D488"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D00363:0009D488": "281b6137f283cf0f2b81bbc9c1f9783c54fc41e57096823cae7f876b6f2736da"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-068",
+    "id": "D00454",
+    "binding": "D00454:0009E364",
+    "storage": "0009E364",
+    "use_site_ids": [
+      "STATIC_CODE_OR_TABLE_CONSUMER_UNVERIFIED"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "UNKNOWN",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "3c93638f2f79c69a5ac84f918010185d8897aba133cc92ece2206e3d9be7716e",
+    "before_sha256": "7a492123ad4b627fbafc8869aaf0680a53c76aeef23f6ced41df6fc5ce8c04dd",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "723e5bc4ab8c722ede7845aacce83b199f64a17b89906045eedae159e07910dc",
+    "after": "%l흠，그런데，근래의　너희들의　활약은　대단하구나…%k",
+    "old_slot_offset": "00842F5A",
+    "old_payload_bytes": 54,
+    "new_payload_bytes": 54,
+    "reason": "Same conditional elder dialogue group explicitly calls the speaker 長老 at D00452; Japanese じゃな and surrounding わし/じゃぞい support a warm elder ending. This line changes only 잖아 to 하구나; static adjacency does not assert runtime event order.",
+    "decision": "CORRECT_AFTER_STATIC_OR_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_OR_STATIC_PATH_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D00454:0009E364"
+    ],
+    "evidence_refs": [
+      "D00454:0009E364"
+    ],
+    "aligned_pointer_refs": [
+      "0009E364"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D00454:0009E364": "3c93638f2f79c69a5ac84f918010185d8897aba133cc92ece2206e3d9be7716e"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-069",
+    "id": "D00477",
+    "binding": "D00477:0009E530",
+    "storage": "0009E530",
+    "use_site_ids": [
+      "STATIC_CODE_OR_TABLE_CONSUMER_UNVERIFIED"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "UNKNOWN",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "c25dd6fd37ef5bfd928bcba2e3d4a42f6cce86bafc83ab85515c1abec6781293",
+    "before_sha256": "5d668800ff9bfb6754fc37f1c83c266267e623d382a1dfaab40a32bd7e24c6b4",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "ff6c8a1dfba8f275c2575463b5a048c8a9aca1c08261fb2a515c5bf0f2956a6a",
+    "after": "대체　거기서　무슨　일이　벌어지는지　조사하고　와주겠느냐？",
+    "old_slot_offset": "00843372",
+    "old_payload_bytes": 70,
+    "new_payload_bytes": 60,
+    "reason": "The line itself uses archaic くれぬか; adjacent same conditional dialogue group has わし/のう and calls speaker 長老. Korean 와주지 않을래 was youthful; 와주겠느냐 maintains a courteous request and the question of what happened in the castle. No runtime branch claim.",
+    "decision": "CORRECT_AFTER_STATIC_OR_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_OR_STATIC_PATH_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D00477:0009E530"
+    ],
+    "evidence_refs": [
+      "D00477:0009E530"
+    ],
+    "aligned_pointer_refs": [
+      "0009E530"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D00477:0009E530": "c25dd6fd37ef5bfd928bcba2e3d4a42f6cce86bafc83ab85515c1abec6781293"
+    }
+  },
+  {
+    "change_id": "TONE-PASS02-070",
+    "id": "D07807",
+    "binding": "D07807:007F809C",
+    "storage": "007F809C",
+    "use_site_ids": [
+      "STATIC_CODE_OR_TABLE_CONSUMER_UNVERIFIED"
+    ],
+    "scene_id": "UNKNOWN_RUNTIME_BRANCH",
+    "speaker_id": "UNKNOWN",
+    "addressee_id": "UNKNOWN",
+    "profile_version": "tone-pass02-context-v1",
+    "source_sha256": "ab7ec5f13c47fe0b95ae658720409bdc19f18ee57d6b6c4f635d680df22243c6",
+    "before_sha256": "3ab347b2aedf3f471cb8a7c1814b92665c258ecea5629084bb66504b69f6e338",
+    "before_hash_policy": "SHA256_UTF8_DECODED_TEXT_U3000_TO_ASCII_SPACE",
+    "before_raw_sha256": "bc48756b165d0831b2a5282b2c7debb032ece629b79bc5e57c2040ed5588e5d3",
+    "after": "로즈가　곤란한가　보더라．워낙　굳센　녀석이라…내색은　전혀　안　하지만…너희가　힘이　될　수　있다면　도와줘라！로즈　가게에　외상도　있고　하니…뭐，그렇다는　거야！",
+    "old_slot_offset": "00C5F54B",
+    "old_payload_bytes": 168,
+    "new_payload_bytes": 168,
+    "reason": "Within the line JP みてぇ/ンな/手ェ貸してやんな and KO 보더라/녀석/그렇다는 거야 establish gruff casual advice. 도와주렴 is gentle compared with this same-line voice; 도와줘라 preserves request and strength. Consumer/actor runtime still UNKNOWN.",
+    "decision": "CORRECT_AFTER_STATIC_OR_TEXT_INTERNAL_REVIEW",
+    "confidence": "HIGH_TEXT_INTERNAL_OR_STATIC_PATH_RUNTIME_NOT_RUN",
+    "affected_bindings": [
+      "D07807:007F809C"
+    ],
+    "evidence_refs": [
+      "D07807:007F809C"
+    ],
+    "aligned_pointer_refs": [
+      "007F809C"
+    ],
+    "source_hash_policy": "SHA256_UTF8_EXACT_CP932_DECODED_JP",
+    "affected_source_jp_sha256": {
+      "D07807:007F809C": "ab7ec5f13c47fe0b95ae658720409bdc19f18ee57d6b6c4f635d680df22243c6"
+    }
+  }
+]
