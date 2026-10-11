@@ -1,9 +1,9 @@
 {
-  "schema": "narikiri2-v11-local-candidate-1",
+  "schema": "narikiri2-v11-verification-1",
   "version": "v1.1",
-  "status": "LOCAL_CANDIDATE_HARDWARE_NOT_RUN",
-  "release_eligible": false,
-  "hardware_status": "NOT_RUN",
+  "status": "READY_FOR_RELEASE_USER_ATTESTED",
+  "release_eligible": true,
+  "hardware_status": "USER_ATTESTED",
   "source_sha256": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
   "source_size": 8388608,
   "target_sha256": "9fd341b827a8ba282781d7f8f214f2ba8641365b541564d53e9ef5267511889b",
@@ -46,8 +46,10 @@
       "scope": "Bounded final-image CPU/runtime/pixel regressions; prior candidate input failures retained and corrected"
     },
     "G8": {
-      "status": "NOT_RUN",
-      "scope": "Exact final-hash target hardware checks required"
+      "status": "PASS",
+      "basis": "USER_ATTESTED_SCOPE",
+      "individual_checks": "NOT_REPORTED",
+      "scope": "Current user reports normal operation and requests publication of preceding final validation delivery. Acceptance of this stated scope; not per-check hardware PASS."
     },
     "G9": {
       "status": "PASS",
@@ -55,7 +57,7 @@
     },
     "G10": {
       "status": "PASS",
-      "scope": "Reviewed candidate source/history and explicit public allowlist; two archive builds and fresh standalone application passed. No public download or release approval is claimed."
+      "scope": "Reviewed source/history, explicit public allowlist and deterministic package/standalone application. Publication authorized by current scoped user decision; final commit and downloads recorded externally."
     }
   },
   "tests": {
@@ -77,6 +79,14 @@
       "actual_patch_negative_processes": 7,
       "standalone_fresh_process": true,
       "preliminary_report_sha256": "ce123cc6d7012f5b41744c513d832b924f58b22c7f331bbee2d335f6087f02ab"
+    },
+    "publication_package": {
+      "collected": 36,
+      "passed": 35,
+      "failed": 0,
+      "skipped": 1,
+      "optimized_python": true,
+      "scope": "Includes unchanged 26 candidate contracts and 10 explicit publication-scope tests. Actual Windows symlink creation unavailable (1314); no game byte change."
     }
   },
   "performance": {
@@ -225,7 +235,7 @@
     "scope": "Actual final-ROM output; prior review labels retained, no new translation review"
   },
   "limitations": [
-    "No hardware evidence for this exact target hash; previous v1.0 hardware play does not transfer.",
+    "User reports normal operation of preceding final delivery and requests publication; exact device/loader/checklist and independent user hash confirmation are NOT_REPORTED. Previous v1.0 hardware evidence does not transfer.",
     "No complete natural playthrough, all branches or two-console link exchange.",
     "Ending pixel coverage uses a disclosed 4-byte test entry dispatch; not natural story completion.",
     "SGM supported scope is the same-ROM offscreen VBA core with paired EEPROM; no cross-core or GUI claim.",
@@ -235,13 +245,28 @@
     "One actual symlink-output test was NOT_RUN because Windows lacks the required privilege. Hardlink and synthetic symlink guard tests passed."
   ],
   "public_package": {
-    "status": "LOCAL_CANDIDATE_ONLY",
+    "status": "PUBLICATION_APPROVED_USER_ATTESTED",
     "source_history_reviewed_commit": "7042bb72428b4bf84ee45c9758dc45f2d665c3d7",
     "payload_allowlist_entries": 13,
     "includes_rom_save_state_or_full_script": false,
     "source_history_raw_findings": 1,
     "source_history_finding_disposition": "Two path-shaped literals in the new negative test are synthetic rejection fixtures; raw flags retained.",
     "archive_identity_location": "Companion release manifest and SHA256SUMS.txt bind the actual generated ZIP. This source document does not hash itself.",
-    "published_download_verification": "NOT_RUN"
-  }
+    "published_download_verification": "POST_PUBLICATION_EXTERNAL_RECORD_REQUIRED"
+  },
+  "scope_decision": {
+    "kind": "USER_ATTESTED",
+    "date": "2026-10-11",
+    "exact_user_quote": "검증 결과 정상적인것을 확인했어. 깃허브 저장소에 v1.1버전으로 업데이트 해줘",
+    "context": "FINAL_VALIDATION_9FD",
+    "target_sha256": "9fd341b827a8ba282781d7f8f214f2ba8641365b541564d53e9ef5267511889b",
+    "source_sha256": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+    "patch_sha256": "4e4ad0229b22ea5bd8e6b351adfa79a749e2b5288aabb24d7d1e356a7bfafade",
+    "environment": {
+      "hardware_model": "NOT_REPORTED",
+      "emulator": "NOT_REPORTED",
+      "tested_checks": "NOT_REPORTED"
+    }
+  },
+  "user_attestation_target_binding": "Conversation context: immediately preceding delivered 9fd3 validation bundle; no independent user hash check reported."
 }

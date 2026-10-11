@@ -13,6 +13,39 @@ from v09c_io import atomic_write_new
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE_NAME = 'Xagros_Narikiri2_KOR_v1.1_JP_PACKAGE.zip'
 ARCHIVE_NAMES = frozenset((*PAYLOAD_NAMES, MANIFEST_NAME, 'SHA256SUMS.txt'))
+PUBLICATION_QUOTE = '검증 결과 정상적인것을 확인했어. 깃허브 저장소에 v1.1버전으로 업데이트 해줘'
+
+
+def validate_verification_policy(verification, manifest):
+    """Keep candidate policy or require the exact disclosed user attestation."""
+    validate_manifest(manifest)
+    if (not isinstance(verification, dict) or verification.get('version') != 'v1.1'
+            or any(verification.get(name + '_sha256') != manifest[name]['sha256']
+                   for name in ('source', 'target', 'patch'))):
+        raise ValueError('Verification document identities differ')
+    if verification.get('release_eligible') is False and verification.get('hardware_status') == 'NOT_RUN':
+        return
+    if verification.get('release_eligible') is not True or verification.get('hardware_status') != 'USER_ATTESTED':
+        raise ValueError('Candidate verification or explicit USER_ATTESTED publication required')
+    if any(verification.get(name + '_size') != manifest[name]['size']
+           or type(verification.get(name + '_size')) is not int for name in ('source', 'target', 'patch')):
+        raise ValueError('Publication verification sizes differ')
+    gates = verification.get('gates')
+    if (not isinstance(gates, dict) or set(gates) != {'G' + str(i) for i in range(11)}
+            or any(not isinstance(gate, dict) or gate.get('status') != 'PASS' for gate in gates.values())):
+        raise ValueError('Publication requires recorded G0-G10 PASS')
+    expected = dict(kind='USER_ATTESTED', date='2026-10-11', exact_user_quote=PUBLICATION_QUOTE,
+        context='FINAL_VALIDATION_9FD', source_sha256=manifest['source']['sha256'],
+        target_sha256=manifest['target']['sha256'], patch_sha256=manifest['patch']['sha256'],
+        environment=dict(hardware_model='NOT_REPORTED', emulator='NOT_REPORTED', tested_checks='NOT_REPORTED'))
+    if verification.get('scope_decision') != expected:
+        raise ValueError('Exact user-attested publication scope differs or is missing')
+    # User acceptance resolves the publication scope. It does not supply a
+    # hardware model, emulator identity, or individually observed hardware checks.
+    if (set(gates['G8']) - {'status', 'scope', 'basis', 'individual_checks'}
+            or gates['G8'].get('basis') != 'USER_ATTESTED_SCOPE'
+            or gates['G8'].get('individual_checks') != 'NOT_REPORTED'):
+        raise ValueError('G8 must distinguish user attestation from individual hardware evidence')
 
 
 def public_text(name, data):
@@ -33,15 +66,7 @@ def package(japanese: bytes, target: bytes, patch: bytes, manifest: dict, docume
     for name in DOCUMENT_NAMES:
         entries[name] = public_text(name, (Path(documents) / name).read_bytes())
     verification = json.loads(entries['VERIFICATION.json'].decode('utf-8'))
-    if (not isinstance(verification, dict) or verification.get('version') != 'v1.1'
-            or verification.get('source_sha256') != manifest['source']['sha256']
-            or verification.get('target_sha256') != manifest['target']['sha256']
-            or verification.get('patch_sha256') != manifest['patch']['sha256']):
-        raise ValueError('Verification document identities differ')
-    # This tool prepares the current review candidate. Official publication after
-    # hardware verification requires an explicit review of this package policy.
-    if verification.get('release_eligible') is not False or verification.get('hardware_status') != 'NOT_RUN':
-        raise ValueError('Candidate verification must disclose release_eligible=false and hardware_status=NOT_RUN')
+    validate_verification_policy(verification, manifest)
     files = {name: {'size': len(data), 'sha256': sha(data)} for name, data in sorted(entries.items())}
     if 'files' in manifest and manifest['files'] != files:
         raise ValueError('Input manifest payload differs from actual public files')

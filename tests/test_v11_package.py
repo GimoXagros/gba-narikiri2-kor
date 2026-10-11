@@ -253,6 +253,7 @@ class V11PackageTests(unittest.TestCase):
                 doc.write_text(json.dumps(dict(original, **{key: value})), encoding='utf-8')
                 with self.assertRaisesRegex(ValueError, 'Candidate verification'): self.package()
 
+
     def test_manifest_extra_payload_path_rejected(self):
         with zipfile.ZipFile(BytesIO(self.package())) as archive:
             manifest = json.loads(archive.read('manifest.json'))
@@ -265,6 +266,89 @@ class V11PackageTests(unittest.TestCase):
         manifest['files']['RIGHTS.md']['sha256'] = '0' * 64
         with self.assertRaisesRegex(ValueError, 'actual public files'): self.package(manifest=manifest)
 
+
+class PublicationRecordTests(unittest.TestCase):
+    """Policy cases use actual production pins, without fake ROM/BPS fixtures."""
+    def setUp(self):
+        self.manifest = dict(schema=app.SCHEMA, version='v1.1',
+            source=dict(size=app.SOURCE_SIZE, sha256=app.SOURCE_SHA256),
+            target=dict(size=app.TARGET_SIZE, sha256=app.TARGET_SHA256),
+            patch=dict(name=app.PATCH_NAME, size=app.PATCH_SIZE, sha256=app.PATCH_SHA256))
+        self.record = dict(version='v1.1', release_eligible=True, hardware_status='USER_ATTESTED',
+            source_size=app.SOURCE_SIZE, target_size=app.TARGET_SIZE, patch_size=app.PATCH_SIZE,
+            source_sha256=app.SOURCE_SHA256, target_sha256=app.TARGET_SHA256, patch_sha256=app.PATCH_SHA256,
+            gates={'G' + str(i): dict(status='PASS') for i in range(11)},
+            scope_decision=dict(kind='USER_ATTESTED', date='2026-10-11',
+                exact_user_quote='검증 결과 정상적인것을 확인했어. 깃허브 저장소에 v1.1버전으로 업데이트 해줘',
+                context='FINAL_VALIDATION_9FD', source_sha256=app.SOURCE_SHA256,
+                target_sha256=app.TARGET_SHA256, patch_sha256=app.PATCH_SHA256,
+                environment=dict(hardware_model='NOT_REPORTED', emulator='NOT_REPORTED', tested_checks='NOT_REPORTED')))
+        self.record['gates']['G8'].update(basis='USER_ATTESTED_SCOPE', individual_checks='NOT_REPORTED')
+
+    def test_recorded_exact_user_attestation_supported_with_production_pins(self):
+        pkg.validate_verification_policy(self.record, self.manifest)
+
+    def test_previous_candidate_policy_still_supported(self):
+        candidate = dict(self.record, release_eligible=False, hardware_status='NOT_RUN')
+        candidate.pop('scope_decision')
+        candidate['gates']['G8']['status'] = 'NOT_RUN'
+        pkg.validate_verification_policy(candidate, self.manifest)
+
+    def test_release_without_approval_record_rejected(self):
+        self.record.pop('scope_decision')
+        with self.assertRaisesRegex(ValueError, 'scope'): pkg.validate_verification_policy(self.record, self.manifest)
+
+    def test_other_rom_patch_or_source_approval_rejected(self):
+        for name in ('target', 'patch', 'source'):
+            with self.subTest(name=name):
+                record = copy.deepcopy(self.record)
+                record['scope_decision'][name + '_sha256'] = '0' * 64
+                with self.assertRaisesRegex(ValueError, 'scope'): pkg.validate_verification_policy(record, self.manifest)
+
+    def test_unconfirmed_gate_waiver_or_missing_gate_rejected(self):
+        for gate in ('G0', 'G3', 'G8', 'G9', 'G10'):
+            for status in ('NOT_RUN', 'USER_ATTESTED', 'WAIVED', 'FAIL'):
+                with self.subTest(gate=gate, status=status):
+                    record = copy.deepcopy(self.record)
+                    record['gates'][gate]['status'] = status
+                    with self.assertRaisesRegex(ValueError, 'G0-G10'): pkg.validate_verification_policy(record, self.manifest)
+        self.record['gates'].pop('G4')
+        with self.assertRaisesRegex(ValueError, 'G0-G10'): pkg.validate_verification_policy(self.record, self.manifest)
+
+    def test_false_individual_hardware_claim_rejected(self):
+        for key, value in (('basis', 'HARDWARE_MEASURED'), ('individual_checks', 'PASS'),
+                           ('individual_checks', {'boot': 'PASS', 'save': 'PASS'}), ('boot_verified', True)):
+            with self.subTest(key=key, value=value):
+                record = copy.deepcopy(self.record)
+                record['gates']['G8'][key] = value
+                with self.assertRaisesRegex(ValueError, 'G8'): pkg.validate_verification_policy(record, self.manifest)
+
+    def test_invented_environment_or_extra_scope_claim_rejected(self):
+        for field, value in (('hardware_model', 'Nintendo DS'), ('emulator', 'VBA'), ('tested_checks', 'ALL PASS')):
+            with self.subTest(field=field):
+                record = copy.deepcopy(self.record)
+                record['scope_decision']['environment'][field] = value
+                with self.assertRaisesRegex(ValueError, 'scope'): pkg.validate_verification_policy(record, self.manifest)
+        self.record['scope_decision']['actual_api_model'] = 'VERIFIED'
+        with self.assertRaisesRegex(ValueError, 'scope'): pkg.validate_verification_policy(self.record, self.manifest)
+
+    def test_quoted_authorization_date_or_context_cannot_be_substituted(self):
+        for field, value in (('exact_user_quote', 'looks good'), ('date', '2026-10-10'), ('context', 'V1_0')):
+            with self.subTest(field=field):
+                record = copy.deepcopy(self.record)
+                record['scope_decision'][field] = value
+                with self.assertRaisesRegex(ValueError, 'scope'): pkg.validate_verification_policy(record, self.manifest)
+
+    def test_sizes_mismatched_or_boolean_rejected(self):
+        for name in ('source', 'target', 'patch'):
+            for value in (True, 1):
+                with self.subTest(name=name, value=value):
+                    record = dict(self.record, **{name + '_size': value})
+                    with self.assertRaisesRegex(ValueError, 'sizes'): pkg.validate_verification_policy(record, self.manifest)
+
+    def test_direct_hardware_pass_claim_not_supported_by_user_quote(self):
+        self.record['hardware_status'] = 'PASS'
+        with self.assertRaisesRegex(ValueError, 'USER_ATTESTED'): pkg.validate_verification_policy(self.record, self.manifest)
 
 if __name__ == '__main__':
     unittest.main()
