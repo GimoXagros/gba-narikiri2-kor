@@ -54,18 +54,19 @@
       "scope": "Two clean complete builds, identical ROM/BPS and fresh-process ZIP-local standalone application to exact Japanese source"
     },
     "G10": {
-      "status": "NOT_RUN",
-      "scope": "Actual candidate ZIP and write-safety checks PASS; final committed history and final regenerated package audit pending"
+      "status": "PASS",
+      "scope": "Reviewed candidate source/history and explicit public allowlist; two archive builds and fresh standalone application passed. No public download or release approval is claimed."
     }
   },
   "tests": {
     "working_tree": {
-      "passed": 391,
+      "collected": 417,
+      "passed": 416,
       "failed": 0,
-      "skipped": 0,
+      "skipped": 1,
       "optimized_python": true,
-      "log_sha256": "60ba54504ae0387a101e8acb47d43816d10eb0b03eb7c3401d5d473c82eccd30",
-      "scope": "Includes preserved private experiments; not the count of tests in a clean public checkout"
+      "log_sha256": "f5c90c51bbcea6f6abafa33e1a81bd65b6bcf32fedc46f6d86c5982d5f166fc2",
+      "scope": "Complete local working-tree regression including preserved private experiments; actual symlink test NOT_RUN due to Windows privilege. Not the clean public test count."
     },
     "v11_package": {
       "passed": 25,
@@ -214,7 +215,8 @@
     "independent_save_B_to_F": "c9012214cfacc3df7d50a90895232ef4069a118da1d510d48f1dd6099c629c19",
     "independent_new_game_and_book": "ad8c2a034e4018ce02ab622680ba0ef0067f28b5a9c5af49528e23b6eba1ee63",
     "final_expanded_address_rescan": "04c5614be335efbe2b3338357bb22e8e62ab173f1d0a444c02547d73b44a1dc6",
-    "pub27_sgm_fresh_resume": "71d84df42c4a1b466a8880df61964d927e08166b82b397c88b868c49d9580510"
+    "pub27_sgm_fresh_resume": "71d84df42c4a1b466a8880df61964d927e08166b82b397c88b868c49d9580510",
+    "public_history_7042bb7_context": "0d23882a51dceb155bf68aa292fed8eaaddd4dd010571e65013a10b9abbb0713"
   },
   "private_dialogue_export": {
     "rows": 10371,
@@ -229,6 +231,17 @@
     "SGM supported scope is the same-ROM offscreen VBA core with paired EEPROM; no cross-core or GUI claim.",
     "Inherited RL map resources 32/43 remain byte-preserved; their full consumer reachability is not established.",
     "Controlled audio route has equal counts, callback partitions and silence intervals, but 62 of 3295102 stereo pairs differ from ac0; listening and cause are not established.",
-    "Bounded address and CPU checks do not prove every possible computed address or event."
-  ]
+    "Bounded address and CPU checks do not prove every possible computed address or event.",
+    "One actual symlink-output test was NOT_RUN because Windows lacks the required privilege. Hardlink and synthetic symlink guard tests passed."
+  ],
+  "public_package": {
+    "status": "LOCAL_CANDIDATE_ONLY",
+    "source_history_reviewed_commit": "7042bb72428b4bf84ee45c9758dc45f2d665c3d7",
+    "payload_allowlist_entries": 13,
+    "includes_rom_save_state_or_full_script": false,
+    "source_history_raw_findings": 1,
+    "source_history_finding_disposition": "Two path-shaped literals in the new negative test are synthetic rejection fixtures; raw flags retained.",
+    "archive_identity_location": "Companion release manifest and SHA256SUMS.txt bind the actual generated ZIP. This source document does not hash itself.",
+    "published_download_verification": "NOT_RUN"
+  }
 }
