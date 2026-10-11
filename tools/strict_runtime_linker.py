@@ -421,6 +421,39 @@ def annotate_pointer_shapes(ledger: Ledger, japanese: bytes, refs: list[dict], a
     return result
 
 
+def final_arena_tail(ledger: Ledger, plan: dict):
+    """Account for adapters installed after the component layout snapshot.
+
+    Historical plan/menu 'free' fields describe their own phase only. A later
+    writer still occupies bytes even if it writes the same value as before.
+    This report is occupancy evidence, never permission to allocate zero bytes.
+    """
+    start,end=plan['arena']
+    tail=start+plan['used']
+    if not (0<=start<=tail<=end<=len(ledger.image)) or plan['free']!=end-tail:
+        raise ValueError('Arena snapshot extent mismatch')
+    intervals=[];writers=[]
+    for entry in ledger.entries:
+        if entry['stage']<2 or entry['start']>=end or entry['end']<=tail:
+            continue
+        lo,hi=max(tail,entry['start']),min(end,entry['end'])
+        if not (0<=entry['start']<entry['end']<=len(ledger.image)):
+            raise ValueError('Final arena writer extent mismatch')
+        intervals.append((lo,hi))
+        writers.append(dict(name=entry['name'],start=lo,end=hi,stage=entry['stage']))
+    cursor=tail;unassigned=[]
+    for lo,hi in sorted(intervals):
+        if lo>cursor:unassigned.append([cursor,lo])
+        cursor=max(cursor,hi)
+    if cursor<end:unassigned.append([cursor,end])
+    remaining=sum(hi-lo for lo,hi in unassigned)
+    return dict(snapshot='after_all_linker_writes',arena=[start,end],
+                component_layout_tail=[tail,end],component_layout_free_bytes=end-tail,
+                later_writers=writers,final_tail_unassigned_intervals=unassigned,
+                final_tail_unassigned_bytes=remaining,final_tail_occupied_bytes=end-tail-remaining,
+                qualification='Historical layout/menu free fields precede later adapters. Unassigned means no stage2+ writer in this tail, not proof of reusable space or whole-program reference closure.')
+
+
 def verify_binding_storage(image: bytes, japanese: bytes, csv_path: Path):
     with csv_path.open(encoding="utf-8-sig", newline="") as f:
         rows = list(csv.DictReader(f))
@@ -613,7 +646,8 @@ def main():
     report = dict(status="FIXED_8MIB_DISCOVERY_DIAGNOSTIC_NOT_PRODUCT",
         release_eligible=False, source_sha256=sha(jp), adopted_sha256=sha(ko),
         probe_sha256=sha(probe), output_sha256=sha(result), output_bytes=len(result),
-        layout=plan, guarded_adopted_carryovers=sum(e["stage"] == 1 for e in ledger.entries),
+        layout=plan, final_arena_tail=final_arena_tail(ledger,plan),
+        guarded_adopted_carryovers=sum(e["stage"] == 1 for e in ledger.entries),
         generic_writes=generic_count, asset_writes=asset_count,
         code_literal_relocations=code_literals, hook_veneer_relocations=patched,
         mapped_nonveneer_refs_open=suspicious,
