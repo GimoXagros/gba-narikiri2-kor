@@ -77,15 +77,24 @@ def keyboard_display(raw,glyphs):
     return ''.join(parts)
 
 
-def export(japanese,adopted,rom,link,components,text_build,previous,out):
-    paths={k:Path(v) for k,v in locals().copy().items()}
+def export(japanese,adopted,rom,link,components,text_build,previous,out,stage4_baseline=None):
+    paths={k:Path(v) for k,v in locals().copy().items() if v is not None}
     out=paths['out']
     if out.exists():raise FileExistsError('Fresh export directory required')
     jp=paths['japanese'].read_bytes();ko=paths['adopted'].read_bytes();image=paths['rom'].read_bytes()
     require_image(jp,JP_SHA256,0x800000,'Japanese source')
     require_image(ko,BASELINE_SHA256,13270790,'Adopted Korean source')
     linked=json.loads(paths['link'].read_text(encoding='utf-8'))
-    if len(image)!=0x800000 or sha(image)!=linked['output_sha256']:raise ValueError('Linked ROM identity')
+    if stage4_baseline is None:
+        if len(image)!=0x800000 or sha(image)!=linked['output_sha256']:raise ValueError('Linked ROM identity')
+        layout_binding=dict(kind='DIRECT_LINK',baseline_sha256=linked['output_sha256'])
+    else:
+        # Keep the original LINK truthful. Re-read both actual images and audit
+        # every stage4 owner before reusing the unchanged stage3 segment addresses.
+        from strict_perf_address_audit import address_contracts
+        audit=address_contracts(image,paths['stage4_baseline'].read_bytes(),linked)
+        layout_binding=dict(kind='AUDITED_STAGE4_FIXED_OWNERS',baseline_sha256=audit['baseline_sha256'],
+            address_audit_status=audit['status'],outside_owner_changed_bytes=audit['outside_owner_changed_bytes'])
     build=json.loads(paths['components'].read_text(encoding='utf-8'))
     segments={s['name']:s for s in linked['layout']['segments']}
     books={}
@@ -155,7 +164,7 @@ def export(japanese,adopted,rom,link,components,text_build,previous,out):
     manifest=dict(rom_sha256=sha(image),rom_bytes=len(image),japanese_sha256=sha(jp),
         adopted_sha256=sha(ko),historical_bindings=10172,additional_ui_bindings=197,
         additional_fixed_names=2,total_bindings=len(rows),pointer_mismatches=0,stream_start_mismatches=0,
-        native_mismatches=0,slot_overflows=0,release_eligible=False,
+        native_mismatches=0,slot_overflows=0,release_eligible=False,layout_binding=layout_binding,
         csv_profile='Machine-readable lossless UTF-8. Import text columns as text; XLSX is the spreadsheet-safe view.',
         review_scope='Prior review labels preserved. This export performs no new translation or scene review.',
         keyboard_rows='Two keyboard rows preserve unresolved visual glyph codes as FONT:XX; no Unicode appearance claim.',
@@ -171,4 +180,6 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     for key in ('japanese','adopted','rom','link','components','text-build','previous','out'):
         p.add_argument('--'+key,type=Path,required=True)
+    p.add_argument('--stage4-baseline',type=Path,
+        help='Original linked stage3 ROM; require the independent fixed-owner audit for a stage4 image')
     print(json.dumps(export(**vars(p.parse_args())),indent=2))
