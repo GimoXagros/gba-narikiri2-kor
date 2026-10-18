@@ -1,0 +1,28 @@
+{
+  "version": "v1.1a",
+  "reviewed_bindings": 597,
+  "changed_bindings": 552,
+  "retained_bindings": 45,
+  "changed_starts": 544,
+  "inserted_fullwidth_spaces": 578,
+  "added_clear_commands": 1,
+  "preserved_pointer_bindings": 10371,
+  "preserved_original_starts": 10371,
+  "rom_bytes": 8388608,
+  "protected_segments": 52,
+  "native_stream_readbacks": 10369,
+  "fixed_name_readbacks": 2,
+  "changed_binding_consumers": {
+    "automatic_dialogue": 538,
+    "fixed_window": 13,
+    "fixed_timing": 1,
+    "unclassified": 0
+  },
+  "additional_description_fields_checked": 619,
+  "cpu_fixture": {
+    "status": "PASS_CPU_FIXTURE_NOT_NORMAL_PLAY",
+    "changed_starts": 544
+  },
+  "target_sha256": "8823db1cb72f1328136ccfd8fff1fbdca0c8489cbc7ccf90f7e4ecdbb1c37776",
+  "scope": "Static source/consumer analysis, full readback, exact candidate CPU decoder fixture. Not a complete natural-route or hardware playthrough."
+}
