@@ -16,3 +16,5 @@ jobs:
       - run: python -m unittest discover -s tests -p test_japanese_application.py -v
       - run: python -m unittest discover -s tests -p test_title_trade.py -v
       - run: python -O -m unittest discover -s tests -p test_v11_package.py -v
+      - run: python -O -m unittest discover -s tests -p test_v11a_package.py -v
+      - run: python -O -m unittest discover -s tests -p test_v11a_build.py -v

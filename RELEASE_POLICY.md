@@ -1,5 +1,13 @@
 # 배포 정책
 
+## v1.1a — 2026-10-19 수정 수락 및 배포 결정
+
+사용자 요청: “수정된 사항을 확인했어. **v1.1**a로 저장소에 업데이트 및 배포해줘”. 최종 교정본 `8823db1cb72f1328136ccfd8fff1fbdca0c8489cbc7ccf90f7e4ecdbb1c37776` 및 BPS `75a16466feaae9612c6827d8fac5faf5b9a40eb968a740d9954aae10be5eadce`에 연결한 USER_ATTESTED 수정 수락이다. 사용자 환경·항목별 검사·직접 해시 대조를 추정하지 않는다.
+
+검증 계약 `narikiri2-v11a-verification-1`은 수정 수락, 고정된 원본·결과·BPS 식별자, CPU_FIXTURE_ONLY 증거를 구분한다. hardware_status·runtime_status·individual_checks와 사용자 환경은 NOT_REPORTED로 남긴다. 이전 v1.1의 G0–G10 PASS를 복사하거나 CPU fixture를 일반 플레이·실기 통과로 바꾸지 않는다.
+
+게임 바이트가 바뀌면 이 수락을 승계하지 않는다. 새 폴더 재적용과 공개 다운로드의 크기·해시가 승인한 바이트에 일치한 뒤에만 RELEASED_AND_VERIFIED로 기록한다. 태그를 이동하지 않으며 이전 릴리스·이슈 #4의 미확인 범위를 보존한다.
+
 ## v1.1 — 2026-10-11 공개 범위 결정
 
 사용자의 현재 요청: “검증 결과 정상적인것을 확인했어. 깃허브 저장소에 v1.1버전으로 업데이트 해줘”. 직전 전달본 `9fd341b8…11889b`에 대한 정상 동작 확인과 공개 요청을 USER_ATTESTED 범위 결정으로 연결한다. 사용자가 직접 SHA-256을 확인했다고 추정하지 않는다. 기기·실행 프로그램과 개별 실기 항목은 NOT_REPORTED로 남긴다.

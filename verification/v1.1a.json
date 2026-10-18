@@ -1,0 +1,32 @@
+{
+  "schema": "narikiri2-v11a-verification-1",
+  "version": "v1.1a",
+  "release_eligible": true,
+  "hardware_status": "NOT_REPORTED",
+  "runtime_status": "NOT_REPORTED",
+  "individual_checks": "NOT_REPORTED",
+  "cpu_fixture": {
+    "status": "PASS_CPU_FIXTURE_NOT_NORMAL_PLAY",
+    "scope": "CPU_FIXTURE_ONLY"
+  },
+  "correction_acceptance": {
+    "kind": "USER_ATTESTED",
+    "date": "2026-10-19",
+    "exact_user_quote": "수정된 사항을 확인했어. **v1.1**a로 저장소에 업데이트 및 배포해줘",
+    "context": "QA597_CORRECTION_8823",
+    "environment": {
+      "hardware_model": "NOT_REPORTED",
+      "emulator": "NOT_REPORTED",
+      "tested_checks": "NOT_REPORTED"
+    },
+    "source_sha256": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+    "target_sha256": "8823db1cb72f1328136ccfd8fff1fbdca0c8489cbc7ccf90f7e4ecdbb1c37776",
+    "patch_sha256": "75a16466feaae9612c6827d8fac5faf5b9a40eb968a740d9954aae10be5eadce"
+  },
+  "source_size": 8388608,
+  "source_sha256": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+  "target_size": 8388608,
+  "target_sha256": "8823db1cb72f1328136ccfd8fff1fbdca0c8489cbc7ccf90f7e4ecdbb1c37776",
+  "patch_size": 378236,
+  "patch_sha256": "75a16466feaae9612c6827d8fac5faf5b9a40eb968a740d9954aae10be5eadce"
+}
