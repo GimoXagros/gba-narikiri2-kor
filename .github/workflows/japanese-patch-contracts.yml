@@ -18,3 +18,5 @@ jobs:
       - run: python -O -m unittest discover -s tests -p test_v11_package.py -v
       - run: python -O -m unittest discover -s tests -p test_v11a_package.py -v
       - run: python -O -m unittest discover -s tests -p test_v11a_build.py -v
+      - run: python -O -m unittest discover -s tests -p test_v11b_build.py -v
+      - run: python -O -m unittest discover -s tests -p test_v11b_package.py -v

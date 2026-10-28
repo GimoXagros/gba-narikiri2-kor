@@ -1,0 +1,487 @@
+{
+  "proof": "SCOPED_POSITIVE_RETIRED_STRING_SUFFIX_PROOF",
+  "owners": [
+    {
+      "binding": "D04818:0035A890",
+      "storage": 3516560,
+      "start": 3551580,
+      "encoded_used": 104,
+      "reclaim_start": 3551684,
+      "reclaim_end": 3551845,
+      "prefix_sha256": "1132d55e022649e8735a7202400834a339eaff4e0f590bdf38913392e7065da2",
+      "suffix_before_sha256": "b409522ecb7098a7959e0eef928059b1c8ef7902b05c87c42ad68808b7352169"
+    },
+    {
+      "binding": "D07846:007F84E0",
+      "storage": 8357088,
+      "start": 3599032,
+      "encoded_used": 119,
+      "reclaim_start": 3599152,
+      "reclaim_end": 3599299,
+      "prefix_sha256": "3db73f7a81e1971adcfbb2e4a7e184ddc158dc1119654f8e880e677205a293b5",
+      "suffix_before_sha256": "1d345af9d05b2b506b1e58ecefb6ad253ad8a403ea6092c5c717a55645894b07"
+    },
+    {
+      "binding": "D05225:0035AF84",
+      "storage": 3518340,
+      "start": 3527120,
+      "encoded_used": 106,
+      "reclaim_start": 3527228,
+      "reclaim_end": 3527367,
+      "prefix_sha256": "db6ddafe1f0798a7aaea24b66cddd1f3260814b2dd45da8298240aae0d9c855b",
+      "suffix_before_sha256": "ad57c9bb252535fbc011f91aaed95a06deff0a1f03bec5e4d93bac3f2c0f5778"
+    },
+    {
+      "binding": "D07388:007F42C4",
+      "storage": 8340164,
+      "start": 3467848,
+      "encoded_used": 118,
+      "reclaim_start": 3467968,
+      "reclaim_end": 3468103,
+      "prefix_sha256": "d347628c80266a5b44ab1431f798c1d2ff3187bad9dc6176cad22403a669f94a",
+      "suffix_before_sha256": "fa05904ea5cac28672c0531e1cc084d7c325ec1316da6a589427ca35aaffd2f9"
+    },
+    {
+      "binding": "D07806:007F8080",
+      "storage": 8355968,
+      "start": 3603628,
+      "encoded_used": 120,
+      "reclaim_start": 3603748,
+      "reclaim_end": 3603885,
+      "prefix_sha256": "8164008daeec52c5f9f200f7a2cd6d058d1b82e93493677954085bc3a77b55f3",
+      "suffix_before_sha256": "495b7be3ebbe8bce7641f35fbf6bc58d69c402c1ab6568a0c44a238970544c85"
+    },
+    {
+      "binding": "D05356:003638D8",
+      "storage": 3553496,
+      "start": 3554368,
+      "encoded_used": 93,
+      "reclaim_start": 3554464,
+      "reclaim_end": 3554590,
+      "prefix_sha256": "ef2af116c4301c3b0299bd043ca78907a8fa46e0e02a2cbd739e1073f35d30d2",
+      "suffix_before_sha256": "e22b6fa4639136867860fbdad2a5529c2bb892c38b824ad2655f54cdce420c2e"
+    },
+    {
+      "binding": "D07538:007F552C",
+      "storage": 8344876,
+      "start": 3516020,
+      "encoded_used": 97,
+      "reclaim_start": 3516120,
+      "reclaim_end": 3516246,
+      "prefix_sha256": "0597e60f81954fa7cddf71c0ee451c94b3ef3e9d7897e552b08becafc5f6285b",
+      "suffix_before_sha256": "7b65ac644c562085ec5a69cdd2b54996387fa2924ef7f43f7b6d629f61af2a10"
+    },
+    {
+      "binding": "D07245:007F30F0",
+      "storage": 8335600,
+      "start": 3479008,
+      "encoded_used": 104,
+      "reclaim_start": 3479112,
+      "reclaim_end": 3479239,
+      "prefix_sha256": "8b17d1592110bbb5610b09fc7582a685bf7990e67ebcb9a77d512d40588cc88c",
+      "suffix_before_sha256": "beb6d17e4125a9fb52277309230b8fc8fc61db3f36cb280373a2a904c8f0293e"
+    },
+    {
+      "binding": "D07390:007F4310",
+      "storage": 8340240,
+      "start": 3467536,
+      "encoded_used": 98,
+      "reclaim_start": 3467636,
+      "reclaim_end": 3467757,
+      "prefix_sha256": "9f6d18c17c6e8a40e914cc9e280252d8c3d8484e98d88532c93dd71be448f786",
+      "suffix_before_sha256": "b5951893bc9793759bc627a0d530aa0c11338cbac22438b8d0e6411bbd233a70"
+    },
+    {
+      "binding": "D07786:007F7E50",
+      "storage": 8355408,
+      "start": 3605952,
+      "encoded_used": 125,
+      "reclaim_start": 3606080,
+      "reclaim_end": 3606198,
+      "prefix_sha256": "2f6f0d79351fd33cd1ce1b6f474279c90c86d6ab419f1025fee095817d25b10c",
+      "suffix_before_sha256": "f4ba193fd787e8178d5a7654507f6f29f7ceaeb86d6a6e92a4d97683b796c373"
+    },
+    {
+      "binding": "D07385:007F4228",
+      "storage": 8340008,
+      "start": 3468432,
+      "encoded_used": 95,
+      "reclaim_start": 3468528,
+      "reclaim_end": 3468647,
+      "prefix_sha256": "efe57ef1d65a51c52c2727bbc3cf96358e9aeb97e3280118d2cbd3f12453e97e",
+      "suffix_before_sha256": "a8bf85f815271e96bb2c1e476702ad176a1588a092d52aef9c7ab37233b1ead6"
+    },
+    {
+      "binding": "D07916:007F8C88",
+      "storage": 8359048,
+      "start": 3590940,
+      "encoded_used": 92,
+      "reclaim_start": 3591032,
+      "reclaim_end": 3591152,
+      "prefix_sha256": "4a708e15d51578496332215f47dccce116e298b39eecd6193818212882721549",
+      "suffix_before_sha256": "4dd6a23282e7363b7f075a21aa8623f506866561177a04fb015cd5250eba5779"
+    },
+    {
+      "binding": "D07805:007F8064",
+      "storage": 8355940,
+      "start": 3603888,
+      "encoded_used": 124,
+      "reclaim_start": 3604012,
+      "reclaim_end": 3604129,
+      "prefix_sha256": "ad668759a2a493e5b86c2c85095dd2f056500bd5646760a4f064557b3ac5fa44",
+      "suffix_before_sha256": "ec42dd09b366218bbca2c93651770e1139699a106adc7752e496e361dd69f2ed"
+    },
+    {
+      "binding": "D05124:0035AD90",
+      "storage": 3517840,
+      "start": 3533516,
+      "encoded_used": 111,
+      "reclaim_start": 3533628,
+      "reclaim_end": 3533742,
+      "prefix_sha256": "b3b30fdae3e58a49d8c15940c225ab87436e367fd3e0e4f8144ba3c7a1a8f82b",
+      "suffix_before_sha256": "d4259b9c74ad621d100bfcc19ad20efefe5da8924e7945d0e55cc308dd2a368e"
+    },
+    {
+      "binding": "D06468:00738398",
+      "storage": 7570328,
+      "start": 3172700,
+      "encoded_used": 79,
+      "reclaim_start": 3172780,
+      "reclaim_end": 3172892,
+      "prefix_sha256": "8dd407db3a6e0d70264632b5359821a5cb35c0ac54ad05cf8046d186830d6459",
+      "suffix_before_sha256": "37c0718d161e7062e7c18cc0b713c532ec968eed1327da0dfe5762fa91907dd5"
+    },
+    {
+      "binding": "D07885:007F8924",
+      "storage": 8358180,
+      "start": 3594772,
+      "encoded_used": 83,
+      "reclaim_start": 3594856,
+      "reclaim_end": 3594967,
+      "prefix_sha256": "0e7abfae833638eb180e77bf7ea9e1b91ab1927607cc29e5035c08c08ed9f94b",
+      "suffix_before_sha256": "e3280524e7e47c6b75f881de4bad78e59e10e7ca54a931e07e45f1c6583355b2"
+    },
+    {
+      "binding": "D07924:007F8D68",
+      "storage": 8359272,
+      "start": 3589944,
+      "encoded_used": 88,
+      "reclaim_start": 3590032,
+      "reclaim_end": 3590143,
+      "prefix_sha256": "3f8a13ef760450ab040208a234dc428732720560a4d6337aca1fee26be332e60",
+      "suffix_before_sha256": "0a4d1837c827eed02bb1f115d89b8f9fcf19b75c68424feecb3f9585038380bd"
+    },
+    {
+      "binding": "D07105:007F23E0",
+      "storage": 8332256,
+      "start": 3489128,
+      "encoded_used": 113,
+      "reclaim_start": 3489244,
+      "reclaim_end": 3489351,
+      "prefix_sha256": "903344c846eda6f0663d47ad4ba46b991af0250a44796fb92838760ca0f3aac8",
+      "suffix_before_sha256": "6327dee86f6489e664d2b11b7448f6f7df38dec40e289af8adc365f3d18b5af9"
+    },
+    {
+      "binding": "D07807:007F809C",
+      "storage": 8355996,
+      "start": 3603440,
+      "encoded_used": 78,
+      "reclaim_start": 3603520,
+      "reclaim_end": 3603627,
+      "prefix_sha256": "83bf6771445d154849d2d8b75650d224c2f340d7b4ba08e2bca0c1bc117cb8bf",
+      "suffix_before_sha256": "f11f9ad66e1c4ab90d45f458b5d64d81b26fd227a4c143c3a64adc6370375dfd"
+    },
+    {
+      "binding": "D07843:007F848C",
+      "storage": 8357004,
+      "start": 3599564,
+      "encoded_used": 85,
+      "reclaim_start": 3599652,
+      "reclaim_end": 3599755,
+      "prefix_sha256": "b84a482053997dd23469ff738221de2c507a56ab83b5d531ce902df54c237d1d",
+      "suffix_before_sha256": "1988f90441f259275f4c6caea2338a40936a155e49dbc55380096ca4e7e64cbd"
+    },
+    {
+      "binding": "D07246:007F30F4",
+      "storage": 8335604,
+      "start": 3478820,
+      "encoded_used": 81,
+      "reclaim_start": 3478904,
+      "reclaim_end": 3479006,
+      "prefix_sha256": "cbb5fac3973c05978baad7ec16aaca78ffd45d9eac01fc1168cc0c7678b7f304",
+      "suffix_before_sha256": "063c1eaed862cd3b7ab47ce48ca60d2c77d8f341c0667b616599fb277d58b3f3"
+    },
+    {
+      "binding": "D07376:007F4064",
+      "storage": 8339556,
+      "start": 3469508,
+      "encoded_used": 85,
+      "reclaim_start": 3469596,
+      "reclaim_end": 3469697,
+      "prefix_sha256": "a75cbc42ebe811d70aa970b4bdbf781214e8f729fa4067cba41b4b551f772caf",
+      "suffix_before_sha256": "726b284e802a7c0352a511edfb648d089809d38feb38a7b9498725b5df10a3ba"
+    },
+    {
+      "binding": "D07748:007F7A28",
+      "storage": 8354344,
+      "start": 3609864,
+      "encoded_used": 79,
+      "reclaim_start": 3609944,
+      "reclaim_end": 3610047,
+      "prefix_sha256": "90ecdcd7b16651273129ff210c675da4dfc693e1431f1503eeea52ceef84eb92",
+      "suffix_before_sha256": "7688df6e1269f5150d0d3e4a24dbf052f31ec0826564fd441665504e1930ad45"
+    },
+    {
+      "binding": "D07821:007F8224",
+      "storage": 8356388,
+      "start": 3601924,
+      "encoded_used": 81,
+      "reclaim_start": 3602008,
+      "reclaim_end": 3602109,
+      "prefix_sha256": "491b904f2dd75fd503531b0212070186700f07875dfb46d0292de63576653b00",
+      "suffix_before_sha256": "a33d267219d865950f6e87f01eef130d77ce4fe5a07c2e9a3d8d5b724bbf7a1f"
+    },
+    {
+      "binding": "D07382:007F41DC",
+      "storage": 8339932,
+      "start": 3468828,
+      "encoded_used": 92,
+      "reclaim_start": 3468920,
+      "reclaim_end": 3469021,
+      "prefix_sha256": "8c0132f44fbe2853531463f402b3826044bacd74a7f8f8cc8a5dce209882e646",
+      "suffix_before_sha256": "6d7bcaa0c4066c572235978231ad12105204043f387dd65508c7fdf8fbdde850"
+    },
+    {
+      "binding": "D07387:007F4278",
+      "storage": 8340088,
+      "start": 3468104,
+      "encoded_used": 86,
+      "reclaim_start": 3468192,
+      "reclaim_end": 3468291,
+      "prefix_sha256": "256492a593013d19f6ec65bfb62e0889727a8b97457cfe52a2ba38f43cda87af",
+      "suffix_before_sha256": "3b1adf899cec06158cf4b02dcfd9d74c7d310f842cbd79a4c15d9230036fbdcf"
+    },
+    {
+      "binding": "D07402:007F4440",
+      "storage": 8340544,
+      "start": 3466640,
+      "encoded_used": 104,
+      "reclaim_start": 3466744,
+      "reclaim_end": 3466845,
+      "prefix_sha256": "491b4289fd5e4b5730ff7c06a8528e2a285b49c53bb3481670cd79ae545b8209",
+      "suffix_before_sha256": "f905e267aaccf21a0d419ad9c9758452e13e4627663df48183a373541ce222d1"
+    },
+    {
+      "binding": "D07656:007F5CF4",
+      "storage": 8346868,
+      "start": 3584572,
+      "encoded_used": 51,
+      "reclaim_start": 3584624,
+      "reclaim_end": 3584724,
+      "prefix_sha256": "86aec496dad229566692b99e4c1b1d9bfa8cc09783efc3c58e652e4e8c34b38a",
+      "suffix_before_sha256": "5f0ca37a986be225259781bf345b5cf82e2a143bc23ff8f9a7619a4dd1da9eea"
+    },
+    {
+      "binding": "D06592:00738780",
+      "storage": 7571328,
+      "start": 3178780,
+      "encoded_used": 73,
+      "reclaim_start": 3178856,
+      "reclaim_end": 3178952,
+      "prefix_sha256": "06c1060d0fb431ee0f5360d48c43ceb2a60371d433afcd30d06762e6c1af3263",
+      "suffix_before_sha256": "1c5568f269b7ea350d1b5569b9513afc1a61e54cd70d2f2e0d6a0c6cef9139a7"
+    },
+    {
+      "binding": "D07899:007F8AAC",
+      "storage": 8358572,
+      "start": 3593136,
+      "encoded_used": 75,
+      "reclaim_start": 3593212,
+      "reclaim_end": 3593310,
+      "prefix_sha256": "fd0930aae2b84ca1eff06c52e0ac279831dcd39423253f5e349ac5dfe16e77de",
+      "suffix_before_sha256": "df09c5d01b3e083463ea1769d3135ff5d562b3d2976215cd380da1d92d5558aa"
+    },
+    {
+      "binding": "D07975:007F91BC",
+      "storage": 8360380,
+      "start": 3616800,
+      "encoded_used": 80,
+      "reclaim_start": 3616880,
+      "reclaim_end": 3616979,
+      "prefix_sha256": "6fb0ae2a18d86671cae2c8641908bb3167f4a54e242cfd84a5225a4c8d4dfff8",
+      "suffix_before_sha256": "87faddf6f553ed71ce9bcea679ab5d9bbabbfdd5791acae0d04616da27eb650c"
+    },
+    {
+      "binding": "D05362:003638F4",
+      "storage": 3553524,
+      "start": 3553740,
+      "encoded_used": 66,
+      "reclaim_start": 3553808,
+      "reclaim_end": 3553904,
+      "prefix_sha256": "bdd172b682160a23381e74e2b90193288fb2735916097dec8b6387be93de8d21",
+      "suffix_before_sha256": "592180458b75bf4bfec54f31ebba879d02694c148d3f969becdd551d83590b69"
+    },
+    {
+      "binding": "D07583:007F5A68",
+      "storage": 8346216,
+      "start": 3568676,
+      "encoded_used": 60,
+      "reclaim_start": 3568736,
+      "reclaim_end": 3568834,
+      "prefix_sha256": "c00b71c8fc187b461822dd200a64d03f8b012a8e4f9a58250131f41d9c14feab",
+      "suffix_before_sha256": "9f18d38e03d08bd87928c9a9511074a2ba2cf98f7444470b9ebba3f4c9d7a80d"
+    },
+    {
+      "binding": "D07818:007F81D0",
+      "storage": 8356304,
+      "start": 3602292,
+      "encoded_used": 78,
+      "reclaim_start": 3602372,
+      "reclaim_end": 3602468,
+      "prefix_sha256": "a49190c666bce4467ffcf92c51acca827654e46954cb67d38c960cdeb8cf0ceb",
+      "suffix_before_sha256": "a051c20fe7c74d86c5ac99531cf0e1555cc4aa95eebb7215abbd804ecbcbf997"
+    },
+    {
+      "binding": "D07897:007F8A74",
+      "storage": 8358516,
+      "start": 3593460,
+      "encoded_used": 66,
+      "reclaim_start": 3593528,
+      "reclaim_end": 3593624,
+      "prefix_sha256": "bb78949aa21538c6ce663475df6c141f9eefc0c99e7682e9b3a6bf1345696744",
+      "suffix_before_sha256": "f1e1d0a546d015d9f6ea4be00046827c07ea144407e81bdf23bd72d6ca0d5a70"
+    },
+    {
+      "binding": "D07901:007F8AE4",
+      "storage": 8358628,
+      "start": 3592784,
+      "encoded_used": 86,
+      "reclaim_start": 3592872,
+      "reclaim_end": 3592968,
+      "prefix_sha256": "777c80ade1a165a00bd3d7c84ffbc496411677111957e4d3632006257da9ccec",
+      "suffix_before_sha256": "9819a994caf0b4145375e6a15f191f2e7457712279e05a713253d7b40d9e1399"
+    },
+    {
+      "binding": "D07537:007F5528",
+      "storage": 8344872,
+      "start": 3516248,
+      "encoded_used": 40,
+      "reclaim_start": 3516288,
+      "reclaim_end": 3516385,
+      "prefix_sha256": "3af6a3b14c1cc2d9b72874b5e0fffd03e571e8776c66d7409af7c92be352f042",
+      "suffix_before_sha256": "d5b93c246eeb05238d05b2e3e314a9505640fc9ed75081ee5595c69c7519ee15"
+    },
+    {
+      "binding": "D05180:0035AE84",
+      "storage": 3518084,
+      "start": 3529964,
+      "encoded_used": 67,
+      "reclaim_start": 3530032,
+      "reclaim_end": 3530126,
+      "prefix_sha256": "972d0af3d682fa2b9f886b615e17e0cb0fdd9a613db37dd98853ba4a68b928c4",
+      "suffix_before_sha256": "80d009ad356f80f613f5ce4580f19e96727735afec04c12599132a3e12f3960c"
+    },
+    {
+      "binding": "D07126:007F26D8",
+      "storage": 8333016,
+      "start": 3487480,
+      "encoded_used": 106,
+      "reclaim_start": 3487588,
+      "reclaim_end": 3487681,
+      "prefix_sha256": "926c50b62aef41ce3ef61bb95580bc94c4cf082299036ea421053fbaebd43490",
+      "suffix_before_sha256": "4cb32085813f85666f57115ca8707e8605886f67e56bcff71e5c1896838b3ca2"
+    },
+    {
+      "binding": "D07920:007F8CF8",
+      "storage": 8359160,
+      "start": 3590452,
+      "encoded_used": 69,
+      "reclaim_start": 3590524,
+      "reclaim_end": 3590615,
+      "prefix_sha256": "29468b5ab0d4cae031b4959bd368d080125ee681f004317a6db5d002849e3a00",
+      "suffix_before_sha256": "22321c16cf623db64876907acaf865390b84366257432904d3b8fafeadbb6a07"
+    },
+    {
+      "binding": "D05227:0035AF90",
+      "storage": 3518352,
+      "start": 3526864,
+      "encoded_used": 79,
+      "reclaim_start": 3526944,
+      "reclaim_end": 3527036,
+      "prefix_sha256": "95abba34026e9c88896a890bf6b595977149f9181004e240e2387e6f7fcba96c",
+      "suffix_before_sha256": "c07f8cc087bc0628a9d41a85a11a98c252c518f7af3238e83655eb75f9d843de"
+    },
+    {
+      "binding": "D07825:007F8294",
+      "storage": 8356500,
+      "start": 3601420,
+      "encoded_used": 84,
+      "reclaim_start": 3601504,
+      "reclaim_end": 3601597,
+      "prefix_sha256": "25676b8dfb821eec6bc091c917c250b7accf66076380d1ca8e0b36299d031a3e",
+      "suffix_before_sha256": "267e1fcbdf454866b03b31976f7393feb2fb336234915a198fa4b51758c1859a"
+    },
+    {
+      "binding": "D06463:00738380",
+      "storage": 7570304,
+      "start": 3172016,
+      "encoded_used": 70,
+      "reclaim_start": 3172088,
+      "reclaim_end": 3172178,
+      "prefix_sha256": "e83416920541a3c32f267782ae8b3c134c2c7c1d2eb2e3f9be37468158cbc156",
+      "suffix_before_sha256": "fe61e83dc19a7189efba91b292320cd359b04da1e571ceb0299e8751f583dd6a"
+    },
+    {
+      "binding": "D07465:007F4C44",
+      "storage": 8342596,
+      "start": 3461768,
+      "encoded_used": 65,
+      "reclaim_start": 3461836,
+      "reclaim_end": 3461925,
+      "prefix_sha256": "edd009793b87f375cf8ae835bd5986320b4d2aa8e8a494a0a0c01ae2c0a988b9",
+      "suffix_before_sha256": "dda1ef58357346291cdaca6911cba358009855df634af40631df6729d2e982d8"
+    },
+    {
+      "binding": "D07934:007F8E80",
+      "storage": 8359552,
+      "start": 3588860,
+      "encoded_used": 82,
+      "reclaim_start": 3588944,
+      "reclaim_end": 3589034,
+      "prefix_sha256": "2d6460d5d8ea58823cd6ca22c4412e9f5f9567608601d1e887aec388de259904",
+      "suffix_before_sha256": "e7b50cf8d1418e1a5a05cc6772b36b8a7155a134cd6a3f55db67c67436a4df7d"
+    }
+  ],
+  "required_components": [
+    {
+      "name": "owned",
+      "new": 760832,
+      "size": 316,
+      "sha256": "3ab20a6d281381592f256473e613ddf8d6572735d56bd69ccc0a1ec898fbb4cc"
+    },
+    {
+      "name": "unit",
+      "new": 3662320,
+      "size": 326,
+      "sha256": "b9af84d74757197b5f8531e50e1e9c03b9d03089efdddb09c32e559b23802460"
+    },
+    {
+      "name": "lookup",
+      "new": 761148,
+      "size": 168,
+      "sha256": "d0321828837d809c0f340b3e59588aa72c531082e791546510fb115c99561d78"
+    },
+    {
+      "name": "full_book",
+      "new": 762476,
+      "size": 9312,
+      "sha256": "6b146bfe8f1b8cc05b7bbc3bd5b7d509e395be0dd8ec634b14c6d35730dbff08"
+    },
+    {
+      "name": "full_bounds",
+      "new": 775484,
+      "size": 24773,
+      "sha256": "dd51cd17029b9d53a30307c62960b4d8c62b120f0835d54b7a6282e3bdefd825"
+    }
+  ]
+}

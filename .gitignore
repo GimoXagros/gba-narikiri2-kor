@@ -21,6 +21,7 @@ local/
 *.ttf
 *.otf
 *.state
+*.sgm
 *.g3diag*
 *.tmp
 

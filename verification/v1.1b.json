@@ -1,0 +1,86 @@
+{
+  "schema": "narikiri2-v11b-verification-1",
+  "version": "v1.1b",
+  "release_eligible": true,
+  "hardware_status": "NOT_RUN",
+  "user_final_artifact_acceptance": "NOT_REPORTED",
+  "authorization": {
+    "kind": "USER_REQUESTED_CONDITIONAL",
+    "exact_user_quote": "남은 반각화 작업과 독립 검증을 계속 진행해줘. 원래 포인터·문자열 위치·8MiB 크기를 유지하고, 최종 검증까지 통과하면 v1.1b로 배포해줘. 작업은 각각 하위 전문가 에이전트를 이용해줘",
+    "condition": "ALL_APPLICABLE_FINAL_CANDIDATE_GATES_PASS"
+  },
+  "limitations": [
+    "PHYSICAL_HARDWARE_NOT_RUN",
+    "NATURAL_BRANCH_COVERAGE_NOT_EXHAUSTIVE",
+    "NATIVE_SPACING_EXCEPTIONS_PRESERVED",
+    "LINK_PLAY_NOT_RUN"
+  ],
+  "gates": {
+    "reproducible_build": {
+      "status": "PASS",
+      "scope": "EXACT_CANDIDATE_ISOLATED_REBUILD",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "report_sha256": "94188bf478af103f22712856ed7b1308e7215fba30040b96532a47e746ca5756"
+    },
+    "rom_layout": {
+      "status": "PASS",
+      "scope": "ORIGINAL_POINTERS_STARTS_AND_8MIB",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "report_sha256": "09182254a2f63da4c2d5860149faa9bbcd7d4764164da251090acc2fc7269198"
+    },
+    "binary_ownership": {
+      "status": "PASS",
+      "scope": "OWNED_WRITES_AND_READBACK",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "report_sha256": "a1468e3ae6560f1225236814bfe1621ae4d9cac36e39a72aaaa21efa277746a0"
+    },
+    "cpu_fixtures": {
+      "status": "PASS",
+      "scope": "CPU_FIXTURES_NOT_NORMAL_PLAY",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "report_sha256": "a458bad99810e4d1bc39cf86b642f357d055f208d1b2be3f15e0d03aa3aff670"
+    },
+    "headless_runtime": {
+      "status": "PASS",
+      "scope": "VIRTUAL_GUEST_EXECUTION_SCOPED_SCENARIOS",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "report_sha256": "b4c792060d66967317d211979711b88305564a630b203d235a9fc0bff3bd71fa"
+    },
+    "save_restore": {
+      "status": "PASS",
+      "scope": "COPIED_SAVE_AND_STATE_RESTORE",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "report_sha256": "1166e2adee026cf33ed3af6e8969a8609cc81a9907641d430ae37fc13337b90c"
+    },
+    "performance": {
+      "status": "PASS",
+      "scope": "ORIGINAL_FIXED_GUEST_FRAME_BENCHMARKS",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "report_sha256": "65f16414b2b53e370aae45d9a07e6b93fcdc983f9826e599f8d80e7604dde3cf"
+    },
+    "independent_review": {
+      "status": "PASS",
+      "scope": "FINAL_HASH_INDEPENDENT_REVIEW",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "report_sha256": "389a585b601df1e37c72bf636bf3981cd80150bbd27ea66d22fdb30411954d26"
+    },
+    "bps_roundtrip": {
+      "status": "PASS",
+      "scope": "EXACT_JAPANESE_TO_FINAL_TARGET",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "report_sha256": "5fc88b8e4082d206567662cd77f6af9c37a9d5bba8d6b9721c45d3d5faba671d"
+    },
+    "package_preflight": {
+      "status": "PASS",
+      "scope": "PUBLIC_ALLOWLIST_PRIVACY_AND_PACKAGE_TESTS",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "report_sha256": "cb2ca5c8c411dd22ef367186694a5b2be197602e96d42575d9fe7b26c0ba2f40"
+    }
+  },
+  "source_size": 8388608,
+  "source_sha256": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+  "target_size": 8388608,
+  "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+  "patch_size": 383084,
+  "patch_sha256": "98e885adbc075ff0e953abb6e49dd5e03cd12dd07c755e9e7dde230408446eaf"
+}

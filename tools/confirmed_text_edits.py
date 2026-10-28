@@ -17,7 +17,7 @@ def normalized(text):
     return text.replace('\u3000',' ')
 
 
-def encode_full(text):
+def encode_full(text, *, halfwidth_spaces=False):
     result=bytearray()
     for character in text:
         if '\uac00'<=character<='\ud7a3':
@@ -25,7 +25,7 @@ def encode_full(text):
         elif character=='\n':
             result.append(10)
         elif character==' ':
-            result.extend(b'\x81\x40')
+            result.extend(b'\x80\x40' if halfwidth_spaces else b'\x81\x40')
         elif 0x21<=ord(character)<=0x7e:
             result.append(ord(character))
         else:

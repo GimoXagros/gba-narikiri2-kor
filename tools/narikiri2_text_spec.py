@@ -28,6 +28,8 @@ KR_NAME_MAX = 0x9505C0
 
 HANGUL_GLYPH_START = 671
 HANGUL_GLYPH_COUNT = 2350
+# Reserved only by the local half-space candidate; intercepted before font IO.
+HALFWIDTH_SPACE_CODE = 0x8040
 ASCII_CONVERSION_TABLE = 0x0CADA4
 KANA_MODE0_TABLE = 0x0CAE64
 KANA_MODE0_MARK_TABLE = 0x0CAEE0
@@ -111,6 +113,8 @@ def hangul_to_game_code(character: str) -> int:
 
 
 def glyph_code_to_text(code: int) -> str:
+    if code == HALFWIDTH_SPACE_CODE:
+        return ' '
     index = game_sjis_glyph_index(code)
     relative = index - HANGUL_GLYPH_START
     if 0 <= relative < HANGUL_GLYPH_COUNT:
