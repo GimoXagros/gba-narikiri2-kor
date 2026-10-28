@@ -1,0 +1,134 @@
+"""Private 아니요 candidate: retain lettering, add native ㅛ stems, move only NO group."""
+import argparse
+import json
+from pathlib import Path
+
+from PIL import Image
+from bps import apply_bps, create_bps
+from narikiri2_item_ui_font import compress_lz77
+from strict_asset_fontpages import _assemble
+from strict_relative_assets import read_resource
+from refine_baked_no import BASE_SHA, START, CAPACITY, POINTER, RAW_SHA, sha, pack, unpack, indexed
+
+HOOK = 0x1A3BE
+BEFORE_HOOK = bytes.fromhex('82818a81')
+HELPER_SOURCE = '''
+    push {r2}
+    cmp r3, #1
+    bne store
+    adds r2, #4
+store:
+    strh r2, [r0, #12]
+    strh r2, [r1, #12]
+    pop {r2}
+    bx lr
+'''
+
+
+def native_yesno_text(original):
+    if len(original) != 256 or sha(original) != RAW_SHA:
+        raise ValueError('Exact accepted NO pixels required')
+    pixels = unpack(original)
+    # Preserve 아/니, the original ㅇ, bottom bar, slant and baseline exactly.
+    for y in range(10, 13):
+        assert pixels[y][27:29] == [15, 15]
+        pixels[y][27:29] = [8, 8]
+        for x in (25, 26, 29, 30):
+            pixels[y][x] = 15
+        for x in (24, 31):
+            pixels[y][x] = 8
+    result = pack(pixels)
+    before = unpack(original)
+    assert all(a == b or (24 <= x <= 31 and 10 <= y <= 12)
+               for y, (old, new) in enumerate(zip(before, pixels)) for x, (a, b) in enumerate(zip(old, new)))
+    return result
+
+
+def helper_and_hook(address):
+    helper = _assemble(HELPER_SOURCE, address, 16)
+    hook = _assemble(f'bl {0x08000000 + address:#x}', HOOK, 4)
+    assert len(helper) == 16 and len(hook) == 4
+    return helper, hook
+
+
+def build(base):
+    if len(base) != 0x800000 or sha(base) != BASE_SHA or base[HOOK:HOOK + 4] != BEFORE_HOOK:
+        raise ValueError('Exact accepted baseline and yes/no placement stores required')
+    original, used = read_resource(base, START)
+    if sha(original) != RAW_SHA or used != CAPACITY:
+        raise ValueError('NO source asset or consumed owner changed')
+    raw = native_yesno_text(original)
+    stream = compress_lz77(raw, vram_safe=True)
+    decoded, consumed = read_resource(stream, 0)
+    if decoded != raw or START % 4 or len(stream) % 4:
+        raise ValueError('Aligned native compression roundtrip failure')
+    helper_at = START + len(stream)
+    helper, hook = helper_and_hook(helper_at)
+    if consumed > len(stream) or helper_at + len(helper) > START + CAPACITY:
+        raise ValueError('Placement helper overlaps live compression or exceeds exact current owner')
+    payload = stream + helper + base[helper_at + len(helper):START + CAPACITY]
+    assert len(payload) == CAPACITY
+    image = bytearray(base)
+    image[START:START + CAPACITY] = payload
+    image[HOOK:HOOK + 4] = hook
+    assert read_resource(image, START)[0] == raw
+    assert image[POINTER:POINTER + 4] == base[POINTER:POINTER + 4]
+    assert image[:HOOK] == base[:HOOK] and image[HOOK + 4:START] == base[HOOK + 4:START] and image[START + CAPACITY:] == base[START + CAPACITY:]
+    writes = [dict(id='no_group_placement_call', start=HOOK, bytes=4, before_hex=BEFORE_HOOK.hex(),
+                   before_sha256=sha(BEFORE_HOOK), after_hex=hook.hex(), after_sha256=sha(hook)),
+              dict(id='no_graphic_and_private_placement_helper', start=START, bytes=CAPACITY,
+                   before_sha256=sha(base[START:START + CAPACITY]), after_sha256=sha(payload))]
+    report = dict(status='C_UNAPPROVED_USER_CORRECTION', label='아니요', before_rom_sha256=sha(base), after_rom_sha256=sha(image),
+                  size=len(image), native_before_sha256=sha(original), native_after_sha256=sha(raw),
+                  palette_indices=[0, 8, 15], pixel_edit_mask=dict(x=[24, 31], y=[10, 12]),
+                  layout_change='Only NO text+bubble group moves4px right; YES, cursor and anchors unchanged', writes=writes,
+                  compressed_stream=dict(start=START, consumed_bytes=consumed, padded_bytes=len(stream), end_exclusive=helper_at),
+                  nested_code_owner=dict(start=helper_at, end_exclusive=helper_at + len(helper), bytes=len(helper), sha256=sha(helper),
+                                         future_recompression_guard='Any recompression must end at or before helper start; never overwrite nested code'),
+                  abi=dict(inputs='r0=NO/YES bubble object; r1=matching text object; r2=originalx; r3=option index0YES/1NO',
+                           preserved='r0-r12 and SP; r2 pushed/popped; helper preserves incoming LR; no calls inside helper',
+                           lr_contract='BL sets LR to0x0801A3C3; helper bx LR returns0x0801A3C2; host caller LR remains saved by native function prologue',
+                           flags='NZCV changed; next native instruction adds r3,#1 overwrites live condition flags before its cmp/branch',
+                           stack_bytes=4, return_site=HOOK + 4),
+                  consumer='Only stores0x1A3BE/0x1A3C0 in yes/no constructor-opening loop0x1A328; resource82YES/84NO generated by0x1A4CC',
+                  unchanged='All other ROM bytes, all resource pointers, fonts, text, palette and global shape layout',
+                  different_bytes=sum(a != b for a, b in zip(base, image)))
+    return bytes(image), raw, payload, helper, hook, report
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    for name in ('baseline', 'live-palette', 'out'):
+        parser.add_argument('--' + name, type=Path, required=True)
+    args = parser.parse_args()
+    base = args.baseline.read_bytes()
+    image, raw, payload, helper, hook, report = build(base)
+    palette_bytes = args.live_palette.read_bytes()
+    if len(palette_bytes) != 1024:
+        raise ValueError('Full captured palette required')
+    import struct
+    palette = [((value >> shift) & 31) * 255 // 31 for value in struct.unpack_from('<16H', palette_bytes, 512 + 7 * 32) for shift in (0, 5, 10)]
+    palette += [0] * (768 - len(palette))
+    args.out.mkdir(parents=True, exist_ok=False)
+    (args.out / 'C_GRAPHICS_LAYOUT_UNAPPROVED.gba').write_bytes(image)
+    (args.out / 'asset_owner_payload.bin').write_bytes(payload)
+    (args.out / 'native_4bpp.bin').write_bytes(raw)
+    (args.out / 'placement_helper.bin').write_bytes(helper)
+    (args.out / 'placement_call.bin').write_bytes(hook)
+    patch = create_bps(base, image, 'Private unapproved 아니요 native graphic and NO group placement'.encode('utf-8'))
+    assert apply_bps(base, patch) == image
+    (args.out / 'C_FROM_V11A.bps').write_bytes(patch)
+    original = read_resource(base, START)[0]
+    pictures = [indexed(data, palette) for data in (original, raw)]
+    for name, picture in zip(('CURRENT_아니오', 'C_아니요'), pictures):
+        picture.save(args.out / (name + '_NATIVE_INDEXED.png'))
+        picture.resize((128, 64), Image.Resampling.NEAREST).save(args.out / (name + '_4x.png'))
+    mask = Image.new('1', (32, 16))
+    mask.putdata([a != b for old, new in zip(unpack(original), unpack(raw)) for a, b in zip(old, new)])
+    mask.save(args.out / 'EXACT_CHANGED_PIXEL_MASK.png')
+    (args.out / 'C_WRITE_PLAN.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    print(json.dumps(report))
+
+
+if __name__ == '__main__':
+    main()

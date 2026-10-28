@@ -1,0 +1,124 @@
+{
+  "schema": "narikiri2-v11b-evidence-1",
+  "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+  "gates": {
+    "reproducible_build": {
+      "status": "PASS",
+      "scope": "EXACT_CANDIDATE_ISOLATED_REBUILD",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "summary": "Two explicit-input builds in separate source directories produced identical ROM and BPS.",
+      "checks_count": 2,
+      "source_report_sha256": "a8e2f561bd498c3ac3981d36a6aceb3d44300746d78a8ab642619151211d20ce"
+    },
+    "rom_layout": {
+      "status": "PASS",
+      "scope": "ORIGINAL_POINTERS_STARTS_AND_8MIB",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "summary": "Original pointer values, storage and string starts preserved; 8388608 bytes; all 45 protected owners checked.",
+      "checks_count": 10371,
+      "source_report_sha256": "7d7c34ed5c9ae4ea1f6fcc1163f43d61dd8cec28f99807c446a4c9e771ff129c"
+    },
+    "binary_ownership": {
+      "status": "PASS",
+      "scope": "OWNED_WRITES_AND_READBACK",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "summary": "Both stages, 59 flattened compact writers, preimages, postimages and unchanged gaps independently checked.",
+      "checks_count": 59,
+      "source_report_sha256": "62ed63e289978b60ef22135e5e71cfa8b36ddbd63cf1a681e1233c5f2d0353b1"
+    },
+    "cpu_fixtures": {
+      "status": "PASS",
+      "scope": "CPU_FIXTURES_NOT_NORMAL_PLAY",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "summary": "8947 owned decoder calls plus bounded renderer, numeric policy, cache, ABI and ARMv4T checks; fixtures are not normal play.",
+      "checks_count": 8947,
+      "source_report_sha256": "6dc8fba79aa30660f03622fba147024fcbd42517d968f3cc2a127cd4b82d086d"
+    },
+    "headless_runtime": {
+      "status": "PASS",
+      "scope": "VIRTUAL_GUEST_EXECUTION_SCOPED_SCENARIOS",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "summary": "Five scoped reports: graphics, battle, audio, configured VBA Pub dialogue and SGM resume. Inherited skill-title clipping remains. One stereo frame differs out of 1500002; no bit-identical audio, hearing or hardware claim.",
+      "checks_count": 5,
+      "source_report_sha256": "07f55c2fc9fd02c0c18f0eb84b9e6b888265ba64eaad03775e3b307a8ade003a"
+    },
+    "save_restore": {
+      "status": "PASS",
+      "scope": "COPIED_SAVE_AND_STATE_RESTORE",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "summary": "98 evidence files reviewed: default/mixed names, profiles/items, two cold loads, resave, suspend resume and consumption. Original save preserved.",
+      "checks_count": 98,
+      "source_report_sha256": "f8ed8a5a6615329ae36e0accc39acd6474764f7d87ce0948750f8a265207b6a3"
+    },
+    "performance": {
+      "status": "PASS",
+      "scope": "ORIGINAL_FIXED_GUEST_FRAME_BENCHMARKS",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "summary": "All six fixed guest-frame benchmarks passed without cadence changes or frameskip; zero unresolved moves.",
+      "checks_count": 7330,
+      "source_report_sha256": "95e8b0fe6e3cf319f2552b4a8b613aebac6efd674c8445f162d8404995ae0a95",
+      "metrics": {
+        "item": {
+          "movements": 1560,
+          "p99": 8,
+          "display_max": 2,
+          "unresolved": 0
+        },
+        "monster": {
+          "movements": 1420,
+          "p99": 7,
+          "display_max": 4,
+          "unresolved": 0
+        },
+        "costume": {
+          "movements": 2000,
+          "p99": 7,
+          "display_max": 3,
+          "unresolved": 0
+        },
+        "character": {
+          "movements": 220,
+          "p99": 17,
+          "display_max": 2,
+          "unresolved": 0
+        },
+        "buy": {
+          "movements": 1050,
+          "p99": 7,
+          "display_max": 2,
+          "unresolved": 0
+        },
+        "sell": {
+          "movements": 1080,
+          "p99": 7,
+          "display_max": 2,
+          "unresolved": 0
+        }
+      }
+    },
+    "independent_review": {
+      "status": "PASS",
+      "scope": "FINAL_HASH_INDEPENDENT_REVIEW",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "summary": "Five independent exact-candidate code/layout/save/package reports reviewed. Physical hardware and exhaustive natural branches not run.",
+      "checks_count": 5,
+      "source_report_sha256": "a233a7ceadfad48016e543fc7e81e33b648f65599355fb7ef651d6b0c65000aa"
+    },
+    "bps_roundtrip": {
+      "status": "PASS",
+      "scope": "EXACT_JAPANESE_TO_FINAL_TARGET",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "summary": "Exact Japanese input plus cumulative BPS yields exact final target.",
+      "checks_count": 1,
+      "source_report_sha256": "2641acf7028c15eac394f39f50688ec1385e358bdc33795f057907a6b7ef30a7"
+    },
+    "package_preflight": {
+      "status": "PASS",
+      "scope": "PUBLIC_ALLOWLIST_PRIVACY_AND_PACKAGE_TESTS",
+      "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+      "summary": "Eight contract test suites pass with one real Windows symlink privilege skip in each applicable package suite. Fixed public allowlist; no ROM, saves, BIOS, font binaries or dialogue corpus.",
+      "checks_count": 8,
+      "source_report_sha256": "fd7299cad0d7e833fa899d39224b320f71d4a65126b346c9fd78433b25327270"
+    }
+  }
+}
