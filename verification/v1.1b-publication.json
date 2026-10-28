@@ -1,0 +1,41 @@
+{
+  "status": "RELEASED_AND_VERIFIED",
+  "release_url": "https://github.com/GimoXagros/gba-narikiri2-kor/releases/tag/v1.1b",
+  "tag": "v1.1b",
+  "release_commit": "a6bbf059d93062d72c5b41b7f4b61385e45086d3",
+  "authenticated_download": false,
+  "target_sha256": "32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677",
+  "target_size": 8388608,
+  "assets": [
+    {
+      "name": "Xagros_Narikiri2_KOR_v1.1b.bps",
+      "url": "https://github.com/GimoXagros/gba-narikiri2-kor/releases/download/v1.1b/Xagros_Narikiri2_KOR_v1.1b.bps",
+      "size": 383084,
+      "sha256": "98e885adbc075ff0e953abb6e49dd5e03cd12dd07c755e9e7dde230408446eaf"
+    },
+    {
+      "name": "Xagros_Narikiri2_KOR_v1.1b_JP_PACKAGE.zip",
+      "url": "https://github.com/GimoXagros/gba-narikiri2-kor/releases/download/v1.1b/Xagros_Narikiri2_KOR_v1.1b_JP_PACKAGE.zip",
+      "size": 322482,
+      "sha256": "2552ba49d621600b474e480ac91b53c254ccc5be4d81c9f74c907803ed98b439"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "url": "https://github.com/GimoXagros/gba-narikiri2-kor/releases/download/v1.1b/SHA256SUMS.txt",
+      "size": 207,
+      "sha256": "702aedd38163b7a825d1cc2629697464feed04cf5d5d0e9739b540893ec46a00"
+    }
+  ],
+  "downloaded_zip_fresh_application": "PASS",
+  "ci_runs": [
+    40691058734,
+    40691058588,
+    40691059031
+  ],
+  "hardware": "NOT_RUN",
+  "complete_playthrough": "NOT_RUN",
+  "link_play": "NOT_RUN",
+  "release_tree": "9acb17faa816f7ff0c995f3ea1faea6edfe734c9",
+  "date": "2026-10-28",
+  "scope": "Published asset integrity and exact fresh-folder application; runtime limitations remain in v1.1b release notes."
+}
