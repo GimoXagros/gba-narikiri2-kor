@@ -1,0 +1,12 @@
+diff --git a/src/gba/audio.c b/src/gba/audio.c
+--- a/src/gba/audio.c
++++ b/src/gba/audio.c
+@@ -323,7 +323,7 @@ void GBAAudioSampleFIFO(struct GBAAudio* audio, int fifoId, int32_t cycles) {
+ 			channel->fifoRead = 0;
+ 		}
+ 	}
+-	int32_t until = mTimingUntil(&audio->p->timing, &audio->sampleEvent) - 1;
++	int32_t until = mTimingUntil(&audio->p->timing, &audio->sampleEvent) + cycles - 1;
+ 	int bits = 2 << GBARegisterSOUNDBIASGetResolution(audio->soundbias);
+ 	until += 1 << (9 - GBARegisterSOUNDBIASGetResolution(audio->soundbias));
+ 	until >>= 9 - GBARegisterSOUNDBIASGetResolution(audio->soundbias);

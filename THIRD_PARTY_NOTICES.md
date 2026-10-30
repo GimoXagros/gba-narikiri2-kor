@@ -9,3 +9,5 @@ This project imports the upstream generator's native bitmap glyphs/components, p
 `config/title_trade_glyphs.json` records the native 교/환 bitmap rows and their upstream generated-file identities for the v0.9d title menu. The product build verifies them against the pinned generator output. They are covered by the same Apache-2.0 font notice.
 
 The font generator and development/test dependencies are fetched separately and are not included as executables. Their respective upstream licenses continue to apply. The game, original graphics/audio, and pre-existing FFR translation are not licensed by this project's MIT license.
+
+The optional reference-core source patch in `docs/audio/mgba-e31759b-fifo-timing.patch` modifies mGBA (Jeffrey Pfau and contributors), revision e31759b24e7a4e3899285ff720d7b573ac328ae7. It is provided under MPL-2.0; see https://github.com/mgba-emu/mgba/blob/e31759b24e7a4e3899285ff720d7b573ac328ae7/LICENSE. No emulator binaries are included. This exception is separate from the MIT license for original project code.
