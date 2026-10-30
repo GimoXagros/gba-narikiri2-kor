@@ -7,3 +7,6 @@ LICENSE text eol=lf
 *.tsv text eol=lf whitespace=-blank-at-eol
 *.s text eol=lf
 *.mjs text eol=lf
+
+# Unified diff context prefixes may precede upstream tabs.
+*.patch text eol=lf whitespace=-space-before-tab
