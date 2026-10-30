@@ -2,14 +2,14 @@
 
 ![테일즈 오브 더 월드 나리키리 던전 2](logo.png)
 
-**v1.1b**는 일본어 원본 ROM(게임 코드 AN9J)에 직접 적용하는 8MiB 누적 한국어 패치입니다. 일반 대사와 지원되는 소형 문자열에 반각 단어 간격을 적용하고 목록 성능을 개선했습니다. FFR 패치를 먼저 적용할 필요는 없습니다.
+**v1.1c**는 일본어 원본 ROM(게임 코드 AN9J)에 직접 적용하는 8MiB 누적 한국어 패치입니다. 일반 대사와 지원되는 소형 문자열에 반각 단어 간격을 적용하고 목록 성능을 개선했습니다. FFR 패치를 먼저 적용할 필요는 없습니다.
 
 ## 적용
 
-[v1.1b 릴리스](https://github.com/GimoXagros/gba-narikiri2-kor/releases/tag/v1.1b)에서 `Xagros_Narikiri2_KOR_v1.1b_JP_PACKAGE.zip`을 받아 새 폴더에 모두 풉니다. Python 3.10 이상과 표준 라이브러리를 사용합니다.
+[v1.1c 릴리스](https://github.com/GimoXagros/gba-narikiri2-kor/releases/tag/v1.1c)에서 `Xagros_Narikiri2_KOR_v1.1c_JP_PACKAGE.zip`을 받아 새 폴더에 모두 풉니다. Python 3.10 이상과 표준 라이브러리를 사용합니다.
 
 ```powershell
-python apply_japanese_patch.py Japanese.gba --output Xagros_Narikiri2_KOR_v1.1b.gba
+python apply_japanese_patch.py Japanese.gba --output Xagros_Narikiri2_KOR_v1.1c.gba
 ```
 
 수정하지 않은 일본어 원본에 적용합니다. 적용기는 원본·패치·결과를 확인하고 기존 출력 파일을 덮어쓰지 않습니다.
@@ -17,18 +17,18 @@ python apply_japanese_patch.py Japanese.gba --output Xagros_Narikiri2_KOR_v1.1b.
 | 구분 | 바이트 | SHA-256 |
 | --- | ---: | --- |
 | 일본어 원본 AN9J | 8,388,608 | `a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7` |
-| v1.1b 결과 ROM | 8,388,608 | `32ed708c0c8c26074829a163000dd5504a5a7a1fbcd4f1319c2eb1f45d438677` |
-| 일본어 원본용 BPS | 383,084 | `98e885adbc075ff0e953abb6e49dd5e03cd12dd07c755e9e7dde230408446eaf` |
+| v1.1c 결과 ROM | 8,388,608 | `bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c` |
+| 일본어 원본용 BPS | 383,088 | `18407507b181b0e24d53313e03b032f0140fdf111e804901ae69c11cfb7d0d98` |
 
 ZIP의 포함 파일과 체크섬은 `manifest.json`, `SHA256SUMS.txt`에서 확인합니다. ROM·개인 저장·전체 대사집은 공개 첨부물에 포함하지 않습니다.
 
-## v1.1b 변경 및 검증 범위
+## v1.1c 변경 및 검증 범위
 
 큰 글자 단어 간격은 6px, 지원되는 소형 문자열은 4px로 표시합니다. 숫자 열·들여쓰기·이름 입력판·사용자 이름과 숨겨진 개발용 목록의 예외는 보존합니다. `아니요`는 이전 느낌을 유지한 그래픽으로 교정했습니다. 10,371개 원래 포인터와 문자열 시작 위치, 8MiB 크기는 유지합니다.
 
-분리된 소스 폴더에서 ROM/BPS 재현, 실제 CPU 디코더와 코드 경계, 고정 목록 7,330회 이동, 가상 화면·일반 저장 두 번 불러오기·중단 저장·펍 로즈 SGM 복원을 최종 해시로 검증했습니다. 상세 수치와 범위는 [v1.1b 릴리스 노트](docs/RELEASE_NOTES_V11B.md), [적용·빌드 안내](docs/V11B_PACKAGE.md), [검증 계약](verification/v1.1b.json), [관문별 증거](verification/v1.1b-evidence.json)를 참조하세요.
+분리된 소스 폴더에서 ROM/BPS 재현, 실제 CPU 디코더와 코드 경계, 고정 목록 7,330회 이동, 가상 화면·일반 저장 두 번 불러오기·중단 저장·펍 로즈 SGM 복원을 최종 해시로 검증했습니다. 상세 수치와 범위는 [v1.1c 릴리스 노트](docs/RELEASE_NOTES_V11C.md), [적용·빌드 안내](docs/V11C_PACKAGE.md), [검증 계약](verification/v1.1c.json), [관문별 증거](verification/v1.1c-evidence.json)를 참조하세요.
 
-기술 설정 제목의 기존 잘림은 남아 있습니다. 오디오는 1,500,002개 스테레오 프레임 중 1개가 기준선과 달라 비트 단위 동일 판정은 하지 않습니다. 최종 v1.1b 실기·청취·전체 분기·통신은 미검증이며 이슈 #4를 유지합니다. 사용자의 조건부 배포 요청과 최종본 직접 수락은 구분합니다.
+기술 설정 제목에 4px 상단 여백을 확보했습니다. 오디오의 한 스테레오 프레임 차이는 시험용 mGBA의 FIFO 타이밍 계산으로 원인을 확인했고, 별도 수정 참조 코어와 VBA에서 버전 간 PCM 전체 일치를 확인했습니다. ROM 음원은 수정하지 않았으며 기존 mGBA에는 차이가 남습니다. [원인·소스 수정 기록](docs/AUDIO_TIMING_V11C.md)을 참조하세요. 최종 실기·청취·전체 분기·통신은 미검증이며 이슈 #4를 유지합니다.
 
 ## 이전 v1.1a 기록
 

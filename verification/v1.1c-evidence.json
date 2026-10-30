@@ -1,0 +1,140 @@
+{
+  "schema": "narikiri2-v11c-evidence-1",
+  "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+  "gates": {
+    "title_margin": {
+      "status": "PASS",
+      "scope": "EXACT_TITLE_PLACEMENT_AND_PIXEL_PRESERVATION",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "summary": "Title Y0 to4; all glyph pixels preserved, VRAM/palette unchanged; 22 of23 battle captures identical, only expected title area differs.",
+      "checks_count": 23,
+      "source_report_sha256": "494ffb3603a06b393c97851d2a8520e45d5fd2ea7d39ab7e9561dec3342a327c"
+    },
+    "audio_causality": {
+      "status": "PASS",
+      "scope": "REFERENCE_CORE_FIFO_TIMING_FIX_AND_PAIRED_PCM",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "summary": "Unmodified and single-line-corrected mGBA cores paired across v1.1a/b/c. Corrected reference PCM identical; stock mGBA still differs. No ROM audio modification or listening claim.",
+      "checks_count": 6,
+      "source_report_sha256": "4977c44647493ba5c8dbe917f7b1ce794862b43c945731cfdceb81ee6e67fbdf"
+    },
+    "reproducible_build": {
+      "status": "PASS",
+      "scope": "EXACT_CANDIDATE_ISOLATED_REBUILD",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "summary": "Explicit-input isolated copied-source rebuild produces exact ROM and cumulative BPS.",
+      "checks_count": 2,
+      "source_report_sha256": "a3666c2c84ffed08262b2a3fb3520a7cc675d4642b0e010d69a0ff5c911dcc3b"
+    },
+    "rom_layout": {
+      "status": "PASS",
+      "scope": "ORIGINAL_POINTERS_STARTS_AND_8MIB",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "summary": "10371 original pointers and starts, 8MiB and45 protected prefixes checked on final image.",
+      "checks_count": 10371,
+      "source_report_sha256": "45cf59d15ad428de1e7a5797ad1676e896181e5f6beb4daa6458d9dfdac04431"
+    },
+    "binary_ownership": {
+      "status": "PASS",
+      "scope": "OWNED_WRITES_AND_READBACK",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "summary": "Rebuilt v1.1b owned writes unchanged; exact guarded title instruction is the only new change, one actual changed byte at0x134C6.",
+      "checks_count": 1,
+      "source_report_sha256": "d731cee7add476b9add6128227e1f37904a9476ac38b9717d37628a609f8342b"
+    },
+    "cpu_fixtures": {
+      "status": "PASS",
+      "scope": "CPU_FIXTURES_NOT_NORMAL_PLAY",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "summary": "8947 actual decoder CPU calls on final image with output, register, stack, boundary and protected-tail checks. Not normal gameplay.",
+      "checks_count": 8947,
+      "source_report_sha256": "45cf59d15ad428de1e7a5797ad1676e896181e5f6beb4daa6458d9dfdac04431"
+    },
+    "headless_runtime": {
+      "status": "PASS",
+      "scope": "VIRTUAL_GUEST_EXECUTION_SCOPED_SCENARIOS",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "summary": "6151-frame controller battle route,23 captures, stable title idle0/60/600, field entry/return; zero RAM interventions.",
+      "checks_count": 23,
+      "source_report_sha256": "494ffb3603a06b393c97851d2a8520e45d5fd2ea7d39ab7e9561dec3342a327c"
+    },
+    "save_restore": {
+      "status": "PASS",
+      "scope": "COPIED_SAVE_AND_STATE_RESTORE",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "summary": "11 fresh processes: default/mixed cold twice, resave/reload; suspend write/resume/consumed. Semantic identity and original inputs preserved.",
+      "checks_count": 11,
+      "source_report_sha256": "ae4eec4c2eb7ba8fdf9be9e10970dddcfc8fd71c77a70d53eeb49aa93bc5a27f"
+    },
+    "performance": {
+      "status": "PASS",
+      "scope": "ORIGINAL_FIXED_GUEST_FRAME_BENCHMARKS",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "summary": "All six original fixed guest-frame benchmarks pass; RAM fixtures disclosed, zero unresolved moves.",
+      "checks_count": 7330,
+      "source_report_sha256": "0b0999400a20c00776cbc0d1573c043b0e24b887580a4397e9d29d990cc59c2e",
+      "metrics": {
+        "item": {
+          "movements": 1560,
+          "p99": 8,
+          "display_max": 2,
+          "unresolved": 0
+        },
+        "monster": {
+          "movements": 1420,
+          "p99": 7,
+          "display_max": 4,
+          "unresolved": 0
+        },
+        "costume": {
+          "movements": 2000,
+          "p99": 7,
+          "display_max": 3,
+          "unresolved": 0
+        },
+        "character": {
+          "movements": 220,
+          "p99": 17,
+          "display_max": 2,
+          "unresolved": 0
+        },
+        "buy": {
+          "movements": 1050,
+          "p99": 7,
+          "display_max": 2,
+          "unresolved": 0
+        },
+        "sell": {
+          "movements": 1080,
+          "p99": 7,
+          "display_max": 2,
+          "unresolved": 0
+        }
+      }
+    },
+    "independent_review": {
+      "status": "PASS",
+      "scope": "FINAL_HASH_INDEPENDENT_REVIEW",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "summary": "Independent exact ROM/BPS/readback, source-expression and actual compiled-core PCM review; VBA exact final PCM equal. Hardware not run.",
+      "checks_count": 6,
+      "source_report_sha256": "21aa8a97daa35678d710a2ab34178c072e701928ba6b61b829d5aad269acf835"
+    },
+    "bps_roundtrip": {
+      "status": "PASS",
+      "scope": "EXACT_JAPANESE_TO_FINAL_TARGET",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "summary": "Exact Japanese source plus cumulative BPS produces final target; original ROM and saves preserved.",
+      "checks_count": 1,
+      "source_report_sha256": "263a6f592d849234ce7bbd57baee28ea09947c0532b892a8b8f45fdef84c4257"
+    },
+    "package_preflight": {
+      "status": "PASS",
+      "scope": "PUBLIC_ALLOWLIST_PRIVACY_AND_PACKAGE_TESTS",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "summary": "Twelve optimized-mode contract suites pass; applicable Windows symlink privilege skips disclosed.14 public entries exclude ROM, saves, BIOS, binaries and full corpus.",
+      "checks_count": 12,
+      "source_report_sha256": "b95fd9e5c6a16bf71349bda8c28eda5e26338fac5ead9793dbec21983acfb7b8"
+    }
+  }
+}

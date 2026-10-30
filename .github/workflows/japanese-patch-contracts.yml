@@ -20,3 +20,7 @@ jobs:
       - run: python -O -m unittest discover -s tests -p test_v11a_build.py -v
       - run: python -O -m unittest discover -s tests -p test_v11b_build.py -v
       - run: python -O -m unittest discover -s tests -p test_v11b_package.py -v
+      - run: python -O -m unittest discover -s tests -p test_skill_title_margin.py -v
+      - run: python -O -m unittest discover -s tests -p test_v11c_build.py -v
+      - run: python -O -m unittest discover -s tests -p test_v11c_package.py -v
+      - run: python -O -m unittest discover -s tests -p test_audio_fifo_timing.py -v

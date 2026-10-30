@@ -1,0 +1,102 @@
+{
+  "schema": "narikiri2-v11c-verification-1",
+  "version": "v1.1c",
+  "release_eligible": true,
+  "hardware_status": "NOT_RUN",
+  "user_final_artifact_acceptance": "NOT_REPORTED",
+  "authorization": {
+    "kind": "USER_REQUESTED_CONDITIONAL",
+    "exact_user_quote": "소담아, 하위 전문 에이전트를 이용하여 아래 두 문제를 해결해서 1.1c를 배포해줄래?",
+    "condition": "ALL_APPLICABLE_FINAL_CANDIDATE_GATES_PASS"
+  },
+  "limitations": [
+    "PHYSICAL_HARDWARE_NOT_RUN",
+    "NATURAL_BRANCH_COVERAGE_NOT_EXHAUSTIVE",
+    "NATIVE_SPACING_EXCEPTIONS_PRESERVED",
+    "LINK_PLAY_NOT_RUN",
+    "LISTENING_NOT_RUN",
+    "STOCK_MGBA_SINGLE_SAMPLE_DIFFERENCE_REMAINS",
+    "VBA_BATTLE_ROUTE_INCONCLUSIVE_BASELINE_AND_FINAL",
+    "DESKTOP_SGM_LOAD_NOT_RUN"
+  ],
+  "gates": {
+    "title_margin": {
+      "status": "PASS",
+      "scope": "EXACT_TITLE_PLACEMENT_AND_PIXEL_PRESERVATION",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "report_sha256": "8ef2c92e4e2e249a6d94184919d118c9fbdd12ef395b2bc1ad25a8b69801c66e"
+    },
+    "audio_causality": {
+      "status": "PASS",
+      "scope": "REFERENCE_CORE_FIFO_TIMING_FIX_AND_PAIRED_PCM",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "report_sha256": "42c13710117a9de0feda34982ab0eca5e73821c795f372ceee9325448b747c7f"
+    },
+    "reproducible_build": {
+      "status": "PASS",
+      "scope": "EXACT_CANDIDATE_ISOLATED_REBUILD",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "report_sha256": "59b90887ee7a05d03138de7c5c198f90146cca1a9444c1afeaef77fc36730cf0"
+    },
+    "rom_layout": {
+      "status": "PASS",
+      "scope": "ORIGINAL_POINTERS_STARTS_AND_8MIB",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "report_sha256": "ddb46bf0b2218adad13279c9025ddffbe157d317571700009f5a6e68f0601af9"
+    },
+    "binary_ownership": {
+      "status": "PASS",
+      "scope": "OWNED_WRITES_AND_READBACK",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "report_sha256": "7ccf337670744e681869eaab0885808503aa88f213539df02a49da40f0f06132"
+    },
+    "cpu_fixtures": {
+      "status": "PASS",
+      "scope": "CPU_FIXTURES_NOT_NORMAL_PLAY",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "report_sha256": "7e6857024ab316b39870e8fd8a0b6f520d0bf29e32368928ff110ff2430b2869"
+    },
+    "headless_runtime": {
+      "status": "PASS",
+      "scope": "VIRTUAL_GUEST_EXECUTION_SCOPED_SCENARIOS",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "report_sha256": "d47a766959f1d008bee3d0ceefa7d5df9a83b31ec1f3eddb8ac70f13386428fd"
+    },
+    "save_restore": {
+      "status": "PASS",
+      "scope": "COPIED_SAVE_AND_STATE_RESTORE",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "report_sha256": "e14d378d3f8ce2709b94165ad15d128ffdea2c72ca6218a9893eb667bc755f35"
+    },
+    "performance": {
+      "status": "PASS",
+      "scope": "ORIGINAL_FIXED_GUEST_FRAME_BENCHMARKS",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "report_sha256": "bd307f5526131c65626a9d079a86273d466b7e8673663fc7eb78b576cbd33f9d"
+    },
+    "independent_review": {
+      "status": "PASS",
+      "scope": "FINAL_HASH_INDEPENDENT_REVIEW",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "report_sha256": "d5feacd2bd3472c432e2b95361f14e78865e90a977d5aba666ee07af18c4efe9"
+    },
+    "bps_roundtrip": {
+      "status": "PASS",
+      "scope": "EXACT_JAPANESE_TO_FINAL_TARGET",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "report_sha256": "6a685cc3cfa6c056a13908a0ed77d5833269fc4498423262761526bbacba7c5e"
+    },
+    "package_preflight": {
+      "status": "PASS",
+      "scope": "PUBLIC_ALLOWLIST_PRIVACY_AND_PACKAGE_TESTS",
+      "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+      "report_sha256": "a242b0f9e664d7ac492d7a58549bdf5c382810ad938abb8cad3294830a778246"
+    }
+  },
+  "source_size": 8388608,
+  "source_sha256": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+  "target_size": 8388608,
+  "target_sha256": "bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c",
+  "patch_size": 383088,
+  "patch_sha256": "18407507b181b0e24d53313e03b032f0140fdf111e804901ae69c11cfb7d0d98"
+}
