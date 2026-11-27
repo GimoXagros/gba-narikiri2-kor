@@ -1,4 +1,4 @@
-"""Restore the four original AN9J battle labels requested in issue #25."""
+"""Restore the five original AN9J battle labels requested for issue #25."""
 
 from dataclasses import dataclass
 from hashlib import sha256
@@ -32,6 +32,9 @@ LABELS = (
     Label('EXP', 0x6D6EFC, 0x6D6FFC,
           '271d6dbe057722ccb78584ca17de38821ca86cb51837444f1a1df13ba6bdf5da',
           '05a771cc99c469e64c0728bea0283870fcb7ff9ba5e53cb8ff01b15c849407e1'),
+    Label('HIT', 0x6D78BC, 0x6D79BC,
+          '49087f91c66049e9c8d43346e3c804dd377f7346b2a0977eb2fe678df7a88391',
+          '810972470d470f467617b701d81a04f629db807ec72869afcd89478b916408e5'),
 )
 
 # These JP frame records, pointers and OBJ palettes already appear in v1.1c.

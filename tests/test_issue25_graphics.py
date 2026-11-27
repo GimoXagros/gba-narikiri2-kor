@@ -24,10 +24,12 @@ class Issue25GraphicsTests(unittest.TestCase):
             labels.append(replace(label, v11c_sha256=sha256(before).hexdigest(),
                                   japanese_sha256=sha256(original).hexdigest()))
 
-        # Model an unrelated runtime change and preserve a byte immediately after both spans.
+        # Model an unrelated runtime change and preserve the neighboring tiles.
         baseline[0x134C6] = 0x04
         baseline[0x6D645C] = 0xA1
         baseline[0x6D6FFC] = 0xB1
+        baseline[0x6D78BB] = 0xC1
+        baseline[0x6D79BC] = 0xD1
         cls.japanese, cls.baseline = bytes(japanese), bytes(baseline)
         cls.labels = tuple(labels)
 
@@ -35,11 +37,12 @@ class Issue25GraphicsTests(unittest.TestCase):
         self.enterContext(patch.multiple(
             graphics, LABELS=self.labels, JAPANESE_SHA256=sha256(self.japanese).hexdigest()))
 
-    def test_only_the_four_exact_tile_ranges_are_restored(self):
+    def test_only_the_five_exact_tile_ranges_are_restored(self):
         result, records = graphics.restore_battle_graphics(self.japanese, self.baseline)
         expected = bytearray(self.baseline)
         bounds = [(0x6D63BC, 0x6D645C), (0x6D6C3C, 0x6D6DBC),
-                  (0x6D6DBC, 0x6D6EFC), (0x6D6EFC, 0x6D6FFC)]
+                  (0x6D6DBC, 0x6D6EFC), (0x6D6EFC, 0x6D6FFC),
+                  (0x6D78BC, 0x6D79BC)]
         self.assertEqual([(row['offset'], row['end']) for row in records], bounds)
         for row, (start, end) in zip(records, bounds, strict=True):
             expected[start:end] = self.japanese[start:end]
