@@ -2,29 +2,23 @@
 
 ![테일즈 오브 더 월드 나리키리 던전 2](logo.png)
 
-**v1.1c는 프리릴리즈**이며 일본어 원본 ROM(게임 코드 AN9J)에 직접 적용하는 8MiB 누적 한국어 패치입니다. 일반 대사와 지원되는 소형 문자열에 반각 단어 간격을 적용하고 목록 성능을 개선했습니다. FFR 패치를 먼저 적용할 필요는 없습니다.
+**[v1.1d 프리릴리즈 다운로드](https://github.com/GimoXagros/gba-narikiri2-kor/releases/tag/v1.1d)**
 
-현재 정식 릴리스는 [v1.1](https://github.com/GimoXagros/gba-narikiri2-kor/releases/tag/v1.1)입니다. 아래 안내는 후속 프리릴리즈 v1.1c를 기준으로 합니다.
+퀘스트 대사의 목표물과 스펙터클즈 전투 정보창에서 깨지던 글자를 수정했습니다. 전투·결과 화면의 TARGET, HIT, BONUS, EXP, GALD는 일본어판 그래픽으로 복원했습니다. 코스튬 여섯 종의 명칭과 VBA-M에서 첫 마을의 SELECT 메뉴를 열 때 발생하던 멈춤도 수정했습니다.
 
-## 적용
+## 패치 적용
 
-[v1.1c 릴리스](https://github.com/GimoXagros/gba-narikiri2-kor/releases/tag/v1.1c)에서 `Xagros_Narikiri2_KOR_v1.1c_JP_PACKAGE.zip`을 받아 새 폴더에 모두 풉니다. Python 3.10 이상과 표준 라이브러리를 사용합니다.
+릴리스에서 `Xagros_Narikiri2_KOR_v1.1d_JP_PACKAGE.zip`을 받아 새 폴더에 풉니다. 수정하지 않은 일본어 원본(AN9J)과 Python 3.10 이상을 사용합니다.
 
 ```powershell
-python apply_japanese_patch.py Japanese.gba --output Xagros_Narikiri2_KOR_v1.1c.gba
+python apply_japanese_patch.py Japanese.gba --output Xagros_Narikiri2_KOR_v1.1d.gba
 ```
 
-수정하지 않은 일본어 원본에 적용합니다. 적용기는 원본·패치·결과를 확인하고 기존 출력 파일을 덮어쓰지 않습니다.
+결과 ROM은 8,388,608바이트이며 SHA-256은 `705d92a147ac1e3bd4830ca976154dd397c67263ad99dcd04a8dd5313d9e0177`입니다. 원래 포인터와 문자열 시작 위치 10,371개를 확인했습니다. [적용·빌드·My Boy 확인 순서](docs/V11D_PACKAGE.md) · [검증 결과](verification/v1.1d.json) · [코스튬 변경 목록](docs/issue25-names.csv)
 
-| 구분 | 바이트 | SHA-256 |
-| --- | ---: | --- |
-| 일본어 원본 AN9J | 8,388,608 | `a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7` |
-| v1.1c 결과 ROM | 8,388,608 | `bf9e425dc172fb36b0f3ab221a14299898768a8bf5e7e7c36feaf7242f86334c` |
-| 일본어 원본용 BPS | 383,088 | `18407507b181b0e24d53313e03b032f0140fdf111e804901ae69c11cfb7d0d98` |
+가상 mGBA에서 첫 의뢰와 두 후속 의뢰의 수주·지역 입장, 전투 결과, 일반 저장과 중단 저장 복원을 확인했습니다. 가상 VBA-M에서도 SELECT 메뉴와 실제 전투 결과를 확인했습니다. My Boy Premium과 실기는 미검증입니다. 정식 배포는 [v1.1](https://github.com/GimoXagros/gba-narikiri2-kor/releases/tag/v1.1)입니다.
 
-ZIP의 포함 파일과 체크섬은 `manifest.json`, `SHA256SUMS.txt`에서 확인합니다. ROM·개인 저장·전체 대사집은 공개 첨부물에 포함하지 않습니다.
-
-## v1.1c 변경 및 검증 범위
+## 이전 v1.1c 기록
 
 큰 글자 단어 간격은 6px, 지원되는 소형 문자열은 4px로 표시합니다. 숫자 열·들여쓰기·이름 입력판·사용자 이름과 숨겨진 개발용 목록의 예외는 보존합니다. `아니요`는 이전 느낌을 유지한 그래픽으로 교정했습니다. 10,371개 원래 포인터와 문자열 시작 위치, 8MiB 크기는 유지합니다.
 
