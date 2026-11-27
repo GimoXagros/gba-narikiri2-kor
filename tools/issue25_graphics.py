@@ -1,4 +1,4 @@
-"""Restore the five original AN9J battle labels requested for issue #25."""
+"""Restore the requested original AN9J battle and level-up graphics."""
 
 from dataclasses import dataclass
 from hashlib import sha256
@@ -32,6 +32,13 @@ LABELS = (
     Label('EXP', 0x6D6EFC, 0x6D6FFC,
           '271d6dbe057722ccb78584ca17de38821ca86cb51837444f1a1df13ba6bdf5da',
           '05a771cc99c469e64c0728bea0283870fcb7ff9ba5e53cb8ff01b15c849407e1'),
+    Label('LEVEL', 0x6D6FFC, 0x6D70FC,
+          '44bf985aa7026bf175923a762087d0b664f9344257736c8ce18e7cacfbc5f635',
+          '885341abce966de35e99e111c58acdaf74140c45409b5756a40f19c6859f5e6d'),
+    # Skill-up uses the distinct result frame 17 and its own tiles at 0x6D7ABC.
+    Label('LEVEL_UP', 0x6D70FC, 0x6D71BC,
+          '53da1d93013cb8fc310af44f63325a25ea81d8cbabd5fc967c97c094f997e2d1',
+          '5554184cd4e193975f707312cfffcd07e376b514cdb0addc05273902a31c2b55'),
     Label('HIT', 0x6D78BC, 0x6D79BC,
           '49087f91c66049e9c8d43346e3c804dd377f7346b2a0977eb2fe678df7a88391',
           '810972470d470f467617b701d81a04f629db807ec72869afcd89478b916408e5'),

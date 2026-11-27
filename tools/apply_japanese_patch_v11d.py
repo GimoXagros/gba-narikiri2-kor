@@ -9,8 +9,8 @@ from v09c_io import atomic_write_new
 
 SIZE = 0x800000
 SOURCE = "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7"
-PATCH = "0ec5c689b01072745b37239bb30e0bc0e3b36c65d8e90d04bb348c807c7f982e"
-TARGET = "705d92a147ac1e3bd4830ca976154dd397c67263ad99dcd04a8dd5313d9e0177"
+PATCH = "fd8b75ac1944f5921726b109ad6466c2c4067be842d04889b42f775cba35b50a"
+TARGET = "c3d13c1418e5958c31cd11b835c3102de0a0fb7a072f696a2bb831e36e83b79d"
 PATCH_NAME = "Xagros_Narikiri2_KOR_v1.1d.bps"
 
 
@@ -22,7 +22,7 @@ def verified(data, length, digest, label):
 
 def apply(source, patch, output):
     original = verified(source.read_bytes(), SIZE, SOURCE, "Japanese AN9J source ROM")
-    delta = verified(patch.read_bytes(), 381753, PATCH, "v1.1d patch")
+    delta = verified(patch.read_bytes(), 381332, PATCH, "v1.1d patch")
     target = verified(apply_bps(original, delta), SIZE, TARGET, "Patched ROM")
     atomic_write_new(output, target)
 

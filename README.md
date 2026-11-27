@@ -4,7 +4,9 @@
 
 **[v1.1d 프리릴리즈 다운로드](https://github.com/GimoXagros/gba-narikiri2-kor/releases/tag/v1.1d)**
 
-퀘스트 대사의 목표물과 스펙터클즈 전투 정보창에서 깨지던 글자를 수정했습니다. 전투·결과 화면의 TARGET, HIT, BONUS, EXP, GALD는 일본어판 그래픽으로 복원했습니다. 코스튬 여섯 종의 명칭과 VBA-M에서 첫 마을의 SELECT 메뉴를 열 때 발생하던 멈춤도 수정했습니다.
+퀘스트 대사의 목표물과 스펙터클즈 전투 정보창에서 깨지던 글자를 수정했습니다. 전투·결과 화면의 TARGET, HIT, BONUS, EXP, GALD, LEVEL UP!은 일본어판 그래픽으로 복원했습니다. 코스튬 여섯 종의 명칭과 VBA-M에서 첫 마을의 SELECT 메뉴를 열 때 발생하던 멈춤도 수정했습니다.
+
+2026-11-28에 공개한 v1.1d 파일을 레벨 상승 표시 복원본으로 교체했습니다. 이전 v1.1d의 결과 해시가 `705d92a1…`이면 새 패키지를 받아 일본어 원본에 다시 적용하세요.
 
 ## 패치 적용
 
@@ -14,7 +16,7 @@
 python apply_japanese_patch.py Japanese.gba --output Xagros_Narikiri2_KOR_v1.1d.gba
 ```
 
-결과 ROM은 8,388,608바이트이며 SHA-256은 `705d92a147ac1e3bd4830ca976154dd397c67263ad99dcd04a8dd5313d9e0177`입니다. 원래 포인터와 문자열 시작 위치 10,371개를 확인했습니다. [적용·빌드·My Boy 확인 순서](docs/V11D_PACKAGE.md) · [검증 결과](verification/v1.1d.json) · [코스튬 변경 목록](docs/issue25-names.csv)
+결과 ROM은 8,388,608바이트이며 SHA-256은 `c3d13c1418e5958c31cd11b835c3102de0a0fb7a072f696a2bb831e36e83b79d`입니다. 원래 포인터와 문자열 시작 위치 10,371개를 확인했습니다. [적용·빌드·My Boy 확인 순서](docs/V11D_PACKAGE.md) · [검증 결과](verification/v1.1d.json) · [코스튬 변경 목록](docs/issue25-names.csv)
 
 가상 mGBA에서 첫 의뢰와 두 후속 의뢰의 수주·지역 입장, 전투 결과, 일반 저장과 중단 저장 복원을 확인했습니다. 가상 VBA-M에서도 SELECT 메뉴와 실제 전투 결과를 확인했습니다. My Boy Premium과 실기는 미검증입니다. 정식 배포는 [v1.1](https://github.com/GimoXagros/gba-narikiri2-kor/releases/tag/v1.1)입니다.
 
