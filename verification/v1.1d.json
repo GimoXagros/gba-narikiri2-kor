@@ -1,11 +1,11 @@
 {
   "version": "v1.1d",
-  "test_filename": "TEST03",
+  "test_filename": "v1.1d replacement",
   "source_sha256": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
-  "rom_sha256": "705d92a147ac1e3bd4830ca976154dd397c67263ad99dcd04a8dd5313d9e0177",
+  "rom_sha256": "c3d13c1418e5958c31cd11b835c3102de0a0fb7a072f696a2bb831e36e83b79d",
   "size": 8388608,
-  "patch_sha256": "0ec5c689b01072745b37239bb30e0bc0e3b36c65d8e90d04bb348c807c7f982e",
-  "patch_bytes": 381753,
+  "patch_sha256": "fd8b75ac1944f5921726b109ad6466c2c4067be842d04889b42f775cba35b50a",
+  "patch_bytes": 381332,
   "pointer_bindings": 10371,
   "pointer_or_start_mismatches": 0,
   "full_cpu_bindings": 8947,
@@ -18,12 +18,12 @@
   "quest_item_formatter_cases": 157,
   "quest_item_names_with_spaces": 85,
   "quest_checkpoints_first_and_wrong_destination": 17,
-  "japanese_battle_labels": 5,
-  "changed_label_bytes": 1161,
+  "japanese_battle_labels": 7,
+  "changed_label_bytes": 1472,
   "tutorial_frames_checked": 81,
   "cave_frames_checked": 46,
   "enemy_inspection": {
-    "rom_sha256": "705d92a147ac1e3bd4830ca976154dd397c67263ad99dcd04a8dd5313d9e0177",
+    "rom_sha256": "c3d13c1418e5958c31cd11b835c3102de0a0fb7a072f696a2bb831e36e83b79d",
     "affected_rows": 168,
     "tested_native_cases": 4,
     "failures": [],
@@ -87,19 +87,21 @@
   },
   "isolated_source_build": "ROM and cumulative BPS byte-identical",
   "evidence_files": {
-    "issue24-25-qa/705d92a147ac/STATIC.json": "8c1f5165bf23b260a4cb8870f5160dc6f9079f42ddfa56dc25f4f5a972b68c88",
-    "issue24-25-qa/705d92a147ac/GATES.json": "6469cef4aed8b3fcf992a1cd0ebad5b7a0c93af5533ca5e792c11a433301dd13",
-    "issue24-25-qa/705d92a147ac/HIT_COMPARISONS.json": "71da1bb571910d7c55443690bf36464475891da2259d13efa0abcc9757b1a08d",
-    "issue24-25-qa/705d92a147ac/QUEST_FORMATTER.json": "82aef7e5932b9b2dc263fe46965095f917d7006256d1e5aab8ab56f48f174470",
-    "issue24-25-qa/705d92a147ac/INSPECTION_CPU.json": "025135d5f94c43a560d744cd72b975621e48c5d67259af8d2fca64d1b89b643f",
-    "issue24-25-qa/705d92a147ac/final-review/EXTRA_GATES.json": "2cf913f849eae8b2536123333099dd67f37e94f75285fabb47ac6d51f7e5e39b",
-    "issue24-25-qa/hit-save/save/SUMMARY.json": "53b752c9feebec71dafc529cc1b6db4e8018438f89a98a220a260276189bdb17",
-    "issue24/hit-bought/REPLAY.json": "db85bbbf7726d3a4eec6c28c83b70736ab296dc3f9ca3c4642938052082bf53c",
-    "issue24/v11d-final/build/BUILD_RESULT.json": "e13e6cf8d9386924843d37407bdee535b883acd6cbd7015a3e890ae5b5ec681b",
-    "quest-more/705d-beck-journey/RESULT.json": "211ca787bed80bb6659c11d249d5681b0db75529a804e6d7c7464642467485f1",
-    "quest-more/705d-beck-reload/RESULT.json": "8338d79438199c0eacb38863bbf9292f3b1d8116105ab432c240684af24967f4",
-    "quest-more/705d-mendel-journey/RESULT.json": "20e8c4cacfdcebf3378c7b69537b103bdea3be75220bc487ffdbc345f3983c41",
-    "quest-more/705d-mendel-reload/RESULT.json": "8fbfbc4772379f60aae5eaaa9fd3d7bae0e871a8c2189cf311788d2dfa6301e9"
+    "issue24-25-qa/c3d13c1418e5/GATES.json": "27ef0ba7cc106385ed81202359969c1dbabcb937f85120353cd17413d788d06d",
+    "issue24-25-qa/c3d13c1418e5/RELEASE_RUNTIME.json": "03d3c659bd2e9d30507d47a05171a95e567f867c3dd6e84254197f152f0f6d46",
+    "issue24-25-qa/c3d13c1418e5/STATIC.json": "8217389f0b372166102e5956d18c304b6d5d4c1db266a56e800b803fc5736603",
+    "issue24-25-qa/c3d13c1418e5/QUEST_FORMATTER.json": "dafe2fc68283d946e04b0927222326e2f11389d3d34bb86acbf724ab8ef07d27",
+    "issue24-25-qa/c3d13c1418e5/QUEST_RENDERER.json": "300d3dab2c4110c13ef9fe53f3c9e92dbdaa4de92dace5063056bb18cdb45b03",
+    "issue24-25-qa/c3d13c1418e5/INSPECTION_CPU.json": "d29e11de38d8eb8830408065f9426c045cfbf6e16a5108cc297212379c9dd391",
+    "issue24-25-qa/c3d13c1418e5/final-review/EXTRA_GATES.json": "1afe4917db189668523ad4ff232ee01f72a7647fccfc32bac29529ed397d4d67",
+    "issue24-25-qa/r2-save/save/SUMMARY.json": "4119f04c13bc1e76926e15927a25f8147fbce90a5da2c64477aaa2cc5aaa3cc7",
+    "issue24/r2/bought/REPLAY.json": "a1be90c5a388e450431de76a334fc4a206ff5641769527b76ccedb91e2636de9",
+    "issue24/r2/clean-build/BUILD_RESULT.json": "e70e7efba018294177673f1c8052cc24d2868479c83a6856d4a78391a969ae75",
+    "issue25-presentation/comparison-r2-level/LEVEL_RENDER_REVIEW.json": "47c63b75760a9950739335627115304dcef37174e15eb53d2f0448e643d0404f",
+    "issue24-25-qa/c3d13c1418e5/advanced-mendel-journey/RESULT.json": "ee3e67a03d42805d3efd68f37e4b303158fd399e64ce4eebeb8c855a5f8135a4",
+    "issue24-25-qa/c3d13c1418e5/advanced-mendel-reload/RESULT.json": "41bef08ef2025b929b819f1a41cbbf121fac91e8dd39cf11f524f5f4266e620f",
+    "issue24-25-qa/c3d13c1418e5/advanced-beck-journey/RESULT.json": "26ed993148bcc9072b79dbb04fb78b8860e7ca28e7acf899e07ebca827cfff03",
+    "issue24-25-qa/c3d13c1418e5/advanced-beck-reload/RESULT.json": "23f34bb9627c84984f1500a4e47b3dddc42bdb545326564f1fbbf2a74bff6e43"
   },
   "hit_changed_bytes_since_test02": 206,
   "quests": {
@@ -121,20 +123,24 @@
       "HIT",
       "BONUS",
       "EXP",
-      "GALD"
+      "GALD",
+      "LEVEL",
+      "UP!"
     ],
     "hit_opaque_pixels": 355,
-    "hit_only_change_tutorial_cave": 7,
     "sample_counts": [
       1,
       2,
       4
     ],
-    "new_rom_targeting": "Left/right confirmed distinct enemies from the same input point",
-    "level_and_skill_up_combined": "NOT_OBSERVED_IN_NATURAL_BATTLES"
+    "new_rom_targeting": "Three-target selection measured on superseded 705d image. Target assets and routines byte-identical in replacement.",
+    "level_and_skill_up_combined": "PASS presentation fixture. Costume XP seeded; skill display flag set without claiming acquisition.",
+    "changed_bytes_since_replaced_v11d": 311,
+    "paired_level_frames": 14
   },
   "user_report": {
     "version": "TEST02",
-    "scope": "User confirmed restored battle information display before addition of HIT. Final TEST03 user result not yet reported."
-  }
+    "scope": "User confirmed battle information on TEST02. No end-user test of this replacement reported."
+  },
+  "supersedes_sha256": "705d92a147ac1e3bd4830ca976154dd397c67263ad99dcd04a8dd5313d9e0177"
 }
