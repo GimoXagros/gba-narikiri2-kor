@@ -24,3 +24,5 @@ jobs:
       - run: python -O -m unittest discover -s tests -p test_v11c_build.py -v
       - run: python -O -m unittest discover -s tests -p test_v11c_package.py -v
       - run: python -O -m unittest discover -s tests -p test_audio_fifo_timing.py -v
+      - run: python -O -m unittest discover -s tests -p test_issue24_quest.py -v
+      - run: python -O -m unittest discover -s tests -p test_issue25_graphics.py -v
