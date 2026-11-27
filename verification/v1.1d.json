@@ -1,0 +1,140 @@
+{
+  "version": "v1.1d",
+  "test_filename": "TEST03",
+  "source_sha256": "a92c0f6dbb5c013b47b7178e23d81663e3952a10df7b1f68967ebf7bb3b98eb7",
+  "rom_sha256": "705d92a147ac1e3bd4830ca976154dd397c67263ad99dcd04a8dd5313d9e0177",
+  "size": 8388608,
+  "patch_sha256": "0ec5c689b01072745b37239bb30e0bc0e3b36c65d8e90d04bb348c807c7f982e",
+  "patch_bytes": 381753,
+  "pointer_bindings": 10371,
+  "pointer_or_start_mismatches": 0,
+  "full_cpu_bindings": 8947,
+  "compact_cpu_bindings": 1420,
+  "costume_names": 6,
+  "changed_name_bindings": 24,
+  "costume_name_starts": 20,
+  "affected_full_streams": 144,
+  "full_encoded_bytes": 3976,
+  "quest_item_formatter_cases": 157,
+  "quest_item_names_with_spaces": 85,
+  "quest_checkpoints_first_and_wrong_destination": 17,
+  "japanese_battle_labels": 5,
+  "changed_label_bytes": 1161,
+  "tutorial_frames_checked": 81,
+  "cave_frames_checked": 46,
+  "enemy_inspection": {
+    "rom_sha256": "705d92a147ac1e3bd4830ca976154dd397c67263ad99dcd04a8dd5313d9e0177",
+    "affected_rows": 168,
+    "tested_native_cases": 4,
+    "failures": [],
+    "deepest_stack_bytes": 180
+  },
+  "saves": {
+    "normal": "mGBA two cold reloads after resave for default and mixed character names",
+    "suspend": "mGBA in-game suspend, resume, consumed state",
+    "vba": "VBA-M 2.1.3 115defb virtual SELECT menu, save and reload",
+    "exact_core_state": "three continuation screenshots and 64 KiB EWRAM identical",
+    "desktop_SGM_UI": "NOT_RUN"
+  },
+  "performance": {
+    "item": {
+      "movements": 1560,
+      "p99_selection_frames": 8,
+      "max_display_delay_frames": 2,
+      "unresolved": 0
+    },
+    "monster": {
+      "movements": 1420,
+      "p99_selection_frames": 7,
+      "max_display_delay_frames": 4,
+      "unresolved": 0
+    },
+    "costume": {
+      "movements": 2000,
+      "p99_selection_frames": 7,
+      "max_display_delay_frames": 3,
+      "unresolved": 0
+    },
+    "character": {
+      "movements": 220,
+      "p99_selection_frames": 17,
+      "max_display_delay_frames": 2,
+      "unresolved": 0
+    },
+    "buy": {
+      "movements": 1050,
+      "p99_selection_frames": 7,
+      "max_display_delay_frames": 2,
+      "unresolved": 0
+    },
+    "sell": {
+      "movements": 1080,
+      "p99_selection_frames": 7,
+      "max_display_delay_frames": 2,
+      "unresolved": 0
+    }
+  },
+  "runtime": {
+    "mGBA": "0.11-219-e31759b",
+    "virtual_VBA_M": "2.1.3 115defb",
+    "My_Boy_Premium": "NOT_RUN",
+    "physical_GBA": "NOT_RUN",
+    "hardware_audio_or_link_play": "NOT_RUN"
+  },
+  "battle_inspection_gameplay": {
+    "mGBA": "Controller-only shop-purchased Spectacles. Terror Needle HP 111/140, matches repaired control.",
+    "VBA_M": "Shop-purchased Spectacles on Night Raid HP 188/320. Restored a native checkpoint on the same virtual core, closed with B, and continued to victory."
+  },
+  "isolated_source_build": "ROM and cumulative BPS byte-identical",
+  "evidence_files": {
+    "issue24-25-qa/705d92a147ac/STATIC.json": "8c1f5165bf23b260a4cb8870f5160dc6f9079f42ddfa56dc25f4f5a972b68c88",
+    "issue24-25-qa/705d92a147ac/GATES.json": "6469cef4aed8b3fcf992a1cd0ebad5b7a0c93af5533ca5e792c11a433301dd13",
+    "issue24-25-qa/705d92a147ac/HIT_COMPARISONS.json": "71da1bb571910d7c55443690bf36464475891da2259d13efa0abcc9757b1a08d",
+    "issue24-25-qa/705d92a147ac/QUEST_FORMATTER.json": "82aef7e5932b9b2dc263fe46965095f917d7006256d1e5aab8ab56f48f174470",
+    "issue24-25-qa/705d92a147ac/INSPECTION_CPU.json": "025135d5f94c43a560d744cd72b975621e48c5d67259af8d2fca64d1b89b643f",
+    "issue24-25-qa/705d92a147ac/final-review/EXTRA_GATES.json": "2cf913f849eae8b2536123333099dd67f37e94f75285fabb47ac6d51f7e5e39b",
+    "issue24-25-qa/hit-save/save/SUMMARY.json": "53b752c9feebec71dafc529cc1b6db4e8018438f89a98a220a260276189bdb17",
+    "issue24/hit-bought/REPLAY.json": "db85bbbf7726d3a4eec6c28c83b70736ab296dc3f9ca3c4642938052082bf53c",
+    "issue24/v11d-final/build/BUILD_RESULT.json": "e13e6cf8d9386924843d37407bdee535b883acd6cbd7015a3e890ae5b5ec681b",
+    "quest-more/705d-beck-journey/RESULT.json": "211ca787bed80bb6659c11d249d5681b0db75529a804e6d7c7464642467485f1",
+    "quest-more/705d-beck-reload/RESULT.json": "8338d79438199c0eacb38863bbf9292f3b1d8116105ab432c240684af24967f4",
+    "quest-more/705d-mendel-journey/RESULT.json": "20e8c4cacfdcebf3378c7b69537b103bdea3be75220bc487ffdbc345f3983c41",
+    "quest-more/705d-mendel-reload/RESULT.json": "8fbfbc4772379f60aae5eaaa9fd3d7bae0e871a8c2189cf311788d2dfa6301e9"
+  },
+  "hit_changed_bytes_since_test02": 206,
+  "quests": {
+    "first": "Elixir acceptance and Hunter Forest entry",
+    "advanced": [
+      "Mendel, thief target, Tower of Trials",
+      "Chef Beck, carbonara for Jeff, Jet Black Mine"
+    ],
+    "advanced_replay_observations": 106,
+    "advanced_input": "Two independent assignments accepted from the same copied late-game normal save. Two destination dialogues, accepted-save exports, two cold reloads.",
+    "not_run": [
+      "My Boy Premium",
+      "all quest assignments"
+    ]
+  },
+  "battle_results": {
+    "names": [
+      "TARGET",
+      "HIT",
+      "BONUS",
+      "EXP",
+      "GALD"
+    ],
+    "hit_opaque_pixels": 355,
+    "hit_only_change_tutorial_cave": 7,
+    "sample_counts": [
+      1,
+      2,
+      4
+    ],
+    "new_rom_targeting": "Left/right confirmed distinct enemies from the same input point",
+    "level_and_skill_up_combined": "NOT_OBSERVED_IN_NATURAL_BATTLES"
+  },
+  "user_report": {
+    "version": "TEST02",
+    "scope": "User confirmed restored battle information display before addition of HIT. Final TEST03 user result not yet reported."
+  }
+}

@@ -1,0 +1,7 @@
+﻿display_id,rom_job_id,japanese_source,current_korean,proposed_korean,full_binding_storage,gallery_full_binding_storage,compact_binding_id,selector_binding_id,review_state,reason
+87,JOB_131,%hｵﾝﾐﾂ%h,은밀,밀정,002B78CC,003A765C,JOB_131:002B78D0,SELECT_JOB_131:003AE2EC,INTEGRATED_GAMEPLAY_AND_CPU_READBACK_VERIFIED,게임 화면 및 CPU 바인딩 읽기 확인 완료. JOB_131·132 동일 항목.
+88,JOB_132,%hｵﾝﾐﾂ%h,은밀,밀정,002B790C,003A7660,JOB_132:002B7910,SELECT_JOB_132:003AE2F0,INTEGRATED_GAMEPLAY_AND_CPU_READBACK_VERIFIED,게임 화면 및 CPU 바인딩 읽기 확인 완료. JOB_131·132 동일 항목.
+103,JOB_145,ｴﾝﾁｬﾝﾀｰ,엔챈터,인챈터,002B7C4C,003A769C,JOB_145:002B7C50,SELECT_JOB_145:003AE324,INTEGRATED_GAMEPLAY_AND_CPU_READBACK_VERIFIED,게임 화면 및 CPU 바인딩 읽기 확인 완료; 기존 외래어 표기 유지.
+104,JOB_146,ｴﾝﾁｬﾝﾄﾚｽ,엔챈트레스,인챈트리스,002B7C8C,003A76A0,JOB_146:002B7C90,SELECT_JOB_146:003AE328,INTEGRATED_GAMEPLAY_AND_CPU_READBACK_VERIFIED,게임 화면 및 CPU 바인딩 읽기 확인 완료; 기존 외래어 표기 유지.
+128,JOB_164,%hﾀﾋﾞｹﾞｲﾆﾝ%h,여행예능인,유랑 예술가,002B810C,003A7700,JOB_164:002B8110,SELECT_JOB_164:003AE370,INTEGRATED_GAMEPLAY_AND_CPU_READBACK_VERIFIED,게임 화면 및 CPU 바인딩 읽기 확인 완료; 전체 명칭 표시 확인.
+129,JOB_165,%hﾐｽﾞｹﾞｲﾆﾝ%h,물예능인,물 곡예사,002B814C,003A7704,JOB_165:002B8150,SELECT_JOB_165:003AE374,INTEGRATED_GAMEPLAY_AND_CPU_READBACK_VERIFIED,게임 화면 및 CPU 바인딩 읽기 확인 완료; 전체 명칭 표시 확인.
